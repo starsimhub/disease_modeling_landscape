@@ -34,7 +34,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | GLEAM / GLEAMviz | Metapopulation | C++/Java/web | ISI Foundation / Northeastern | [gleamviz.org](https://www.gleamviz.org) | — | Global epidemic and mobility metapopulation simulator using transportation networks. |
 | FRED | ABM | C++ | U. Pittsburgh | [github.com](https://github.com/PublicHealthDynamicsLab/FRED) | ★ 81 | Framework for Reconstructing Epidemic Dynamics — synthetic-population ABM for diseases and control strategies. |
 | SimInf | Metapopulation / Stochastic | R/C | SLU / Linköping (Sweden) | [github.com](https://github.com/stewid/SimInf) | ★ 36 | Data-driven stochastic disease spread on networks via Gillespie/events. |
-| Vivarium | Microsimulation | Python | IHME / U. Washington | [github.com](https://github.com/ihmeuw/vivarium) | ★ 54 | Microsimulation framework using GBD distributions. |
 | epidemics | Compartmental | R | Epiverse-TRACE / LSHTM | [epiverse-trace.github.io](https://epiverse-trace.github.io/epidemics/) | ★ 17 | Composable compartmental scenario models with curated literature library. |
 | Epydemix | Compartmental / Inference | Python | ISI / Northeastern | [github.com](https://github.com/ngozzi/epydemix) | ★ 23 | Compartmental modeling with ABC calibration. |
 | Vahana.jl | ABM | Julia | U. Bamberg | [github.com](https://github.com/s-fuerst/Vahana.jl) | ★ 36 | Large-scale agent-based epi modeling. |
@@ -62,7 +61,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | odin.dust / odin2 | ODE / Stochastic | R | MRC IDE Imperial | [mrc-ide.github.io](https://mrc-ide.github.io/odin2/) | ★ 9 | Fast ODE/discrete sims compiled via dust. |
 | mcstate | Inference | R | MRC IDE Imperial | [mrc-ide.github.io](https://mrc-ide.github.io/mcstate/) | ★ 19 | pMCMC / particle filter for odin/dust. |
 | epidemia | Compartmental / Inference | R/Stan | Imperial (Bhatt/Flaxman) | [imperialcollegelondon.github.io](https://imperialcollegelondon.github.io/epidemia/) | ★ 49 | Bayesian semi-mechanistic epidemic regression in Stan. |
-| LEMMA | Compartmental / Inference | R/Stan | UCSF | [github.com](https://github.com/LocalEpi/LEMMA) | ★ 15 | Local Epidemic Modeling for Management & Action — UCSF COVID-19 Bayesian model. |
 | PyRoss | Compartmental / Inference | Python | U. Cambridge | [github.com](https://github.com/rajeshrinet/pyross) | ★ 166 | Inference, prediction, and control of epidemics via ODE/SDE. |
 | epipack | Compartmental | Python | HU Berlin | [github.com](https://github.com/benmaier/epipack) | ★ 34 | Numerical and symbolic compartmental modeling. |
 | BayesianTools | Inference | R | academic (Hartig) | [github.com](https://github.com/florianhartig/BayesianTools) | ★ 129 | MCMC tooling commonly used for epi inference. |
@@ -75,8 +73,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | EpiNow2 | Rt / nowcasting / forecasting | R/Stan | epiforecasts / LSHTM | [epiforecasts.io](https://epiforecasts.io/EpiNow2/) | ★ 134 | Bayesian real-time infection estimation, Rt estimation, and short-term forecasts. |
 | epinowcast | Nowcasting / Rt | R/Stan | epiforecasts | [package.epinowcast.org](https://package.epinowcast.org) | — | Hierarchical Bayesian nowcasting of right-truncated infectious-disease surveillance data. |
 | estimateR | Rt estimation | R | ETH Zurich | [github.com](https://github.com/covid-19-Re/estimateR) | — | Rt estimation with deconvolution from clinical or wastewater incidence data. |
-| ern | Rt estimation | R | PHAC / NML | [cran.r-project.org](https://cran.r-project.org/package=ern) | — | Effective reproduction number estimation from clinical or wastewater surveillance. |
-| EpiSewer | Rt estimation (wastewater) | R/Stan | ETH Zurich | [github.com](https://github.com/adrian-lison/EpiSewer) | ★ 23 | Bayesian generative model to estimate Rt from wastewater pathogen concentrations. |
 | R0 | Rt estimation | R | Hospices Civils Lyon | [cran.r-project.org](https://cran.r-project.org/package=R0) | — | Toolbox of methods to estimate basic and real-time reproduction numbers from epidemic curves. |
 | earlyR | Rt estimation | R | RECON | [repidemicsconsortium.org](https://www.repidemicsconsortium.org/earlyR/) | — | Likelihood-based Rt estimation during the early stage of an outbreak. |
 | projections | Forecasting | R | RECON | [repidemicsconsortium.org](https://www.repidemicsconsortium.org/projections/) | — | Short-term incidence projections from past incidence, serial interval, and R. |
@@ -103,7 +99,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | epiparameter | Outbreak analytics | R | Epiverse-TRACE | [epiverse-trace.github.io](https://epiverse-trace.github.io/epiparameter/) | ★ 35 | Curated library plus classes and helpers for working with epidemiological parameters. |
 | simulist | Line-list tools | R | Epiverse-TRACE | [epiverse-trace.github.io](https://epiverse-trace.github.io/simulist/) | ★ 10 | Simulate realistic outbreak line-list and contact-tracing data. |
 | finalsize | Outbreak analytics | R | Epiverse-TRACE | [epiverse-trace.github.io](https://epiverse-trace.github.io/finalsize/) | ★ 13 | Compute final epidemic size in heterogeneous populations with structured contacts. |
-| EpiContactTrace | Outbreak analytics | R | SLU (Sweden) | [cran.r-project.org](https://cran.r-project.org/package=EpiContactTrace) | — | Network-based contact tracing and risk-based surveillance for livestock outbreaks. |
 
 ## 5. Network-based epidemic modeling
 
@@ -266,7 +261,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | ern | Wastewater Rt | R | PHAC-NML (Champredon et al.) | [cran.r-project.org](https://cran.r-project.org/package=ern) | On CRAN; PLOS One 2024 | Effective reproduction number estimation from wastewater and clinical surveillance data (wraps EpiEstim). |
 | WES | Wastewater toolkit | R | community | [r-wes.com](https://www.r-wes.com) | — | Wastewater & environmental sampling analytical toolkit. |
 | CDC NWSS-tools | Wastewater pipelines | Python / R | US CDC | [github.com](https://github.com/CDCgov/NWSS) | Used by US National Wastewater Surveillance System; jurisdictions across all 50 states | National wastewater surveillance pipelines (WVAL calculation, Aquascope bioinformatics) for SARS-CoV-2, influenza, RSV. |
-| Vivarium | Microsimulation | Python | IHME | [github.com](https://github.com/ihmeuw/vivarium) | Used by IHME for GBD-driven population health modeling | GBD-driven Python microsimulation framework (cross-listed in Section 17). |
 
 ## 17. Microsimulation, health-economics, and decision-analytic frameworks
 
