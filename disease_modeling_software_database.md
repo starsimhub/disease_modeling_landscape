@@ -50,6 +50,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | SEIRS+ | Network / Compartmental | Python | community (McGee) | [github.com](https://github.com/ryansmcgee/seirsplus) | ★ 675 | Python stochastic SEIRS/network epidemic modeling framework. |
 | EpiRust | ABM | Rust | ThoughtWorks | [github.com](https://github.com/thoughtworks/epirust) | ★ 105 | Rust-based epidemic simulation framework. |
 | Kendrick | DSL | Pharo / Smalltalk | KendrickOrg | [github.com](https://github.com/KendrickOrg/kendrick) | ★ 52 | Domain-specific language for epidemiological models. |
+| Emulsion | DSL / multi-scale stochastic | Python / YAML DSL | INRAE (Picault, Ezanno et al.) | [sourcesup.renater.fr](https://sourcesup.renater.fr/emulsion-public/) | PLOS Comp Biol 2019 (Picault et al.) | Transparent multi-level multi-scale stochastic modeling framework for human, animal, and plant epidemiology with a YAML-based DSL. |
 
 ## 2. Compartmental modeling, ODE/SDE solvers, and inference
 
@@ -195,7 +196,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | AnophelesModel | Vector model | R | Swiss TPH | [github.com](https://github.com/SwissTPH/AnophelesModel) | ★ 7 | R package modeling Anopheles bionomics and vector control product effects on malaria transmission. |
 | EMOD-Malaria | Malaria ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-malaria) | EMOD platform widely cited | IDM individual-based malaria model with mechanistic vector and within-host components. |
 | Skeeter Buster | Vector model | C++ | NC State University | [journals.plos.org](https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0000508) | PLOS NTD 2009; SB2 update 2022 | Stochastic, spatially explicit Aedes aegypti (and Anopheles) population model for vector control and gene-drive studies. |
-| eMOD-MAP | Geospatial bridging | Python | MAP / IDM | [idmod.org](https://www.idmod.org/) | Community use | Bridging tool linking the Malaria Atlas Project geospatial layers to EMOD malaria simulations. |
 | OpenMalaria-MESA | Malaria ABM | C++ | MESA Malaria | [mesamalaria.org](https://mesamalaria.org) | MESA knowledge hub deployment | Hosted deployment of OpenMalaria for the MESA malaria modeling community. |
 | MicroMoB | Vector-borne | R | dd-harp consortium | [github.com](https://github.com/dd-harp/MicroMoB) | ★ 2 | Modular framework for mosquito-borne disease modeling with pluggable components. |
 | MGDrivE | Vector model / gene drive | R / C++ | Marshall Lab, UC Berkeley | [marshalllab.github.io](https://marshalllab.github.io/MGDrivE/) | Three PLOS Comp Biol / Methods Ecol Evol papers (2020, 2021, 2024) | Spatially explicit simulation framework for mosquito gene-drive systems with seasonality and epidemiological dynamics. |
