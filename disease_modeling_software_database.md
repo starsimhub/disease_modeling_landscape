@@ -33,14 +33,10 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | STEM | Spatial / Metapopulation | Java | IBM Research / Eclipse Foundation | [eclipse.org](https://www.eclipse.org/stem/) | — | Spatiotemporal Epidemiologic Modeler (Eclipse plugin platform) with documented global public-health use. |
 | GLEAM / GLEAMviz | Metapopulation | C++/Java/web | ISI Foundation / Northeastern | [gleamviz.org](https://www.gleamviz.org) | — | Global epidemic and mobility metapopulation simulator using transportation networks. |
 | FRED | ABM | C++ | U. Pittsburgh | [github.com](https://github.com/PublicHealthDynamicsLab/FRED) | ★ 81 | Framework for Reconstructing Epidemic Dynamics — synthetic-population ABM for diseases and control strategies. |
-| EMULSION | DSL / ABM | Python | INRAE | [sourcesup.renater.fr](https://sourcesup.renater.fr/projects/emulsion-public/) | — | Multi-level stochastic models with explicit declarative DSL. |
 | SimInf | Metapopulation / Stochastic | R/C | SLU / Linköping (Sweden) | [github.com](https://github.com/stewid/SimInf) | ★ 36 | Data-driven stochastic disease spread on networks via Gillespie/events. |
 | Vivarium | Microsimulation | Python | IHME / U. Washington | [github.com](https://github.com/ihmeuw/vivarium) | ★ 54 | Microsimulation framework using GBD distributions. |
 | epidemics | Compartmental | R | Epiverse-TRACE / LSHTM | [epiverse-trace.github.io](https://epiverse-trace.github.io/epidemics/) | ★ 17 | Composable compartmental scenario models with curated literature library. |
-| epidemik | Compartmental | Python | community | [pypi.org](https://pypi.org/project/epidemik/) | — | Flexible compartmental modeling. |
-| MetaCast | Metapopulation | Python | community | [github.com](https://github.com/MetaCast) | — | Metapopulation broadcasting of epi/eco models. |
 | Epydemix | Compartmental / Inference | Python | ISI / Northeastern | [github.com](https://github.com/ngozzi/epydemix) | ★ 23 | Compartmental modeling with ABC calibration. |
-| GEMS | ABM | Java | academic | — | — | General-purpose individual-based simulator. |
 | Vahana.jl | ABM | Julia | U. Bamberg | [github.com](https://github.com/s-fuerst/Vahana.jl) | ★ 36 | Large-scale agent-based epi modeling. |
 | MatSim-EpiSim | ABM | Java | TU Berlin | [github.com](https://github.com/matsim-org/matsim-episim-libs) | ★ 12 | Activity-based mobility epidemic model. |
 | RepastHPC | ABM | C++ | Argonne National Lab | [repast.github.io](https://repast.github.io) | ★ 29 | Parallel agent-based simulation toolkit widely used for epi. |
@@ -53,8 +49,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | OpenABM-Covid19 | ABM / network | C/Python | Oxford BDI | [github.com](https://github.com/BDI-pathogens/OpenABM-Covid19) | ★ 128 | Network agent-based simulator of COVID-19 transmission and contact tracing. |
 | Covasim | ABM | Python | IDM | [covasim.org](https://covasim.org) | ★ 287 | Agent-based COVID-19 simulator with interventions, calibration, and policy scenarios. |
 | SEIRS+ | Network / Compartmental | Python | community (McGee) | [github.com](https://github.com/ryansmcgee/seirsplus) | ★ 675 | Python stochastic SEIRS/network epidemic modeling framework. |
-| GEMFsim / FastGEMF | Network spreading | Python/MATLAB | academic | [github.com](https://github.com/ayounap/GEMFsim) | — | Generalized epidemic mean-field simulation on networks. |
-| Epigrass | Spatial / Metapopulation | Python | community (Coelho) | [github.com](https://github.com/fccoelho/epigrass) | ★ 5 | Geospatial epidemic simulation framework. |
 | EpiRust | ABM | Rust | ThoughtWorks | [github.com](https://github.com/thoughtworks/epirust) | ★ 105 | Rust-based epidemic simulation framework. |
 | Kendrick | DSL | Pharo / Smalltalk | KendrickOrg | [github.com](https://github.com/KendrickOrg/kendrick) | ★ 52 | Domain-specific language for epidemiological models. |
 
@@ -72,8 +66,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | PyRoss | Compartmental / Inference | Python | U. Cambridge | [github.com](https://github.com/rajeshrinet/pyross) | ★ 166 | Inference, prediction, and control of epidemics via ODE/SDE. |
 | epipack | Compartmental | Python | HU Berlin | [github.com](https://github.com/benmaier/epipack) | ★ 34 | Numerical and symbolic compartmental modeling. |
 | BayesianTools | Inference | R | academic (Hartig) | [github.com](https://github.com/florianhartig/BayesianTools) | ★ 129 | MCMC tooling commonly used for epi inference. |
-| rstanarm / brms | Inference | R/Stan | Stan team | [mc-stan.org](https://mc-stan.org) | — | Bayesian regression backbones used by many epi packages. |
-| greta | Inference | R | community | [greta-stats.org](https://greta-stats.org) | ★ 601 | TensorFlow-based Bayesian inference, used for epi. |
 
 ## 3. Rt estimation, nowcasting, and forecasting
 
@@ -91,7 +83,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | EpiSoon | Forecasting | R | epiforecasts | [epiforecasts.io](https://epiforecasts.io/EpiSoon/) | — | Short-term Rt-based forecasting framework (deprecated in favor of EpiNow2). |
 | EpiLPS | Rt estimation | R | UCLouvain | [cran.r-project.org](https://cran.r-project.org/package=EpiLPS) | — | Laplacian-P-splines Bayesian framework for fast Rt estimation. |
 | scoringutils | Forecast scoring | R | epiforecasts | [epiforecasts.io](https://epiforecasts.io/scoringutils/) | ★ 56 | Utilities for evaluating and scoring probabilistic epidemiological forecasts. |
-| hubverse / hubUtils | Forecast-hub infrastructure | R/Python | CDC / Reich Lab | [hubverse.io](https://hubverse.io) | ★ 6 | Tooling for collaborative forecast hubs (FluSight, COVID-19 Forecast Hub, Scenario Modeling Hub). |
 | Multi-target Multi-scale Forecasting Framework | Forecasting (ensemble) | Python/R | UVA Biocomplexity | [covid19-forecast.uvadsos.io](http://covid19-forecast.uvadsos.io/) | — | Ensemble framework (AR, Kalman, LSTM, compartmental) producing UVA hub forecast submissions. |
 | PatchSim | Forecasting (metapopulation) | Python | UVA NSSAC | [github.com](https://github.com/NSSAC/PatchSim) | — | National-scale metapopulation SEIR simulator used for influenza and COVID-19 forecasting. |
 | NobBS | Nowcasting | R | Harvard / Lipsitch lab | [github.com](https://github.com/sarahhbellum/NobBS) | — | Nowcasting by Bayesian Smoothing for delayed disease reporting (McGough et al. 2020). |
@@ -124,7 +115,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | EpiModel-networks module | Network ABM | R | Statnet / Emory (Jenness et al.) | [epimodel.org](https://epimodel.org) | ★ 271 | Stochastic network epidemic models built on temporal ERGMs. |
 | socialmixr | Contact matrices | R | epiforecasts | [github.com](https://github.com/epiforecasts/socialmixr) | ★ 43 | Derive age-structured contact matrices from POLYMOD-style surveys. |
 | contactdata | Contact matrices | R | community | [cran.r-project.org](https://cran.r-project.org/package=contactdata) | — | Prem et al. synthetic contact matrices for 152 countries. |
-| sispread | Network ABM | C / Python | academic | — | — | SIS disease spread simulation on contact networks. |
 
 ## 6. Phylodynamics & genomic epidemiology
 
@@ -153,14 +143,9 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 
 | Name | Type | Language | Authors | Link | Usage | Description |
 |---|---|---|---|---|---|---|
-| R-INLA | Bayesian spatial / disease mapping | R / C++ | Rue, Martino, Lindgren et al. (NTNU / KAUST) | [r-inla.org](https://www.r-inla.org) | Rue et al. 2009 paper >10k citations | Integrated Nested Laplace Approximation for fast approximate Bayesian inference on latent Gaussian models, the de facto standard for hierarchical spatial epi. |
 | SpatialEpi | Spatial / cluster detection | R | A. Kim, J. Wakefield (U. Washington) | [cran.r-project.org](https://cran.r-project.org/package=SpatialEpi) | CRAN since 2012 | Methods and example datasets for cluster detection and disease mapping. |
-| CARBayes | Bayesian areal / CAR | R | D. Lee (U. Glasgow) | [cran.r-project.org](https://cran.r-project.org/package=CARBayes) | JSS 2013 widely cited | MCMC for spatial generalised linear mixed models with conditional autoregressive (CAR/BYM) priors on areal data. |
 | DClusterm | Cluster detection | R | V. Gomez-Rubio, P. Moraga | [cran.r-project.org](https://cran.r-project.org/package=DClusterm) | — | Model-based detection of disease clusters via GLM model selection over candidate cluster dummies. |
-| diseasemapping | Disease mapping | R | P. Brown (U. Toronto) | [cran.r-project.org](https://cran.r-project.org/package=diseasemapping) | Archived on CRAN 2022 | Tools for modeling and mapping disease incidence/risk on areal data. |
-| INLA-SPDE | Geostatistical (continuous spatial) | R / C++ | F. Lindgren, H. Rue | [r-inla.org](https://www.r-inla.org/learnmore/papers) | Lindgren-Rue-Lindstrom 2011 highly cited | Stochastic-PDE representation of Gaussian fields, providing scalable continuous-domain spatial models within R-INLA. |
 | hhh4 / surveillance | Spatio-temporal endemic-epidemic | R | M. Höhle, S. Meyer, L. Held (LMU / RKI / U. Zurich) | [cran.r-project.org](https://cran.r-project.org/package=surveillance) | Meyer-Held-Höhle JSS 2017 widely cited | Endemic-epidemic multivariate count time-series models for areal infectious-disease surveillance data. |
-| sf / spdep / spatstat | Geostatistical / spatial backbone | R / C++ | E. Pebesma, R. Bivand, A. Baddeley (community) | [r-spatial.github.io](https://r-spatial.github.io/sf/) | sf ★ 1.4k; Pebesma 2018 ~3k+ citations | Core R geospatial stack (vector simple features, spatial dependence/weights, point-pattern analysis) used pervasively in spatial epi. |
 | MAP / malariaAtlas | Disease mapping / geostatistical | R / Python | Malaria Atlas Project (Oxford BDI) | [malariaatlas.org](https://malariaatlas.org) | ★ 32; underpins WHO malaria estimates | R interface and modeled raster/parasite-rate datasets from the Malaria Atlas Project. |
 
 ## 8. Surveillance, aberration detection, and genomic surveillance
@@ -181,7 +166,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 
 | Name | Type | Language | Authors | Link | Usage | Description |
 |---|---|---|---|---|---|---|
-| Spectrum / EPP | Compartmental | C++ / GUI | Avenir Health / UNAIDS | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Used by ~170 countries for UNAIDS estimates | UNAIDS official tool combining surveillance, survey, and program data to produce national HIV estimates and projections. |
+| Spectrum / EPP / AIM | Compartmental | C++ / GUI | Avenir Health / UNAIDS | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Used by 161+ countries for UNAIDS estimates (131+ via AIM in 2025 round) | UNAIDS official tool (umbrella suite bundling AIM, Goals, TIME, FamPlan, DemProj, LiST modules) combining surveillance, survey, and program data to produce national HIV estimates and projections. |
 | Goals / Goals-ART | Allocative efficiency | Spectrum module | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Used in 30+ countries via Spectrum | Spectrum-based resource-allocation model for HIV programs and ART scale-up planning. |
 | Thembisa | Compartmental | R / Excel | U. Cape Town (Johnson) | [thembisa.org](https://thembisa.org) | Source of UNAIDS South Africa estimates since 2017 | Deterministic compartmental model of the South African HIV epidemic at national and provincial levels. |
 | MicroCOSM | HIV ABM | R | SACEMA / UCT (Johnson) | [github.com](https://github.com/leighjohnson/MicroCOSM) | bioRxiv 310763; cited in SA HIV/structural-driver literature | Agent-based model of social and structural drivers of HIV/STIs and reproductive health in South Africa. |
@@ -190,9 +175,8 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | PopART-IBM | HIV ABM | C | Imperial / Oxford BDI | [github.com](https://github.com/BDI-pathogens/POPART-IBM) | PLOS Comp Biol 2021 (Pickles et al.) | Highly efficient stochastic individual-based simulation developed for the HPTN 071 (PopART) trial. |
 | EMOD-HIV | HIV ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-hiv) | EMOD platform paper widely cited (Bershteyn 2018) | IDM agent-based HIV model with detailed cascade and care pathway support, built on the EMOD platform. |
 | HIVsim (Starsim) | HIV ABM | Python | Starsim Hub | [starsim.org](https://starsim.org) | Part of Starsim ecosystem (2024) | Starsim-based individual-based HIV transmission and intervention model. |
-| Optima HIV | Allocative efficiency | Python | Optima Consortium | [optimamodel.com](https://optimamodel.com/hiv/) | Used in 40+ countries | Compartmental HIV epidemic and allocative-efficiency model for program prioritization, supported by World Bank, UN, and CDC. |
+| Optima HIV | Allocative efficiency | Python | Optima Consortium / Burnet Institute | [optimamodel.com](https://optimamodel.com/hiv/) | Applied in 40+ countries (23 govt-led analyses with World Bank/UNDP) | Compartmental HIV epidemic and allocative-efficiency model for program prioritization, supported by World Bank, UN, and CDC. |
 | CEPAC (HIV-CDM) | Microsimulation | C++ | MGH / Harvard MPEC | [massgeneral.org](https://www.massgeneral.org/medicine/mpec/research/cepac) | Hundreds of cost-effectiveness publications | State-transition Monte Carlo microsimulation of HIV disease progression for clinical and policy cost-effectiveness analysis. |
-| ARTcost | Cost projection | Excel / R | Academic | — | — | Cost-projection model for antiretroviral therapy programs. |
 | AIDS Epidemic Model (AEM) | Compartmental | Spectrum module | East-West Center (Brown) | [eastwestcenter.org](https://www.eastwestcenter.org/projects/improving-hiv-response-impacts-and-building-national-policy-analysis-capacity) | Used by 13 Asian countries | Process-based HIV model for concentrated epidemics, used widely in Asia-Pacific national HIV estimates. |
 | SimpactCyan | HIV ABM | C++ / R / Python | Hasselt U. / SACEMA (Liesenborgs) | [github.com](https://github.com/j0r1/simpactcyan) | Sci Rep 2019 (Liesenborgs et al.); ~150+ citations | Open-source individual-based simulator for HIV in dynamic sexual networks. |
 | STDSIM | Microsimulation | C++ | Erasmus MC (de Vlas) | [pubsonline.informs.org](https://pubsonline.informs.org/doi/10.1287/inte.28.3.84) | Used since 1998; widely cited in African HIV/STI work | Stochastic microsimulation of heterosexual HIV/STI transmission, developed at Erasmus University Rotterdam. |
@@ -204,8 +188,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | TIME Impact | Compartmental | C++ / GUI | Avenir Health / LSHTM / KNCV | [avenirhealth.org](https://avenirhealth.org/software-time.php) | Used in South Africa, Ghana, and other countries for TB investment cases | Spectrum-nested TB transmission model for impact, cost-effectiveness, and strategic planning. |
 | EMOD-TB | TB ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub) | EMOD platform paper widely cited | IDM individual-based TB model with HIV co-infection, drug resistance, and treatment dynamics. |
 | TBVx | Vaccine impact | Python | KNCV / TB Modelling | [github.com](https://github.com/kncvtbplus/tbvx) | Used in PLOS Medicine TB vaccine cost-effectiveness studies | Country-level vaccine-impact TB transmission model. |
-| TBMAC suite | Various | Various | TB Modelling and Analysis Consortium | [tb-mac.org](https://tb-mac.org) | Consortium spanning many academic groups | Curated portfolio of TB models maintained by the TB Modelling and Analysis Consortium. |
-| Optima TB | Allocative efficiency | Python | Optima Consortium | [optimamodel.com](https://optimamodel.com/tb/) | PLOS Comp Biol 2021; applied in Belarus and other countries | Compartmental TB transmission and allocative-efficiency model for optimizing TB spending. |
+| Optima TB | Allocative efficiency | Python | Optima Consortium / Burnet Institute | [optimamodel.com](https://optimamodel.com/tb/applications.html) | PLOS Comp Biol 2021; applied in Malawi, Indonesia, South Africa, Mozambique, Belarus, Tajikistan, Kyrgyz Republic | Compartmental TB transmission and allocative-efficiency model for optimizing TB spending. |
 
 ## 11. Disease-specific: Malaria
 
@@ -216,7 +199,6 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | malariaEquilibrium | Equilibrium solver | R | Imperial MRC IDE | [github.com](https://github.com/mrc-ide/malariaEquilibrium) | ★ 3 | R package solving the equilibrium of the Imperial malaria transmission model. |
 | AnophelesModel | Vector model | R | Swiss TPH | [github.com](https://github.com/SwissTPH/AnophelesModel) | ★ 7 | R package modeling Anopheles bionomics and vector control product effects on malaria transmission. |
 | EMOD-Malaria | Malaria ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-malaria) | EMOD platform widely cited | IDM individual-based malaria model with mechanistic vector and within-host components. |
-| MultiMalModPy | Comparator harness | Python | AHADI / IDM | — | Internal AHADI use | Python harness for cross-comparison of EMOD, OpenMalaria, and malariasimulation outputs. |
 | Skeeter Buster | Vector model | C++ | NC State University | [journals.plos.org](https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0000508) | PLOS NTD 2009; SB2 update 2022 | Stochastic, spatially explicit Aedes aegypti (and Anopheles) population model for vector control and gene-drive studies. |
 | eMOD-MAP | Geospatial bridging | Python | MAP / IDM | [idmod.org](https://www.idmod.org/) | Community use | Bridging tool linking the Malaria Atlas Project geospatial layers to EMOD malaria simulations. |
 | OpenMalaria-MESA | Malaria ABM | C++ | MESA Malaria | [mesamalaria.org](https://mesamalaria.org) | MESA knowledge hub deployment | Hosted deployment of OpenMalaria for the MESA malaria modeling community. |
@@ -263,26 +245,17 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | FPsim | ABM | Python | IDM / Starsim Hub | [fpsim.org](https://fpsim.org) | npj Women's Health 2023 | Woman-centered family planning ABM with contraceptive use, fertility, and empowerment metrics. |
 | STIsim | ABM | Python | Starsim Hub | [github.com](https://github.com/starsimhub/stisim) | PyPI distributed; Zimbabwe POC application | Adaptable Starsim-based model of co-transmitting STIs (HIV, syphilis, chlamydia, gonorrhea, BV). |
 | Polio model (IDM) | ABM | C++/Python | IDM | [github.com](https://github.com/EMOD-Hub) | Used in Kano state polio analyses | EMOD-based agent simulation of polio transmission and OPV/IPV vaccination campaigns. |
-| MeaslesModel (Imperial) | Compartmental | R | LSHTM / Imperial | — | Academic publications | Compartmental measles transmission and vaccination dynamics model. |
-| denguesim | Compartmental / vector | R/C++ | Academic | — | Academic refs | Aedes aegypti dengue transmission dynamics model. |
-| OpenWASH / cholera (JHU) | Compartmental | R | Johns Hopkins | — | Academic refs | Cholera transmission and WASH-intervention model. |
 | ZikaSpread | Stochastic metapopulation | Python | Northeastern / ISI Foundation | [zika-model.org](http://www.zika-model.org/) | PNAS 2017 Americas Zika spread study | Data-driven global stochastic metapopulation model of Zika in the Americas. |
-| EboVaxSim | Vaccination model | R | LSHTM | — | Academic refs | Ebola vaccination strategy and ring-vaccination evaluation model. |
-| Spectrum FamPlan / DemProj / GBM | Demographic projection | C++ | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | 193 countries / regions; UN Population Division integration | Suite of demographic and family-planning projection modules used globally for policy planning. |
+| Spectrum FamPlan / DemProj / GBM | Demographic / family-planning projection | C++ | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | 193 countries / regions; UN Population Division integration; FP2030/USAID country planning | Spectrum modules: DemProj (cohort-component demographic projections), FamPlan (contraceptive use and FP service needs), GBM (Goals Burden Model for HIV intervention impact and resource needs). |
 | LiST (Lives Saved Tool) | Intervention impact model | C++/GUI | JHSPH / Avenir Health | [livessavedtool.org](https://www.livessavedtool.org) | Default coverage data for ~80 LMICs; BMC Public Health 2011 supplement | Multi-cause MNCH/nutrition/WASH intervention impact model on child and maternal mortality. |
 
 ## 15. Veterinary / animal / zoonotic disease modeling
 
 | Name | Type | Language | Authors | Link | Usage | Description |
 |---|---|---|---|---|---|---|
-| InterSpread Plus (ISP) | Livestock spread | C++ | Massey U. EpiCentre (NZ) | — | Stevenson et al. 2013 widely cited (~200+); used for FMD planning in NZ, US, UK, EU | Spatial stochastic simulation model of FMD and other livestock disease spread between farms. |
 | NAADSM / ADSM | Veterinary ABM | C / Python | USDA APHIS / CFIA / Colorado State | [github.com](https://github.com/NAVADMC/ADSM) | Open-source under USDA; used in North America for FMD planning | North American Animal Disease Spread Model simulating disease spread and control in livestock herds. |
-| AusSpread | Livestock spread | C++/GIS | NSW DPI / Australian Govt DAFF | — | Australian govt FMD planning tool; used internationally | GIS-based stochastic spatial simulator of FMD spread across Australian livestock populations. |
 | AADIS | Hybrid livestock ABM | C# / Java | UNE / CSIRO / DAFF | [aadis.org](https://aadis.org/) | Australia's official EAD decision-support tool (FMD, ASF, LSD, AI) | Hybrid equation-based + agent-based national model of animal disease spread for emergency preparedness. |
-| EpiSAM | Livestock spread | (custom) | (academic) | — | Academic refs only | Stochastic livestock disease spread model. |
 | be-FAST / be-CSF | Livestock spread | C++ | UCM Madrid (MOMAT) | [ucm.es](https://www.ucm.es/momat/classical-swine-fever) | Used for CSF/ASF risk assessment in Spain, Bulgaria, EU | Spatial hybrid IBM + SI model for between-farm and within-farm CSF/ASF spread. |
-| ASFV-IBM | Livestock ABM | R | (academic) | — | Academic refs | Individual-based model of African swine fever transmission. |
-| HPAIv-spread | Livestock spread | R | (academic) | — | Academic refs | Spread model for highly pathogenic avian influenza in poultry. |
 | EpiContactTrace | Contact tracing | R | SLU Sweden (Nöremark, Widgren) | [cran.r-project.org](https://cran.r-project.org/package=EpiContactTrace) | BMC Vet Res 2014 widely cited; on CRAN | R package for forward/backward contact tracing of livestock movements during disease outbreaks. |
 
 ## 16. Wastewater & environmental epidemiology
@@ -302,41 +275,12 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | heemod | CEA / Markov | R | Filipović-Pierucci, Zarca, Durand-Zaleski (AP-HP) | [cran.r-project.org](https://cran.r-project.org/package=heemod) | On CRAN; widely used in HE textbooks/teaching | Markov state-transition health-economic evaluation package with PSA, DSA, EVPI. |
 | hesim | CEA / simulation | R / C++ (Rcpp) | Devin Incerti, Jeroen Jansen | [hesim-dev.github.io](https://hesim-dev.github.io/hesim/) | On CRAN; arXiv 2102.09437 | Modular fast simulation framework for cohort/individual state-transition and partitioned-survival HE models. |
 | TreeAge Pro | Decision tree / Markov | proprietary | TreeAge Software | [treeage.com](https://www.treeage.com) | 30+ years of commercial use; standard tool for HEOR, regulatory submissions | Commercial decision-tree and Markov modeling environment for HE, clinical, and business decision analysis. |
-| Amua | Decision analysis | Java | Z. Ward | [github.com](https://github.com/zward/Amua) | Open source; used for teaching | Open-source GUI-based decision tree, Markov, and probabilistic programming framework. |
 | CEPAC | Microsimulation (HIV) | C++ | MGH / Harvard MPEC | [massgeneral.org](https://www.massgeneral.org/medicine/mpec) | 100+ peer-reviewed publications on HIV/TB CEA in US and LMIC | Cost-Effectiveness of Preventing AIDS Complications microsimulation of HIV disease and care. |
 | Vivarium | Microsimulation | Python | IHME | [github.com](https://github.com/ihmeuw/vivarium) | Used by IHME for GBD-linked simulations | GBD-driven microsimulation framework for population-health interventions. |
 | Synthea | Synthetic patients | Java | MITRE | [github.com](https://github.com/synthetichealth/synthea) | De facto standard for synthetic FHIR/EHR data in US health IT | Synthetic Patient Population Simulator generating realistic HL7/FHIR EHR data. |
 | SynthPops | Synthetic populations | Python | IDM | [github.com](https://github.com/synthpops/synthpops) | ★ 47; used with Covasim, FPsim, Starsim | Generates synthetic populations with household, school, and workplace contact networks for ABMs. |
-
-## 18. Domain-general modeling platforms widely used for disease
-
-| Name | Type | Language | Authors | Link | Usage | Description |
-|---|---|---|---|---|---|---|
-| Berkeley Madonna | ODE solver | proprietary | UC Berkeley (Macey, Oster) | [berkeley-madonna.com](https://berkeley-madonna.com) | Long-standing classic for SIR teaching; v10 paper CPT:PSP 2022 | Fast adaptive ODE/difference-equation solver classic for SIR-class compartmental modeling. |
-| Vensim | System dynamics | proprietary | Ventana Systems | [vensim.com](https://vensim.com) | Used in Sterman's "Business Dynamics"; widespread academic and policy use | Continuous-simulation system-dynamics platform with discrete-event and ABM support. |
-| Stella / iThink | System dynamics | proprietary | isee systems | [iseesystems.com](https://www.iseesystems.com) | Standard SD teaching tool since 1985 | Visual stocks-and-flows system-dynamics modeling environment. |
-| AnyLogic | ABM platform | Java | The AnyLogic Company | [anylogic.com](https://www.anylogic.com) | Used by 40%+ of Fortune 100; epi templates available | Commercial multi-method (SD/ABM/DES) simulation platform with pandemic templates. |
-| InsightMaker | SD / ABM | JavaScript | Scott Fortmann-Roe | [insightmaker.com](https://insightmaker.com) | 20,000+ registered users; SMPT 2014 paper | Free browser-based system-dynamics and agent-based modeling tool. |
-
-## 19. Spectrum and Spectrum-family planning tools
-
-| Name | Type | Language | Authors | Link | Usage | Description |
-|---|---|---|---|---|---|---|
-| Spectrum suite | Policy planning suite | C++ / GUI | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Used by 161 countries for HIV/demographic estimates; UNAIDS official tool | Umbrella software bundling AIM, Goals, TIME, FamPlan, DemProj, LiST and other policy-planning modules. |
-| AIM | HIV projection | C++ | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Underlies UNAIDS country HIV estimates for 131+ countries (2025 round) | AIDS Impact Model projecting HIV epidemic and treatment indicators within Spectrum. |
-| FamPlan | Family-planning projection | C++ | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Used by FP2030/USAID country planning | Projects contraceptive use and family-planning service needs. |
-| DemProj | Demographic projection | C++ | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Underlies all Spectrum demographic projections globally | Cohort-component demographic projections for population, fertility, mortality. |
-| GBM | Burden / impact model | C++ | Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) | Used in HIV resource-needs and goals analyses | Goals Burden Model for HIV intervention impact and resource needs estimation. |
-| OneHealth Tool | Costing platform | C++ / GUI | UN IAWG-Costing / WHO / Avenir | [avenirhealth.org](https://avenirhealth.org/software-onehealth.html) | Used in 50–80+ LMICs for national strategic health plans | Integrated strategic health planning, costing, and impact analysis tool. |
-
-## 20. Optima family
-
-| Name | Type | Language | Authors | Link | Usage | Description |
-|---|---|---|---|---|---|---|
-| Optima HIV | Allocative-efficiency model | Python | Optima Consortium / Burnet Institute | [optimamodel.com](http://optimamodel.com) | Applied in 40+ countries (23 govt-led analyses with World Bank/UNDP) | Compartmental HIV model optimizing allocation of prevention and treatment resources. |
-| Optima TB | Allocative-efficiency model | Python | Optima Consortium / Burnet | [optimamodel.com](http://optimamodel.com/tb/applications.html) | Applied in Malawi, Indonesia, South Africa, Mozambique, Belarus, Tajikistan, Kyrgyz Republic | TB compartmental model for optimizing TB-program spending allocation. |
-| Optima Nutrition | Allocative-efficiency model | Python | Optima Consortium / World Bank | [optimamodel.com](https://optimamodel.com/nutrition/) | Applied in Bangladesh, Tanzania, Pakistan; ongoing in Benin, DRC, Nigeria, India, Sierra Leone, Tajikistan | Allocative-efficiency tool for childhood-stunting and nutrition-intervention targeting. |
-| Atomica | Compartmental engine | Python | Burnet Institute (Optima Team) | [github.com](https://github.com/atomicateam/atomica) | Successor engine underlying Optima TB/Nutrition and other compartmental apps | Generic compartmental simulation engine for disease, cascade, and resource-allocation models. |
+| OneHealth Tool | Costing platform | C++ / GUI | UN IAWG-Costing / WHO / Avenir Health | [avenirhealth.org](https://avenirhealth.org/software-onehealth.html) | Used in 50–80+ LMICs for national strategic health plans | Integrated strategic health planning, costing, and impact analysis tool. |
+| Optima Nutrition | Allocative efficiency | Python | Optima Consortium / World Bank | [optimamodel.com](https://optimamodel.com/nutrition/) | Applied in Bangladesh, Tanzania, Pakistan; ongoing in Benin, DRC, Nigeria, India, Sierra Leone, Tajikistan | Allocative-efficiency tool for childhood-stunting and nutrition-intervention targeting. |
 
 ---
 
