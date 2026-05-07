@@ -21,7 +21,7 @@ Claude was the asked to reconcile the two lists and add additional information (
 
 Full results are listed [here](disease_modeling_software_database.md). A total of 171 software tools were found, although most had limited evidence of use.
 
-The following tools were identified as the most important disease modeling software tools, approximately ordered by impact, with related tools grouped together:
+The following were identified as the most important disease modeling software tools, with related tools grouped together:
 
 1. [EMOD](#emod) — High-fidelity C++ individual-based multi-disease platform
 2. [LASER](#laser) — Lightweight Python toolkit for large-scale spatial eradication models
