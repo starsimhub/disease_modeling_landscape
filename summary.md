@@ -19,7 +19,7 @@ Claude was the asked to reconcile the two lists and add additional information (
 
 ## Findings
 
-Full results are listed [here](https://github.com/starsimhub/disease_modeling_landscape/blob/main/disease_modeling_software_database.md). A total of 171 software tools were found, although most had limited evidence of use.
+Full results are listed [here](disease_modeling_software_database.md). A total of 171 software tools were found, although most had limited evidence of use.
 
 The following tools were identified as the most important disease modeling software tools, approximately ordered by impact, with related tools grouped together:
 
@@ -111,7 +111,7 @@ The following tools were identified as the most important disease modeling softw
 * **Diseases**: HIV (Optima HIV); tuberculosis (Optima TB); child nutrition/stunting (Optima Nutrition); also malaria and COVID-19 variants
 * **Language**: Python
 * **Years**: 2014-2024
-* **Links**: [optimamodel.com](https://optimamodel.com), [code](https://github.com/optimamodel), [docs](https://optimamodel.com/docs/)
+* **Links**: [optimamodel.com](https://optimamodel.com), [code](https://github.com/optimamodel), [docs](https://optimamodel.com/hiv/documents.html)
 * **Publication**: Kelly SL, Martin-Hughes R, Stuart RM, Kerr CC, Wilson DP, et al. "The global Optima HIV allocative-efficiency model: targeting resources in efforts to end AIDS" Lancet HIV 5(4): e190–e198, 2018
 * **Package**: N/A — not on PyPI (distributed via GitHub)
 * **Evidence of use**: Applied with national governments in 40+ countries (23+ documented for HIV) for World Bank-supported allocative-efficiency studies; informed national HIV strategic plans across Africa, Asia, Eastern Europe and Latin America
@@ -228,7 +228,7 @@ The following tools were identified as the most important disease modeling softw
 * **Diseases**: COVID-19 (primary), influenza, RSV; extensible to other respiratory infections
 * **Language**: C++ core with Python interface
 * **Years**: 2020-2026
-* **Links**: [scicompmod.github.io/memilio](https://scicompmod.github.io/memilio/), [code](https://github.com/SciCompMod/memilio), [docs](https://memilio.readthedocs.io/en/latest/)
+* **Links**: [github.com/SciCompMod/memilio](https://github.com/SciCompMod/memilio), [docs](https://memilio.readthedocs.io/en/latest/)
 * **Publication**: Kühn MJ et al., "Assessment of effective mitigation and prediction of the spread of SARS-CoV-2 in Germany using demographic information and spatial resolution," Mathematical Biosciences, 2021
 * **Package**: [PyPi (1,830 downloads)](https://pepy.tech/projects/memilio-simulation)
 * **Evidence of use**: ~67 GitHub stars; used for official German COVID-19 forecasts (RKI); integrated into DLR's panDEmis web app; SPoCK ICU bed occupancy forecasts
