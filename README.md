@@ -23,21 +23,21 @@ Full results are listed [here](disease_modeling_software_database.md). A total o
 
 The following tools were identified as the most important disease modeling software tools, approximately ordered by impact, with related tools grouped together:
 
-1. [EMOD](#emod) — High-fidelity C++ individual-based multi-disease modeling platform with vector dynamics
-2. [LASER](#laser) — Lightweight Python agent-based toolkit for very large-scale spatial eradication models
-3. [Starsim](#starsim) — Python agent-based framework for multi-disease transmission through dynamic networks
-4. [EpiModel](#epimodel) — R package for stochastic epidemic simulation over dynamic ERGM-based contact networks
-5. [Spectrum](#spectrum) — Policy-modelling suite producing official UNAIDS/WHO HIV, TB, and child-survival estimates
-6. [Optima](#optima) — Compartmental transmission models with budget allocative-efficiency optimisation
-7. [Atomica](#atomica) — General-purpose Python compartmental engine with cascade analysis and optimisation
-8. [GLEAM](#gleam) — Stochastic global metapopulation simulator integrating worldwide air-travel and mobility data
-9. [Epydemix](#epydemix) — Python compartmental modeling with built-in contact matrices and ABC calibration
-10. [epidemics](#epidemics) — R library of composable compartmental models for outbreak scenario analysis
-11. [odin](#odin) — R domain-specific language compiling ODE and stochastic models to fast C code
-12. [Vivarium](#vivarium) — Python microsimulation framework linking IHME Global Burden of Disease data
-13. [FRED](#fred) — C++ agent-based framework using census-based US synthetic populations
-14. [EpiHiper](#epihiper) — HPC parallel agent-based simulator for US-scale (300M+ agents) epidemics
-15. [MEmilio](#memilio) — Modular C++/Python library combining ODE, agent-based, and hybrid metapopulation models
+1. [EMOD](#emod) — High-fidelity C++ individual-based multi-disease platform
+2. [LASER](#laser) — Lightweight Python toolkit for large-scale spatial eradication models
+3. [Starsim](#starsim) — Python agent-based framework for multi-disease network transmission
+4. [EpiModel](#epimodel) — R package for stochastic epidemics over dynamic ERGM networks
+5. [Spectrum](#spectrum) — Policy suite for official UNAIDS/WHO HIV, TB, and child-survival estimates
+6. [Optima](#optima) — Compartmental transmission models with allocative-efficiency optimisation
+7. [Atomica](#atomica) — General-purpose Python compartmental engine with cascade analysis
+8. [GLEAM](#gleam) — Stochastic global metapopulation simulator using air-travel mobility data
+9. [Epydemix](#epydemix) — Python compartmental modeling with ABC calibration
+10. [epidemics](#epidemics) — R library of composable compartmental outbreak models
+11. [odin](#odin) — R DSL compiling ODE and stochastic models to fast C
+12. [Vivarium](#vivarium) — Python microsimulation linked to IHME Global Burden of Disease data
+13. [FRED](#fred) — C++ agent-based framework using US census synthetic populations
+14. [EpiHiper](#epihiper) — HPC parallel agent-based simulator for 300M+ agents
+15. [MEmilio](#memilio) — Modular C++/Python library combining ODE, ABM, and hybrid models
 
 ### EMOD
 
