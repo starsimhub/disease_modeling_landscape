@@ -230,6 +230,6 @@ The following tools were identified as the most important disease modeling softw
 * **Years**: 2020-2026
 * **Links**: [scicompmod.github.io/memilio](https://scicompmod.github.io/memilio/), [code](https://github.com/SciCompMod/memilio), [docs](https://memilio.readthedocs.io/en/latest/)
 * **Publication**: Kühn MJ et al., "Assessment of effective mitigation and prediction of the spread of SARS-CoV-2 in Germany using demographic information and spatial resolution," Mathematical Biosciences, 2021
-* **Package**: https://pepy.tech/projects/memilio-simulation — 1,830 downloads
+* **Package**: [PyPi (1,830 downloads)](https://pepy.tech/projects/memilio-simulation)
 * **Evidence of use**: ~67 GitHub stars; used for official German COVID-19 forecasts (RKI); integrated into DLR's panDEmis web app; SPoCK ICU bed occupancy forecasts
 * **Description**: High-performance modular epidemic simulation library combining equation-based, agent-based, and hybrid graph-ODE metapopulation models with C++ performance and Python usability
