@@ -11,7 +11,7 @@
 | Atomica | Burnet Institute | 2018-2026 | 14 stars, 251k downloads | [atomica.tools](https://atomica.tools) | Custom | Minimal modern landing page |
 | GLEAM | ISI / Northeastern | 2009-2026 | 2000+ citations, used by WHO/CDC | [gleamproject.org](https://www.gleamproject.org/) | Custom | Full modern landing page |
 | Epydemix | Northeastern / ISI | 2024-2026 | 23 stars, 16k downloads | [epydemix.org](https://www.epydemix.org/) | Custom | Full modern landing page |
-| epidemics | LSHTM | 2023-2026 | 17 stars | [epiverse-trace.github.io/epidemics](https://epiverse-trace.github.io/epidemics/) | Semi-custom | Default pkgdown site |
+| Epiverse | LSHTM | 2023-2026 | 200+ stars, 4k+ downloads | [epiverse-trace.github.io](https://epiverse-trace.github.io) | Semi-custom | Full modern landing page |
 | odin | Imperial College London | 2016-2026 | 106 stars, 81k downloads, used by WHO/SAGE | [mrc-ide.github.io/odin](https://mrc-ide.github.io/odin/) | Default | Default pkgdown site |
 | Vivarium | IHME | 2017-2026 | 553k downloads | [vivarium.readthedocs.io](https://vivarium.readthedocs.io/) | Default | Default ReadTheDocs site |
 | FRED | University of Pittsburgh | 2013-2026 | 81 stars, 200+ citations | [fred.publichealth.pitt.edu](https://fred.publichealth.pitt.edu/) | Org | Minimal landing page |
