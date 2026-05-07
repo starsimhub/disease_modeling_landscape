@@ -1,4 +1,6 @@
-# Disease modeling tool properties
+# Disease modeling tool web presence
+
+This file lists the [top-tier](README.md) disease modeling tools in reference to their web presence (URL type and website content).
 
 | Name | Author | Years | Usage | URL | URL type | Content |
 |------|--------|-------|-------|-----|----------|---------|
