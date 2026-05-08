@@ -21,8 +21,6 @@ Claude was the asked to reconcile the two lists and add additional information (
 
 Full results are listed [here](disease_modeling_software_database.md). A total of 171 software tools were found, although most had limited evidence of use.
 
-**Note:** Evidence of use is hard to quantify. "Downloads" vastly *overestimate* users, since the vast majority of downloads are due to automated runs (e.g. GitHub Actions or cluster deployment); these typically comprise perhaps 90-99.9% of downloads. GitHub stars *underestimate* users, since the majority of users (50-99%) download rather than star/fork.
-
 The following were identified as the most important disease modeling software tools, with related tools grouped together:
 
 1. [Starsim](#starsim) — Python agent-based framework for multi-disease network transmission
@@ -40,6 +38,8 @@ The following were identified as the most important disease modeling software to
 13. [FRED](#fred) — C++ agent-based framework using US census synthetic populations
 14. [EpiHiper](#epihiper) — HPC parallel agent-based simulator for 300M+ agents
 15. [MEmilio](#memilio) — Modular C++/Python library combining ODE, ABM, and hybrid models
+
+**Note:** Evidence of use is hard to quantify. "Downloads" vastly *overestimate* users, since the vast majority of downloads are due to automated runs (e.g. GitHub Actions or cluster deployment); these typically comprise perhaps 90-99.9% of downloads. GitHub stars *underestimate* users, since the majority of users (50-99%) download rather than star/fork.
 
 ### Starsim
 
