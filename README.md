@@ -43,8 +43,8 @@ The following were identified as the most important disease modeling software to
 
 ### Starsim
 
-* **Author**: Institute for Disease Modeling (IDM), Burnet Institute, and collaborators (Cliff Kerr et al.)
-* **Model type**: Agent-based / network framework
+* **Author**: IDM, Burnet Institute, Johns Hopkins, APHRC, Makerere, and other contributors
+* **Model type**: Agent-based / network framework, plus compartmental and metapopulation modeling
 * **Diseases**: Multi-disease (HIV, STIs, measles, TB, COVID-19, HPV, malaria, NCDs, pregnancy)
 * **Language**: Python
 * **Years**: 2023-2026
@@ -56,7 +56,7 @@ The following were identified as the most important disease modeling software to
 
 ### EMOD
 
-* **Author**: Institute for Disease Modeling (IDM) / Gates Foundation (originated by Philip Eckhoff, 2010)
+* **Author**: IDM
 * **Model type**: Individual-based / agent-based stochastic model
 * **Diseases**: Malaria and HIV (current public release); historically also TB, polio, measles, typhoid, dengue, COVID-19
 * **Language**: C++ core with Python interface
@@ -69,10 +69,10 @@ The following were identified as the most important disease modeling software to
 
 ### LASER
 
-* **Author**: Institute for Disease Modeling (IDM) / Gates Foundation and collaborators
+* **Author**: IDM
 * **Model type**: Lightweight agent-based / spatial framework (also supports cohort and stochastic compartmental)
 * **Diseases**: Generic infectious disease framework; example implementations for measles (laser-measles) and generic SIR; targeted at eradication-relevant pathogens (measles, polio)
-* **Language**: Python (with Numba/high-performance backend)
+* **Language**: Python
 * **Years**: 2023-2026
 * **Links**: [docs.idmod.org/projects/laser](https://docs.idmod.org/projects/laser/en/latest/), [code](https://github.com/InstituteforDiseaseModeling/laser), [docs](https://docs.idmod.org/projects/laser/en/latest/)
 * **Publication**: N/A
@@ -82,7 +82,7 @@ The following were identified as the most important disease modeling software to
 
 ### EpiModel
 
-* **Author**: Samuel M. Jenness, Steven M. Goodreau, Martina Morris, Adrien Le Guillou (Statnet/Emory)
+* **Author**: Emory University (Samuel M. Jenness, Steven M. Goodreau, Martina Morris, Adrien Le Guillou)
 * **Model type**: Compartmental (DCM), individual-contact (ICM), and stochastic network (statnet/ERGM-based) models
 * **Diseases**: Generic SI/SIR/SIS framework; extensions for HIV, STIs (EpiModelHIV), and COVID-19 (EpiModelCOVID)
 * **Language**: R
@@ -108,7 +108,7 @@ The following were identified as the most important disease modeling software to
 
 ### Optima
 
-* **Author**: Optima Consortium for Decision Science (Burnet Institute lead; David P. Wilson, Cliff C. Kerr, Robyn M. Stuart and colleagues; partners incl. UNSW, World Bank)
+* **Author**: Optima Consortium for Decision Science (Burnet Institute lead; plus UNSW and World Bank)
 * **Model type**: Compartmental dynamic transmission model with allocative-efficiency optimisation
 * **Diseases**: HIV (Optima HIV); tuberculosis (Optima TB); child nutrition/stunting (Optima Nutrition); also malaria and COVID-19 variants
 * **Language**: Python
@@ -121,7 +121,7 @@ The following were identified as the most important disease modeling software to
 
 ### Atomica
 
-* **Author**: Atomica Team / Burnet Institute (core developers incl. James Jansson, Romesh Abeysuriya, Cliff C. Kerr; successor framework to Optima)
+* **Author**: Burnet Institute (Romesh Abeysuriya et al.)
 * **Model type**: General-purpose compartmental modelling engine (with optimisation and cascade-analysis features)
 * **Diseases**: General-purpose (applied to HIV care cascades, TB, hepatitis C, malaria, NCDs)
 * **Language**: Python
@@ -134,7 +134,7 @@ The following were identified as the most important disease modeling software to
 
 ### GLEAM
 
-* **Author**: Alessandro Vespignani, Vittoria Colizza, Matteo Chinazzi et al. (ISI Foundation, Northeastern/MOBS Lab, Indiana University)
+* **Author**: Northeastern University, ISI Foundation, Indiana University (Alessandro Vespignani, Vittoria Colizza, Matteo Chinazzi et al.)
 * **Model type**: Stochastic metapopulation model on a global mobility network (air travel + commuting)
 * **Diseases**: H1N1 influenza, seasonal influenza, Ebola, MERS, Zika, COVID-19/SARS-CoV-2
 * **Language**: C++ simulation engine with Java/web-based GLEAMviz client
@@ -147,7 +147,7 @@ The following were identified as the most important disease modeling software to
 
 ### Epydemix
 
-* **Author**: Nicolò Gozzi, Matteo Chinazzi, Alessandro Vespignani et al. (Northeastern / ISI Foundation / epistorm)
+* **Author**: Northeastern, ISI Foundation, Epistorm (Nicolò Gozzi, Matteo Chinazzi, Alessandro Vespignani et al.)
 * **Model type**: Stochastic compartmental with Approximate Bayesian Computation (ABC) calibration
 * **Diseases**: Generic respiratory/infectious diseases (e.g., COVID-19, influenza); user-defined compartmental structures
 * **Language**: Python
@@ -155,20 +155,20 @@ The following were identified as the most important disease modeling software to
 * **Links**: [epydemix.org](https://www.epydemix.org/), [code](https://github.com/epistorm/epydemix), [docs](https://www.epydemix.org/)
 * **Publication**: Gozzi N. et al., "Epydemix: An open-source Python package for epidemic modeling with integrated approximate Bayesian calibration," PLOS Computational Biology, 2025
 * **Package**: [PyPI (16,570 downloads)](https://pepy.tech/projects/epydemix)
-* **Evidence of use**: ~23 GitHub stars; published in PLOS Comp Bio (2025); built-in support for 400+ countries via population/contact matrix data
-* **Description**: Open-source Python package for building stochastic compartmental epidemic models with built-in age-stratified contact matrices, demographics for 400+ countries, intervention modeling, and integrated ABC calibration
+* **Evidence of use**: ~23 GitHub stars; published in PLOS Comp Bio (2025)
+* **Description**: Open-source Python package for building stochastic compartmental epidemic models with built-in age-stratified contact matrices, demographics for 400+ locations, intervention modeling, and integrated ABC calibration
 
 ### epidemics
 
-* **Author**: Pratik R. Gupte, Rosalind M. Eggo, Adam Kucharski, et al. (CMMID, LSHTM; Epiverse-TRACE)
+* **Author**: LSHTM, Epiverse-TRACE (Pratik R. Gupte, Rosalind M. Eggo, Adam Kucharski, et al.)
 * **Model type**: Compartmental (deterministic and stochastic, discrete-time)
 * **Diseases**: Generic respiratory pathogens (influenza-like, COVID-19), Ebola virus disease, diphtheria
-* **Language**: R (with C++/Boost odeint backend)
+* **Language**: R (with C++ backend)
 * **Years**: 2023-2026
 * **Links**: [epiverse-trace.github.io/epidemics](https://epiverse-trace.github.io/epidemics/), [code](https://github.com/epiverse-trace/epidemics), [docs](https://epiverse-trace.github.io/epidemics/)
 * **Publication**: N/A (no primary peer-reviewed paper identified)
 * **Package**: N/A — not on CRAN (distributed via r-universe only)
-* **Evidence of use**: ~17 GitHub stars; part of the Wellcome-funded Epiverse-TRACE outbreak analytics ecosystem at LSHTM; available via CRAN and R-universe
+* **Evidence of use**: ~17 GitHub stars; part of the Wellcome-funded Epiverse-TRACE outbreak analytics ecosystem at LSHTM; wider Epiverse ecosystem with 200+ stars and 4k+ downloads
 * **Description**: R library of published compartmental epidemic models with composable classes for demographic structure, non-pharmaceutical interventions, and vaccination regimes for outbreak scenario modeling
 
 ### odin
