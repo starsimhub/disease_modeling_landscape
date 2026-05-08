@@ -21,11 +21,13 @@ Claude was the asked to reconcile the two lists and add additional information (
 
 Full results are listed [here](disease_modeling_software_database.md). A total of 171 software tools were found, although most had limited evidence of use.
 
+**Note:** Evidence of use is hard to quantify. "Downloads" vastly *overestimate* users, since the vast majority of downloads are due to automated runs (e.g. GitHub Actions or cluster deployment); these typically comprise perhaps 90-99.9% of downloads. GitHub stars *underestimate* users, since the majority of users (50-99%) download rather than star/fork.
+
 The following were identified as the most important disease modeling software tools, with related tools grouped together:
 
-1. [EMOD](#emod) — High-fidelity C++ individual-based multi-disease platform
-2. [LASER](#laser) — Lightweight Python toolkit for large-scale spatial eradication models
-3. [Starsim](#starsim) — Python agent-based framework for multi-disease network transmission
+1. [Starsim](#starsim) — Python agent-based framework for multi-disease network transmission
+2. [EMOD](#emod) — High-fidelity C++ individual-based multi-disease platform
+3. [LASER](#laser) — Lightweight Python toolkit for large-scale spatial eradication models
 4. [EpiModel](#epimodel) — R package for stochastic epidemics over dynamic ERGM networks
 5. [Spectrum](#spectrum) — Policy suite for official UNAIDS/WHO HIV, TB, and child-survival estimates
 6. [Optima](#optima) — Compartmental transmission models with allocative-efficiency optimisation
@@ -39,6 +41,19 @@ The following were identified as the most important disease modeling software to
 14. [EpiHiper](#epihiper) — HPC parallel agent-based simulator for 300M+ agents
 15. [MEmilio](#memilio) — Modular C++/Python library combining ODE, ABM, and hybrid models
 
+### Starsim
+
+* **Author**: Institute for Disease Modeling (IDM), Burnet Institute, and collaborators (Cliff Kerr et al.)
+* **Model type**: Agent-based / network framework
+* **Diseases**: Multi-disease (HIV, STIs, measles, TB, COVID-19, HPV, malaria, NCDs, pregnancy)
+* **Language**: Python
+* **Years**: 2023-2026
+* **Links**: [starsim.org](https://starsim.org/), [code](https://github.com/starsimhub/starsim), [docs](https://docs.starsim.org/)
+* **Publication**: Kerr CC et al. "Starsim: A fast, flexible framework for agent-based modeling of health and disease" (in preparation, 2026)
+* **Package**: [PyPI (63,640 downloads)](https://pepy.tech/projects/starsim) (plus [302k for Covasim](https://pepy.tech/projects/covasim), [39k for HPVsim](https://pepy.tech/projects/hpvsim), [18k for FPsim](https://pepy.tech/projects/fpsim), and [8k for STIsim](https://pepy.tech/projects/stisim))
+* **Evidence of use**: ~35 GitHub stars; supported by IDM/Gates Foundation; underpins STIsim, HPVsim, FPsim, and other disease-specific extensions
+* **Description**: Python agent-based modeling framework for simulating multi-disease transmission through dynamic networks, with built-in tools for interventions, scenario analysis, and calibration
+
 ### EMOD
 
 * **Author**: Institute for Disease Modeling (IDM) / Gates Foundation (originated by Philip Eckhoff, 2010)
@@ -48,7 +63,7 @@ The following were identified as the most important disease modeling software to
 * **Years**: 2010-2026
 * **Links**: [idmod.org/tools](https://www.idmod.org/tools/), [code](https://github.com/EMOD-Hub/EMOD), [docs](https://docs.idmod.org/projects/emod-generic/en/latest/)
 * **Publication**: Bershteyn A, Gerardin J, Bridenbecker D, et al. "[Implementation and applications of EMOD, an individual-based multi-disease modeling platform](https://doi.org/10.1093/femspd/fty059)." Pathogens and Disease, 76(5), fty059, 2018
-* **Package**: [PyPI (14,110 downloads)](https://pepy.tech/projects/emodpy)
+* **Package**: [PyPI (14,110 downloads)](https://pepy.tech/projects/emodpy) (for emodpy)
 * **Evidence of use**: ~105 GitHub stars; used by Nigeria's National Malaria Elimination Programme for the 2021–2025 strategic plan; deployed across multiple sub-Saharan African countries for malaria policy
 * **Description**: Mature C++ individual-based multi-disease modeling platform built for high-fidelity simulations including vector dynamics, with shared core code across pathogens
 
@@ -64,19 +79,6 @@ The following were identified as the most important disease modeling software to
 * **Package**: [PyPI (106,330 downloads)](https://pepy.tech/projects/laser-core)
 * **Evidence of use**: Developed by IDM under Gates Foundation; MIT-licensed; ecosystem of disease packages (laser-core, laser-generic, laser-measles)
 * **Description**: High-performance, lightweight agent-based spatial modeling toolkit designed for very large populations, with core components (LaserFrame, SortedQueue, PropertySet) for building eradication-focused disease models
-
-### Starsim
-
-* **Author**: Institute for Disease Modeling (IDM), Burnet Institute, and collaborators (Cliff Kerr et al.)
-* **Model type**: Agent-based / network framework
-* **Diseases**: Multi-disease (HIV, STIs, measles, TB, COVID-19, HPV, malaria, NCDs, pregnancy)
-* **Language**: Python
-* **Years**: 2023-2026
-* **Links**: [starsim.org](https://starsim.org/), [code](https://github.com/starsimhub/starsim), [docs](https://docs.starsim.org/)
-* **Publication**: Kerr CC et al. "Starsim: A fast, flexible framework for agent-based modeling of health and disease" (in preparation, 2026)
-* **Package**: [PyPI (63,640 downloads)](https://pepy.tech/projects/starsim)
-* **Evidence of use**: ~35 GitHub stars; supported by IDM/Gates Foundation; underpins STIsim, HPVsim, FPsim, and other disease-specific extensions
-* **Description**: Python agent-based modeling framework for simulating multi-disease transmission through dynamic networks, with built-in tools for interventions, scenario analysis, and calibration
 
 ### EpiModel
 
