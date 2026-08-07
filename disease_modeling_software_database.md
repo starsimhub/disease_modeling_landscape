@@ -16,7 +16,11 @@ A consolidated inventory of software libraries specifically designed for infecti
 
 ## Methodology & caveats
 
-This database merges two prior compilations (a Claude-authored survey and a GPT-authored survey) into a single deduplicated table. Tools listed have either (a) a peer-reviewed publication, (b) a maintained public repository with external users, or (c) been referenced in two or more independent reviews. The Usage column is best-effort — for repositories without obvious metrics it is left as "—". Star counts and citation totals are point-in-time snapshots and will drift.
+This database merges two prior compilations (a Claude-authored survey and a GPT-authored survey) into a single deduplicated table. Tools listed have either (a) a peer-reviewed publication, (b) a maintained public repository with external users, or (c) been referenced in two or more independent reviews. The Usage column is best-effort — for repositories without obvious metrics it is left as "—". Star counts and citation totals are point-in-time snapshots (2026-05-06) and will drift.
+
+**Maintenance status** has been verified only for the smaller set of tools covered in the [main summary](README.md), where it is recorded in a dedicated Status column. Elsewhere in this database, entries are annotated as **Unmaintained** only where the maintainers have retired the tool and this is known to us; the absence of such an annotation should not be read as confirmation that a tool is actively maintained.
+
+**Conflicts of interest**: this database was compiled by Cliff Kerr, who works at IDM, leads development of Starsim, and is a co-author on several of the publications referenced. Entries are ordered by category and then arbitrarily within category; no ordering here implies a ranking. Corrections and additions are welcome.
 
 ---
 
@@ -25,7 +29,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | Name | Type | Language | Authors | Link | Usage | Description |
 |---|---|---|---|---|---|---|
 | Starsim | ABM / network | Python | IDM / Starsim Hub | [starsim.org](https://starsim.org) | ★ 35 | Modular agent-based disease modeling framework with dynamic networks and multi-disease support. |
-| EMOD | ABM / IBM | C++/Python | IDM | [github.com](https://github.com/EMOD-Hub/EMOD) | ★ 105 | Individual-based multi-disease platform (HIV, TB, malaria, polio, measles, COVID). |
+| EMOD | ABM / IBM | C++/Python | IDM | [github.com](https://github.com/EMOD-Hub/EMOD) | ★ 105 | **Unmaintained.** Individual-based multi-disease platform (HIV, TB, malaria, polio, measles, COVID). |
 | EpiModel | ABM / network / Compartmental | R | Statnet / Emory | [epimodel.org](https://epimodel.org) | ★ 271 | Deterministic, stochastic individual-contact, and stochastic network epidemic models; 125+ studies. |
 | EpiHiper | ABM / network | C++ | UVA Biocomplexity / NSSAC | [github.com](https://github.com/NSSAC/EpiHiper) | ★ 6 | High-performance epidemic simulation over large dynamic contact networks; CDC Scenario Modeling Hub. |
 | Atomica | Compartmental | Python | Burnet Institute | [github.com](https://github.com/atomicateam/atomica) | ★ 14 | Compartmental engine for disease + cascade modeling, calibration, and scenarios (successor to Optima). |
@@ -169,7 +173,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | ECDC HIV Modelling Tool / hivPlatform | Back-calculation | R | ECDC | [github.com](https://github.com/EU-ECDC/hivPlatform) | Used by EU/EEA national HIV surveillance teams | Back-calculation of HIV incidence and undiagnosed populations from surveillance data. |
 | HIV Synthesis | HIV ABM | Custom (Fortran-style) | UCL (Phillips) | [ucl.ac.uk](https://www.ucl.ac.uk/global-health/research/z-research/hiv-synthesis-model) | Phillips group has 100k+ citations across HIV work | Individual-based stochastic HIV model used for PrEP, ART resistance, and self-testing policy analyses in sub-Saharan Africa. |
 | PopART-IBM | HIV ABM | C | Imperial / Oxford BDI | [github.com](https://github.com/BDI-pathogens/POPART-IBM) | PLOS Comp Biol 2021 (Pickles et al.) | Highly efficient stochastic individual-based simulation developed for the HPTN 071 (PopART) trial. |
-| EMOD-HIV | HIV ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-hiv) | EMOD platform paper widely cited (Bershteyn 2018) | IDM agent-based HIV model with detailed cascade and care pathway support, built on the EMOD platform. |
+| EMOD-HIV | HIV ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-hiv) | EMOD platform paper widely cited (Bershteyn 2018) | **Unmaintained.** IDM agent-based HIV model with detailed cascade and care pathway support, built on the EMOD platform. |
 | HIVsim (Starsim) | HIV ABM | Python | Starsim Hub | [starsim.org](https://starsim.org) | Part of Starsim ecosystem (2024) | Starsim-based individual-based HIV transmission and intervention model. |
 | Optima HIV | Allocative efficiency | Python | Optima Consortium / Burnet Institute | [optimamodel.com](https://optimamodel.com/hiv/) | Applied in 40+ countries (23 govt-led analyses with World Bank/UNDP) | Compartmental HIV epidemic and allocative-efficiency model for program prioritization, supported by World Bank, UN, and CDC. |
 | CEPAC (HIV-CDM) | Microsimulation | C++ | MGH / Harvard MPEC | [massgeneral.org](https://www.massgeneral.org/medicine/mpec/research/cepac) | Hundreds of cost-effectiveness publications | State-transition Monte Carlo microsimulation of HIV disease progression for clinical and policy cost-effectiveness analysis. |
@@ -182,7 +186,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | Name | Type | Language | Authors | Link | Usage | Description |
 |---|---|---|---|---|---|---|
 | TIME Impact | Compartmental | C++ / GUI | Avenir Health / LSHTM / KNCV | [avenirhealth.org](https://avenirhealth.org/software-time.php) | Used in South Africa, Ghana, and other countries for TB investment cases | Spectrum-nested TB transmission model for impact, cost-effectiveness, and strategic planning. |
-| EMOD-TB | TB ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub) | EMOD platform paper widely cited | IDM individual-based TB model with HIV co-infection, drug resistance, and treatment dynamics. |
+| EMOD-TB | TB ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub) | EMOD platform paper widely cited | **Unmaintained.** IDM individual-based TB model with HIV co-infection, drug resistance, and treatment dynamics. |
 | TBVx | Vaccine impact | Python | KNCV / TB Modelling | [github.com](https://github.com/kncvtbplus/tbvx) | Used in PLOS Medicine TB vaccine cost-effectiveness studies | Country-level vaccine-impact TB transmission model. |
 | Optima TB | Allocative efficiency | Python | Optima Consortium / Burnet Institute | [optimamodel.com](https://optimamodel.com/tb/applications.html) | PLOS Comp Biol 2021; applied in Malawi, Indonesia, South Africa, Mozambique, Belarus, Tajikistan, Kyrgyz Republic | Compartmental TB transmission and allocative-efficiency model for optimizing TB spending. |
 
@@ -194,7 +198,7 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | malariasimulation | Malaria ABM | R / C++ | Imperial MRC IDE | [github.com](https://github.com/mrc-ide/malariasimulation) | ★ 21; basis of Imperial WHO/Global Fund analyses | Imperial individual-based model of P. falciparum malaria for vector control and intervention deployment. |
 | malariaEquilibrium | Equilibrium solver | R | Imperial MRC IDE | [github.com](https://github.com/mrc-ide/malariaEquilibrium) | ★ 3 | R package solving the equilibrium of the Imperial malaria transmission model. |
 | AnophelesModel | Vector model | R | Swiss TPH | [github.com](https://github.com/SwissTPH/AnophelesModel) | ★ 7 | R package modeling Anopheles bionomics and vector control product effects on malaria transmission. |
-| EMOD-Malaria | Malaria ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-malaria) | EMOD platform widely cited | IDM individual-based malaria model with mechanistic vector and within-host components. |
+| EMOD-Malaria | Malaria ABM | C++ / Python | IDM | [github.com](https://github.com/EMOD-Hub/emodpy-malaria) | EMOD platform widely cited | **Unmaintained.** IDM individual-based malaria model with mechanistic vector and within-host components. |
 | Skeeter Buster | Vector model | C++ | NC State University | [journals.plos.org](https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0000508) | PLOS NTD 2009; SB2 update 2022 | Stochastic, spatially explicit Aedes aegypti (and Anopheles) population model for vector control and gene-drive studies. |
 | OpenMalaria-MESA | Malaria ABM | C++ | MESA Malaria | [mesamalaria.org](https://mesamalaria.org) | MESA knowledge hub deployment | Hosted deployment of OpenMalaria for the MESA malaria modeling community. |
 | MicroMoB | Vector-borne | R | dd-harp consortium | [github.com](https://github.com/dd-harp/MicroMoB) | ★ 2 | Modular framework for mosquito-borne disease modeling with pluggable components. |
