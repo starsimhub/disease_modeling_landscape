@@ -1,10 +1,8 @@
 # **Disease modeling software landscape**
 
-Cliff Kerr | 2026.05.06
-
 ## Introduction
 
-The aim of this document is to summarize the current landscape of software tools that are:
+The aim of this project is to summarize the current landscape of software tools that are:
 
 1. Focused on dynamical disease modeling (excluding data or statistical tools, or general purpose tools that are used for, but not specific to, disease modeling)  
 2. Open source and in use by the community (excluding one-off models supporting publications, or that have no evidence of reuse)
