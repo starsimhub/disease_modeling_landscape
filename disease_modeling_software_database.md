@@ -16,7 +16,15 @@ A consolidated inventory of software libraries specifically designed for infecti
 
 ## Methodology & caveats
 
-This database merges two prior compilations (a Claude-authored survey and a GPT-authored survey) into a single deduplicated table. Tools listed have either (a) a peer-reviewed publication, (b) a maintained public repository with external users, or (c) been referenced in two or more independent reviews. The Usage column is best-effort — for repositories without obvious metrics it is left as "—". Star counts and citation totals are point-in-time snapshots (2026-05-06) and will drift.
+This database merges two prior compilations (a Claude-authored survey and a GPT-authored survey) into a single deduplicated table. Tools listed have either (a) a peer-reviewed publication, (b) a maintained public repository with external users, or (c) been referenced in two or more independent reviews. The Usage column is best-effort — for repositories without obvious metrics it is left as "—". Star counts and citation totals are point-in-time snapshots (2026-05-06, with a second pass 2026-08-07) and will drift.
+
+**Second pass — systematic search.** The initial compilation relied on what two language models could recall, which under-represents tools whose main visibility is a software paper rather than a widely cited application. A structured search was therefore run on 2026-08-07 to find what recall had missed, using no author or project names as query terms:
+
+1. **Crossref bibliographic queries** (~30 keyword combinations of a modeling term — *epidemic, infectious disease, outbreak, transmission, metapopulation, agent-based, compartmental, SEIR* — with a software term — *package, framework, platform, library, toolkit, simulator, pipeline*), run both across the whole corpus and restricted to the journals that publish software papers: JOSS (ISSN 2475-9066), *Epidemics*, *Journal of Statistical Software*, *Journal of Open Research Software*, *SoftwareX*, *PLOS Computational Biology*, and *Infectious Disease Modelling*.
+2. **GitHub repository search** by topic (`epidemiology`, `epidemic-model`, `disease-modeling`, `agent-based-model`, `infectious-diseases`, `compartmental-model`) and by keyword in name/description, sorted by stars.
+3. **The CRAN *Epidemiology* Task View**, as a curated index of the R ecosystem.
+
+This added 24 entries (bringing the total to 195) and supplied publication references for several existing ones. Below roughly 10 GitHub stars the repository searches return almost entirely coursework and one-off projects, which is the practical floor of this method. The search was English-language and Crossref/GitHub-indexed, so tools published in other languages, distributed outside GitHub/CRAN/PyPI, or documented only in grey literature remain under-represented.
 
 **Maintenance status** has been verified only for the smaller set of tools covered in the [main summary](README.md), where it is recorded in a dedicated Status column. Elsewhere in this database, entries are annotated as **Unmaintained** only where the maintainers have retired the tool and this is known to us; the absence of such an annotation should not be read as confirmation that a tool is actively maintained.
 
@@ -44,10 +52,18 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | MatSim-EpiSim | ABM | Java | TU Berlin | [github.com](https://github.com/matsim-org/matsim-episim-libs) | ★ 12 | Activity-based mobility epidemic model. |
 | RepastHPC | ABM | C++ | Argonne National Lab | [repast.github.io](https://repast.github.io) | ★ 29 | Parallel agent-based simulation toolkit widely used for epi. |
 | OpenCOVID | ABM | Julia/Python | Swiss TPH | [github.com](https://github.com/SwissTPH/OpenCOVID) | ★ 74 | Spatial agent-based epidemic framework. |
-| Pathogen.jl | ABM / Inference | Julia | academic | [github.com](https://github.com/jangevaare/Pathogen.jl) | — | Bayesian individual-level disease modeling. |
+| Pathogen.jl | ABM / Inference | Julia | U. Guelph / U. Calgary (Angevaare, Feng, Deardon) | [github.com](https://github.com/jangevaare/Pathogen.jl) | ★ 75; J Stat Softw 2022 | Bayesian individual-level disease transmission network modeling and inference. |
+| epiworldR / epiworld | ABM | R / C++ (also Python) | U. Utah (Meyer, Vega Yon) | [github.com](https://github.com/UofUEpiBio/epiworldR) | ★ 14; 15k CRAN downloads; JOSS 2023 | Fast agent-based epidemiological modeling with multi-disease and user-defined intervention support. |
+| individual | ABM / IBM toolkit | R / C++ | MRC IDE Imperial (Charles, Wu) | [github.com](https://github.com/mrc-ide/individual) | ★ 35; 7.6k CRAN downloads; JOSS 2021 | State-and-event toolkit for building individual-based epidemiological models; underpins malariasimulation. |
+| GEMS | ABM / Microsim | Julia | U. Trier / IMMIDD (OptimAgent project) | [github.com](https://github.com/IMMIDD/GEMS) | ★ 13 | German Epidemic Microsimulation System — nationwide individual-based simulator with synthetic populations. |
+| summer / summer2 | Compartmental | Python | Monash University (Trauer, Ragonnet et al.) | [github.com](https://github.com/monash-emu/summer2) | Basis of the AuTuMN TB/COVID models used across Asia-Pacific | Framework for building stratified compartmental models with a declarative flow API and JAX backend. |
+| epymorph | Metapopulation / Spatial | Python | Northern Arizona University (CCL) | [github.com](https://github.com/NAU-CCL/Epymorph) | ★ 9 | Modular spatial metapopulation modeling framework separating disease, movement, and geography. |
+| MetaCast | Metapopulation | Python | academic (Grunnill) | [github.com](https://github.com/m-d-grunnill/MetaCast) | ★ 3; JOSS 2024 | Broadcasts a user-defined epidemiological or ecological model across arbitrary metapopulation dimensions. |
+| Eir | ABM / spatial | Python | academic (Srinivasan) | [pypi.org](https://pypi.org/project/Eir/) | JOSS 2021 | Python package for simulating epidemics with spatial and mobility structure. |
+| MetaWards | Metapopulation | Python/Cython | University of Bristol | [github.com](https://github.com/metawards/MetaWards) | ★ 14; JOSS 2021 | Flexible ward-level metapopulation framework for modelling disease spread across England and Wales. |
 | Mesa | ABM | Python | Project Mesa | [github.com](https://github.com/projectmesa/mesa) | ★ 3.6k | General ABM framework, widely used for epi models. |
 | NetLogo | ABM | Scala/Java | Northwestern CCL | [ccl.northwestern.edu](https://ccl.northwestern.edu/netlogo/) | ★ 1.2k | General ABM platform with extensive epi-model library. |
-| flepiMoP | Metapopulation / Inference | Python/R | Johns Hopkins IDD | [github.com](https://github.com/HopkinsIDD/flepiMoP) | ★ 11 | Flexible infectious disease modeling and forecasting framework, used for COVID-19 and influenza. |
+| flepiMoP | Metapopulation / Inference | Python/R | Johns Hopkins IDD | [github.com](https://github.com/HopkinsIDD/flepiMoP) | ★ 12; 33 contributors; Epidemics 2024; US COVID-19 and Flu Scenario Modeling Hubs | Flexible infectious disease modeling and forecasting pipeline, used for COVID-19 and influenza. |
 | Epiabm | ABM | Python/C++ | Cambridge / Imperial (SABS-R3) | [github.com](https://github.com/SABS-R3-Epidemiology/epiabm) | ★ 20 | Open-source epidemiological ABM reimplementing Imperial's CovidSim approach. |
 | OpenABM-Covid19 | ABM / network | C/Python | Oxford BDI | [github.com](https://github.com/BDI-pathogens/OpenABM-Covid19) | ★ 128 | Network agent-based simulator of COVID-19 transmission and contact tracing. |
 | Covasim | ABM | Python | IDM | [covasim.org](https://covasim.org) | ★ 287 | Agent-based COVID-19 simulator with interventions, calibration, and policy scenarios. |
@@ -67,8 +83,15 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | mcstate | Inference | R | MRC IDE Imperial | [mrc-ide.github.io](https://mrc-ide.github.io/mcstate/) | ★ 19 | pMCMC / particle filter for odin/dust. |
 | epidemia | Compartmental / Inference | R/Stan | Imperial (Bhatt/Flaxman) | [imperialcollegelondon.github.io](https://imperialcollegelondon.github.io/epidemia/) | ★ 49 | Bayesian semi-mechanistic epidemic regression in Stan. |
 | PyRoss | Compartmental / Inference | Python | U. Cambridge | [github.com](https://github.com/rajeshrinet/pyross) | ★ 166 | Inference, prediction, and control of epidemics via ODE/SDE. |
-| epipack | Compartmental | Python | HU Berlin | [github.com](https://github.com/benmaier/epipack) | ★ 34 | Numerical and symbolic compartmental modeling. |
+| epipack | Compartmental | Python | HU Berlin (Maier) | [github.com](https://github.com/benmaier/epipack) | ★ 35; JOSS 2021 | Numerical, symbolic, and stochastic-network compartmental modeling from reaction equations. |
 | BayesianTools | Inference | R | academic (Hartig) | [github.com](https://github.com/florianhartig/BayesianTools) | ★ 129 | MCMC tooling commonly used for epi inference. |
+| EpiDynamics | Compartmental | R | academic | [cran.r-project.org](https://cran.r-project.org/package=EpiDynamics) | 50k CRAN downloads | Collection of SIR/SEIR/SIS model variants implementing Keeling & Rohani's textbook models. |
+| tsiR | Compartmental / Inference | R | Princeton (Becker, Grenfell) | [github.com](https://github.com/adbecker/tsiR) | ★ 9; 38k CRAN downloads; JOSS 2017 | Time-series SIR fitting and simulation for recurrent epidemics such as measles. |
+| Bernadette | Compartmental / Inference | R/Stan | academic | [cran.r-project.org](https://cran.r-project.org/package=Bernadette) | 11k CRAN downloads; JOSS 2023 | Bayesian evidence synthesis for age-specific transmission dynamics and mortality. |
+| EpiILMCT | IBM / Inference | R | U. Calgary (Deardon group) | [cran.r-project.org](https://cran.r-project.org/package=EpiILMCT) | J Stat Softw 2021 | Continuous-time individual-level models of infectious disease with Bayesian inference. |
+| hybridModels | Metapopulation / Stochastic | R | academic (Brazil) | [cran.r-project.org](https://cran.r-project.org/package=hybridModels) | J Stat Softw 2020 | Stochastic simulation of disease spread over dynamic animal-movement networks. |
+| AlgebraicPetri.jl | Compositional / Petri net | Julia | AlgebraicJulia (DARPA ASKEM) | [github.com](https://github.com/AlgebraicJulia/AlgebraicPetri.jl) | ★ 94 | Category-theoretic composition of Petri-net epidemic models from reusable building blocks. |
+| GEMFsim | Network / Stochastic | MATLAB/Python/R/C | Kansas State NetSE (Sahneh, Scoglio) | [ece.k-state.edu](https://www.ece.k-state.edu/netse/software/) | J Comput Sci 2017 | Stochastic simulator for the Generalized Epidemic Modeling Framework on multilayer networks. |
 
 ## 3. Rt estimation, nowcasting, and forecasting
 
@@ -87,6 +110,10 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | Multi-target Multi-scale Forecasting Framework | Forecasting (ensemble) | Python/R | UVA Biocomplexity | [covid19-forecast.uvadsos.io](http://covid19-forecast.uvadsos.io/) | — | Ensemble framework (AR, Kalman, LSTM, compartmental) producing UVA hub forecast submissions. |
 | PatchSim | Forecasting (metapopulation) | Python | UVA NSSAC | [github.com](https://github.com/NSSAC/PatchSim) | — | National-scale metapopulation SEIR simulator used for influenza and COVID-19 forecasting. |
 | NobBS | Nowcasting | R | Harvard / Lipsitch lab | [github.com](https://github.com/sarahhbellum/NobBS) | — | Nowcasting by Bayesian Smoothing for delayed disease reporting (McGough et al. 2020). |
+| hubverse | Forecast hub infrastructure | R | Consortium of Infectious Disease Modeling Hubs | [hubverse.io](https://hubverse.io) | ~24 hubs incl. US CDC, ECDC; Nature Health 2026 | Standards and tooling for collecting, validating, aggregating, and scoring multi-team forecast hub submissions. |
+| epigrowthfit | Growth-rate estimation | R | McMaster (Bolker group) | [github.com](https://github.com/davidearn/epigrowthfit) | — | Nonlinear mixed-effects fitting of epidemic growth curves to estimate r and R0. |
+| EpiInvert | Incidence deconvolution / Rt | R/C++ | Universidad de Las Palmas | [cran.r-project.org](https://cran.r-project.org/package=EpiInvert) | PLOS ONE / Biology 2022 | Variational deconvolution of reported incidence to recover infection dates and Rt. |
+| SubEpiPredict / SpatialWavePredict | Forecasting (ensemble) | MATLAB | Georgia State (Chowell group) | [github.com](https://github.com/gchowell/SubEpiPredict-Toolbox) | PLOS Comp Biol 2022; BMC Med Res Methodol 2024 | Ensemble n-sub-epidemic wave toolboxes for short-term forecasting of epidemic trajectories. |
 
 ## 4. Outbreak analytics & data toolkits
 
@@ -115,6 +142,9 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | EpiModel-networks module | Network ABM | R | Statnet / Emory (Jenness et al.) | [epimodel.org](https://epimodel.org) | ★ 271 | Stochastic network epidemic models built on temporal ERGMs. |
 | socialmixr | Contact matrices | R | epiforecasts | [github.com](https://github.com/epiforecasts/socialmixr) | ★ 43 | Derive age-structured contact matrices from POLYMOD-style surveys. |
 | contactdata | Contact matrices | R | community | [cran.r-project.org](https://cran.r-project.org/package=contactdata) | — | Prem et al. synthetic contact matrices for 152 countries. |
+| nosoi | Agent-based transmission | R | KU Leuven (Lequime, Bastide, Dellicour, Lemey, Baele) | [github.com](https://github.com/slequime/nosoi) | ★ 21; 30k CRAN downloads; Methods Ecol Evol 2020 | Forward agent-based stochastic simulator of transmission chains with host and vector population structure. |
+| epichains | Branching process | R | Epiverse-TRACE / LSHTM | [github.com](https://github.com/epiverse-trace/epichains) | ★ 15; 4.8k CRAN downloads | Simulation and likelihood inference for transmission chain sizes and lengths via branching processes. |
+| nbTransmission | Transmission inference | R | Boston University | [cran.r-project.org](https://cran.r-project.org/package=nbTransmission) | PLOS Comp Biol 2020 | Naive Bayes estimation of relative transmission probabilities between cases from covariates. |
 
 ## 6. Phylodynamics & genomic epidemiology
 
@@ -235,6 +265,8 @@ This database merges two prior compilations (a Claude-authored survey and a GPT-
 | LEMMA | Bayesian compartmental | R/Stan | UCSF | [github.com](https://github.com/LocalEpi/LEMMA) | California county forecasts during pandemic | Bayesian local-epidemic model fitting hospitalizations, ICU, deaths, cases, and seroprevalence. |
 | FluSurv-Network / FluSight | Ensemble forecasting | R/Python | CDC / Reich Lab (UMass) | [reichlab.io](https://reichlab.io/flusightnetwork) | Adopted by CDC as primary flu forecast 2018+ | Multi-team collaborative ensemble forecasts of US influenza adopted by CDC. |
 | RSV-MODEL ensemble | Ensemble forecasting | R | CDC / MIDAS / Hopkins IDD | [rsvforecasthub.org](https://rsvforecasthub.org/) | Operational US RSV Forecast Hub | Collaborative weekly RSV hospitalization forecasts feeding CDC RSV-NET. |
+| COVSIM | Stochastic ABM | Python | NC State University | [doi.org](https://doi.org/10.1016/j.epidem.2024.100752) | Epidemics 2024; NC state-level policy analyses | County-resolved agent-based COVID-19 model of North Carolina with vaccination and NPI scenarios (no public repository located). |
+| CovsirPhy | Compartmental / Inference | Python | community (Hirokazu Takaya) | [github.com](https://github.com/lisphilar/covid19-sir) | ★ 113 | Phase-dependent SIR-derived ODE analysis, parameter estimation, and scenario projection for COVID-19. |
 
 ## 14. Disease-specific: STIs, vector-borne, vaccine-preventable, other
 

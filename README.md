@@ -13,7 +13,11 @@ Both Claude Opus 4.7 and ChatGPT 5.5 were given the following prompt:
 
 > "List all epidemiology / disease modeling software libraries. List as many as you can find, that have evidence of >1 group using or have been published. These should be specific for disease modeling (e.g. EpiEstim), not general-purpose tools that could be used for disease modeling (e.g. NumPy). Include the name, brief description, and link."
 
-Claude was then asked to reconcile the two lists and add additional information (e.g. model type and disease). Full results are listed [here](disease_modeling_software_database.md): a total of 171 software tools were found, although most had limited evidence of use.
+Claude was then asked to reconcile the two lists and add additional information (e.g. model type and disease). Full results are listed [here](disease_modeling_software_database.md).
+
+Asking a language model to recall tools has a predictable bias: it favours tools that are widely *cited* over tools that are widely *used*, and it systematically misses packages whose main published output is a software paper rather than a high-profile application. A second, systematic pass was therefore run on 2026-08-07 to find what recall had missed — Crossref bibliographic queries combining modeling keywords (*epidemic, infectious disease, outbreak, transmission, metapopulation, agent-based, compartmental*) with software keywords (*package, framework, platform, library, toolkit, simulator, pipeline*), both corpus-wide and restricted to the journals that publish software papers (JOSS, *Epidemics*, *Journal of Statistical Software*, *Journal of Open Research Software*, *SoftwareX*, *PLOS Computational Biology*, *Infectious Disease Modelling*); GitHub repository search by topic and by keyword, sorted by stars; and the CRAN *Epidemiology* Task View. Details and limitations are recorded in the [database methodology](disease_modeling_software_database.md#methodology--caveats).
+
+That pass added 24 tools, bringing the total to 195, and added three tools to the summary list below. Most entries in the database still have limited evidence of use.
 
 ### Selection criteria
 
@@ -23,7 +27,7 @@ From that database, the tools below were selected as those in widest current use
 2. **Availability**: it is publicly obtainable and documented, whether open source or (as for Spectrum and GLEAM) available to external users under another licence.
 3. **Evidence of use beyond the originating group**: either a peer-reviewed publication describing the tool, **or** documented application by two or more independent institutions.
 
-Selection is still a judgment call, and other tools in the database could reasonably be included. Corrections and additions are welcome.
+These criteria are necessary but not sufficient: many database entries meet all three. The additional filter is breadth of current use, which is the softest part of the process and the most open to challenge. The [tools considered but not included](#tools-considered-but-not-included) section below names the closest calls and the specific reason each fell short, so that the exclusions can be argued with rather than guessed at. Corrections and additions are welcome.
 
 ### Author and conflicts of interest
 
@@ -52,9 +56,12 @@ Where a tool anchors a family of packages, the related packages are listed separ
 | [epidemics](#epidemics) | LSHTM | R | Active | Library of composable compartmental outbreak models |
 | [EpiHiper](#epihiper) | University of Virginia | C++ | Active | HPC parallel agent-based simulator for 300M+ agents |
 | [EpiModel](#epimodel) | Emory University | R | Active | Stochastic epidemics over dynamic ERGM networks |
+| [epiworldR](#epiworldr) | University of Utah | R/C++ | Active | Fast multi-disease agent-based models with user-defined interventions |
 | [Epydemix](#epydemix) | Northeastern / ISI | Python | Active | Compartmental modeling with ABC calibration |
+| [flepiMoP](#flepimop) | Johns Hopkins | Python/R | Active | Metapopulation pipeline behind US Scenario Modeling Hub submissions |
 | [FRED](#fred) | University of Pittsburgh | C++ | Low activity | Agent-based framework using US census synthetic populations |
 | [GLEAM](#gleam) | Northeastern / ISI | C++ | Active | Global metapopulation simulator using air-travel mobility data |
+| [individual](#individual) | Imperial College London | R/C++ | Active | Toolkit for building individual-based models; underpins malariasimulation |
 | [MEmilio](#memilio) | DLR / RKI | C++/Python | Active | Modular library combining ODE, ABM, and hybrid models |
 | [odin](#odin) | Imperial College London | R | Active | DSL compiling ODE and stochastic models to fast C |
 | [Optima](#optima) | Burnet Institute | Python | Active | Compartmental models with allocative-efficiency optimisation |
@@ -134,6 +141,21 @@ Where a tool anchors a family of packages, the related packages are listed separ
 * **Related packages**: EpiModelHIV, EpiModelCOVID, and the underlying statnet suite are distributed and counted separately
 * **Description**: R package providing a general stochastic framework for simulating epidemics over dynamic contact networks, leveraging temporal ERGMs from the statnet suite
 
+### epiworldR
+
+* **Author**: University of Utah, Division of Epidemiology (Derek Meyer, George G. Vega Yon)
+* **Model type**: Agent-based, with network, small-world, and fully-connected population structures
+* **Diseases**: Generic SIS/SIR/SEIR and variants; supports multiple simultaneous diseases and user-defined models
+* **Language**: R and Python wrappers over a header-only C++ library (`epiworld`)
+* **Years**: 2021-2026
+* **Status**: Active (last commit 2026-08)
+* **Links**: [uofuepibio.github.io/epiworldR](https://uofuepibio.github.io/epiworldR/), [code](https://github.com/UofUEpiBio/epiworldR), [docs](https://uofuepibio.github.io/epiworldR/)
+* **Publication**: Meyer D, Vega Yon GG. "[epiworldR: Fast Agent-Based Epi Models](https://doi.org/10.21105/joss.05781)." Journal of Open Source Software, 8(90), 5781, 2023
+* **Package**: [CRAN (15,323 downloads)](https://cran.r-project.org/package=epiworldR)
+* **Evidence of use**: ~14 GitHub stars; peer-reviewed software paper; distributed on CRAN with a companion Shiny interface (epiworldRShiny) and taught through published workshop material
+* **Related packages**: the underlying C++ library `epiworld` and the Python binding `epiworldpy` are distributed separately
+* **Description**: Agent-based framework designed for speed, with a C++ backend, out-of-the-box parallelisation across simulation replicates, support for multiple concurrent diseases, and transmission probabilities that can depend on agent attributes
+
 ### Epydemix
 
 * **Author**: Northeastern, ISI Foundation, Epistorm (Nicolò Gozzi, Matteo Chinazzi, Alessandro Vespignani et al.)
@@ -147,6 +169,20 @@ Where a tool anchors a family of packages, the related packages are listed separ
 * **Package**: [PyPI (16,570 downloads)](https://pepy.tech/projects/epydemix)
 * **Evidence of use**: ~69 GitHub stars; published in PLOS Comp Bio (2025)
 * **Description**: Open-source Python package for building stochastic compartmental epidemic models with built-in age-stratified contact matrices, demographics for 400+ locations, intervention modeling, and integrated ABC calibration
+
+### flepiMoP
+
+* **Author**: Johns Hopkins Bloomberg School of Public Health, Infectious Disease Dynamics group, with UNC Chapel Hill and other collaborators (Joseph C. Lemaitre, Sara L. Loo, Joshua Kaminsky, Justin Lessler, Shaun Truelove et al.)
+* **Model type**: Spatial metapopulation compartmental model with a modular inference and scenario layer
+* **Diseases**: COVID-19, influenza, RSV; configurable compartmental structures for other pathogens
+* **Language**: Python simulation core with R inference and post-processing tooling
+* **Years**: 2020-2026 (public repository from 2023)
+* **Status**: Active (last commit 2025-12)
+* **Links**: [flepimop.org](https://www.flepimop.org/), [code](https://github.com/HopkinsIDD/flepiMoP), [docs](https://www.flepimop.org/)
+* **Publication**: Lemaitre JC, Loo SL, Kaminsky J, Lee EC, McKee C, Smith C, Jung S, Sato K, Carcelen A, Hill A, Lessler J, Truelove S. "[flepiMoP: The evolution of a flexible infectious disease modeling pipeline during the COVID-19 pandemic](https://doi.org/10.1016/j.epidem.2024.100753)." Epidemics, 47, 100753, 2024
+* **Package**: N/A — distributed via GitHub
+* **Evidence of use**: ~12 GitHub stars but 33 contributors; used for Johns Hopkins submissions to the US COVID-19 Scenario Modeling Hub, the Flu Scenario Modeling Hub, and CDC forecasting hubs; applied to state-level projections across the US
+* **Description**: Configuration-driven pipeline that separates the epidemic model, the observation/likelihood model, and the inference engine, allowing spatially resolved metapopulation models to be specified in YAML and fitted to surveillance data at scale
 
 ### FRED
 
@@ -175,6 +211,21 @@ Where a tool anchors a family of packages, the related packages are listed separ
 * **Package**: N/A
 * **Evidence of use**: Used for real-time forecasting of 2009 H1N1, 2014 Ebola, 2016 Zika, and COVID-19 (Chinazzi et al. Science 2020 with 2000+ citations); widely used by WHO, CDC
 * **Description**: Stochastic, spatially structured metapopulation epidemic simulator integrating worldwide census and mobility data (3300+ subpopulations) to forecast global pandemic spread
+
+### individual
+
+* **Author**: MRC Centre for Global Infectious Disease Analysis, Imperial College London (Giovanni D. Charles, Sean L. Wu, Peter Winskill et al.)
+* **Model type**: Individual-based / agent-based modeling toolkit (state-and-event architecture with bitset-based population representation)
+* **Diseases**: General-purpose; the principal downstream application is malaria (`malariasimulation`)
+* **Language**: R with a C++ backend
+* **Years**: 2019-2026
+* **Status**: Active (last commit 2026-06)
+* **Links**: [mrc-ide.github.io/individual](https://mrc-ide.github.io/individual/), [code](https://github.com/mrc-ide/individual), [docs](https://mrc-ide.github.io/individual/)
+* **Publication**: Charles GD, Wu SL. "[individual: An R package for individual-based epidemiological models](https://doi.org/10.21105/joss.03539)." Journal of Open Source Software, 6(66), 3539, 2021
+* **Package**: [CRAN (7,589 downloads)](https://cran.r-project.org/package=individual)
+* **Evidence of use**: ~35 GitHub stars; provides the simulation engine for `malariasimulation`, which underpins Imperial's malaria analyses for WHO and the Global Fund; used across several MRC IDE disease models
+* **Related packages**: `malariasimulation` and other MRC IDE models built on it are distributed and counted separately
+* **Description**: A deliberately minimal toolkit that supplies the state, variable, and event machinery for individual-based models — leaving the epidemiology to the modeller — with performance-oriented bitset operations in C++; a building block rather than an end-to-end platform, included here on the strength of its downstream policy use
 
 ### MEmilio
 
@@ -262,3 +313,26 @@ Where a tool anchors a family of packages, the related packages are listed separ
 * **Evidence of use**: ~54 GitHub stars on the original repository; used at IHME for GBD-linked microsimulation studies (diarrhea, neonatal, ischemic heart disease, women's health interventions); BSD-3 licensed
 * **Related packages**: vivarium_public_health and numerous `vivarium_gates_*` study repositories are distributed separately
 * **Description**: Python framework for building modular, component-based microsimulations that link demographic and disease-burden data (notably IHME's Global Burden of Disease estimates) into individual-level simulations of health interventions
+
+## Tools considered but not included
+
+Every tool below is a legitimate, publicly available disease modeling tool, and several are peer-reviewed. They are listed here because the boundary of the summary list is a judgment call, and an omission is easier to challenge when the reason is stated. All appear in the [full database](disease_modeling_software_database.md).
+
+| Tool | Institution | Why not listed |
+|---|---|---|
+| [Covasim](https://covasim.org) | IDM | Disease-specific (COVID-19) rather than general-purpose; treated as a predecessor codebase of Starsim |
+| [CovidSim](https://github.com/mrc-ide/covid-sim) | Imperial College London | Disease-specific; a policy model rather than a reusable framework, and no longer developed |
+| [dust](https://mrc-ide.github.io/dust/), [mcstate](https://mrc-ide.github.io/mcstate/) | Imperial College London | Components of the odin toolchain, counted as related packages of odin rather than separately |
+| [EoN](https://github.com/springer-math/Mathematics-of-Epidemics-on-Networks) | Joel Miller / community | Scoped to spreading processes on networks; principally a companion to a textbook |
+| [Epiabm](https://github.com/SABS-R3-Epidemiology/epiabm) | Cambridge / Imperial | A reimplementation of CovidSim built as a software-engineering exercise; limited independent application |
+| [epipack](https://github.com/benmaier/epipack) | HU Berlin | Peer-reviewed (JOSS 2021) and actively maintained, but no documented application outside the originating group |
+| [GEMS](https://github.com/IMMIDD/GEMS) | University of Trier | Published 2025 and actively developed; too new to show use beyond the originating project |
+| [hubverse](https://hubverse.io) | Consortium of Infectious Disease Modeling Hubs | Infrastructure for running forecast hubs, not a dynamical disease model — fails criterion 1 despite very wide adoption |
+| [MetaWards](https://github.com/metawards/MetaWards) | University of Bristol | Peer-reviewed (JOSS 2021), but little development since 2024 and use concentrated in one group |
+| [OpenABM-Covid19](https://github.com/BDI-pathogens/OpenABM-Covid19) | Oxford BDI | Disease-specific; development ceased after the pandemic |
+| [pomp](https://kingaa.github.io/pomp/) | University of Michigan | A general statistical inference framework for partially observed Markov processes, not specific to disease modeling — fails criterion 1 |
+| [SEIRS+](https://github.com/ryansmcgee/seirsplus) | community (McGee) | Widely starred (675) but no peer-reviewed software paper and no public development since 2023 |
+| [SimInf](https://github.com/stewid/SimInf) | SLU / Linköping | Peer-reviewed (JSS 2019) and maintained; use concentrated in veterinary epidemiology rather than general-purpose |
+| [summer](https://github.com/monash-emu/summer2) | Monash University | Real multi-country application via the AuTuMN models, but no software paper and no public development since 2024 |
+
+The three inclusion criteria are deliberately permissive, so this boundary rests on the breadth-of-use filter, which cannot be made fully objective. Reasonable people will draw it differently. If you maintain a tool listed above and believe the reason given is wrong or out of date, that is exactly the kind of correction this document needs.
