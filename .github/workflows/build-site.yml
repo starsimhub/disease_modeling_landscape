@@ -1,0 +1,62 @@
+name: Build site
+
+# The site is served from docs/ as committed, so docs/data/data.js has to stay in
+# step with the database_*.md files by hand. This does it instead: on a push it
+# rebuilds and commits, and on a pull request it fails if the tables are malformed
+# or the committed data.js is stale.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'database_*.md'
+      - 'docs/build.py'
+      - 'docs/build_site.py'
+      - 'docs/fetch_publications.py'
+      - 'docs/data/publications.json'
+  pull_request:
+    paths:
+      - 'database_*.md'
+      - 'docs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Offline on pull requests: Crossref lookups need the network and are not
+      # worth flaking a PR over. A new DOI shows up as an unresolved title, which
+      # the push build then fixes.
+      - name: Build
+        run: python docs/build.py ${{ github.event_name == 'pull_request' && '--offline' || '' }}
+
+      - name: Fail if the committed site data is stale
+        if: github.event_name == 'pull_request'
+        run: |
+          if ! git diff --quiet -- docs/data/data.js; then
+            echo 'docs/data/data.js is out of date. Run: python docs/build.py'
+            git diff --stat -- docs/data/data.js
+            exit 1
+          fi
+
+      - name: Commit the rebuilt data
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- docs/data; then
+            echo 'Nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/data
+          git commit -m 'rebuild site data [skip ci]'
+          git push

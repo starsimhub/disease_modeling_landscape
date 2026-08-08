@@ -11,24 +11,25 @@ A static illustration of what the GSIDD "IDD tools" section could look like, bui
 | `assets/app.js` | Table browser: filtering, sorting, column visibility, detail drawer, CSV export |
 | `data/data.js` | Generated data; do not edit by hand |
 | `data/publications.json` | Cached DOI → title/journal/year lookups |
+| `build.py` | The one command to run: checks, fetches, builds |
 | `build_site.py` | Regenerates `data/data.js` from the markdown databases |
 | `fetch_publications.py` | Refreshes `data/publications.json` from Crossref |
 
 ## Rebuilding after editing the databases
 
 ```bash
-python docs/build_site.py
+python docs/build.py
 ```
 
-This parses the main table out of each `database_*.md` file (and the per-ecosystem detail sections from `database_ecosystems.md`) and writes `docs/data/data.js`. The data is emitted as a plain script rather than JSON so the site also works when `index.html` is opened directly from disk, with no server.
+That is the whole pipeline, in three stages.
 
-If publications have been added or their DOIs changed, refresh the title cache first:
+1. **Check.** Every table is parsed and tested: cell counts match the header, names are unique and in case-insensitive alphabetical order, each `Publication` cell is a DOI link or `—`, and the count stated in the prose ("137 tools, sorted alphabetically…") matches the number of rows. Any failure stops the build, so a malformed table cannot be published silently.
+2. **Fetch.** Every DOI in `database_tools.md` not already in `data/publications.json` is resolved against Crossref, falling back to DataCite for DOIs Crossref does not hold (arXiv preprints, mostly). The cache is committed, so only this stage needs the network.
+3. **Build.** The main table of each `database_*.md` file — and the per-ecosystem detail sections from `database_ecosystems.md` — is written to `docs/data/data.js`, with each DOI replaced by its title, journal and year. The data is emitted as a plain script rather than JSON so the site also works when `index.html` is opened directly from disk, with no server.
 
-```bash
-python docs/fetch_publications.py   # --refresh to re-fetch everything
-```
+Useful flags: `--check` runs the checks and builds nothing, `--offline` skips the Crossref stage, `--refresh` re-fetches every DOI rather than only the new ones. The two underlying scripts can still be run on their own if you want one stage without the others.
 
-This resolves every DOI in `database_tools.md` against Crossref, falling back to DataCite for DOIs Crossref does not hold (arXiv preprints, mostly), and caches the results. `build_site.py` then substitutes the title for the DOI as the link text, appending the journal and year. The cache is committed, so building the site never needs network access; only this script does.
+`.github/workflows/build-site.yml` runs the same command in CI: on a push to `main` it rebuilds and commits `data/data.js`, and on a pull request it fails if the tables are malformed or the committed `data.js` is stale. Forgetting to rebuild is therefore caught rather than shipped.
 
 ## Previewing locally
 
@@ -43,7 +44,7 @@ Then open <http://localhost:8000>.
 - **Tabs** for Tools (default), Ecosystems and Communities, each backed by its own database file. The active tab is reflected in the URL hash (`#ecosystems`), so tabs are linkable. Filters are remembered per tab while the page is open.
 - **Free-text search** across every column, including hidden ones, with matches highlighted.
 - **Faceted filters** — checkbox dropdowns per tab (for tools: Type, Discipline, Pathogen, Language, Licence). Counts next to each option reflect the other filters in force, so you can see what a selection would yield before making it; options that would return nothing are dimmed rather than removed. Multi-valued cells such as `R / C++` are indexed under each value. Verbose statuses collapse to a facetable label (`Active (with caveat)`), with the full text on hover and in the detail drawer.
-- **Licence grouping.** Filtering by licence uses families rather than exact SPDX identifiers, so versions of one licence stay together: MIT (50), GPL (41, covering GPL-2.0 through GPL-3.0-or-later), BSD (5), Other copyleft (8: LGPL, AGPL, EUPL), Other permissive (6: Apache, Artistic, public domain), Proprietary or closed (14) and Not stated (4). The table cell still shows the exact identifier — the grouping applies to the filter only. `Not stated` is kept separate despite being under five entries, because an undeclared licence is a different fact from a deliberately closed one. The mapping is `licenceGroup()` in `assets/app.js`.
+- **Licence grouping.** Filtering by licence uses families rather than exact SPDX identifiers, so versions of one licence stay together: MIT (54), GPL (44, covering GPL-2.0 through GPL-3.0-or-later), BSD (5), Other copyleft (9: LGPL, AGPL, EUPL, CeCILL), Other permissive (6: Apache, Artistic, public domain), Proprietary or closed (14) and Not stated (5). The table cell still shows the exact identifier — the grouping applies to the filter only. `Not stated` is kept separate despite being under five entries, because an undeclared licence is a different fact from a deliberately closed one. The mapping is `licenceGroup()` in `assets/app.js`.
 - **Column show/hide**, since the full tables are wider than a page. Each tab starts with the discursive columns hidden — for tools, that means Discipline, Publication, Usage and Licence. The name column stays pinned to the left while scrolling sideways.
 - **Sorting** by clicking any column header.
 - **Detail drawer** — click a row for the complete record, including hidden columns and, for ecosystems, the component list and caveats from the per-ecosystem sections.

@@ -281,6 +281,19 @@ window.DB = {
      "MIT"
     ],
     [
+     "disaggregation",
+     "Model",
+     "Math & stats",
+     "Any/general",
+     "R / C++",
+     "Bayesian spatial disaggregation regression, predicting fine-scale disease risk surfaces from areally aggregated case counts and high-resolution covariates.",
+     "Nandi, Lucas, Gething & Weiss, Malaria Atlas Project",
+     "[github.com](https://github.com/aknandi/disaggregation)",
+     "[disaggregation: An R Package for Bayesian Spatial Disaggregation Modeling](https://doi.org/10.18637/jss.v106.i11) — *Journal of Statistical Software, 2023*",
+     "26★, 7 forks; CRAN 35k",
+     "MIT"
+    ],
+    [
      "dust",
      "Utility",
      "Math & stats",
@@ -723,6 +736,19 @@ window.DB = {
      "MIT"
     ],
     [
+     "first90",
+     "Model",
+     "Global health",
+     "HIV",
+     "R",
+     "Synthesises HIV testing programme data with survey testing histories to estimate the proportion of people living with HIV who know their status; deployed as the Shiny90 web tool.",
+     "Maheu-Giroux et al., McGill University, with UNAIDS",
+     "[github.com](https://github.com/mrc-ide/first90release)",
+     "[National HIV testing and diagnosis coverage in sub-Saharan Africa: a new modeling tool for estimating the ‘first 90’ from program and survey data](https://doi.org/10.1097/QAD.0000000000002386) — *AIDS, 2019*",
+     "5★, 1 forks; UNAIDS 'first 90' estimates via shiny90.unaids.org",
+     "MIT"
+    ],
+    [
      "flepiMoP",
      "Model",
      "Epidemiology",
@@ -1087,6 +1113,19 @@ window.DB = {
      "GPL-3.0"
     ],
     [
+     "Naomi",
+     "Model",
+     "Global health",
+     "HIV",
+     "R / C++",
+     "Bayesian small-area estimation of district-level HIV prevalence, ART coverage and incidence from household surveys, programme data and antenatal clinic testing.",
+     "Eaton et al., Imperial College London, with UNAIDS",
+     "[github.com](https://github.com/mrc-ide/naomi)",
+     "[Naomi: a new modelling tool for estimating HIV epidemic indicators at the district level in sub‐Saharan Africa](https://doi.org/10.1002/jia2.25788) — *Journal of the International AIDS Society, 2021*",
+     "9★, 11 forks; UNAIDS-supported subnational HIV estimates across sub-Saharan Africa",
+     "MIT"
+    ],
+    [
      "nbTransmission",
      "Model",
      "Epidemiology",
@@ -1347,6 +1386,19 @@ window.DB = {
      "GPL-3.0"
     ],
     [
+     "prevR",
+     "Model",
+     "Epidemiology",
+     "HIV",
+     "R",
+     "Kernel-based spatial estimation of prevalence surfaces from DHS-type cluster surveys, using adaptive bandwidths set by a target number of observations.",
+     "Larmarange et al., IRD and Ceped",
+     "[github.com](https://github.com/larmarange/prevR)",
+     "[Methods for mapping regional trends of HIV prevalence from Demographic and Health Surveys (DHS)](https://doi.org/10.4000/cybergeo.24606) — *Cybergeo, 2011*",
+     "6★, 2 forks; CRAN 69k",
+     "CeCILL-2"
+    ],
+    [
      "projections",
      "Utility",
      "Epidemiology",
@@ -1386,6 +1438,19 @@ window.DB = {
      "GPL-2.0-or-later"
     ],
     [
+     "Rsero",
+     "Model",
+     "Epidemiology",
+     "Any/general",
+     "R / Stan",
+     "Fits serocatalytic models to age-stratified seroprevalence surveys to reconstruct the annual force of infection and past pathogen circulation.",
+     "Hozé, Salje & Cauchemez, Institut Pasteur",
+     "[github.com](https://github.com/nathoze/Rsero)",
+     "[RSero: A user-friendly R package to reconstruct pathogen circulation history from seroprevalence studies](https://doi.org/10.1371/journal.pcbi.1012777) — *PLOS Computational Biology, 2025*",
+     "8★, 7 forks; PLOS Comput Biol 2025",
+     "Not stated"
+    ],
+    [
      "SaTScan",
      "Utility",
      "Public health",
@@ -1422,6 +1487,58 @@ window.DB = {
      "[github.com](https://github.com/cov-lineages/scorpio)",
      "[SCORPIO: a utility for defining and classifying mutation constellations of virus genomes](https://doi.org/10.1093/bioinformatics/btad575) — *Bioinformatics, 2023*",
      "39★, 4 forks",
+     "GPL-3.0"
+    ],
+    [
+     "serocalculator",
+     "Model",
+     "Public health",
+     "Enteric",
+     "R",
+     "Estimates seroincidence of infection from cross-sectional quantitative antibody measurements and a previously fitted antibody-decay model.",
+     "Lai, Teunis et al., Serologic Epidemiology Research Group, UC Davis",
+     "[github.com](https://github.com/UCD-SERG/serocalculator)",
+     "[serocalculator, an R package for estimating seroincidence from cross-sectional serological data](https://doi.org/10.1101/2025.06.04.25328941) — *2025*",
+     "7★, 3 forks; CRAN 38k",
+     "GPL-3.0"
+    ],
+    [
+     "serofoi",
+     "Model",
+     "Epidemiology",
+     "Any/general",
+     "R / Stan",
+     "Bayesian estimation of the force of infection, and how it has changed over time, from age-disaggregated cross-sectional serosurveys.",
+     "Cucunubá et al., Pontificia Universidad Javeriana (Epiverse-TRACE)",
+     "[github.com](https://github.com/epiverse-trace/serofoi)",
+     "—",
+     "22★, 3 forks; CRAN 3.5k",
+     "MIT"
+    ],
+    [
+     "serosim",
+     "Model",
+     "Epidemiology",
+     "Any/general",
+     "R",
+     "Simulates serological survey data from user-specified infection, vaccination and antibody-kinetics processes, for study design and method validation.",
+     "Menezes, Takahashi, Hay et al.",
+     "[github.com](https://github.com/seroanalytics/serosim)",
+     "[serosim: An R package for simulating serological data arising from vaccination, epidemiological and antibody kinetics processes](https://doi.org/10.1371/journal.pcbi.1011384) — *PLOS Computational Biology, 2023*",
+     "7★, 3 forks",
+     "GPL-3.0"
+    ],
+    [
+     "serosolver",
+     "Model",
+     "Epidemiology",
+     "Respiratory",
+     "R / C++",
+     "Bayesian inference of individual infection histories and antibody kinetics from cross-sectional or longitudinal serological data.",
+     "Hay, Minter, Lessler, Cummings et al.",
+     "[github.com](https://github.com/seroanalytics/serosolver)",
+     "[An open source tool to infer epidemiological and immunological dynamics from serological data: serosolver](https://doi.org/10.1371/journal.pcbi.1007840) — *PLOS Computational Biology, 2020*",
+     "20★, 9 forks",
      "GPL-3.0"
     ],
     [
