@@ -15,6 +15,7 @@ from pathlib import Path
 DOCS = Path(__file__).parent
 ROOT = DOCS.parent
 OUT = DOCS / 'data' / 'data.js'
+PUBLICATIONS = DOCS / 'data' / 'publications.json'
 
 # Which file, which section heading holds the main table, and how it's labelled.
 SOURCES = [
@@ -83,8 +84,35 @@ def parse_details(lines):
     return details
 
 
+def load_publications():
+    if not PUBLICATIONS.exists():
+        print(f'note: {PUBLICATIONS.name} missing -- run fetch_publications.py to show titles')
+        return {}
+    return json.loads(PUBLICATIONS.read_text(encoding='utf-8'))
+
+
+def title_publications(rows, index, publications):
+    """Rewrite `[10.1234/x](https://doi.org/10.1234/x)` cells to use the paper's title."""
+    pattern = re.compile(r'^\[[^\]]+\]\(https://doi\.org/(10\.[^)]+)\)$')
+    hits = 0
+    for row in rows:
+        match = pattern.match(row[index])
+        record = publications.get(match.group(1)) if match else None
+        if not record:
+            continue
+        suffix = ', '.join(filter(None, [record.get('journal'), str(record.get('year') or '')]))
+        # Escape the brackets markdown would otherwise read as a nested link.
+        title = record['title'].replace('[', r'\[').replace(']', r'\]')
+        row[index] = f'[{title}](https://doi.org/{match.group(1)})'
+        if suffix:
+            row[index] += f' — *{suffix}*'
+        hits += 1
+    return hits
+
+
 def build():
     data = {'sections': []}
+    publications = load_publications()
     for src in SOURCES:
         text = (ROOT / src['file']).read_text(encoding='utf-8')
         lines = text.split('\n')
@@ -92,6 +120,10 @@ def build():
         heading = re.compile(r'^##\s+' + re.escape(src['section']) + r'\s*$')
         start = next(i for i, line in enumerate(lines) if heading.match(line))
         columns, rows = parse_table(lines, start + 1)
+
+        titled = 0
+        if 'Publication' in columns:
+            titled = title_publications(rows, columns.index('Publication'), publications)
 
         section = dict(
             key=src['key'],
@@ -106,7 +138,8 @@ def build():
             section['details'] = details
         data['sections'].append(section)
         print(f"{src['file']}: {len(rows)} rows x {len(columns)} columns"
-              f"{f', {len(details)} detail sections' if details else ''}")
+              f"{f', {len(details)} detail sections' if details else ''}"
+              f"{f', {titled} publication titles' if titled else ''}")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = json.dumps(data, ensure_ascii=False, indent=1)

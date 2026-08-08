@@ -377,6 +377,7 @@ tbody tr:nth-child(even):hover td, tbody tr:nth-child(even):hover td.col-sticky 
 
 td.cell-name { font-weight: 600; color: var(--navy); min-width: 200px; max-width: 260px; }
 td.cell-wide { min-width: 320px; max-width: 460px; }
+td.cell-medium { min-width: 180px; max-width: 280px; }
 td.cell-tight { white-space: nowrap; }
 td a { text-decoration: underline; text-decoration-color: #e6bda3; }
 
