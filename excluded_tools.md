@@ -1,6 +1,6 @@
 # Tools excluded from the IDD tools database
 
-Working file, not part of the website data. It records every tool from the earlier compilation that is **not** in [database_tools.md](database_tools.md), with the reason, so that the decisions are reviewable rather than silent.
+Working file, not part of the website data. It records every tool considered and **not** included in [database_tools.md](database_tools.md) — from the earlier compilation and from each subsequent search pass — with the reason, so that the decisions are reviewable rather than silent.
 
 Note that the criteria have since been relaxed in three ways, and the entries below have been re-checked against the relaxed rules: closed-source tools are now included and labelled, publication is no longer a hard gate where there is strong evidence of use, and "supported" means any activity in the last three years. What remains excluded therefore fails on availability, on maintenance, on evidence of use, or on scope.
 
@@ -18,6 +18,7 @@ Criterion numbering follows details.md: **(2)** published, **(3)** documented, *
 - **WES** — no public source repository or licence located.
 - **OpenEpi** — web calculators; no source repository with an open licence located.
 - **Eir** — GitHub repository no longer exists; PyPI package last released 2021.
+- **AEM (AIDS Epidemic Model)** — published in JAIDS in 2024 and used across 13 Asian countries, but no public download page, repository or licence could be located; the software is obtained by arrangement with the East-West Center. Unlike Spectrum and LiST, which are closed but freely downloadable, it cannot be got hold of.
 
 ### Unmaintained — fails (5)
 
@@ -33,6 +34,9 @@ Criterion numbering follows details.md: **(2)** published, **(3)** documented, *
 - **EpiDynamics** — last CRAN release 2020-02.
 - **epitools** — last CRAN release 2020-03; also general-purpose epidemiological statistics.
 - **SpatialEpi** — last CRAN release 2023-02, before the cutoff.
+- **PrevMap** — the standard package for model-based geostatistical prevalence mapping, and well cited, but its last CRAN release was 2021-10. Its maintained successor **RiskMap** is excluded separately, below.
+- **seroincidence** (ECDC seroincidence calculator) — last CRAN release 2018-06; superseded in practice by `serocalculator`, which is included.
+- **DisMod-MR** — no repository activity since 2023-04; also general descriptive-epidemiology meta-regression across all Global Burden of Disease causes rather than an IDD tool.
 - **EpiInvert** — last CRAN release 2022-12.
 - **phylodyn** — last push 2021-11; also no `LICENSE` file.
 - **PhyDyn** — last push 2022-12.
@@ -59,6 +63,8 @@ Publication alone is no longer required. These entries have neither a publicatio
 - **EARS / Farrington** — algorithms implemented inside the `surveillance` package, not a separate tool; duplicate of the surveillance entry.
 - **hhh4 / surveillance** — duplicate of the surveillance entry in the previous compilation.
 - **EpiModel-networks module** — duplicate of the EpiModel entry.
+- **RiskMap** — actively maintained (CRAN 2025-10) and the intended successor to PrevMap, but it has no publication of its own yet and no independent use beyond its authors. Worth revisiting once a paper appears.
+- **EPP-ASM** (`mrc-ide/eppasm`) — no licence declared and no stand-alone documentation; distributed as a component of the EPP/Spectrum estimation workflow rather than as a tool in its own right. Covered by the Spectrum entry.
 
 ### Insufficient evidence of use — fails (4)
 
@@ -70,6 +76,9 @@ Evidence of use is assessed cumulatively, with a publication or a documented pro
 ### General-purpose, not unique to IDD — fails (X)
 
 - **pomp** — general statistical inference framework for partially observed Markov processes; built in and for the IDD community, but not IDD-specific.
+- **SUMMER** — small-area estimation for household-survey and demographic indicators, chiefly under-five mortality; the methods are used for IDD indicators but the package is not an IDD tool.
+- **surveyPrev** and **sae4health** — the same, applied to DHS binary indicators across every health domain; `sae4health` is a Shiny front end over `surveyPrev`.
+- **sae** — general small-area estimation methodology, no health content.
 
 - **Mesa** — general agent-based modelling framework.
 - **NetLogo** — general agent-based modelling platform.
@@ -91,3 +100,7 @@ Evidence of use is assessed cumulatively, with a publication or a documented pro
 
 - **FluSurv-Network / FluSight** — forecast hub and its data, not a tool; the associated tooling is covered by the hubverse entry.
 - **RSV-MODEL ensemble** — forecast hub, not a tool.
+
+### Guidance and training material — fails (X)
+
+- **MBGapp** — a Shiny application for *teaching* model-based geostatistics, with a Loa loa case study; the criteria exclude training material rather than the tools it teaches. The companion **VariogramApp** is excluded for the same reason.

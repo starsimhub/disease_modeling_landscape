@@ -1,4 +1,9 @@
 {
+ "10.1002/jia2.25788": {
+  "journal": "Journal of the International AIDS Society",
+  "title": "Naomi: a new modelling tool for estimating HIV epidemic indicators at the district level in sub‐Saharan Africa",
+  "year": 2021
+ },
  "10.1002/sim.3659": {
   "journal": "Statistics in Medicine",
   "title": "Estimating incubation period distributions with coarse data",
@@ -169,6 +174,11 @@
   "title": "Updates to the Spectrum/Estimations and Projections Package model for estimating trends and current values for key HIV indicators",
   "year": 2017
  },
+ "10.1097/QAD.0000000000002386": {
+  "journal": "AIDS",
+  "title": "National HIV testing and diagnosis coverage in sub-Saharan Africa: a new modeling tool for estimating the ‘first 90’ from program and survey data",
+  "year": 2019
+ },
  "10.1097/QAI.0000000000000605": {
   "journal": "JAIDS Journal of Acquired Immune Deficiency Syndromes",
   "title": "Optima: A Model for HIV Epidemic Analysis, Program Prioritization, and Resource Optimization",
@@ -193,6 +203,11 @@
   "journal": "Microbial Genomics",
   "title": "Large-scale sequencing of SARS-CoV-2 genomes from one region allows detailed epidemiology and enables local outbreak management",
   "year": 2021
+ },
+ "10.1101/2025.06.04.25328941": {
+  "journal": "",
+  "title": "serocalculator, an R package for estimating seroincidence from cross-sectional serological data",
+  "year": 2025
  },
  "10.1101/310763": {
   "journal": "",
@@ -324,6 +339,11 @@
   "title": "Nowcasting by Bayesian Smoothing: A flexible, generalizable model for real-time epidemic tracking",
   "year": 2020
  },
+ "10.1371/journal.pcbi.1007840": {
+  "journal": "PLOS Computational Biology",
+  "title": "An open source tool to infer epidemiological and immunological dynamics from serological data: serosolver",
+  "year": 2020
+ },
  "10.1371/journal.pcbi.1009146": {
   "journal": "PLOS Computational Biology",
   "title": "OpenABM-Covid19—An agent-based model for non-pharmaceutical interventions against COVID-19 including contact tracing",
@@ -349,6 +369,11 @@
   "title": "EpiLPS: A fast and flexible Bayesian tool for estimation of the time-varying reproduction number",
   "year": 2022
  },
+ "10.1371/journal.pcbi.1011384": {
+  "journal": "PLOS Computational Biology",
+  "title": "serosim: An R package for simulating serological data arising from vaccination, epidemiological and antibody kinetics processes",
+  "year": 2023
+ },
  "10.1371/journal.pcbi.1011609": {
   "journal": "PLOS Computational Biology",
   "title": "AnophelesModel: An R package to interface mosquito bionomics, human exposure and intervention effects with models of malaria intervention impact",
@@ -358,6 +383,11 @@
   "journal": "PLOS Computational Biology",
   "title": "HPVsim: An agent-based model of HPV transmission and cervical disease",
   "year": 2024
+ },
+ "10.1371/journal.pcbi.1012777": {
+  "journal": "PLOS Computational Biology",
+  "title": "RSero: A user-friendly R package to reconstruct pathogen circulation history from seroprevalence studies",
+  "year": 2025
  },
  "10.1371/journal.pcbi.1013735": {
   "journal": "PLOS Computational Biology",
@@ -423,6 +453,11 @@
   "journal": "Journal of Statistical Software",
   "title": "AMR: An R Package for Working with Antimicrobial Resistance Data",
   "year": 2022
+ },
+ "10.18637/jss.v106.i11": {
+  "journal": "Journal of Statistical Software",
+  "title": "disaggregation: An R Package for Bayesian Spatial Disaggregation Modeling",
+  "year": 2023
  },
  "10.21105/joss.01731": {
   "journal": "Journal of Open Source Software",
@@ -498,6 +533,11 @@
   "journal": "Frontiers in Environmental Science",
   "title": "A hybrid modeling approach to simulating foot-and-mouth disease outbreaks in Australian livestock",
   "year": 2015
+ },
+ "10.4000/cybergeo.24606": {
+  "journal": "Cybergeo",
+  "title": "Methods for mapping regional trends of HIV prevalence from Demographic and Health Surveys (DHS)",
+  "year": 2011
  },
  "10.4102/sajhivmed.v18i1.694": {
   "journal": "Southern African Journal of HIV Medicine",
