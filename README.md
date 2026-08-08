@@ -1,5 +1,7 @@
 # IDD software tools
 
+**WARNING: This repo is in draft form and is public for ease of sharing and collaboration only. Information contained herein is mostly LLM generated and has NOT been thoroughly vetted. The risk if inaccurate or hallucinated content is high.**
+
 This repository holds the data underlying the "IDD tools" section of the Global Society for Infectious Disease Dynamics ([gsidd.org](https://www.gsidd.org)) website. That section lists software packages and tools of use or interest to the infectious disease dynamics (IDD) community, with the aims of building communities of practice around IDD software and improving the visibility of tools so that they get reused.
 
 Start with **[details.md](details.md)**, which sets out the scope, definitions, and inclusion criteria that everything else follows.
@@ -11,6 +13,10 @@ Start with **[details.md](details.md)**, which sets out the scope, definitions, 
 | [database_tools.md](database_tools.md) | The tools themselves — models, utilities, and AI extensions, with type, discipline, pathogen, language, authors, code, publication, usage, and licence |
 | [database_communities.md](database_communities.md) | Communities of practice organised around developing, hosting, or curating IDD software |
 | [database_ecosystems.md](database_ecosystems.md) | Families of tools built to work together — whether through a shared engine, data structure or standard, or through a common design philosophy — and the basis on which each qualifies |
+
+## Prototype website
+
+**[docs/](docs/)** builds these three tables into a static, filterable site — an illustration of how the data could be presented on gsidd.org, with tabs, faceted filters, column show/hide, and a per-entry detail panel. See [docs/README.md](docs/README.md) for how to preview it and how to regenerate its data after editing the tables.
 
 ## Working files
 

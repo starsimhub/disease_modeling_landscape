@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDD Tools Landscape | GSIDD</title>
+<meta name="description" content="A browsable database of infectious disease dynamics software tools, ecosystems, and communities of practice.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cpath d='M2 56 C 18 56, 22 8, 34 8 C 46 8, 50 56, 66 56' fill='none' stroke='%231A2B6D' stroke-width='6'/%3E%3Cpath d='M30 56 C 46 56, 50 26, 62 26 C 74 26, 78 56, 94 56' fill='none' stroke='%23DB682B' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#tools" aria-label="GSIDD home">
+      <svg class="brand-mark" viewBox="0 0 100 60" aria-hidden="true">
+        <path d="M2 56 C 18 56, 22 8, 34 8 C 46 8, 50 56, 66 56" fill="none" stroke="#1A2B6D" stroke-width="3"/>
+        <path d="M16 56 C 32 56, 36 20, 48 20 C 60 20, 64 56, 80 56" fill="none" stroke="#8d95b5" stroke-width="3"/>
+        <path d="M30 56 C 46 56, 50 30, 62 30 C 74 30, 78 56, 94 56" fill="none" stroke="#c3c8da" stroke-width="3"/>
+        <circle cx="34" cy="8" r="3" fill="none" stroke="#DB682B" stroke-width="2"/>
+        <circle cx="22" cy="26" r="3" fill="none" stroke="#DB682B" stroke-width="2"/>
+        <circle cx="14" cy="44" r="3" fill="none" stroke="#DB682B" stroke-width="2"/>
+      </svg>
+      <span class="brand-name">GSIDD</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Events</a>
+      <a href="#" class="is-current">Resources</a>
+      <a href="#">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <h1>The IDD Tools Landscape</h1>
+    <p class="lede">
+      Infectious disease dynamics runs on software. This is a curated, evidence-checked index of that software: the
+      <strong>tools</strong> themselves, the <strong>ecosystems</strong> built so that tools work together, and the
+      <strong>communities</strong> that build and maintain them. Inclusion is not an endorsement by GSIDD. To suggest an
+      addition or a correction, write to <a href="mailto:info@gsidd.org">info@gsidd.org</a>.
+    </p>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="Database"></nav>
+
+  <p class="tab-intro" id="tab-intro"></p>
+
+  <section class="toolbar" aria-label="Filters">
+    <div class="toolbar-row">
+      <div class="search-field">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" id="search" placeholder="Search names, descriptions, authors&hellip;" autocomplete="off" aria-label="Search">
+      </div>
+      <div class="facets" id="facets"></div>
+      <div class="toolbar-actions">
+        <div class="dropdown" id="columns-dropdown">
+          <button type="button" class="btn" data-dropdown-toggle aria-expanded="false">
+            Columns <span class="badge" id="columns-badge"></span> <span class="caret" aria-hidden="true"></span>
+          </button>
+          <div class="dropdown-panel" data-dropdown-panel hidden>
+            <div class="dropdown-head">
+              <strong>Show columns</strong>
+              <button type="button" class="link-btn" id="columns-reset">Reset</button>
+            </div>
+            <div class="dropdown-list" id="columns-list"></div>
+          </div>
+        </div>
+        <button type="button" class="btn" id="download">Download CSV</button>
+      </div>
+    </div>
+    <div class="chips" id="active-filters"></div>
+  </section>
+
+  <div class="result-bar">
+    <span id="result-count"></span>
+    <button type="button" class="link-btn" id="clear-all" hidden>Clear all filters</button>
+  </div>
+
+  <div class="table-wrap">
+    <table id="table">
+      <thead><tr id="table-head"></tr></thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <p class="empty" id="empty" hidden>No entries match these filters.</p>
+  </div>
+
+  <p class="source-note" id="source-note"></p>
+
+</main>
+
+<div class="drawer-scrim" id="drawer-scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-labelledby="drawer-title" role="dialog" aria-modal="true">
+  <div class="drawer-head">
+    <h2 id="drawer-title"></h2>
+    <button type="button" class="icon-btn" id="drawer-close" aria-label="Close">&times;</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Prototype layout for the GSIDD IDD tools section. Data generated from the
+      <code>database_*.md</code> files in the disease modeling landscape repository.</p>
+  </div>
+</footer>
+
+<script src="data/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

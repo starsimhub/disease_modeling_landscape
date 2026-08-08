@@ -1,0 +1,522 @@
+{
+ "10.1002/sim.3659": {
+  "journal": "Statistics in Medicine",
+  "title": "Estimating incubation period distributions with coarse data",
+  "year": 2009
+ },
+ "10.1007/978-3-032-20404-2_26": {
+  "journal": "Mathematics in Industry",
+  "title": "German Epidemic Microsimulation System",
+  "year": 2026
+ },
+ "10.1007/s11538-025-01421-5": {
+  "journal": "Bulletin of Mathematical Biology",
+  "title": "modelSSE: An R Package for Characterizing Infectious Disease Superspreading from Contact Tracing Data",
+  "year": 2025
+ },
+ "10.1007/s41060-017-0086-6": {
+  "journal": "International Journal of Data Science and Analytics",
+  "title": "NDlib: a python library to model and analyze diffusion processes over complex networks",
+  "year": 2017
+ },
+ "10.1016/S2352-3018%2817%2930190-X": {
+  "journal": "The Lancet HIV",
+  "title": "Cost-effectiveness of public-health policy options in the presence of pretreatment NNRTI drug resistance in sub-Saharan Africa: a modelling study",
+  "year": 2018
+ },
+ "10.1016/j.epidem.2021.100535": {
+  "journal": "Epidemics",
+  "title": "Impact of vaccination and non-pharmaceutical interventions on SARS-CoV-2 dynamics in Switzerland",
+  "year": 2022
+ },
+ "10.1016/j.epidem.2024.100752": {
+  "journal": "Epidemics",
+  "title": "COVSIM: A stochastic agent-based COVID-19 SIMulation model for North Carolina",
+  "year": 2024
+ },
+ "10.1016/j.epidem.2024.100753": {
+  "journal": "Epidemics",
+  "title": "flepiMoP: The evolution of a flexible infectious disease modeling pipeline during the COVID-19 pandemic",
+  "year": 2024
+ },
+ "10.1016/j.idm.2024.02.001": {
+  "journal": "Infectious Disease Modelling",
+  "title": "SubEpiPredict: A tutorial-based primer and toolbox for fitting and forecasting growth trajectories using the ensemble n-sub-epidemic modeling framework",
+  "year": 2024
+ },
+ "10.1016/j.jocs.2010.07.002": {
+  "journal": "Journal of Computational Science",
+  "title": "Modeling the spatial spread of infectious diseases: The GLobal Epidemic and Mobility computational model",
+  "year": 2010
+ },
+ "10.1016/j.mbs.2021.108648": {
+  "journal": "Mathematical Biosciences",
+  "title": "Assessment of effective mitigation and prediction of the spread of SARS-CoV-2 in Germany using demographic information and spatial resolution",
+  "year": 2021
+ },
+ "10.1016/j.prevetmed.2007.05.019": {
+  "journal": "Preventive Veterinary Medicine",
+  "title": "The North American Animal Disease Spread Model: A simulation model to assist decision making in evaluating animal disease incursions",
+  "year": 2007
+ },
+ "10.1017/S0031182008000371": {
+  "journal": "Parasitology",
+  "title": "Towards a comprehensive simulation model of malaria epidemiology and control",
+  "year": 2008
+ },
+ "10.1038/nprot.2017.066": {
+  "journal": "Nature Protocols",
+  "title": "Multiplex PCR method for MinION and Illumina sequencing of Zika and other virus genomes directly from clinical samples",
+  "year": 2017
+ },
+ "10.1038/s41467-020-20544-y": {
+  "journal": "Nature Communications",
+  "title": "Inferring high-resolution human mixing patterns for disease modeling",
+  "year": 2021
+ },
+ "10.1038/s41467-026-75380-3": {
+  "journal": "Nature Communications",
+  "title": "Real-time estimation of pathogen transmission dynamics from wastewater",
+  "year": 2026
+ },
+ "10.1038/s41588-021-00862-7": {
+  "journal": "Nature Genetics",
+  "title": "Ultrafast Sample placement on Existing tRees (UShER) enables real-time phylogenetics for the SARS-CoV-2 pandemic",
+  "year": 2021
+ },
+ "10.1038/s41598-019-55689-4": {
+  "journal": "Scientific Reports",
+  "title": "SimpactCyan 1.0: An Open-source Simulator for Individual-Based Models in HIV Epidemiology with R and Python Interfaces",
+  "year": 2019
+ },
+ "10.1038/s44360-026-00145-7": {
+  "journal": "Nature Health",
+  "title": "A software platform for collaborative infectious disease modelling",
+  "year": 2026
+ },
+ "10.1073/pnas.2111452118": {
+  "journal": "Proceedings of the National Academy of Sciences",
+  "title": "An open repository of real-time COVID-19 indicators",
+  "year": 2021
+ },
+ "10.1080/03610929708831995": {
+  "journal": "Communications in Statistics - Theory and Methods",
+  "title": "A spatial scan statistic",
+  "year": 1997
+ },
+ "10.1093/aje/kwt133": {
+  "journal": "American Journal of Epidemiology",
+  "title": "A New Framework and Software to Estimate Time-Varying Reproduction Numbers During Epidemics",
+  "year": 2013
+ },
+ "10.1093/bioinformatics/btad575": {
+  "journal": "Bioinformatics",
+  "title": "SCORPIO: a utility for defining and classifying mutation constellations of virus genomes",
+  "year": 2023
+ },
+ "10.1093/bioinformatics/bty406": {
+  "journal": "Bioinformatics",
+  "title": "MASCOT: parameter and state inference under the marginal structured coalescent approximation",
+  "year": 2018
+ },
+ "10.1093/bioinformatics/bty407": {
+  "journal": "Bioinformatics",
+  "title": "Nextstrain: real-time tracking of pathogen evolution",
+  "year": 2018
+ },
+ "10.1093/femspd/fty059": {
+  "journal": "Pathogens and Disease",
+  "title": "Implementation and applications of EMOD, an individual-based multi-disease modeling platform",
+  "year": 2018
+ },
+ "10.1093/ije/dyaa031": {
+  "journal": "International Journal of Epidemiology",
+  "title": "Estimating the relative probability of direct transmission between infectious disease patients",
+  "year": 2020
+ },
+ "10.1093/molbev/msw275": {
+  "journal": "Molecular Biology and Evolution",
+  "title": "Genomic infectious disease epidemiology in partially sampled and ongoing outbreaks",
+  "year": 2017
+ },
+ "10.1093/pnasnexus/pgae557": {
+  "journal": "PNAS Nexus",
+  "title": "Epihiper—A high performance computational modeling framework to support epidemic science",
+  "year": 2024
+ },
+ "10.1093/ve/veab064": {
+  "journal": "Virus Evolution",
+  "title": "Assignment of epidemiological lineages in an emerging pandemic using the pangolin tool",
+  "year": 2021
+ },
+ "10.1093/ve/vex042": {
+  "journal": "Virus Evolution",
+  "title": "TreeTime: Maximum-likelihood phylodynamic analysis",
+  "year": 2018
+ },
+ "10.1093/ve/vey016": {
+  "journal": "Virus Evolution",
+  "title": "Bayesian phylogenetic and phylodynamic data integration using BEAST 1.10",
+  "year": 2018
+ },
+ "10.1097/EDE.0000000000001445": {
+  "journal": "Epidemiology",
+  "title": "A Flexible Statistical Framework for Estimating Excess Mortality",
+  "year": 2022
+ },
+ "10.1097/QAD.0000000000001322": {
+  "journal": "AIDS",
+  "title": "Updates to the Spectrum/Estimations and Projections Package model for estimating trends and current values for key HIV indicators",
+  "year": 2017
+ },
+ "10.1097/QAI.0000000000000605": {
+  "journal": "JAIDS Journal of Acquired Immune Deficiency Syndromes",
+  "title": "Optima: A Model for HIV Epidemic Analysis, Program Prioritization, and Resource Optimization",
+  "year": 2015
+ },
+ "10.1097/qad.0000000000000484": {
+  "journal": "AIDS",
+  "title": "Using the TIME model in Spectrum to estimate tuberculosis–HIV incidence and mortality",
+  "year": 2014
+ },
+ "10.1098/rsos.210506": {
+  "journal": "Royal Society Open Science",
+  "title": "June: open-source individual-based epidemiology simulation",
+  "year": 2021
+ },
+ "10.1098/rsos.211065": {
+  "journal": "Royal Society Open Science",
+  "title": "Efficient Bayesian inference of fully stochastic epidemiological models with applications to COVID-19",
+  "year": 2021
+ },
+ "10.1099/mgen.0.000589": {
+  "journal": "Microbial Genomics",
+  "title": "Large-scale sequencing of SARS-CoV-2 genomes from one region allows detailed epidemiology and enables local outbreak management",
+  "year": 2021
+ },
+ "10.1101/310763": {
+  "journal": "",
+  "title": "MicroCOSM: a model of social and structural drivers of HIV and interventions to reduce HIV incidence in high-risk populations in South Africa",
+  "year": 2018
+ },
+ "10.1109/RIVF.2015.7049888": {
+  "journal": "The 2015 IEEE RIVF International Conference on Computing & Communication Technologies - Research, Innovation, and Vision for Future (RIVF)",
+  "title": "KENDRICK: A Domain Specific Language and platform for mathematical epidemiological modelling",
+  "year": 2015
+ },
+ "10.1111/2041-210X.13318": {
+  "journal": "Methods in Ecology and Evolution",
+  "title": "MGDrivE: A modular simulation framework for the spread of gene drives through spatially explicit mosquito populations",
+  "year": 2019
+ },
+ "10.1111/2041-210X.13422": {
+  "journal": "Methods in Ecology and Evolution",
+  "title": "nosoi: A stochastic agent-based transmission chain simulation framework in R",
+  "year": 2020
+ },
+ "10.1111/j.1750-2659.2012.00422.x": {
+  "journal": "Influenza and Other Respiratory Viruses",
+  "title": "Influenza surveillance in Europe: establishing epidemic thresholds by the Moving Epidemic Method",
+  "year": 2012
+ },
+ "10.1136/bmjgh-2020-003126": {
+  "journal": "BMJ Global Health",
+  "title": "Modelling the COVID-19 pandemic in context: an international participatory approach",
+  "year": 2020
+ },
+ "10.1186/1471-2458-13-940": {
+  "journal": "BMC Public Health",
+  "title": "FRED (A Framework for Reconstructing Epidemic Dynamics): an open-source software system for modeling infectious diseases and control strategies using census-based populations",
+  "year": 2013
+ },
+ "10.1186/1471-2458-13-S3-S1": {
+  "journal": "BMC Public Health",
+  "title": "Overview of the Lives Saved Tool (LiST)",
+  "year": 2013
+ },
+ "10.1186/1472-6947-12-147": {
+  "journal": "BMC Medical Informatics and Decision Making",
+  "title": "The R0 package: a toolbox to estimate reproduction numbers for epidemic outbreaks",
+  "year": 2012
+ },
+ "10.1186/1746-6148-10-71": {
+  "journal": "BMC Veterinary Research",
+  "title": "EpiContactTrace: an R-package for contact tracing during livestock disease outbreaks and for risk-based surveillance",
+  "year": 2014
+ },
+ "10.1186/s12859-023-05428-4": {
+  "journal": "BMC Bioinformatics",
+  "title": "estimateR: an R package to estimate and monitor the effective reproductive number",
+  "year": 2023
+ },
+ "10.1186/s12936-018-2500-5": {
+  "journal": "Malaria Journal",
+  "title": "malariaAtlas: an R interface to global malariometric data hosted by the Malaria Atlas Project",
+  "year": 2018
+ },
+ "10.12688/f1000research.13824.2": {
+  "journal": "F1000Research",
+  "title": "Reflections on the use of the World Health Organization’s (WHO) OneHealth Tool: Implications for health planning in low and middle income countries (LMICs)",
+  "year": 2018
+ },
+ "10.12688/f1000research.14492.2": {
+  "journal": "F1000Research",
+  "title": "epicontacts: Handling, visualisation and analysis of epidemiological contacts",
+  "year": 2018
+ },
+ "10.12688/f1000research.16032.2": {
+  "journal": "F1000Research",
+  "title": "epiflows: an R package for risk assessment of travel-related spread of disease",
+  "year": 2019
+ },
+ "10.12688/f1000research.18002.1": {
+  "journal": "F1000Research",
+  "title": "Epidemic curves made easy using the R package incidence",
+  "year": 2019
+ },
+ "10.12688/f1000research.28073.2": {
+  "journal": "F1000Research",
+  "title": "o2geosocial: Reconstructing who-infected-whom from routinely collected surveillance data",
+  "year": 2021
+ },
+ "10.12688/wellcomeopenres.16006.2": {
+  "journal": "Wellcome Open Research",
+  "title": "Estimating the time-varying reproduction number of SARS-CoV-2 using national and subnational case counts",
+  "year": 2020
+ },
+ "10.12688/wellcomeopenres.16466.2": {
+  "journal": "Wellcome Open Research",
+  "title": "Reproducible parallel inference and simulation of stochastic state space models using odin, dust, and mcstate",
+  "year": 2021
+ },
+ "10.1287/inte.28.3.84": {
+  "journal": "Interfaces",
+  "title": "STDSIM: A Microsimulation Model for Decision Support in STD Control",
+  "year": 1998
+ },
+ "10.1371/journal.pcbi.1003570": {
+  "journal": "PLoS Computational Biology",
+  "title": "Phylodynamic Inference for Structured Epidemiological Models",
+  "year": 2014
+ },
+ "10.1371/journal.pcbi.1005697": {
+  "journal": "PLOS Computational Biology",
+  "title": "Projecting social contact matrices in 152 countries using contact surveys and demographic data",
+  "year": 2017
+ },
+ "10.1371/journal.pcbi.1006650": {
+  "journal": "PLOS Computational Biology",
+  "title": "BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis",
+  "year": 2019
+ },
+ "10.1371/journal.pcbi.1006930": {
+  "journal": "PLOS Computational Biology",
+  "title": "Bayesian inference of transmission chains using timing of symptoms, pathogen genomes and contact data",
+  "year": 2019
+ },
+ "10.1371/journal.pcbi.1007342": {
+  "journal": "PLOS Computational Biology",
+  "title": "EMULSION: Transparent and flexible multiscale stochastic models in human, animal and plant epidemiology",
+  "year": 2019
+ },
+ "10.1371/journal.pcbi.1007735": {
+  "journal": "PLOS Computational Biology",
+  "title": "Nowcasting by Bayesian Smoothing: A flexible, generalizable model for real-time epidemic tracking",
+  "year": 2020
+ },
+ "10.1371/journal.pcbi.1009146": {
+  "journal": "PLOS Computational Biology",
+  "title": "OpenABM-Covid19—An agent-based model for non-pharmaceutical interventions against COVID-19 including contact tracing",
+  "year": 2021
+ },
+ "10.1371/journal.pcbi.1009149": {
+  "journal": "PLOS Computational Biology",
+  "title": "Covasim: An agent-based model of COVID-19 dynamics and interventions",
+  "year": 2021
+ },
+ "10.1371/journal.pcbi.1009210": {
+  "journal": "PLOS Computational Biology",
+  "title": "Bayesian back-calculation and nowcasting for line list data during the COVID-19 pandemic",
+  "year": 2021
+ },
+ "10.1371/journal.pcbi.1009301": {
+  "journal": "PLOS Computational Biology",
+  "title": "PopART-IBM, a highly efficient stochastic individual-based simulation model of generalised HIV epidemics developed in the context of the HPTN 071 (PopART) trial",
+  "year": 2021
+ },
+ "10.1371/journal.pcbi.1010618": {
+  "journal": "PLOS Computational Biology",
+  "title": "EpiLPS: A fast and flexible Bayesian tool for estimation of the time-varying reproduction number",
+  "year": 2022
+ },
+ "10.1371/journal.pcbi.1011609": {
+  "journal": "PLOS Computational Biology",
+  "title": "AnophelesModel: An R package to interface mosquito bionomics, human exposure and intervention effects with models of malaria intervention impact",
+  "year": 2024
+ },
+ "10.1371/journal.pcbi.1012181": {
+  "journal": "PLOS Computational Biology",
+  "title": "HPVsim: An agent-based model of HPV transmission and cervical disease",
+  "year": 2024
+ },
+ "10.1371/journal.pcbi.1013735": {
+  "journal": "PLOS Computational Biology",
+  "title": "Epydemix: An open-source Python package for epidemic modeling with integrated approximate Bayesian calibration",
+  "year": 2025
+ },
+ "10.1371/journal.pntd.0000508": {
+  "journal": "PLoS Neglected Tropical Diseases",
+  "title": "Skeeter Buster: A Stochastic, Spatially Explicit Modeling Tool for Studying Aedes aegypti Population Replacement and Population Suppression Strategies",
+  "year": 2009
+ },
+ "10.1371/journal.pntd.0010591": {
+  "journal": "PLOS Neglected Tropical Diseases",
+  "title": "Evaluating the impact of alternative intervention strategies in accelerating onchocerciasis elimination in an area of persistent transmission in the West Region of Cameroon",
+  "year": 2022
+ },
+ "10.1371/journal.pone.0259037": {
+  "journal": "PLOS ONE",
+  "title": "Predicting the effects of COVID-19 related interventions in urban settings by combining activity-based modelling, agent-based simulation, and mobile phone data",
+  "year": 2021
+ },
+ "10.1371/journal.pone.0305550": {
+  "journal": "PLOS ONE",
+  "title": "ern: An R package to estimate the effective reproduction number using clinical and wastewater surveillance data",
+  "year": 2024
+ },
+ "10.18637/jss.v077.i11": {
+  "journal": "Journal of Statistical Software",
+  "title": "Spatio-Temporal Analysis of Epidemic Phenomena Using the R Package surveillance",
+  "year": 2017
+ },
+ "10.18637/jss.v083.i11": {
+  "journal": "Journal of Statistical Software",
+  "title": "epinet: An R Package to Analyze Epidemics Spread across Contact Networks",
+  "year": 2018
+ },
+ "10.18637/jss.v084.i08": {
+  "journal": "Journal of Statistical Software",
+  "title": "EpiModel: An R Package for Mathematical Modeling of Infectious Disease over Networks",
+  "year": 2018
+ },
+ "10.18637/jss.v090.i14": {
+  "journal": "Journal of Statistical Software",
+  "title": "DClusterm: Model-Based Detection of Disease Clusters",
+  "year": 2019
+ },
+ "10.18637/jss.v091.i12": {
+  "journal": "Journal of Statistical Software",
+  "title": "SimInf: An R Package for Data-Driven Stochastic Disease Spread Simulations",
+  "year": 2019
+ },
+ "10.18637/jss.v094.i06": {
+  "journal": "Journal of Statistical Software",
+  "title": "hybridModels: An R Package for the Stochastic Simulation of Disease Spreading in Dynamic Networks",
+  "year": 2020
+ },
+ "10.18637/jss.v098.i10": {
+  "journal": "Journal of Statistical Software",
+  "title": "Continuous Time Individual-Level Models of Infectious Disease: Package EpiILMCT",
+  "year": 2021
+ },
+ "10.18637/jss.v104.i03": {
+  "journal": "Journal of Statistical Software",
+  "title": "AMR: An R Package for Working with Antimicrobial Resistance Data",
+  "year": 2022
+ },
+ "10.21105/joss.01731": {
+  "journal": "Journal of Open Source Software",
+  "title": "EoN (Epidemics on Networks): a fast, flexible Python package for simulation, analytic approximation, and analysis of epidemics on networks",
+  "year": 2019
+ },
+ "10.21105/joss.03097": {
+  "journal": "Journal of Open Source Software",
+  "title": "epipack: An infectious disease modeling package for Python",
+  "year": 2021
+ },
+ "10.21105/joss.03539": {
+  "journal": "Journal of Open Source Software",
+  "title": "individual: An R package for individual-based epidemiological models",
+  "year": 2021
+ },
+ "10.21105/joss.03773": {
+  "journal": "Journal of Open Source Software",
+  "title": "Nextclade: clade assignment, mutation calling and quality control for viral genomes",
+  "year": 2021
+ },
+ "10.21105/joss.03914": {
+  "journal": "Journal of Open Source Software",
+  "title": "MetaWards: A flexible metapopulation framework for modelling disease spread",
+  "year": 2022
+ },
+ "10.21105/joss.05612": {
+  "journal": "Journal of Open Source Software",
+  "title": "Bernadette: Bayesian Inference and Model Selection for Stochastic Epidemics in R",
+  "year": 2023
+ },
+ "10.21105/joss.05781": {
+  "journal": "Journal of Open Source Software",
+  "title": "epiworldR: Fast Agent-Based Epi Models",
+  "year": 2023
+ },
+ "10.21105/joss.06851": {
+  "journal": "Journal of Open Source Software",
+  "title": "MetaCast: A package for broadCASTing epidemiological and ecological models over META-populations.",
+  "year": 2024
+ },
+ "10.21105/joss.08781": {
+  "journal": "Journal of Open Source Software",
+  "title": "simulist: An R package to simulate disease outbreak line list and contacts data",
+  "year": 2026
+ },
+ "10.2196/15860": {
+  "journal": "JMIR Public Health and Surveillance",
+  "title": "The Surveillance Outbreak Response Management and Analysis System (SORMAS): Digital Health Global Goods Maturity Assessment",
+  "year": 2020
+ },
+ "10.25080/ukpu4584": {
+  "journal": "Python in Science Conference, 2024",
+  "title": "Starsim: A flexible framework for agent-based modeling of health and disease",
+  "year": 2024
+ },
+ "10.2807/1560-7917.ES.2016.21.48.30417": {
+  "journal": "Eurosurveillance",
+  "title": "Estimating HIV incidence and number of undiagnosed individuals living with HIV in the European Union/European Economic Area, 2015",
+  "year": 2016
+ },
+ "10.2807/1560-7917.ES.2026.31.30.2500896": {
+  "journal": "Eurosurveillance",
+  "title": "Evaluation of the Automated and Early Detection of Seasonal Epidemic Onset and Burden Levels (AEDSEO) method for respiratory surveillance using data from 21 European countries",
+  "year": 2026
+ },
+ "10.32614/RJ-2020-020": {
+  "journal": "The R Journal",
+  "title": "Individual-Level Modelling of Infectious Disease Data: EpiILM",
+  "year": 2020
+ },
+ "10.3389/fenvs.2015.00017": {
+  "journal": "Frontiers in Environmental Science",
+  "title": "A hybrid modeling approach to simulating foot-and-mouth disease outbreaks in Australian livestock",
+  "year": 2015
+ },
+ "10.4102/sajhivmed.v18i1.694": {
+  "journal": "Southern African Journal of HIV Medicine",
+  "title": "Progress towards the 2020 targets for HIV diagnosis and antiretroviral treatment in South Africa",
+  "year": 2017
+ },
+ "10.48550/arXiv.2205.07090": {
+  "journal": "arXiv",
+  "title": "Evaluating Forecasts with scoringutils in R",
+  "year": 2022
+ },
+ "10.5334/jors.449": {
+  "journal": "Journal of Open Research Software",
+  "title": "Epidemiological Agent-Based Modelling Software (Epiabm)",
+  "year": 2024
+ },
+ "10.7326/0003-4819-151-3-200908040-00138": {
+  "journal": "Annals of Internal Medicine",
+  "title": "When to Start Antiretroviral Therapy in Resource-Limited Settings",
+  "year": 2009
+ }
+}
