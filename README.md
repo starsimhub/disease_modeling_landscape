@@ -8,9 +8,9 @@ Start with **[details.md](details.md)**, which sets out the scope, definitions, 
 
 | File | Contents |
 |---|---|
-| [database_tools.md](database_tools.md) | The tools themselves — models, utilities, and AI extensions, with type, discipline, pathogen, language, authors, code, publication, adoption, and licence |
+| [database_tools.md](database_tools.md) | The tools themselves — models, utilities, and AI extensions, with type, discipline, pathogen, language, authors, code, publication, usage, and licence |
 | [database_communities.md](database_communities.md) | Communities of practice organised around developing, hosting, or curating IDD software |
-| [database_ecosystems.md](database_ecosystems.md) | Families of tools deliberately built to interoperate, and the mechanism by which they do so |
+| [database_ecosystems.md](database_ecosystems.md) | Families of tools built to work together — whether through a shared engine, data structure or standard, or through a common design philosophy — and the basis on which each qualifies |
 
 ## Working files
 

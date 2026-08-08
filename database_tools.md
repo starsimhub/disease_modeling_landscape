@@ -6,7 +6,7 @@ Entries are drawn from a prior 189-entry compilation, re-vetted in full against 
 
 ## Schema
 
-Each tool is one row of the main table. The first nine columns are those specified in [details.md](details.md); `Adoption` and `Licence` are added so that the evidence behind two of the inclusion criteria is visible rather than implicit.
+Each tool is one row of the main table. The first nine columns are those specified in [details.md](details.md); `Usage` and `Licence` are added so that the evidence behind two of the inclusion criteria is visible rather than implicit.
 
 | Column | Description |
 |---|---|
@@ -19,7 +19,7 @@ Each tool is one row of the main table. The first nine columns are those specifi
 | Authors | Originating individual(s), lab(s), or institution(s) |
 | Code | Markdown link to the source repository or project page; link text is the bare domain |
 | Publication | Markdown link to the DOI of the tool's publication; `—` if none |
-| Adoption | Compact evidence of use — GitHub stars and forks, package-repository downloads, or documented institutional adoption |
+| Usage | Compact evidence of use — GitHub stars and forks, package-repository downloads, or documented institutional adoption |
 | Licence | SPDX identifier where the tool is open source; an explicit description otherwise. Anything that is not an OSI-approved open-source licence is stated as such |
 
 ### Controlled vocabulary: Type
@@ -54,7 +54,7 @@ Each tool is one row of the main table. The first nine columns are those specifi
 
 **What was searched for gaps.** No author or project names were used as query terms. The search combined Crossref bibliographic queries pairing modelling terms (epidemic, outbreak, transmission, metapopulation, agent-based, compartmental, nowcasting, phylodynamic) with software terms (package, framework, library, toolkit, simulator, pipeline); GitHub repository search by topic and keyword, sorted by stars; GitHub search for AI-extension terms (`mcp-server`, `llm`, `agent`, `copilot`) combined with epidemiology terms; and the CRAN *Epidemiology* Task View.
 
-**Honest limitations.** The documentation criterion is a judgement call and borderline entries could reasonably move either way. Adoption metrics are not comparable across languages or distribution channels — CRAN, PyPI, GitHub and installer-based tools are counted in fundamentally different ways, and tools distributed as desktop applications or through national programmes have no download counter at all. The search was English-language and Crossref/GitHub/CRAN/PyPI-indexed, so tools published in other languages, distributed on institutional servers or non-GitHub forges, or documented only in grey literature remain under-represented. Discipline and Pathogen are single-valued by design, which loses information for cross-cutting tools. Excluding a tool is a statement about fit against these criteria on this date, not a judgement of quality.
+**Honest limitations.** The documentation criterion is a judgement call and borderline entries could reasonably move either way. Usage metrics are not comparable across languages or distribution channels — CRAN, PyPI, GitHub and installer-based tools are counted in fundamentally different ways, and tools distributed as desktop applications or through national programmes have no download counter at all. The search was English-language and Crossref/GitHub/CRAN/PyPI-indexed, so tools published in other languages, distributed on institutional servers or non-GitHub forges, or documented only in grey literature remain under-represented. Discipline and Pathogen are single-valued by design, which loses information for cross-cutting tools. Excluding a tool is a statement about fit against these criteria on this date, not a judgement of quality.
 
 **Conflicts of interest**: this database was compiled by Cliff Kerr, who works at the Institute for Disease Modeling (IDM), leads development of Starsim, and is a co-author on several of the publications referenced. Ordering within the table is alphabetical and implies no ranking. Corrections and additions are welcome.
 
@@ -62,7 +62,7 @@ Each tool is one row of the main table. The first nine columns are those specifi
 
 128 tools, sorted alphabetically (case-insensitive) by name.
 
-| Name | Type | Discipline | Pathogen | Language | Description | Authors | Code | Publication | Adoption | Licence |
+| Name | Type | Discipline | Pathogen | Language | Description | Authors | Code | Publication | Usage | Licence |
 |---|---|---|---|---|---|---|---|---|---|---|
 | AADIS | Model | Veterinary | Zoonotic | Java | Australian Animal Disease model — national-scale hybrid ABM/compartmental simulator for livestock disease incursions (government tool; no public source repository). | Australian Department of Agriculture, Fisheries and Forestry | [doi.org](https://doi.org/10.1016/j.envsoft.2016.02.011) | [10.1016/j.envsoft.2016.02.011](https://doi.org/10.1016/j.envsoft.2016.02.011) | Australian national emergency animal disease planning tool | Proprietary (government) |
 | ADSM | Model | Veterinary | Zoonotic | Python / C | Simulates between-herd spread of livestock disease and the effect of control strategies for emergency preparedness planning. | USDA APHIS / Colorado State University | [github.com](https://github.com/NAVADMC/ADSM) | [10.1016/j.prevetmed.2007.05.019](https://doi.org/10.1016/j.prevetmed.2007.05.019) | 10★, 6 forks | BSD-2-Clause |
