@@ -1,6 +1,6 @@
 # IDD software tools
 
-**WARNING: This repo is in draft form and is public for ease of sharing and collaboration only. Information contained herein is mostly LLM generated and has NOT been thoroughly vetted. The risk if inaccurate or hallucinated content is high.**
+**WARNING: This repo is in draft form and is public for ease of sharing and collaboration only. Information contained herein is mostly LLM generated and has NOT been thoroughly vetted. The risk of inaccurate or hallucinated content is high.**
 
 This repository holds the data underlying the "IDD tools" section of the Global Society for Infectious Disease Dynamics ([gsidd.org](https://www.gsidd.org)) website. That section lists software packages and tools of use or interest to the infectious disease dynamics (IDD) community, with the aims of building communities of practice around IDD software and improving the visibility of tools so that they get reused.
 
