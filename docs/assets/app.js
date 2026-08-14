@@ -144,6 +144,14 @@
     return '';
   }
 
+  // The Usage column leads with an ordinal label, which has to sort by rank
+  // rather than by spelling: descending is Established, Emerging, Minimal.
+  var USAGE_RANK = { established: 3, emerging: 2, minimal: 1 };
+
+  function usageRank(text) {
+    return USAGE_RANK[String(text).split(/[\s(]/)[0].toLowerCase()] || 0;
+  }
+
   function compare(a, b) {
     var na = parseFloat(a), nb = parseFloat(b);
     if (!isNaN(na) && !isNaN(nb) && /^[~<>]?[\d.,]+$/.test(a) && /^[~<>]?[\d.,]+$/.test(b)) return na - nb;
@@ -286,6 +294,12 @@
       // blanks are the absence of an answer rather than the smallest one, so they
       // sink to the bottom whichever way the column is sorted
       if (isBlank(x) !== isBlank(y)) return isBlank(x) ? 1 : -1;
+      if (section.columns[idx] === 'Usage') {
+        var rx = usageRank(x), ry = usageRank(y);
+        // Rank alone: within a label the evidence strings are not comparable
+        // with each other, so ties keep the table's own alphabetical order.
+        if (rx || ry) return dir * (rx - ry);
+      }
       return dir * compare(x, y);
     });
   }

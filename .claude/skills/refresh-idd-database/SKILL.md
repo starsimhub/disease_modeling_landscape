@@ -56,6 +56,15 @@ python .claude/skills/refresh-idd-database/scripts/verify.py --doi-for "title of
 
 It reports stars, forks, `pushed_at`, archived status, the licence from the API *and* from the raw `LICENSE`/`DESCRIPTION` file, CRAN/PyPI release dates and download totals, and Crossref matches — then prints a per-criterion verdict, with criterion 3 (documentation) left as a manual judgement because it is.
 
+The `Usage` column itself is generated, not written: score it with
+
+```bash
+python docs/fetch_usage.py --dry-run     # what would change
+python docs/fetch_usage.py               # rewrite the column, refresh docs/data/usage.json
+```
+
+which turns stars, forks, all-time CRAN and PyPI downloads, citations and documented country use into points (rates in `references/criteria.md`) and writes `Established (289★, 238 forks; PyPI 318k)` back into every row. Read the name-only PyPI matches it prints at the end — a wrong package inflates a label — and record any correction in `docs/data/usage_manual.json`, which it never overwrites. A new tool gets its label from the same run; do not invent one.
+
 ## Step 5 — write
 
 Match the existing schema and prose conventions exactly (`references/schemas.md`). In particular:
@@ -70,6 +79,7 @@ Match the existing schema and prose conventions exactly (`references/schemas.md`
 
 ```bash
 python .claude/skills/refresh-idd-database/scripts/check_urls.py           # every URL in every .md
+python docs/fetch_usage.py                                                 # re-score the Usage column
 python docs/build.py                                                       # check → fetch DOIs + update dates → build data.js
 ```
 

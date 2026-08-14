@@ -1,0 +1,53 @@
+{
+ "_comment": "Hand-set values merged over whatever fetch_usage.py finds, and never overwritten by it. Use it to correct a PyPI project it matched on name alone (pypi: null rejects the match, a string replaces it), or to record a country count the Usage prose does not state (countries: N). Keys are tool names as they appear in database_tools.md; fields are any of stars, forks, cran, cran_downloads, pypi, pypi_downloads, citations, countries.",
+ "Atomica": {
+  "pypi": "atomica",
+  "_why": "checked by hand: PyPI `atomica` is the Burnet Institute toolbox, homepage atomica.tools"
+ },
+ "Emulsion": {
+  "pypi": "emulsion",
+  "_why": "checked by hand: PyPI `emulsion` is the INRAE framework, source on forgemia.inra.fr"
+ },
+ "Nextstrain": {
+  "pypi": "nextstrain-augur",
+  "_why": "the augur package is published as nextstrain-augur; PyPI's bare `Augur` is an unrelated placeholder"
+ },
+ "Optima HIV": {
+  "pypi": null,
+  "_why": "PyPI `optima` is a PyTorch optimisation framework"
+ },
+ "Pangolin": {
+  "pypi": null,
+  "_why": "PyPI `pangolin` is a probabilistic inference library; cov-lineages/pangolin is distributed via conda"
+ },
+ "PatchSim": {
+  "pypi": null,
+  "_why": "PyPI `patchsim` is the dsih-artpark package, not NSSAC/PatchSim"
+ },
+ "PyRoss": {
+  "pypi": "pyross",
+  "_why": "checked by hand: PyPI `pyross` links to rajeshrinet/pyross"
+ },
+ "SynthPops": {
+  "pypi": "synthpops",
+  "_why": "checked by hand: PyPI `synthpops` is the IDM package, homepage synthpops.org"
+ },
+ "Vivarium": {
+  "pypi": "vivarium",
+  "stars": 54,
+  "forks": 15,
+  "_why": "PyPI `vivarium` links to ihmeuw/vivarium, checked by hand; the Code column points at ihmeuw/vivarium-suite, an index repository, so the star and fork counts are the framework repository's"
+ },
+ "TreeTime": {
+  "pypi": "phylo-treetime",
+  "_why": "PyPI `TreeTime` is an unrelated to-do list manager"
+ },
+ "civet": {
+  "pypi": null,
+  "_why": "PyPI `civet` is a Django asset precompiler"
+ },
+ "scorpio": {
+  "pypi": null,
+  "_why": "PyPI `scorpio` is an unrelated abandoned package"
+ }
+}

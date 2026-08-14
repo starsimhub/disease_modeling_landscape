@@ -31,6 +31,9 @@ ROOT = Path(__file__).parent.parent
 # Each database file's H1 count sentence, e.g. "137 tools, sorted alphabetically".
 COUNT_RE = re.compile(r'^(\d+) (tools|ecosystems|communities)\b', re.M)
 
+# Every Usage cell is `Label` or `Label (evidence)`; fetch_usage.py writes them.
+USAGE_RE = re.compile(r'^(Established|Emerging|Minimal)( \(.+\))?$')
+
 
 def check_table(src, columns, rows, problems):
     """Structural checks that the site build itself is too permissive to catch."""
@@ -57,6 +60,13 @@ def check_table(src, columns, rows, problems):
     if stated and int(stated.group(1)) != len(rows):
         problems.append(f'{label}: prose says {stated.group(1)} {stated.group(2)}, '
                         f'table has {len(rows)}')
+
+    if 'Usage' in columns:
+        for row in rows:
+            cell = row[columns.index('Usage')]
+            if not USAGE_RE.match(cell):
+                problems.append(f'{label}: {row[0]} has a Usage cell that does not start with '
+                                f'a usage label -- re-run docs/fetch_usage.py')
 
     if 'Publication' in columns:
         for row in rows:

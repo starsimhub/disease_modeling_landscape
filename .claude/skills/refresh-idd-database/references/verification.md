@@ -36,7 +36,34 @@ curl -s "https://pypi.org/pypi/PKG/json" | python3 -c "import json,sys; d=json.l
 curl -s "https://pypistats.org/api/packages/PKG/recent"
 ```
 
-Historical PyPI totals are not available from PyPI itself; existing `Usage` figures are point-in-time and should be re-stated with their own date rather than silently updated against a different metric.
+PyPI publishes no lifetime totals of its own and pypistats serves only the last 180 days, which undercounts a long-lived package against CRAN's all-time figure. Use the public ClickHouse mirror instead — no key, and many projects in one query:
+
+```bash
+curl -s 'https://sql-clickhouse.clickhouse.com/?user=demo&default_format=JSON' \
+  --data-binary "SELECT project, sum(count) AS total FROM pypi.pypi_downloads WHERE project IN ('covasim','starsim') GROUP BY project"
+```
+
+Check the project is the tool's own before counting it: PyPI holds unrelated packages whose names collide with a tool's (`civet` is a Django asset precompiler, `TreeTime` a to-do list manager, `optima` a PyTorch optimiser, `pangolin` a probabilistic inference library). `docs/fetch_usage.py` accepts a guessed name only when the package metadata links back to the tool's repository, and prints the name-only matches for review; rejections and corrections live in `docs/data/usage_manual.json`.
+
+## Usage scores
+
+Do not re-derive the `Usage` column by hand — it is computed:
+
+```bash
+python docs/fetch_usage.py --dry-run     # what would change
+python docs/fetch_usage.py               # rewrite the column, refresh docs/data/usage.json
+python docs/fetch_usage.py --only Naomi  # one tool
+```
+
+It fetches stars and forks, all-time CRAN (cranlogs) and PyPI (ClickHouse) downloads, citations (OpenAlex, then Crossref) and country counts read out of the cell's own prose, converts them to points at the rates in `references/criteria.md`, and writes `Label (evidence)` back into `database_tools.md`. `docs/data/usage.json` is the audit trail: every input behind every label, committed.
+
+Citation counts: OpenAlex is the primary source because Crossref's `is-referenced-by-count` does not cover the arXiv and bioRxiv DOIs several entries use.
+
+```bash
+curl -s "https://api.openalex.org/works/doi:10.1371/journal.pcbi.1009149?mailto=cliff.kerr@gatesfoundation.org" | python3 -c "import json,sys; d=json.load(sys.stdin); print(d['cited_by_count'],'|',d['title'])"
+```
+
+Percent-encoded parentheses in a DOI link target (`10.1016/S2352-3018%2817%2930190-X`) must be decoded before either API will resolve them; that one silently returned zero citations until it was fixed.
 
 ## Crossref
 

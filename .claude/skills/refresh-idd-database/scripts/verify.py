@@ -262,7 +262,7 @@ def from_database(only=None):
             print(f'{name[:26]:<26} {stars:>6} {forks:>6} {pushed:<11} {licence[:18]:<18} {note}')
 
     print('\nSTALE = no activity within 3 years; READ-LICENCE = API licence unreliable, read the file.')
-    print('Re-state Usage figures with their own snapshot date rather than mixing metrics.')
+    print('The Usage column is generated: run `python docs/fetch_usage.py` rather than editing it.')
 
 
 def main():

@@ -12,10 +12,13 @@ A static illustration of what the GSIDD "IDD tools" section could look like, bui
 | `data/data.js` | Generated data; do not edit by hand |
 | `data/publications.json` | Cached DOI → title/journal/year lookups |
 | `data/updated.json` | Cached tool → last-updated date, and where it came from |
+| `data/usage.json` | Cached tool → usage metrics, points and label; the audit trail for the `Usage` column |
+| `data/usage_manual.json` | Hand-set usage values that the fetcher must not overwrite |
 | `build.py` | The one command to run: checks, fetches, builds |
 | `build_site.py` | Regenerates `data/data.js` from the markdown databases |
 | `fetch_publications.py` | Refreshes `data/publications.json` from Crossref |
 | `fetch_updated.py` | Refreshes `data/updated.json` from GitHub, GitLab, PyPI and CRAN |
+| `fetch_usage.py` | Re-scores the `Usage` column of `database_tools.md` and refreshes `data/usage.json` |
 
 ## Rebuilding after editing the databases
 
@@ -25,7 +28,7 @@ python docs/build.py
 
 That is the whole pipeline, in three stages.
 
-1. **Check.** Every table is parsed and tested: cell counts match the header, names are unique and in case-insensitive alphabetical order, each `Publication` cell is a DOI link or `—`, and the count stated in the prose ("137 tools, sorted alphabetically…") matches the number of rows. Any failure stops the build, so a malformed table cannot be published silently.
+1. **Check.** Every table is parsed and tested: cell counts match the header, names are unique and in case-insensitive alphabetical order, each `Publication` cell is a DOI link or `—`, each `Usage` cell starts with `Established`, `Emerging` or `Minimal`, and the count stated in the prose ("137 tools, sorted alphabetically…") matches the number of rows. Any failure stops the build, so a malformed table cannot be published silently.
 2. **Fetch.** Every DOI in `database_tools.md` not already in `data/publications.json` is resolved against Crossref, falling back to DataCite for DOIs Crossref does not hold (arXiv preprints, mostly). Then every tool not already in `data/updated.json` gets a last-updated date (see below). Both caches are committed, so only this stage needs the network.
 3. **Build.** The main table of each `database_*.md` file — and the per-ecosystem detail sections from `database_ecosystems.md` — is written to `docs/data/data.js`, with each DOI replaced by its title, journal and year and an `Updated` column appended to the tools table. The data is emitted as a plain script rather than JSON so the site also works when `index.html` is opened directly from disk, with no server.
 
@@ -48,6 +51,24 @@ Where the `Code` column is not a repository, the tool's own name is tried on the
 
 GitHub allows 60 unauthenticated API calls an hour, well short of the 113 repositories here, so the script uses `$GITHUB_TOKEN` if it is set and otherwise falls back to `gh auth token`. Re-run `python docs/build.py --refresh` to bring the dates (and the DOI titles) up to date, or `python docs/fetch_updated.py --only NAME` to re-check a single tool.
 
+### Usage scoring
+
+The `Usage` column *is* held in `database_tools.md` — unlike the update dates, it carries prose evidence that no API can reconstruct — but the numeric part of it is generated. `python docs/fetch_usage.py` re-fetches the metrics, re-scores every tool, rewrites the column in place, and writes the full breakdown to `data/usage.json` so a label can be audited without re-fetching.
+
+| Evidence | Source | Points |
+|---|---|---|
+| GitHub stars and forks | GitHub API, summed across the account's repositories where `Code` names an organisation | 1 each |
+| CRAN downloads, all-time | cranlogs | 1 per 1,000 |
+| PyPI downloads, all-time | the public ClickHouse mirror of the PyPI download statistics; pypistats serves only the last 180 days, which would undercount long-lived packages against CRAN's lifetime totals | 1 per 1,000 |
+| Citations of the foundational paper | OpenAlex, falling back to Crossref; OpenAlex covers the arXiv and bioRxiv DOIs Crossref's own count does not | 1 each |
+| Countries with documented use | the prose already in the cell ("Used by teams in 40+ countries" → 40); prose describing a national or agency deployment without a number counts as one | 1 each |
+
+Above 50 points is `Established`, 10–50 `Emerging`, below 10 `Minimal`. The points are not published — see the rationale in `database_tools.md` — so the cell reads `Established (289★, 238 forks; PyPI 318k)`: label, then the evidence it came from, with any prose clause in the old cell preserved.
+
+Package names are resolved from the `Code` column where it names one, and otherwise guessed from the repository or tool name and accepted only if the package's own metadata points back at that repository. A name-only match is kept but reported at the end of the run, because PyPI is full of unrelated packages whose names collide with a tool's — `civet` is a Django asset precompiler, `TreeTime` a to-do list manager, `optima` a PyTorch optimiser. Corrections go in `data/usage_manual.json`, which is merged over the fetched values and never rewritten: `"pypi": null` rejects a match, a string replaces it, and `countries` can record adoption the prose does not state.
+
+Flags: `--dry-run` prints the cells that would change and writes nothing, `--offline` re-scores from the cache, `--only NAME` (repeatable) does one tool. Sorting the site's `Usage` column sorts by rank, not spelling, so descending runs Established → Emerging → Minimal.
+
 `.github/workflows/build-site.yml` runs the same command in CI: on a push to `main` it rebuilds and commits `data/data.js`, and on a pull request it fails if the tables are malformed or the committed `data.js` is stale. Forgetting to rebuild is therefore caught rather than shipped.
 
 ## Previewing locally
@@ -66,7 +87,7 @@ Then open <http://localhost:8000>.
 - **Licence grouping.** Filtering by licence uses families rather than exact SPDX identifiers, so versions of one licence stay together: MIT (54), GPL (44, covering GPL-2.0 through GPL-3.0-or-later), BSD (5), Other copyleft (9: LGPL, AGPL, EUPL, CeCILL), Other permissive (6: Apache, Artistic, public domain), Proprietary or closed (14) and Not stated (5). The table cell still shows the exact identifier — the grouping applies to the filter only. `Not stated` is kept separate despite being under five entries, because an undeclared licence is a different fact from a deliberately closed one. The mapping is `licenceGroup()` in `assets/app.js`.
 - **Column show/hide**, since the full tables are wider than a page. Each tab starts with its least-used columns hidden — for tools, Discipline and Licence. The name column stays pinned to the left while scrolling sideways.
 - **Column reordering** by dragging a header, or by pressing Alt + ← / → on a focused one. The name column is the record's identity, so it stays first and nothing moves in front of it; everything else can go anywhere. Reset in the Columns dropdown restores both the default order and the default visibility. A move applies to the table, the detail drawer, the CSV export and the column list alike, and lasts as long as the page is open.
-- **Sorting** by clicking any column header. A sort follows its column when the column moves. Cells saying nothing — blank, `—`, or an `N/A` update date — sink to the bottom whichever way the column is sorted, since a missing answer is not the smallest one: sorting by Updated descending shows the most recently touched tools first and the undatable ones last, rather than leading with them.
+- **Sorting** by clicking any column header. A sort follows its column when the column moves. Cells saying nothing — blank, `—`, or an `N/A` update date — sink to the bottom whichever way the column is sorted, since a missing answer is not the smallest one: sorting by Updated descending shows the most recently touched tools first and the undatable ones last, rather than leading with them. `Usage` sorts by its label's rank rather than alphabetically — descending is Established, then Emerging, then Minimal — and tools sharing a label keep the table's alphabetical order, since their evidence strings are not comparable with each other.
 - **Detail drawer** — click a row for the complete record, including hidden columns and, for ecosystems, the component list and caveats from the per-ecosystem sections.
 - **CSV export** of the current filtered rows and visible columns.
 

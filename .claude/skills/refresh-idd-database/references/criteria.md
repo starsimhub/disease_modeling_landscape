@@ -32,7 +32,11 @@ Calibration points: ~10 stars+forks, or CRAN/PyPI presence, or multi-group publi
 
 Tools whose users are in government or agency workflows rather than on GitHub are the hardest to assess and the most likely to be under-counted. Say so rather than penalising them.
 
-`Usage` cell format: `42★, 30 forks`; `CRAN 213k`; `PyPI 554k`; or a prose clause for programme adoption ("South Africa's official national HIV estimates"). The column was named `Adoption` and was renamed to `Usage` by user instruction.
+**The label is scored, not judged.** Since 2026-08-14 every `Usage` cell opens with `Established`, `Emerging` or `Minimal`, computed by `docs/fetch_usage.py` from a points total: 1 point per GitHub star and per fork, 1 per 1,000 all-time CRAN or PyPI downloads, 1 per citation of the foundational paper, 1 per country with documented use; >50 points `Established`, 10–50 `Emerging`, <10 `Minimal`. Do not assign a label by hand and do not restate the points in the file — run the script, which rewrites the column in place and records the breakdown in `docs/data/usage.json`.
+
+`Usage` cell format: `Established (289★, 238 forks; PyPI 318k)`; `Emerging (CRAN 34k)`; `Established (South Africa's official national HIV estimates)`. The parenthetical is the evidence the label came from; prose clauses are preserved across re-runs, star/fork/CRAN/PyPI figures are regenerated. The column was named `Adoption` and was renamed to `Usage` by user instruction.
+
+The label does not gate inclusion — the criterion is still cumulative judgement, and `Minimal` records thin *public* evidence rather than an unimportant tool. It does make the two under-counted cases visible: a tool distributed through national programmes scores only on citations and country use, and a tool whose paper is recent scores near zero on citations however widely it is used. Where the prose does not state a country count and one is known, set it in `docs/data/usage_manual.json` rather than editing the cell.
 
 ### 5. Supported — activity within 3 years, deliberately a low bar
 
