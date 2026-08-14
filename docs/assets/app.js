@@ -27,7 +27,7 @@
       wide: ['Description', 'Publication'],
       medium: ['Authors'],
       tight: ['Type', 'Discipline', 'Pathogen', 'Language', 'Code', 'Updated', 'Licence'],
-      tags: { Type: typeTag }
+      tags: { Type: typeTag, Usage: usageTag }
     },
     ecosystems: {
       blurb: 'Families of tools deliberately built to work together — sharing a core engine, a data ' +
@@ -134,6 +134,17 @@
     if (t === 'utility') return 'tag-utility';
     if (t.indexOf('ai') === 0) return 'tag-ai';
     return '';
+  }
+
+  /**
+   * The Usage cell is a label plus the evidence behind it, so only the label
+   * becomes a chip: returning an object rather than a class name tells the
+   * renderer to keep the rest of the cell as text after it.
+   */
+  function usageTag(value) {
+    var match = /^(Established|Emerging|Minimal)\s*(?:\(([\s\S]*)\))?$/.exec(mdText(value));
+    if (!match) return '';
+    return { cls: 'tag-usage-' + match[1].toLowerCase(), label: match[1], rest: match[2] || '' };
   }
 
   function statusTag(value) {
@@ -600,10 +611,18 @@
         var td = el('td', cellClass(section, c.col, position));
         var value = row.cells[c.i] || '';
         var tagFn = (section.cfg.tags || {})[c.col];
-        if (tagFn && value) {
+        var spec = tagFn && value ? tagFn(value) : null;
+        if (spec && typeof spec === 'object') {
+          td.appendChild(el('span', 'tag ' + spec.cls, spec.label));
+          if (spec.rest) {
+            var rest = el('span', 'tag-note');
+            rest.innerHTML = mdInline(spec.rest);
+            td.appendChild(rest);
+          }
+        } else if (tagFn && value) {
           var facet = (section.cfg.facets || []).filter(function (f) { return f.col === c.col; })[0];
           var label = facet && facet.short ? facet.short(value) : mdText(value);
-          var tag = el('span', 'tag ' + tagFn(value), label);
+          var tag = el('span', 'tag ' + spec, label);
           if (label !== mdText(value)) tag.title = mdText(value);
           td.appendChild(tag);
         } else {

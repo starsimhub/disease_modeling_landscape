@@ -63,7 +63,7 @@ python docs/fetch_usage.py --dry-run     # what would change
 python docs/fetch_usage.py               # rewrite the column, refresh docs/data/usage.json
 ```
 
-which turns stars, forks, all-time CRAN and PyPI downloads, citations and documented country use into points (rates in `references/criteria.md`) and writes `Established (289★, 238 forks; PyPI 318k)` back into every row. Read the name-only PyPI matches it prints at the end — a wrong package inflates a label — and record any correction in `docs/data/usage_manual.json`, which it never overwrites. A new tool gets its label from the same run; do not invent one.
+which turns stars, forks, all-time CRAN and PyPI downloads, citations and documented country use into points (rates in `references/criteria.md`) and writes `Established (289★, 238 forks; PyPI 318k; 663 citations)` back into every row. Read the name-only PyPI matches it prints at the end — a wrong package inflates a label — and record any correction in `docs/data/usage_manual.json`, which it never overwrites. A new tool gets its label from the same run; do not invent one.
 
 ## Step 5 — write
 

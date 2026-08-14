@@ -422,6 +422,11 @@ mark { background: #ffe6b8; color: inherit; padding: 0 1px; }
 .tag-active { background: #e6f2e8; color: #2c5d33; }
 .tag-caveat { background: #fdf0dd; color: #8a5a12; }
 .tag-inactive { background: #f2e6e6; color: #8a2f2f; }
+/* Usage runs blue -> teal -> green as the evidence thins. */
+.tag-usage-established { background: #bed6f4; color: #163a68; }
+.tag-usage-emerging { background: #cbe8e4; color: #14544d; }
+.tag-usage-minimal { background: #e4f1dc; color: #43642c; }
+.tag-note { display: block; margin-top: 4px; color: var(--muted); }
 
 .empty { padding: 40px; text-align: center; color: var(--muted); }
 

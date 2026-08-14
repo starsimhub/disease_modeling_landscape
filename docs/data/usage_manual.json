@@ -8,6 +8,10 @@
   "pypi": "emulsion",
   "_why": "checked by hand: PyPI `emulsion` is the INRAE framework, source on forgemia.inra.fr"
  },
+ "GLEAM / GLEAMviz": {
+  "cited_for": "tool",
+  "_why": "the paper describes the GLEAM model itself; the title spells the acronym out (\"GLobal Epidemic and Mobility\") rather than naming it, which the title heuristic cannot see"
+ },
  "Nextstrain": {
   "pypi": "nextstrain-augur",
   "_why": "the augur package is published as nextstrain-augur; PyPI's bare `Augur` is an unrelated placeholder"
@@ -37,6 +41,10 @@
   "stars": 54,
   "forks": 15,
   "_why": "PyPI `vivarium` links to ihmeuw/vivarium, checked by hand; the Code column points at ihmeuw/vivarium-suite, an index repository, so the star and fork counts are the framework repository's"
+ },
+ "Thembisa": {
+  "cited_for": "tool",
+  "_why": "Johnson et al. is the Thembisa model's own output paper and its canonical citation, though the title names neither the model nor software"
  },
  "TreeTime": {
   "pypi": "phylo-treetime",

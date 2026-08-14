@@ -5,20 +5,21 @@ Each tool gets a points total from four commensurable sources:
 
     1 point   per GitHub star, and per fork
     1 point   per 1,000 package downloads (CRAN total, PyPI total)
-    1 point   per citation of the tool's foundational paper
+    1 point   per 5 citations of a paper about the tool itself, and per 20
+              citations of one that is not (see cited_for)
     1 point   per country with documented use
 
-and a label from that total: >50 points `Established`, 10-50 `Emerging`, <10
+and a label from that total: >200 points `Established`, 30-200 `Emerging`, <30
 `Minimal`. The points are deliberately not published -- they combine metrics that
 are not really commensurable, and stating them to the unit would claim a
 precision the inputs do not have -- so the cell shows the label followed by the
-evidence behind it, e.g. `Established (288★, 238 forks; PyPI 318k)`.
+evidence behind it, e.g. `Established (288★, 238 forks; PyPI 318k; 663 citations)`.
 
 Download counts are all-time: CRAN via cranlogs, PyPI via the public ClickHouse
 mirror of the PyPI download statistics (pypistats.org serves only the last 180
 days, which would undercount long-lived packages against CRAN's lifetime totals).
-Citations are Crossref's `is-referenced-by-count` for the DOI in the Publication
-column. Country counts are read out of the prose already in the Usage cell
+Citations are OpenAlex's `cited_by_count` for the DOI in the Publication column,
+falling back to Crossref's `is-referenced-by-count`. Country counts are read out of the prose already in the Usage cell
 ("Used by teams in 40+ countries" -> 40); prose that documents a national or
 agency deployment without naming a number counts as one country. Anything the
 prose does not state can be set by hand in docs/data/usage_manual.json, which is
@@ -27,7 +28,7 @@ merged over the fetched values and never overwritten.
 Writes docs/data/usage.json -- the full per-tool breakdown, committed so that a
 label can be audited without re-fetching -- and edits the Usage column of
 database_tools.md in place. Prose clauses in the existing cell are preserved;
-the star, fork, CRAN and PyPI figures in it are regenerated.
+the star, fork, download and citation figures in it are regenerated.
 
 Usage:
     python docs/fetch_usage.py               # re-fetch everything and rewrite the table
@@ -52,6 +53,7 @@ from fetch_updated import (CRAN_RE, GITHUB_RE, HEADERS, PYPI_RE, TOKEN, URL_RE,
 
 DOCS = Path(__file__).parent
 CACHE = DOCS / 'data' / 'usage.json'
+PUBLICATIONS = DOCS / 'data' / 'publications.json'
 MANUAL = DOCS / 'data' / 'usage_manual.json'
 SOURCE = ROOT / 'database_tools.md'
 
@@ -60,7 +62,8 @@ DOI_RE = re.compile(r'https://doi\.org/(10\.[^)\s]+)')
 
 # Segments of an existing Usage cell that this script regenerates; anything else
 # in the cell is prose evidence and is kept.
-GENERATED_RE = re.compile(r'★|^(CRAN|PyPI)\s|^(Established|Emerging|Minimal)\b')
+GENERATED_RE = re.compile(r'★|^(CRAN|PyPI)\s|^(Established|Emerging|Minimal)\b'
+                          r'|^[\d,]+ citations?$')
 COUNTRIES_RE = re.compile(r'(\d+)\s*\+?\s*countries', re.I)
 # Prose that documents a deployment somewhere, when it names no number.
 DEPLOYMENT_RE = re.compile(
@@ -68,16 +71,25 @@ DEPLOYMENT_RE = re.compile(
     r'|\bUNAIDS\b|\bgovernment|\bprogramme|\bguidelines|\bpolicy|\bsurveillance|\bworldwide'
     r'|\bglobally|\bstate\b', re.I)
 
-ESTABLISHED, EMERGING, MINIMAL = 50, 10, 0
+ESTABLISHED, EMERGING = 200, 30
+# Citations of the software's own paper are evidence for the software. Citations
+# of the method or data paper it happens to be attached to are evidence for the
+# science, and count for a quarter as much.
+CITATIONS_PER_POINT = {'tool': 5, 'science': 20, 'unknown': 20}
 
 
 def label_for(points):
-    """>50 points Established, 10-50 Emerging, <10 Minimal."""
+    """>200 points Established, 30-200 Emerging, <30 Minimal."""
     if points > ESTABLISHED:
         return 'Established'
     if points >= EMERGING:
         return 'Emerging'
     return 'Minimal'
+
+
+def citation_rate(record):
+    """Citations needed for one point, given whose paper it is."""
+    return CITATIONS_PER_POINT[record.get('cited_for') or 'unknown']
 
 
 def points_for(record):
@@ -86,7 +98,7 @@ def points_for(record):
     return ((record.get('stars') or 0)
             + (record.get('forks') or 0)
             + downloads / 1000
-            + (record.get('citations') or 0)
+            + (record.get('citations') or 0) / citation_rate(record)
             + (record.get('countries') or 0))
 
 
@@ -163,20 +175,51 @@ def pypi_metadata(project):
 
 def citations(doi):
     """
-    Works citing this DOI. OpenAlex first: it indexes preprint DOIs (several
+    (count, title) for a DOI. OpenAlex first: it indexes preprint DOIs (several
     software papers here are arXiv or bioRxiv) that Crossref's own citation
-    count does not cover, and its counts are the more complete of the two.
+    count does not cover, and its counts are the more complete of the two. The
+    title comes back too, since whether the paper is about the software decides
+    whether its citations are evidence for the software (see cited_for).
     """
     quoted = urllib.parse.quote(doi, safe='/')
     try:
         data = get_json(f'https://api.openalex.org/works/doi:{quoted}'
                         '?mailto=cliff.kerr@gatesfoundation.org')
         if data.get('cited_by_count') is not None:
-            return data['cited_by_count']
+            return data['cited_by_count'], data.get('title')
     except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
         pass
-    data = get_json('https://api.crossref.org/works/' + quoted)
-    return data['message'].get('is-referenced-by-count')
+    message = get_json('https://api.crossref.org/works/' + quoted)['message']
+    return message.get('is-referenced-by-count'), (message.get('title') or [None])[0]
+
+
+# Titles and venues that mark a paper as being about the software itself.
+SOFTWARE_WORDS = re.compile(
+    r'\b(package|software|toolkit|toolbox|tool|tools|library|framework|simulator|'
+    r'platform|pipeline|implementation|program|app|application|interface|module|repository|suite|engine|code)\b', re.I)
+SOFTWARE_VENUES = re.compile(
+    r'open source software|statistical software|softwarex|open research software|'
+    r'software:? practice', re.I)
+
+
+def cited_for(name, title, venue):
+    """
+    Whether a paper's citations are evidence for the *tool* or for the science
+    it happens to be attached to. A paper naming the tool, describing software,
+    or published in a software venue is the tool's own; anything else is a
+    method or data paper whose citation count says nothing about the software.
+    `contactdata` is the clear case: its DOI is Prem et al.'s contact-matrix
+    paper, cited ~1,000 times for the matrices, not for the R package.
+    """
+    if not title:
+        return 'unknown'
+    # `summer / summer2` and `GLEAM / GLEAMviz` are one row naming two packages.
+    parts = [normalise(p) for p in re.split(r'[/,]', name)]
+    if any(p and p in normalise(title) for p in parts):
+        return 'tool'
+    if SOFTWARE_WORDS.search(title) or SOFTWARE_VENUES.search(venue or ''):
+        return 'tool'
+    return 'science'
 
 
 # ------------------------------------------------------- resolving package names
@@ -261,7 +304,7 @@ def count_countries(prose):
 
 
 def compose(record):
-    """`Established (288★, 238 forks; PyPI 318k)`."""
+    """`Established (288★, 238 forks; PyPI 318k; 663 citations)`."""
     parts = []
     if record.get('stars') is not None:
         forks = record.get('forks') or 0
@@ -270,6 +313,8 @@ def compose(record):
         parts.append('CRAN ' + compact(record['cran_downloads']))
     if record.get('pypi_downloads'):
         parts.append('PyPI ' + compact(record['pypi_downloads']))
+    if record.get('citations'):
+        parts.append(f"{record['citations']:,} citation{'' if record['citations'] == 1 else 's'}")
     parts += record.get('prose') or []
     detail = '; '.join(parts)
     return f"{record['label']} ({detail})" if detail else record['label']
@@ -351,12 +396,12 @@ def gather(tool, offline, cached):
     # Parentheses in a DOI are percent-encoded in the link target (Elsevier's
     # 10.1016/S2352-3018(17)30190-X); the APIs want the decoded form.
     record['doi'] = urllib.parse.unquote(doi.group(1)) if doi else None
-    record['citations'] = None
+    record['citations'], record['paper_title'] = None, None
     if record['doi']:
         try:
-            record['citations'] = citations(record['doi'])
+            record['citations'], record['paper_title'] = citations(record['doi'])
         except (urllib.error.URLError, KeyError, TimeoutError) as exc:
-            print(f"    {tool['name']}: Crossref failed ({exc})")
+            print(f"    {tool['name']}: citation lookup failed ({exc})")
     return record
 
 
@@ -404,10 +449,20 @@ def main():
                 record['pypi_downloads'] = total if total is not None else \
                     (cache.get(name, {}).get('pypi_downloads'))
 
+    # publications.json already holds a title and journal for most DOIs, so the
+    # citation provenance check works offline and without re-fetching.
+    published = json.loads(PUBLICATIONS.read_text(encoding='utf-8')) if PUBLICATIONS.exists() else {}
+
     cells, tally = {}, {'Established': 0, 'Emerging': 0, 'Minimal': 0}
     for name, record in records.items():
         if not record.get('pypi'):
             record['pypi_downloads'] = None
+        paper = published.get(record.get('doi') or '', {})
+        record['paper_title'] = record.get('paper_title') or paper.get('title')
+        # A hand-set cited_for wins: the heuristic reads titles, and a method
+        # paper by the tool's own authors is often the tool's canonical citation.
+        record['cited_for'] = ((manual.get(name) or {}).get('cited_for')
+                               or cited_for(name, record['paper_title'], paper.get('journal')))
         record['points'] = round(points_for(record), 1)
         record['label'] = label_for(record['points'])
         tally[record['label']] += 1
@@ -431,6 +486,17 @@ def main():
               'and set "pypi": null in usage_manual.json for any that are not:')
         for name in weak:
             print(f'  {name} -> pypi.org/project/{records[name]["pypi"]}')
+    # Citations only evidence the software if the paper is about the software.
+    borrowed = [(r['citations'], n, r['paper_title']) for n, r in records.items()
+                if r.get('cited_for') == 'science' and (r.get('citations') or 0) >= 25]
+    if borrowed:
+        print('\nCitations that look like the science, not the tool -- the paper does not name '
+              'the tool or describe software, so they count at 1 point per 20 rather than per 5. '
+              'Set "cited_for": "tool" in usage_manual.json for any that are the tool\'s own paper:')
+        for count, name, title in sorted(borrowed, reverse=True):
+            share = 100 * (count / citation_rate(records[name])) / max(records[name]['points'], 1)
+            print(f'  {name}: {count:,} citations, {share:.0f}% of its points -- "{title}"')
+
     if dry_run:
         print('Nothing written (--dry-run).')
         return 0
