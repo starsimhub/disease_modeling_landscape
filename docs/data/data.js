@@ -335,7 +335,7 @@ window.DB = {
      "Epidemiology",
      "Any/general",
      "C++ / Python",
-     "**Unmaintained by IDM.** Individual-based multi-disease transmission platform covering malaria, HIV, TB, polio and respiratory pathogens.",
+     "Individual-based multi-disease transmission platform covering malaria, HIV, TB, polio and respiratory pathogens.",
      "Institute for Disease Modeling",
      "[github.com](https://github.com/EMOD-Hub/EMOD)",
      "[Implementation and applications of EMOD, an individual-based multi-disease modeling platform](https://doi.org/10.1093/femspd/fty059) — *Pathogens and Disease, 2018*",
