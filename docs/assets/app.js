@@ -14,8 +14,8 @@
         'models, plus the utilities around them for data access, genomics, surveillance and forecast ' +
         'evaluation. Every entry has been checked against the inclusion criteria, with usage evidence ' +
         'and licence recorded so the basis for inclusion is visible.',
-      order: ['Name', 'Description', 'Authors', 'Publication', 'Usage', 'Code', 'Language',
-        'Type', 'Pathogen', 'Discipline', 'Licence'],
+      order: ['Name', 'Description', 'Authors', 'Publication', 'Usage', 'Code', 'Updated',
+        'Language', 'Type', 'Pathogen', 'Discipline', 'Licence'],
       hidden: ['Discipline', 'Licence'],
       facets: [
         { col: 'Type' },
@@ -26,7 +26,7 @@
       ],
       wide: ['Description', 'Publication'],
       medium: ['Authors'],
-      tight: ['Type', 'Discipline', 'Pathogen', 'Language', 'Code', 'Licence'],
+      tight: ['Type', 'Discipline', 'Pathogen', 'Language', 'Code', 'Updated', 'Licence'],
       tags: { Type: typeTag }
     },
     ecosystems: {

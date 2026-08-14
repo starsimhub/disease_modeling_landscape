@@ -1,0 +1,622 @@
+{
+ "ADSM": {
+  "date": "2026-05-08",
+  "source": "github",
+  "url": "https://github.com/NAVADMC/ADSM"
+ },
+ "AMR": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/msberends/AMR"
+ },
+ "ARTIC fieldbioinformatics": {
+  "date": "2026-07-16",
+  "source": "github",
+  "url": "https://github.com/artic-network/fieldbioinformatics"
+ },
+ "AnophelesModel": {
+  "date": "2025-08-09",
+  "source": "github",
+  "url": "https://github.com/SwissTPH/AnophelesModel"
+ },
+ "Atomica": {
+  "date": "2026-08-11",
+  "source": "github",
+  "url": "https://github.com/atomicateam/atomica"
+ },
+ "BEAST": {
+  "date": "2026-08-10",
+  "source": "github",
+  "url": "https://github.com/beast-dev/beast-mcmc"
+ },
+ "BEAST 2": {
+  "date": "2026-07-13",
+  "source": "github",
+  "url": "https://github.com/CompEvol/beast2"
+ },
+ "Bernadette": {
+  "date": "2025-02-28",
+  "source": "github",
+  "url": "https://github.com/bernadette-eu/Bernadette"
+ },
+ "CoMo Consortium model": {
+  "date": "2025-02-11",
+  "source": "github-org",
+  "url": "https://como-international.github.io/"
+ },
+ "Covasim": {
+  "date": "2026-08-09",
+  "source": "github",
+  "url": "https://github.com/starsimhub/covasim"
+ },
+ "CovsirPhy": {
+  "date": "2026-07-25",
+  "source": "github",
+  "url": "https://github.com/lisphilar/covid19-sir"
+ },
+ "DClusterm": {
+  "date": "2025-05-08",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=DClusterm"
+ },
+ "Delphi Epidata": {
+  "date": "2026-08-07",
+  "source": "github",
+  "url": "https://github.com/cmu-delphi/delphi-epidata"
+ },
+ "EMOD": {
+  "date": "2026-08-10",
+  "source": "github",
+  "url": "https://github.com/EMOD-Hub/EMOD"
+ },
+ "EPIONCHO-IBM": {
+  "date": "2026-07-13",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/EPIONCHO.IBM"
+ },
+ "Emulsion": {
+  "date": "2026-08-03",
+  "source": "gitlab",
+  "url": "https://forgemia.inra.fr/dynamo/software/emulsion-public"
+ },
+ "EoN": {
+  "date": "2026-07-15",
+  "source": "github",
+  "url": "https://github.com/springer-math/Mathematics-of-Epidemics-on-Networks"
+ },
+ "Epi Info": {
+  "date": "2025-04-09",
+  "source": "github",
+  "url": "https://github.com/Epi-Info/Epi-Info-Community-Edition"
+ },
+ "EpiContactTrace": {
+  "date": "2024-10-10",
+  "source": "github",
+  "url": "https://github.com/stewid/EpiContactTrace"
+ },
+ "EpiEstim": {
+  "date": "2026-07-29",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/EpiEstim"
+ },
+ "EpiHiper": {
+  "date": "2026-07-23",
+  "source": "github",
+  "url": "https://github.com/NSSAC/EpiHiper"
+ },
+ "EpiILM": {
+  "date": "2025-09-26",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=EpiILM"
+ },
+ "EpiILMCT": {
+  "date": "2025-09-23",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=EpiILMCT"
+ },
+ "EpiLPS": {
+  "date": "2025-09-01",
+  "source": "github",
+  "url": "https://github.com/oswaldogressani/EpiLPS"
+ },
+ "EpiModel": {
+  "date": "2026-08-06",
+  "source": "github",
+  "url": "https://github.com/EpiModel/EpiModel"
+ },
+ "EpiNow2": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/epiforecasts/EpiNow2"
+ },
+ "EpiSewer": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/adrian-lison/EpiSewer"
+ },
+ "Epiabm": {
+  "date": "2025-09-12",
+  "source": "github",
+  "url": "https://github.com/SABS-R3-Epidemiology/epiabm"
+ },
+ "Episimmer": {
+  "date": "2026-08-10",
+  "source": "github",
+  "url": "https://github.com/healthbadge/episimmer"
+ },
+ "Epydemix": {
+  "date": "2026-07-29",
+  "source": "github",
+  "url": "https://github.com/epistorm/epydemix"
+ },
+ "FRED": {
+  "date": "2024-05-10",
+  "source": "github",
+  "url": "https://github.com/PublicHealthDynamicsLab/FRED"
+ },
+ "GEMS": {
+  "date": "2026-08-12",
+  "source": "github",
+  "url": "https://github.com/IMMIDD/GEMS"
+ },
+ "HPVsim": {
+  "date": "2026-08-09",
+  "source": "github",
+  "url": "https://github.com/starsimhub/hpvsim"
+ },
+ "JUNE": {
+  "date": "2026-04-14",
+  "source": "github",
+  "url": "https://github.com/IDAS-Durham/JUNE"
+ },
+ "Kendrick": {
+  "date": "2026-03-19",
+  "source": "github",
+  "url": "https://github.com/KendrickOrg/kendrick"
+ },
+ "MASCOT": {
+  "date": "2026-07-14",
+  "source": "github",
+  "url": "https://github.com/CompEvol/Mascot"
+ },
+ "MATSim Episim": {
+  "date": "2026-08-01",
+  "source": "github",
+  "url": "https://github.com/matsim-org/matsim-episim-libs"
+ },
+ "MEmilio": {
+  "date": "2026-08-14",
+  "source": "github",
+  "url": "https://github.com/SciCompMod/memilio"
+ },
+ "MGDrivE": {
+  "date": "2025-09-14",
+  "source": "github",
+  "url": "https://github.com/MarshallLab/MGDrivE"
+ },
+ "MetaCast": {
+  "date": "2024-11-12",
+  "source": "github",
+  "url": "https://github.com/m-d-grunnill/MetaCast"
+ },
+ "MetaWards": {
+  "date": "2024-07-15",
+  "source": "github",
+  "url": "https://github.com/metawards/MetaWards"
+ },
+ "MicroCOSM": {
+  "date": "2025-09-17",
+  "source": "github",
+  "url": "https://github.com/leighjohnson/MicroCOSM"
+ },
+ "NDlib": {
+  "date": "2026-07-31",
+  "source": "github",
+  "url": "https://github.com/GiulioRossetti/ndlib"
+ },
+ "Naomi": {
+  "date": "2026-08-10",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/naomi"
+ },
+ "Nextclade": {
+  "date": "2026-08-12",
+  "source": "github",
+  "url": "https://github.com/nextstrain/nextclade"
+ },
+ "Nextstrain": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/nextstrain/augur"
+ },
+ "NobBS": {
+  "date": "2026-06-03",
+  "source": "github",
+  "url": "https://github.com/sarahhbellum/NobBS"
+ },
+ "OpenABM-Covid19": {
+  "date": "2025-10-09",
+  "source": "github",
+  "url": "https://github.com/BDI-pathogens/OpenABM-Covid19"
+ },
+ "OpenCOVID": {
+  "date": "2024-07-16",
+  "source": "github",
+  "url": "https://github.com/SwissTPH/OpenCOVID"
+ },
+ "OpenMalaria": {
+  "date": "2026-08-11",
+  "source": "github",
+  "url": "https://github.com/OpenMalaria-Org/openmalaria"
+ },
+ "Optima HIV": {
+  "date": "2026-03-02",
+  "source": "github",
+  "url": "https://github.com/optimamodel/optima"
+ },
+ "Pangolin": {
+  "date": "2026-07-25",
+  "source": "github",
+  "url": "https://github.com/cov-lineages/pangolin"
+ },
+ "PatchSim": {
+  "date": "2025-09-03",
+  "source": "github",
+  "url": "https://github.com/NSSAC/PatchSim"
+ },
+ "PopART-IBM": {
+  "date": "2026-04-13",
+  "source": "github",
+  "url": "https://github.com/BDI-pathogens/POPART-IBM"
+ },
+ "PyRoss": {
+  "date": "2024-08-31",
+  "source": "github",
+  "url": "https://github.com/SoftMatterGroupCambridge/pyross"
+ },
+ "R0": {
+  "date": "2023-09-26",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=R0"
+ },
+ "Rsero": {
+  "date": "2026-05-12",
+  "source": "github",
+  "url": "https://github.com/nathoze/Rsero"
+ },
+ "SORMAS": {
+  "date": "2026-08-14",
+  "source": "github",
+  "url": "https://github.com/SORMAS-Foundation/SORMAS-Project"
+ },
+ "STIsim": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/starsimhub/stisim"
+ },
+ "SimInf": {
+  "date": "2026-08-11",
+  "source": "github",
+  "url": "https://github.com/stewid/SimInf"
+ },
+ "SimpactCyan": {
+  "date": "2025-02-08",
+  "source": "github",
+  "url": "https://github.com/j0r1/simpactcyan"
+ },
+ "Starsim": {
+  "date": "2026-08-07",
+  "source": "github",
+  "url": "https://github.com/starsimhub/starsim"
+ },
+ "SubEpiPredict / SpatialWavePredict": {
+  "date": "2026-03-29",
+  "source": "github",
+  "url": "https://github.com/gchowell/SubEpiPredict-Toolbox"
+ },
+ "SynthPops": {
+  "date": "2026-06-04",
+  "source": "github",
+  "url": "https://github.com/synthpops/synthpops"
+ },
+ "TransPhylo": {
+  "date": "2026-07-14",
+  "source": "github",
+  "url": "https://github.com/xavierdidelot/TransPhylo"
+ },
+ "TreeTime": {
+  "date": "2026-08-14",
+  "source": "github",
+  "url": "https://github.com/neherlab/treetime"
+ },
+ "UShER": {
+  "date": "2026-06-01",
+  "source": "github",
+  "url": "https://github.com/yatisht/usher"
+ },
+ "Vivarium": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/ihmeuw/vivarium-suite"
+ },
+ "aedseo": {
+  "date": "2026-08-07",
+  "source": "github",
+  "url": "https://github.com/ssi-dk/aedseo"
+ },
+ "civet": {
+  "date": "2026-07-06",
+  "source": "github",
+  "url": "https://github.com/artic-network/civet"
+ },
+ "coarseDataTools": {
+  "date": "2025-04-11",
+  "source": "github",
+  "url": "https://github.com/nickreich/coarseDataTools"
+ },
+ "contactdata": {
+  "date": "2024-09-25",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=contactdata"
+ },
+ "disaggregation": {
+  "date": "2024-11-13",
+  "source": "github",
+  "url": "https://github.com/aknandi/disaggregation"
+ },
+ "dust": {
+  "date": "2025-08-15",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/dust"
+ },
+ "epichains": {
+  "date": "2026-07-09",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/epichains"
+ },
+ "epicontacts": {
+  "date": "2025-04-17",
+  "source": "github",
+  "url": "https://github.com/reconhub/epicontacts"
+ },
+ "epidemics": {
+  "date": "2026-08-01",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/epidemics"
+ },
+ "epiflows": {
+  "date": "2026-03-09",
+  "source": "github",
+  "url": "https://github.com/reconhub/epiflows"
+ },
+ "epigrowthfit": {
+  "date": "2026-03-31",
+  "source": "github",
+  "url": "https://github.com/davidearn/epigrowthfit"
+ },
+ "epinet": {
+  "date": "2023-11-29",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=epinet"
+ },
+ "epinowcast": {
+  "date": "2026-08-03",
+  "source": "github",
+  "url": "https://github.com/epinowcast/epinowcast"
+ },
+ "epipack": {
+  "date": "2025-10-06",
+  "source": "github",
+  "url": "https://github.com/benmaier/epipack"
+ },
+ "epiparameter": {
+  "date": "2026-07-01",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/epiparameter"
+ },
+ "epitrix": {
+  "date": "2023-09-20",
+  "source": "github",
+  "url": "https://github.com/reconhub/epitrix"
+ },
+ "epiworldR": {
+  "date": "2026-08-11",
+  "source": "github",
+  "url": "https://github.com/UofUEpiBio/epiworldR"
+ },
+ "epymorph": {
+  "date": "2026-08-05",
+  "source": "github",
+  "url": "https://github.com/NAU-CCL/Epymorph"
+ },
+ "ern": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/phac-nml-phrsd/ern"
+ },
+ "estimateR": {
+  "date": "2024-09-10",
+  "source": "github",
+  "url": "https://github.com/covid-19-Re/estimateR"
+ },
+ "excessmort": {
+  "date": "2025-12-03",
+  "source": "github",
+  "url": "https://github.com/rafalab/excessmort"
+ },
+ "finalsize": {
+  "date": "2026-03-26",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/finalsize"
+ },
+ "first90": {
+  "date": "2025-12-16",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/first90release"
+ },
+ "flepiMoP": {
+  "date": "2025-12-15",
+  "source": "github",
+  "url": "https://github.com/HopkinsIDD/flepiMoP"
+ },
+ "hivPlatform": {
+  "date": "2025-09-12",
+  "source": "github",
+  "url": "https://github.com/EU-ECDC/hivPlatform"
+ },
+ "hubverse": {
+  "date": "2026-08-14",
+  "source": "github-org",
+  "url": "https://github.com/hubverse-org"
+ },
+ "hybridModels": {
+  "date": "2025-04-19",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=hybridModels"
+ },
+ "incidence / incidence2": {
+  "date": "2026-03-25",
+  "source": "github",
+  "url": "https://github.com/reconverse/incidence2"
+ },
+ "individual": {
+  "date": "2026-06-08",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/individual"
+ },
+ "linelist": {
+  "date": "2026-06-06",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/linelist"
+ },
+ "linelistBayes": {
+  "date": "2024-05-02",
+  "source": "github",
+  "url": "https://github.com/cmilando/linelistBayes"
+ },
+ "malariaAtlas": {
+  "date": "2026-03-30",
+  "source": "github",
+  "url": "https://github.com/malaria-atlas-project/malariaAtlas"
+ },
+ "malariasimulation": {
+  "date": "2026-07-03",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/malariasimulation"
+ },
+ "mcstate": {
+  "date": "2024-07-01",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/mcstate"
+ },
+ "mem": {
+  "date": "2026-06-08",
+  "source": "github",
+  "url": "https://github.com/lozalojo/mem"
+ },
+ "modelSSE": {
+  "date": "2023-09-07",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=modelSSE"
+ },
+ "nbTransmission": {
+  "date": "2025-05-14",
+  "source": "github",
+  "url": "https://github.com/sarahleavitt/nbTransmission"
+ },
+ "nosoi": {
+  "date": "2025-08-06",
+  "source": "github",
+  "url": "https://github.com/slequime/nosoi"
+ },
+ "o2geosocial": {
+  "date": "2024-06-21",
+  "source": "github",
+  "url": "https://github.com/alxsrobert/o2geosocial"
+ },
+ "odin": {
+  "date": "2026-01-15",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/odin"
+ },
+ "odin.dust / odin2": {
+  "date": "2026-07-14",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/odin2"
+ },
+ "outbreaker2": {
+  "date": "2026-04-20",
+  "source": "github",
+  "url": "https://github.com/reconhub/outbreaker2"
+ },
+ "outbreaks": {
+  "date": "2022-12-08",
+  "source": "github",
+  "url": "https://github.com/reconverse/outbreaks"
+ },
+ "phydynR": {
+  "date": "2025-05-15",
+  "source": "github",
+  "url": "https://github.com/emvolz-phylodynamics/phydynR"
+ },
+ "prevR": {
+  "date": "2024-10-04",
+  "source": "github",
+  "url": "https://github.com/larmarange/prevR"
+ },
+ "projections": {
+  "date": "2024-12-06",
+  "source": "github",
+  "url": "https://github.com/reconhub/projections"
+ },
+ "scoringutils": {
+  "date": "2026-07-19",
+  "source": "github",
+  "url": "https://github.com/epiforecasts/scoringutils"
+ },
+ "scorpio": {
+  "date": "2026-02-13",
+  "source": "github",
+  "url": "https://github.com/cov-lineages/scorpio"
+ },
+ "serocalculator": {
+  "date": "2026-08-10",
+  "source": "github",
+  "url": "https://github.com/UCD-SERG/serocalculator"
+ },
+ "serofoi": {
+  "date": "2026-01-01",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/serofoi"
+ },
+ "serosim": {
+  "date": "2024-12-16",
+  "source": "github",
+  "url": "https://github.com/seroanalytics/serosim"
+ },
+ "serosolver": {
+  "date": "2026-07-16",
+  "source": "github",
+  "url": "https://github.com/seroanalytics/serosolver"
+ },
+ "simulist": {
+  "date": "2026-07-01",
+  "source": "github",
+  "url": "https://github.com/epiverse-trace/simulist"
+ },
+ "socialmixr": {
+  "date": "2026-08-13",
+  "source": "github",
+  "url": "https://github.com/epiforecasts/socialmixr"
+ },
+ "summer / summer2": {
+  "date": "2024-04-23",
+  "source": "github",
+  "url": "https://github.com/monash-emu/summer2"
+ },
+ "surveillance": {
+  "date": "2026-07-30",
+  "source": "cran",
+  "url": "https://cran.r-project.org/package=surveillance"
+ }
+}

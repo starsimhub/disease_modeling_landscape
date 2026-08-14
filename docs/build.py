@@ -2,15 +2,18 @@
 One command to take the database_*.md files to the built site.
 
 Runs, in order: a check that the tables are well formed and internally consistent;
-a Crossref lookup for any DOI not already cached; and the data.js build. Anything
-the checker reports as an error stops the build, so a malformed table cannot be
-published silently.
+a Crossref lookup for any DOI not already cached and a last-updated lookup for any
+tool not already cached; and the data.js build. Anything the checker reports as an
+error stops the build, so a malformed table cannot be published silently.
 
 Usage:
-    python docs/build.py              # check, fetch new DOIs, build
-    python docs/build.py --offline    # skip the Crossref step (no network)
-    python docs/build.py --refresh    # re-fetch every DOI, not just new ones
+    python docs/build.py              # check, fetch what is missing, build
+    python docs/build.py --offline    # skip the fetch steps (no network)
+    python docs/build.py --refresh    # re-fetch everything, not just what is new
     python docs/build.py --check      # run the checks only, build nothing
+
+Update dates go stale on their own rather than through anyone editing a database
+file, so `--refresh` is the way to bring them up to date.
 """
 
 import re
@@ -21,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 import build_site
 import fetch_publications
+import fetch_updated
 
 ROOT = Path(__file__).parent.parent
 
@@ -92,6 +96,8 @@ def main():
     if '--offline' not in sys.argv:
         print()
         fetch_publications.main()
+        print()
+        fetch_updated.main()
     print()
     build_site.build()
     print('\nOpen docs/index.html, or: python -m http.server 8000 --directory docs')

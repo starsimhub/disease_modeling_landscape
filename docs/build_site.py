@@ -16,6 +16,7 @@ DOCS = Path(__file__).parent
 ROOT = DOCS.parent
 OUT = DOCS / 'data' / 'data.js'
 PUBLICATIONS = DOCS / 'data' / 'publications.json'
+UPDATED = DOCS / 'data' / 'updated.json'
 
 # Which file, which section heading holds the main table, and how it's labelled.
 SOURCES = [
@@ -91,6 +92,29 @@ def load_publications():
     return json.loads(PUBLICATIONS.read_text(encoding='utf-8'))
 
 
+def load_updated():
+    if not UPDATED.exists():
+        print(f'note: {UPDATED.name} missing -- run fetch_updated.py to show update dates')
+        return {}
+    return json.loads(UPDATED.read_text(encoding='utf-8'))
+
+
+def add_updated(columns, rows, updated):
+    """
+    Append an Updated column: last commit date for tools with a repository, last
+    release date for tools distributed only as a package, N/A for the rest. The
+    dates live in the generated cache rather than in the database file, since
+    they go stale on their own rather than through anyone editing the database.
+    """
+    columns.append('Updated')
+    hits = 0
+    for row in rows:
+        record = updated.get(row[0])
+        row.append(record['date'] if record else 'N/A')
+        hits += bool(record)
+    return hits
+
+
 def title_publications(rows, index, publications):
     """Rewrite `[10.1234/x](https://doi.org/10.1234/x)` cells to use the paper's title."""
     pattern = re.compile(r'^\[[^\]]+\]\(https://doi\.org/(10\.[^)]+)\)$')
@@ -113,6 +137,7 @@ def title_publications(rows, index, publications):
 def build():
     data = {'sections': []}
     publications = load_publications()
+    updated = load_updated()
     for src in SOURCES:
         text = (ROOT / src['file']).read_text(encoding='utf-8')
         lines = text.split('\n')
@@ -124,6 +149,8 @@ def build():
         titled = 0
         if 'Publication' in columns:
             titled = title_publications(rows, columns.index('Publication'), publications)
+
+        dated = add_updated(columns, rows, updated) if src['key'] == 'tools' else 0
 
         section = dict(
             key=src['key'],
@@ -139,7 +166,8 @@ def build():
         data['sections'].append(section)
         print(f"{src['file']}: {len(rows)} rows x {len(columns)} columns"
               f"{f', {len(details)} detail sections' if details else ''}"
-              f"{f', {titled} publication titles' if titled else ''}")
+              f"{f', {titled} publication titles' if titled else ''}"
+              f"{f', {dated} update dates' if dated else ''}")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = json.dumps(data, ensure_ascii=False, indent=1)

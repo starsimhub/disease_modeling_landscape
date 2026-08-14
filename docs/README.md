@@ -11,9 +11,11 @@ A static illustration of what the GSIDD "IDD tools" section could look like, bui
 | `assets/app.js` | Table browser: filtering, sorting, column visibility, detail drawer, CSV export |
 | `data/data.js` | Generated data; do not edit by hand |
 | `data/publications.json` | Cached DOI → title/journal/year lookups |
+| `data/updated.json` | Cached tool → last-updated date, and where it came from |
 | `build.py` | The one command to run: checks, fetches, builds |
 | `build_site.py` | Regenerates `data/data.js` from the markdown databases |
 | `fetch_publications.py` | Refreshes `data/publications.json` from Crossref |
+| `fetch_updated.py` | Refreshes `data/updated.json` from GitHub, GitLab, PyPI and CRAN |
 
 ## Rebuilding after editing the databases
 
@@ -24,10 +26,27 @@ python docs/build.py
 That is the whole pipeline, in three stages.
 
 1. **Check.** Every table is parsed and tested: cell counts match the header, names are unique and in case-insensitive alphabetical order, each `Publication` cell is a DOI link or `—`, and the count stated in the prose ("137 tools, sorted alphabetically…") matches the number of rows. Any failure stops the build, so a malformed table cannot be published silently.
-2. **Fetch.** Every DOI in `database_tools.md` not already in `data/publications.json` is resolved against Crossref, falling back to DataCite for DOIs Crossref does not hold (arXiv preprints, mostly). The cache is committed, so only this stage needs the network.
-3. **Build.** The main table of each `database_*.md` file — and the per-ecosystem detail sections from `database_ecosystems.md` — is written to `docs/data/data.js`, with each DOI replaced by its title, journal and year. The data is emitted as a plain script rather than JSON so the site also works when `index.html` is opened directly from disk, with no server.
+2. **Fetch.** Every DOI in `database_tools.md` not already in `data/publications.json` is resolved against Crossref, falling back to DataCite for DOIs Crossref does not hold (arXiv preprints, mostly). Then every tool not already in `data/updated.json` gets a last-updated date (see below). Both caches are committed, so only this stage needs the network.
+3. **Build.** The main table of each `database_*.md` file — and the per-ecosystem detail sections from `database_ecosystems.md` — is written to `docs/data/data.js`, with each DOI replaced by its title, journal and year and an `Updated` column appended to the tools table. The data is emitted as a plain script rather than JSON so the site also works when `index.html` is opened directly from disk, with no server.
 
-Useful flags: `--check` runs the checks and builds nothing, `--offline` skips the Crossref stage, `--refresh` re-fetches every DOI rather than only the new ones. The two underlying scripts can still be run on their own if you want one stage without the others.
+Useful flags: `--check` runs the checks and builds nothing, `--offline` skips both fetch stages, `--refresh` re-fetches everything rather than only what is new. The underlying scripts can still be run on their own if you want one stage without the others.
+
+### Update dates
+
+The `Updated` column is not held in `database_tools.md`, because unlike everything else there it goes stale on its own rather than through anyone editing the file. `fetch_updated.py` derives it from whatever the `Code` column points at:
+
+| Where the code lives | What the date is |
+|---|---|
+| A GitHub repository (113 tools) | Last push, via the GitHub API |
+| A GitHub organisation or Pages site (2) | Last push to that account's most recently touched repository |
+| A GitLab instance (1) | Last commit on the default branch |
+| CRAN (9) | `Date/Publication` of the current version |
+| PyPI | Upload time of the newest release file |
+| A DOI, a departmental page or a product site (13) | Nothing to query — recorded as `N/A` |
+
+Where the `Code` column is not a repository, the tool's own name is tried on the registry its language implies (PyPI for Python, CRAN for R) — but only as an exact match, since a near-miss would quietly report some unrelated package's date. The 13 `N/A` entries are all proprietary or institutional tools with no public repository or package: AADIS, CEPAC, COVSIM, GLEAM, HIV Synthesis, LiST, OneHealth Tool, SaTScan, Skeeter Buster, Spectrum, STDSIM, Thembisa and TIME Impact.
+
+GitHub allows 60 unauthenticated API calls an hour, well short of the 113 repositories here, so the script uses `$GITHUB_TOKEN` if it is set and otherwise falls back to `gh auth token`. Re-run `python docs/build.py --refresh` to bring the dates (and the DOI titles) up to date, or `python docs/fetch_updated.py --only NAME` to re-check a single tool.
 
 `.github/workflows/build-site.yml` runs the same command in CI: on a push to `main` it rebuilds and commits `data/data.js`, and on a pull request it fails if the tables are malformed or the committed `data.js` is stale. Forgetting to rebuild is therefore caught rather than shipped.
 
@@ -45,7 +64,7 @@ Then open <http://localhost:8000>.
 - **Free-text search** across every column, including hidden ones, with matches highlighted.
 - **Faceted filters** — checkbox dropdowns per tab (for tools: Type, Discipline, Pathogen, Language, Licence). Counts next to each option reflect the other filters in force, so you can see what a selection would yield before making it; options that would return nothing are dimmed rather than removed. Multi-valued cells such as `R / C++` are indexed under each value. Verbose statuses collapse to a facetable label (`Active (with caveat)`), with the full text on hover and in the detail drawer.
 - **Licence grouping.** Filtering by licence uses families rather than exact SPDX identifiers, so versions of one licence stay together: MIT (54), GPL (44, covering GPL-2.0 through GPL-3.0-or-later), BSD (5), Other copyleft (9: LGPL, AGPL, EUPL, CeCILL), Other permissive (6: Apache, Artistic, public domain), Proprietary or closed (14) and Not stated (5). The table cell still shows the exact identifier — the grouping applies to the filter only. `Not stated` is kept separate despite being under five entries, because an undeclared licence is a different fact from a deliberately closed one. The mapping is `licenceGroup()` in `assets/app.js`.
-- **Column show/hide**, since the full tables are wider than a page. Each tab starts with the discursive columns hidden — for tools, that means Discipline, Publication, Usage and Licence. The name column stays pinned to the left while scrolling sideways.
+- **Column show/hide**, since the full tables are wider than a page. Each tab starts with its least-used columns hidden — for tools, Discipline and Licence. The name column stays pinned to the left while scrolling sideways.
 - **Sorting** by clicking any column header.
 - **Detail drawer** — click a row for the complete record, including hidden columns and, for ecosystems, the component list and caveats from the per-ecosystem sections.
 - **CSV export** of the current filtered rows and visible columns.
@@ -81,4 +100,5 @@ Separately, 14 titles arrive from Crossref with JATS markup embedded. Stripping 
 
 - The header navigation is decorative; links go nowhere.
 - The intro paragraph for each tab is written in `assets/app.js` (`CONFIG[...].blurb`) rather than pulled from the markdown, because the source intros are full of cross-file links that make no sense on the web.
-- Which columns are faceted, hidden by default, or rendered as coloured tags is hard-coded in `CONFIG` at the top of `assets/app.js`; adding a column to a database file will show it in the table and drawer, but giving it a filter means adding it there.
+- Which columns are faceted, ordered, hidden by default, or rendered as coloured tags is hard-coded in `CONFIG` at the top of `assets/app.js`; adding a column to a database file will show it in the table and drawer, but placing it, or giving it a filter, means adding it there. Columns left out of `CONFIG.order` keep their source order, on the end.
+- Update dates are only as fresh as the last `--refresh`, and a repository's last push is a crude proxy for whether a tool is maintained: a README typo counts, and a stable tool that needs no changes looks dormant.
