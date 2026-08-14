@@ -14,7 +14,7 @@
         'models, plus the utilities around them for data access, genomics, surveillance and forecast ' +
         'evaluation. Every entry has been checked against the inclusion criteria, with usage evidence ' +
         'and licence recorded so the basis for inclusion is visible.',
-      order: ['Name', 'Description', 'Authors', 'Publication', 'Usage', 'Code', 'Updated',
+      order: ['Name', 'Description', 'Authors', 'Publication', 'Usage', 'Updated', 'Code',
         'Language', 'Type', 'Pathogen', 'Discipline', 'Licence'],
       hidden: ['Discipline', 'Licence'],
       facets: [
@@ -274,10 +274,19 @@
     });
   }
 
+  /** A cell saying nothing: no value, an em dash, or a date we could not establish. */
+  function isBlank(value) {
+    return !value || value === '—' || value.toUpperCase() === 'N/A';
+  }
+
   function sortRows(section, rows) {
     var idx = section.state.sortCol, dir = section.state.sortDir;
     return rows.slice().sort(function (a, b) {
-      return dir * compare(mdText(a.cells[idx] || ''), mdText(b.cells[idx] || ''));
+      var x = mdText(a.cells[idx] || ''), y = mdText(b.cells[idx] || '');
+      // blanks are the absence of an answer rather than the smallest one, so they
+      // sink to the bottom whichever way the column is sorted
+      if (isBlank(x) !== isBlank(y)) return isBlank(x) ? 1 : -1;
+      return dir * compare(x, y);
     });
   }
 
