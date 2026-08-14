@@ -1,0 +1,60 @@
+# File schemas and writing conventions
+
+Read the head of the target file before editing; it documents its own schema and controlled vocabularies. This is a summary plus the conventions that are not written down anywhere in the data files.
+
+## `database_tools.md` — 11 columns
+
+`Name | Type | Discipline | Pathogen | Language | Description | Authors | Code | Publication | Usage | Licence`
+
+The first nine are specified by `details.md`. `Usage` and `Licence` were added so the evidence behind criteria 4 and 1 is visible rather than implicit. `Usage` was originally called `Adoption`; the user renamed it.
+
+- **Type:** `Model` | `Utility` | `AI extension`. Model = its core represents transmission or disease dynamics, by simulation or by mechanistic/statistical inference of transmission quantities. Utility = supporting problems (data access, cleaning, validation, visualisation, phylogenetics, surveillance analytics, forecast evaluation, synthetic populations). `AI extension` is defined and currently empty.
+- **Discipline** and **Pathogen** are single-valued by design, with controlled vocabularies listed in the file. This loses information for cross-cutting tools and that limitation is stated in the methodology.
+- **Description:** one sentence. Neutral. No marketing adjectives. Retirement is noted here (EMOD).
+- **Code:** Markdown link whose text is the bare domain — `[github.com](https://github.com/starsimhub/starsim)`.
+- **Publication:** `[10.xxxx/yyyy](https://doi.org/10.xxxx/yyyy)` or `—`. `build.py` rejects anything else.
+- **Usage:** `42★, 30 forks`; `CRAN 213k`; `PyPI 554k`; or a prose clause for programme adoption.
+- **Licence:** SPDX identifier, or an explicit non-open description.
+
+Trailing sections: `## Gaps and known limitations` (including the AI-extension search result and the under-covered domains), preceded by `## Methodology and caveats`.
+
+## `database_communities.md` — 9 columns
+
+`Name | Type | Region / scope | Focus | Host / funder | Since | Status | Description | Website`
+
+- **Type:** consortium | network | community of practice | open-source community | modelling hub | research centre | agency programme | society subgroup
+- **Status:** *Active* (dated evidence in the last two years) | *Active, with caveat* (operating but stale or broken web presence — the caveat states what was observed). Wound-down bodies are not listed.
+- Unverifiable fields are `—`, never inferred.
+
+## `database_ecosystems.md` — 9 columns
+
+`Name | Lead institution(s) | Language(s) | Anchor tool | Interoperability basis | Components | Status | Description | Website`
+
+Plus a `### Name` detail section per row enumerating component tools and caveats, a `## Candidates considered but not listed` table with a reason each, and the five qualifying tests. `Interoperability basis` must name *which* test the entry satisfies and how, so a reader can disagree with the evidence rather than the verdict; entries qualifying only under test 5 (shared design philosophy, no code dependency) must say so. `Status` may be *Active*, *Mixed*, or *Dormant*, with specifics in the detail section.
+
+## `excluded_tools.md`
+
+Working file, not published. Sections by failure mode, each entry one bullet with a specific reason:
+
+`Not obtainable` · `Unmaintained — fails (5)` · `No publication and insufficient independent evidence of use — fails (2) and (4)` · `Insufficient evidence of use — fails (4)` · `General-purpose, not unique to IDD — fails (X)` · `Datasets and data services — fails (X)` · `Guidance and training material — fails (X)`
+
+Criterion numbers follow `details.md`. Reasons must be checkable — "last CRAN release 2021-10", not "unmaintained".
+
+## `gsidd_orgs_suggestions.md`
+
+Genuine IDD organisations that are not software communities, proposed for the separate [IDD Orgs](https://www.gsidd.org/idd-orgs) directory. Anything already on that page does not belong here.
+
+## Conventions that apply to every file
+
+- **Alphabetical, case-insensitive, by name**, stated explicitly to carry no ranking information. Insert in place.
+- **One physical line per paragraph, list item and table row.** Never hard-wrap. This is a global user preference and applies to every `.md` file.
+- **The prose count sentence must match the row count** (`137 tools, sorted alphabetically (case-insensitive) by name.`). `build.py` fails the build otherwise.
+- **Snapshot date** stated in the methodology section, with the observation that everything will drift.
+- **Methodology section records what was searched**, so the search is reproducible. Extend it when you add an axis.
+- **Conflict-of-interest note** in every file's methodology section, current as to which listed entries the compiler has a stake in.
+- **Honest limitations**, stated rather than implied — language coverage, indexing bias, judgement calls, non-comparable usage metrics.
+- Amendments to the record go in the data files. `archive/` holds the earlier unreconciled surveys and is left alone: editing it would falsify the record of how the compilation developed.
+
+## The build
+
+`docs/build.py` is the single entry point: check → fetch missing DOIs and last-updated dates → build `docs/data/data.js`. `--check`, `--offline`, `--refresh`. `docs/data/publications.json` and `docs/data/updated.json` are committed caches, so building needs no network. `.github/workflows/build-site.yml` rebuilds `data.js` on push to `main` and fails a PR whose committed `data.js` is stale.

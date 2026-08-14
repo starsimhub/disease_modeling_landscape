@@ -27,6 +27,7 @@ These support review and are not intended for publication.
 | [excluded_tools.md](excluded_tools.md) | Every tool considered and not included, with the criterion it failed, so that the decisions are reviewable rather than silent |
 | [gsidd_orgs_suggestions.md](gsidd_orgs_suggestions.md) | IDD organisations found during this work that are not software communities, proposed as additions to the separate [IDD Orgs](https://www.gsidd.org/idd-orgs) directory |
 | [archive/](archive/) | Earlier surveys and drafts, kept as a record of how the compilation developed |
+| [.claude/skills/refresh-idd-database/](.claude/skills/refresh-idd-database/) | The search grids, operational inclusion criteria, and verification scripts used to build and update the tables, packaged as a Claude Code skill so a refresh is repeatable rather than reconstructed each time |
 
 ## Notes on the data
 
