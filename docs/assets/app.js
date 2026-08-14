@@ -195,6 +195,7 @@
       source: raw.source,
       intro: cfg.blurb || mdText(raw.intro),
       columns: raw.columns,
+      defaultColumns: raw.columns.slice(),  // what the Reset button goes back to
       details: raw.details || {},
       cfg: cfg,
       // per-row cache: raw cells plus a lowercase blob for free-text search
@@ -216,6 +217,32 @@
     sections[raw.key] = section;
     order.push(raw.key);
   });
+
+  /**
+   * Move a column, dragging every row's cells along with it, so the rest of the
+   * code can go on treating a column's position as its index. The first column
+   * is the record's identity — it stays put, and nothing moves in front of it.
+   */
+  function setColumnOrder(section, wanted) {
+    var sorted = section.columns[section.state.sortCol];
+    var index = wanted.map(function (col) { return section.columns.indexOf(col); });
+    section.columns = wanted.slice();
+    section.rows.forEach(function (row) {
+      row.cells = index.map(function (i) { return row.cells[i]; });
+    });
+    // the sort is on a column, not on a position, so follow it to its new index
+    section.state.sortCol = Math.max(0, section.columns.indexOf(sorted));
+    columnsBuiltFor = null;  // the picker lists columns in table order
+  }
+
+  function moveColumn(section, from, to) {
+    to = Math.max(1, Math.min(section.columns.length - 1, to));
+    if (from < 1 || from === to) return false;
+    var wanted = section.columns.slice();
+    wanted.splice(to, 0, wanted.splice(from, 1)[0]);
+    setColumnOrder(section, wanted);
+    return true;
+  }
 
   /** Value(s) a row contributes to a facet. */
   function facetValues(section, facet, row) {
@@ -448,6 +475,20 @@
     return classes.join(' ');
   }
 
+  var dragFrom = null;  // index of the column being dragged, across re-renders
+
+  function clearDropMarks() {
+    document.querySelectorAll('#table-head th').forEach(function (th) {
+      th.classList.remove('drop-before', 'drop-after');
+    });
+  }
+
+  /** Put focus back on a column's header, so a keyboard move can be repeated. */
+  function focusHeader(col) {
+    var th = document.querySelector('#table-head th[data-column="' + col.replace(/"/g, '\\"') + '"]');
+    if (th) th.querySelector('button').focus();
+  }
+
   function renderTable(rows) {
     var section = sections[current];
     var head = $('table-head');
@@ -461,6 +502,12 @@
 
     cols.forEach(function (c, position) {
       var th = el('th', cellClass(section, c.col, position));
+      var movable = c.i > 0;
+      if (movable) {
+        th.draggable = true;
+        th.title = 'Drag to reorder, or Alt + ← / → from the keyboard';
+      }
+      th.dataset.column = c.col;
       var btn = el('button');
       btn.type = 'button';
       btn.appendChild(document.createTextNode(c.col));
@@ -475,6 +522,49 @@
         else { section.state.sortCol = c.i; section.state.sortDir = 1; }
         refresh();
       });
+
+      // Alt + arrow does by keyboard what dragging does by mouse: swap with the
+      // neighbouring visible column, hidden columns in between coming along.
+      btn.addEventListener('keydown', function (e) {
+        if (!e.altKey || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+        var neighbour = cols[position + (e.key === 'ArrowLeft' ? -1 : 1)];
+        if (!neighbour || !movable) return;
+        e.preventDefault();
+        if (moveColumn(section, c.i, neighbour.i)) {
+          refresh();
+          focusHeader(c.col);
+        }
+      });
+
+      if (movable) {
+        th.addEventListener('dragstart', function (e) {
+          dragFrom = c.i;
+          e.dataTransfer.effectAllowed = 'move';
+          e.dataTransfer.setData('text/plain', c.col); // Firefox needs some payload
+          th.classList.add('is-dragging');
+        });
+        th.addEventListener('dragend', function () {
+          dragFrom = null;
+          clearDropMarks();
+          th.classList.remove('is-dragging');
+        });
+      }
+      th.addEventListener('dragover', function (e) {
+        if (dragFrom === null || dragFrom === c.i || c.i === 0) return;
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        clearDropMarks();
+        th.classList.add(dragFrom < c.i ? 'drop-after' : 'drop-before');
+      });
+      th.addEventListener('drop', function (e) {
+        if (dragFrom === null) return;
+        e.preventDefault();
+        var from = dragFrom;
+        dragFrom = null;
+        clearDropMarks();
+        if (moveColumn(section, from, c.i)) refresh();
+      });
+
       th.appendChild(btn);
       head.appendChild(th);
     });
@@ -667,6 +757,7 @@
 
   $('columns-reset').addEventListener('click', function () {
     var section = sections[current];
+    setColumnOrder(section, section.defaultColumns);
     section.columns.forEach(function (col) {
       section.state.visible[col] = (section.cfg.hidden || []).indexOf(col) === -1;
     });

@@ -215,7 +215,7 @@ window.DB = {
      "[Modelling the COVID-19 pandemic in context: an international participatory approach](https://doi.org/10.1136/bmjgh-2020-003126) — *BMJ Global Health, 2020*",
      "Used by teams in 40+ countries",
      "Not stated (web application)",
-     "2025-02-11"
+     "N/A"
     ],
     [
      "contactdata",

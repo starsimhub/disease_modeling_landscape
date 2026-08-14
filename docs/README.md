@@ -38,13 +38,13 @@ The `Updated` column is not held in `database_tools.md`, because unlike everythi
 | Where the code lives | What the date is |
 |---|---|
 | A GitHub repository (113 tools) | Last push, via the GitHub API |
-| A GitHub organisation or Pages site (2) | Last push to that account's most recently touched repository |
+| A GitHub organisation (1) | Last push to that account's most recently touched repository, ignoring its `*.github.io` website |
 | A GitLab instance (1) | Last commit on the default branch |
 | CRAN (9) | `Date/Publication` of the current version |
 | PyPI | Upload time of the newest release file |
-| A DOI, a departmental page or a product site (13) | Nothing to query — recorded as `N/A` |
+| A DOI, a departmental page or a product site (14) | Nothing to query — recorded as `N/A` |
 
-Where the `Code` column is not a repository, the tool's own name is tried on the registry its language implies (PyPI for Python, CRAN for R) — but only as an exact match, since a near-miss would quietly report some unrelated package's date. The 13 `N/A` entries are all proprietary or institutional tools with no public repository or package: AADIS, CEPAC, COVSIM, GLEAM, HIV Synthesis, LiST, OneHealth Tool, SaTScan, Skeeter Buster, Spectrum, STDSIM, Thembisa and TIME Impact.
+Where the `Code` column is not a repository, the tool's own name is tried on the registry its language implies (PyPI for Python, CRAN for R) — but only as an exact match, since a near-miss would quietly report some unrelated package's date. The 14 `N/A` entries are tools with no public repository or package: AADIS, CEPAC, the CoMo Consortium model, COVSIM, GLEAM, HIV Synthesis, LiST, OneHealth Tool, SaTScan, Skeeter Buster, Spectrum, STDSIM, Thembisa and TIME Impact. The CoMo entry is the case the `*.github.io` rule exists for — `como-international.github.io` is a site about the model, and the organisation behind it publishes nothing else, so there is no code to date.
 
 GitHub allows 60 unauthenticated API calls an hour, well short of the 113 repositories here, so the script uses `$GITHUB_TOKEN` if it is set and otherwise falls back to `gh auth token`. Re-run `python docs/build.py --refresh` to bring the dates (and the DOI titles) up to date, or `python docs/fetch_updated.py --only NAME` to re-check a single tool.
 
@@ -65,7 +65,8 @@ Then open <http://localhost:8000>.
 - **Faceted filters** — checkbox dropdowns per tab (for tools: Type, Discipline, Pathogen, Language, Licence). Counts next to each option reflect the other filters in force, so you can see what a selection would yield before making it; options that would return nothing are dimmed rather than removed. Multi-valued cells such as `R / C++` are indexed under each value. Verbose statuses collapse to a facetable label (`Active (with caveat)`), with the full text on hover and in the detail drawer.
 - **Licence grouping.** Filtering by licence uses families rather than exact SPDX identifiers, so versions of one licence stay together: MIT (54), GPL (44, covering GPL-2.0 through GPL-3.0-or-later), BSD (5), Other copyleft (9: LGPL, AGPL, EUPL, CeCILL), Other permissive (6: Apache, Artistic, public domain), Proprietary or closed (14) and Not stated (5). The table cell still shows the exact identifier — the grouping applies to the filter only. `Not stated` is kept separate despite being under five entries, because an undeclared licence is a different fact from a deliberately closed one. The mapping is `licenceGroup()` in `assets/app.js`.
 - **Column show/hide**, since the full tables are wider than a page. Each tab starts with its least-used columns hidden — for tools, Discipline and Licence. The name column stays pinned to the left while scrolling sideways.
-- **Sorting** by clicking any column header.
+- **Column reordering** by dragging a header, or by pressing Alt + ← / → on a focused one. The name column is the record's identity, so it stays first and nothing moves in front of it; everything else can go anywhere. Reset in the Columns dropdown restores both the default order and the default visibility. A move applies to the table, the detail drawer, the CSV export and the column list alike, and lasts as long as the page is open.
+- **Sorting** by clicking any column header. A sort follows its column when the column moves.
 - **Detail drawer** — click a row for the complete record, including hidden columns and, for ecosystems, the component list and caveats from the per-ecosystem sections.
 - **CSV export** of the current filtered rows and visible columns.
 

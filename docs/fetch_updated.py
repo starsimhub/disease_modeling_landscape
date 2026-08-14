@@ -91,17 +91,23 @@ def from_github_account(account):
     """
     Newest push across an organisation's repositories, for the few entries whose
     Code column names a GitHub account or Pages site rather than one repository.
+
+    A `*.github.io` repository is the account's website rather than its code, so
+    it does not count: an account holding nothing else (como-international, for
+    one) publishes a site about a tool but not the tool, which is an unknown
+    date rather than a recent one.
     """
     for kind in ('orgs', 'users'):
         try:
             repos = get_json(
-                f'https://api.github.com/{kind}/{account}/repos?sort=pushed&per_page=1', TOKEN)
+                f'https://api.github.com/{kind}/{account}/repos?sort=pushed&per_page=20', TOKEN)
         except urllib.error.HTTPError as exc:
             if exc.code != 404:
                 raise
             continue
-        if repos:
-            return iso_date(repos[0].get('pushed_at'))
+        for repo in repos:
+            if not repo['name'].lower().endswith('.github.io'):
+                return iso_date(repo.get('pushed_at'))
     return None
 
 
