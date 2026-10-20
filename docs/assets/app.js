@@ -8,14 +8,19 @@
 
   var SPLIT_LIST = /\s*[\/,;]\s*/; // for multi-valued facet cells, e.g. "R / C++"
 
+  // Tab order is a matter of presentation, so it lives here rather than in the
+  // data; sections not listed follow in the order data.js gives them.
+  var TABS = ['ecosystems', 'communities', 'tools'];
+
   var CONFIG = {
     tools: {
       blurb: 'Individual software packages of use to the IDD community — simulation and inference ' +
         'models, plus the utilities around them for data access, genomics, surveillance and forecast ' +
         'evaluation. Every entry has been checked against the inclusion criteria, with usage evidence ' +
         'and licence recorded so the basis for inclusion is visible.',
-      order: ['Name', 'Description', 'Authors', 'Publication', 'Usage', 'Updated', 'Code',
+      order: ['Name', 'Usage', 'Description', 'Authors', 'Publication', 'Updated', 'Code',
         'Language', 'Type', 'Pathogen', 'Discipline', 'Licence'],
+      sort: { col: 'Usage', dir: -1 },
       hidden: ['Discipline', 'Licence'],
       facets: [
         { col: 'Type' },
@@ -35,6 +40,7 @@
         '“interoperability basis” column states which of those holds for each entry, so a strong claim ' +
         'is never confused with a weak one. Open a row for the component list and caveats.',
       hidden: ['Anchor tool', 'Interoperability basis', 'Components'],
+      sort: { col: 'Status', dir: 1 },
       facets: [
         { col: 'Language(s)', split: SPLIT_LIST },
         { col: 'Status', short: shortStatus }
@@ -49,6 +55,7 @@
         'around IDD software. A research group that happens to have produced a model is not listed; a ' +
         'group whose shared output is a tool, a package suite or a hub standard is.',
       hidden: ['Host / funder', 'Since'],
+      sort: { col: 'Status', dir: 1 },
       facets: [
         { col: 'Type' },
         { col: 'Region / scope', search: true },
@@ -79,7 +86,11 @@
   function mdInline(s) {
     return esc(s)
       .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,
-        function (m, t, u) { return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>'; })
+        function (m, t, u) {
+          // a bare domain as link text has no spaces to wrap at, so let it break after its dots
+          if (!/\s/.test(t)) t = t.replace(/([.\/])(?=.)/g, '$1<wbr>');
+          return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>';
+        })
       .replace(/`([^`]+)`/g, '<code>$1</code>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
@@ -163,6 +174,16 @@
     return USAGE_RANK[String(text).split(/[\s(]/)[0].toLowerCase()] || 0;
   }
 
+  // Status sorts the same way, by the colour its tag gets: ascending is active,
+  // then active with a caveat, then dormant or retired.
+  var STATUS_RANK = { 'tag-active': 1, 'tag-caveat': 2, 'tag-inactive': 3 };
+
+  function statusRank(text) {
+    return STATUS_RANK[statusTag(text)] || 0;
+  }
+
+  var RANKED = { Usage: usageRank, Status: statusRank };
+
   function compare(a, b) {
     var na = parseFloat(a), nb = parseFloat(b);
     if (!isNaN(na) && !isNaN(nb) && /^[~<>]?[\d.,]+$/.test(a) && /^[~<>]?[\d.,]+$/.test(b)) return na - nb;
@@ -225,8 +246,8 @@
         query: '',
         filters: {},          // column -> Set of selected values
         visible: {},          // column -> bool
-        sortCol: 0,
-        sortDir: 1
+        sortCol: Math.max(0, raw.columns.indexOf((cfg.sort || {}).col)),
+        sortDir: (cfg.sort || {}).dir || 1
       }
     };
     section.columns.forEach(function (col) {
@@ -234,8 +255,9 @@
     });
     (cfg.facets || []).forEach(function (f) { section.state.filters[f.col] = new Set(); });
     sections[raw.key] = section;
-    order.push(raw.key);
   });
+  order = TABS.filter(function (key) { return sections[key]; }).concat(
+    Object.keys(sections).filter(function (key) { return TABS.indexOf(key) === -1; }));
 
   /**
    * Move a column, dragging every row's cells along with it, so the rest of the
@@ -305,8 +327,9 @@
       // blanks are the absence of an answer rather than the smallest one, so they
       // sink to the bottom whichever way the column is sorted
       if (isBlank(x) !== isBlank(y)) return isBlank(x) ? 1 : -1;
-      if (section.columns[idx] === 'Usage') {
-        var rx = usageRank(x), ry = usageRank(y);
+      var rank = RANKED[section.columns[idx]];
+      if (rank) {
+        var rx = rank(x), ry = rank(y);
         // Rank alone: within a label the evidence strings are not comparable
         // with each other, so ties keep the table's own alphabetical order.
         if (rx || ry) return dir * (rx - ry);

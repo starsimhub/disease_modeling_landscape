@@ -45,7 +45,7 @@ code {
   padding: 0.05em 0.32em;
 }
 
-.wrap { max-width: 1500px; margin: 0 auto; padding: 0 32px; }
+.wrap { max-width: 1800px; margin: 0 auto; padding: 0 32px; }
 
 /* ---------- header ---------- */
 
@@ -352,7 +352,7 @@ thead th button {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  padding: 11px 12px;
+  padding: 11px 10px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -376,7 +376,7 @@ thead th.drop-before::before { left: 0; }
 thead th.drop-after::after { right: 0; }
 
 tbody td {
-  padding: 10px 12px;
+  padding: 10px 10px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
@@ -398,10 +398,14 @@ tbody tr:nth-child(even) td { background: #fcfcfd; }
 tbody tr:nth-child(even) td.col-sticky { background: #fcfcfd; }
 tbody tr:nth-child(even):hover td, tbody tr:nth-child(even):hover td.col-sticky { background: var(--orange-tint); }
 
-td.cell-name { font-weight: 600; color: var(--navy); min-width: 200px; max-width: 260px; }
-td.cell-wide { min-width: 320px; max-width: 460px; }
-td.cell-medium { min-width: 180px; max-width: 280px; }
-td.cell-tight { white-space: nowrap; }
+/* Widths are floors and preferences rather than fixed sizes: the browser hands
+   out what is left over, so a table fits the page where it can. Prose columns
+   get a floor high enough to stay readable; short-value columns wrap at their
+   own spaces (`R / C++`) instead of stretching to their longest value. */
+td.cell-name { font-weight: 600; color: var(--navy); min-width: 130px; width: 170px; }
+td.cell-wide { min-width: 200px; }
+td.cell-medium { min-width: 150px; }
+td.cell-tight { width: 1px; min-width: 70px; }
 td a { text-decoration: underline; text-decoration-color: #e6bda3; }
 
 mark { background: #ffe6b8; color: inherit; padding: 0 1px; }
@@ -518,6 +522,11 @@ mark { background: #ffe6b8; color: inherit; padding: 0 1px; }
 .site-footer p { margin: 0; }
 
 /* ---------- responsive ---------- */
+
+/* a laptop screen: give up a little prose width rather than scroll sideways */
+@media (max-width: 1400px) {
+  td.cell-wide { min-width: 180px; }
+}
 
 @media (max-width: 900px) {
   .wrap { padding: 0 18px; }
