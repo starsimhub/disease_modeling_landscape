@@ -14,15 +14,15 @@
   "title": "German Epidemic Microsimulation System",
   "year": 2026
  },
- "10.1007/s11538-025-01421-5": {
-  "journal": "Bulletin of Mathematical Biology",
-  "title": "modelSSE: An R Package for Characterizing Infectious Disease Superspreading from Contact Tracing Data",
-  "year": 2025
- },
  "10.1007/s41060-017-0086-6": {
   "journal": "International Journal of Data Science and Analytics",
   "title": "NDlib: a python library to model and analyze diffusion processes over complex networks",
   "year": 2017
+ },
+ "10.1016/S2214-109X%2824%2900413-3": {
+  "journal": "The Lancet Global Health",
+  "title": "Estimates of resource use in the public-sector health-care system and the effect of strengthening health-care services in Malawi during 2015–19: a modelling study (Thanzi La Onse)",
+  "year": 2025
  },
  "10.1016/S2352-3018%2817%2930190-X": {
   "journal": "The Lancet HIV",
@@ -69,11 +69,6 @@
   "title": "Towards a comprehensive simulation model of malaria epidemiology and control",
   "year": 2008
  },
- "10.1038/nprot.2017.066": {
-  "journal": "Nature Protocols",
-  "title": "Multiplex PCR method for MinION and Illumina sequencing of Zika and other virus genomes directly from clinical samples",
-  "year": 2017
- },
  "10.1038/s41467-020-20544-y": {
   "journal": "Nature Communications",
   "title": "Inferring high-resolution human mixing patterns for disease modeling",
@@ -83,11 +78,6 @@
   "journal": "Nature Communications",
   "title": "Real-time estimation of pathogen transmission dynamics from wastewater",
   "year": 2026
- },
- "10.1038/s41588-021-00862-7": {
-  "journal": "Nature Genetics",
-  "title": "Ultrafast Sample placement on Existing tRees (UShER) enables real-time phylogenetics for the SARS-CoV-2 pandemic",
-  "year": 2021
  },
  "10.1038/s41598-019-55689-4": {
   "journal": "Scientific Reports",
@@ -113,11 +103,6 @@
   "journal": "American Journal of Epidemiology",
   "title": "A New Framework and Software to Estimate Time-Varying Reproduction Numbers During Epidemics",
   "year": 2013
- },
- "10.1093/bioinformatics/btad575": {
-  "journal": "Bioinformatics",
-  "title": "SCORPIO: a utility for defining and classifying mutation constellations of virus genomes",
-  "year": 2023
  },
  "10.1093/bioinformatics/bty406": {
   "journal": "Bioinformatics",
@@ -148,11 +133,6 @@
   "journal": "PNAS Nexus",
   "title": "Epihiper—A high performance computational modeling framework to support epidemic science",
   "year": 2024
- },
- "10.1093/ve/veab064": {
-  "journal": "Virus Evolution",
-  "title": "Assignment of epidemiological lineages in an emerging pandemic using the pangolin tool",
-  "year": 2021
  },
  "10.1093/ve/vex042": {
   "journal": "Virus Evolution",
@@ -199,11 +179,6 @@
   "title": "Efficient Bayesian inference of fully stochastic epidemiological models with applications to COVID-19",
   "year": 2021
  },
- "10.1099/mgen.0.000589": {
-  "journal": "Microbial Genomics",
-  "title": "Large-scale sequencing of SARS-CoV-2 genomes from one region allows detailed epidemiology and enables local outbreak management",
-  "year": 2021
- },
  "10.1101/2025.06.04.25328941": {
   "journal": "",
   "title": "serocalculator, an R package for estimating seroincidence from cross-sectional serological data",
@@ -233,6 +208,11 @@
   "journal": "Influenza and Other Respiratory Viruses",
   "title": "Influenza surveillance in Europe: establishing epidemic thresholds by the Moving Epidemic Method",
   "year": 2012
+ },
+ "10.1126/science.abc0035": {
+  "journal": "Science",
+  "title": "The impact of COVID-19 and strategies for mitigation and suppression in low- and middle-income countries",
+  "year": 2020
  },
  "10.1136/bmjgh-2020-003126": {
   "journal": "BMJ Global Health",
@@ -384,6 +364,11 @@
   "title": "HPVsim: An agent-based model of HPV transmission and cervical disease",
   "year": 2024
  },
+ "10.1371/journal.pcbi.1012528": {
+  "journal": "PLOS Computational Biology",
+  "title": "EpiFusion: Joint inference of the effective reproduction number by integrating phylodynamic and epidemiological modelling with particle filtering",
+  "year": 2024
+ },
  "10.1371/journal.pcbi.1012777": {
   "journal": "PLOS Computational Biology",
   "title": "RSero: A user-friendly R package to reconstruct pathogen circulation history from seroprevalence studies",
@@ -472,11 +457,6 @@
  "10.21105/joss.03539": {
   "journal": "Journal of Open Source Software",
   "title": "individual: An R package for individual-based epidemiological models",
-  "year": 2021
- },
- "10.21105/joss.03773": {
-  "journal": "Journal of Open Source Software",
-  "title": "Nextclade: clade assignment, mutation calling and quality control for viral genomes",
   "year": 2021
  },
  "10.21105/joss.03914": {

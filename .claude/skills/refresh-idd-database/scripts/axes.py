@@ -35,6 +35,8 @@ AXES = {
     # health-care system" and "health benefits package design", and call the tool a "model" or a
     # "modelling study" rather than any software word. Whole-health-system and multi-disease models
     # written for policy audiences need both a health-system subject axis and "model" as a software term.
+    # In practice this axis did NOT recover TLO (Crossref returns health-services literature); the
+    # GitHub topics added to GITHUB_TOPICS below did. Kept for breadth; expect it to be noisy.
     'health-system': {
         'subject': ['health system', 'health-care system', 'healthcare service delivery', 'resource allocation for health',
                     'health benefits package', 'health workforce', 'multi-disease', 'integrated epidemiological',
@@ -65,6 +67,10 @@ VENUES = [
 GITHUB_TOPICS = [
     'epidemiology', 'epidemic-simulation', 'agent-based-model', 'infectious-diseases',
     'epidemic-model', 'disease-modeling', 'compartmental-model', 'outbreak-analytics',
+    # Added after the Thanzi La Onse miss: topic search found it where no Crossref query could.
+    'healthcare-systems', 'health-economic-evaluation', 'health-economics', 'individual-based-modelling',
+    'individual-based-model', 'individual-based-modeling', 'microsimulation', 'global-health',
+    'cost-effectiveness-analysis',
 ]
 
 GITHUB_KEYWORDS = [

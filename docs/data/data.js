@@ -31,7 +31,7 @@ window.DB = {
      "Australian Department of Agriculture, Fisheries and Forestry",
      "[doi.org](https://doi.org/10.3389/fenvs.2015.00017)",
      "[A hybrid modeling approach to simulating foot-and-mouth disease outbreaks in Australian livestock](https://doi.org/10.3389/fenvs.2015.00017) — *Frontiers in Environmental Science, 2015*",
-     "Minimal (85 citations; Australian national emergency animal disease planning tool)",
+     "Minimal (84 citations; Australian national emergency animal disease planning tool)",
      "Proprietary (government)",
      "N/A"
     ],
@@ -45,7 +45,7 @@ window.DB = {
      "USDA APHIS / Colorado State University",
      "[github.com](https://github.com/NAVADMC/ADSM)",
      "[The North American Animal Disease Spread Model: A simulation model to assist decision making in evaluating animal disease incursions](https://doi.org/10.1016/j.prevetmed.2007.05.019) — *Preventive Veterinary Medicine, 2007*",
-     "Minimal (10★, 6 forks; 168 citations)",
+     "Minimal (11★, 6 forks; 166 citations)",
      "BSD-2-Clause",
      "2026-05-08"
     ],
@@ -59,7 +59,7 @@ window.DB = {
      "Statens Serum Institut, Denmark",
      "[github.com](https://github.com/ssi-dk/aedseo)",
      "[Evaluation of the Automated and Early Detection of Seasonal Epidemic Onset and Burden Levels (AEDSEO) method for respiratory surveillance using data from 21 European countries](https://doi.org/10.2807/1560-7917.ES.2026.31.30.2500896) — *Eurosurveillance, 2026*",
-     "Minimal (1★, 1 fork; CRAN 9.9k)",
+     "Minimal (1★, 1 fork; CRAN 11k)",
      "MIT",
      "2026-08-07"
     ],
@@ -73,7 +73,7 @@ window.DB = {
      "Berends et al., University Medical Center Groningen",
      "[github.com](https://github.com/msberends/AMR)",
      "[AMR: An R Package for Working with Antimicrobial Resistance Data](https://doi.org/10.18637/jss.v104.i03) — *Journal of Statistical Software, 2022*",
-     "Established (112★, 24 forks; CRAN 168k; 54 citations)",
+     "Established (114★, 27 forks; CRAN 172k; 86 citations)",
      "GPL-2.0",
      "2026-08-13"
     ],
@@ -87,23 +87,9 @@ window.DB = {
      "Swiss Tropical and Public Health Institute",
      "[github.com](https://github.com/SwissTPH/AnophelesModel)",
      "[AnophelesModel: An R package to interface mosquito bionomics, human exposure and intervention effects with models of malaria intervention impact](https://doi.org/10.1371/journal.pcbi.1011609) — *PLOS Computational Biology, 2024*",
-     "Minimal (7★, 0 forks; 7 citations; PLOS Comp Biol 2023)",
+     "Minimal (8★, 0 forks; 9 citations; PLOS Comp Biol 2023)",
      "GPL-3.0",
      "2025-08-09"
-    ],
-    [
-     "ARTIC fieldbioinformatics",
-     "Utility",
-     "Genomics",
-     "Any/general",
-     "Python",
-     "Amplicon-based viral genome assembly and consensus calling pipeline for nanopore sequencing of outbreak samples.",
-     "ARTIC Network",
-     "[github.com](https://github.com/artic-network/fieldbioinformatics)",
-     "[Multiplex PCR method for MinION and Illumina sequencing of Zika and other virus genomes directly from clinical samples](https://doi.org/10.1038/nprot.2017.066) — *Nature Protocols, 2017*",
-     "Established (136★, 71 forks; 1,333 citations)",
-     "MIT",
-     "2026-07-16"
     ],
     [
      "Atomica",
@@ -115,7 +101,7 @@ window.DB = {
      "Burnet Institute",
      "[github.com](https://github.com/atomicateam/atomica)",
      "—",
-     "Established (15★, 3 forks; PyPI 268k)",
+     "Established (17★, 3 forks; PyPI 273k)",
      "MIT",
      "2026-08-11"
     ],
@@ -129,7 +115,7 @@ window.DB = {
      "Suchard, Drummond, Rambaut et al.",
      "[github.com](https://github.com/beast-dev/beast-mcmc)",
      "[Bayesian phylogenetic and phylodynamic data integration using BEAST 1.10](https://doi.org/10.1093/ve/vey016) — *Virus Evolution, 2018*",
-     "Established (248★, 83 forks; 4,134 citations)",
+     "Established (248★, 84 forks; 3,796 citations)",
      "LGPL-2.1",
      "2026-08-10"
     ],
@@ -143,7 +129,7 @@ window.DB = {
      "Bouckaert, Drummond et al., BEAST 2 development team",
      "[github.com](https://github.com/CompEvol/beast2)",
      "[BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis](https://doi.org/10.1371/journal.pcbi.1006650) — *PLOS Computational Biology, 2019*",
-     "Established (280★, 82 forks; 4,839 citations)",
+     "Established (285★, 82 forks; 4,532 citations)",
      "LGPL-2.1",
      "2026-07-13"
     ],
@@ -157,7 +143,7 @@ window.DB = {
      "Bouranis et al., Imperial College London",
      "[github.com](https://github.com/bernadette-eu/Bernadette)",
      "[Bernadette: Bayesian Inference and Model Selection for Stochastic Epidemics in R](https://doi.org/10.21105/joss.05612) — *Journal of Open Source Software, 2023*",
-     "Minimal (2★, 3 forks; CRAN 11k)",
+     "Minimal (2★, 3 forks; CRAN 12k)",
      "GPL-3.0",
      "2025-02-28"
     ],
@@ -171,23 +157,9 @@ window.DB = {
      "Massachusetts General Hospital / Harvard Medical School",
      "[doi.org](https://doi.org/10.7326/0003-4819-151-3-200908040-00138)",
      "[When to Start Antiretroviral Therapy in Resource-Limited Settings](https://doi.org/10.7326/0003-4819-151-3-200908040-00138) — *Annals of Internal Medicine, 2009*",
-     "Minimal (131 citations; Used for US and international HIV treatment guidelines)",
+     "Minimal (130 citations; Used for US and international HIV treatment guidelines)",
      "Proprietary (collaboration agreement)",
      "N/A"
-    ],
-    [
-     "civet",
-     "Utility",
-     "Genomics",
-     "Respiratory",
-     "Python",
-     "Cluster Investigation and Virus Epidemiology Tool — builds local phylogenetic context for outbreak sequences.",
-     "ARTIC Network / University of Edinburgh",
-     "[github.com](https://github.com/artic-network/civet)",
-     "[Large-scale sequencing of SARS-CoV-2 genomes from one region allows detailed epidemiology and enables local outbreak management](https://doi.org/10.1099/mgen.0.000589) — *Microbial Genomics, 2021*",
-     "Emerging (50★, 14 forks; 46 citations)",
-     "GPL-3.0",
-     "2026-07-06"
     ],
     [
      "coarseDataTools",
@@ -199,7 +171,7 @@ window.DB = {
      "Reich, Lessler et al.",
      "[github.com](https://github.com/nickreich/coarseDataTools)",
      "[Estimating incubation period distributions with coarse data](https://doi.org/10.1002/sim.3659) — *Statistics in Medicine, 2009*",
-     "Established (10★, 6 forks; CRAN 213k; 166 citations)",
+     "Established (10★, 6 forks; CRAN 221k; 141 citations)",
      "GPL-2.0-or-later",
      "2025-04-11"
     ],
@@ -213,7 +185,7 @@ window.DB = {
      "University of Oxford and international partners",
      "[como-international.github.io](https://como-international.github.io/)",
      "[Modelling the COVID-19 pandemic in context: an international participatory approach](https://doi.org/10.1136/bmjgh-2020-003126) — *BMJ Global Health, 2020*",
-     "Emerging (74 citations; Used by teams in 40+ countries)",
+     "Emerging (64 citations; Used by teams in 40+ countries)",
      "Not stated (web application)",
      "N/A"
     ],
@@ -227,7 +199,7 @@ window.DB = {
      "community",
      "[cran.r-project.org](https://cran.r-project.org/package=contactdata)",
      "[Projecting social contact matrices in 152 countries using contact surveys and demographic data](https://doi.org/10.1371/journal.pcbi.1005697) — *PLOS Computational Biology, 2017*",
-     "Emerging (CRAN 24k; 1,061 citations)",
+     "Emerging (CRAN 25k; 890 citations)",
      "MIT",
      "2024-09-25"
     ],
@@ -241,7 +213,7 @@ window.DB = {
      "Institute for Disease Modeling / Starsim Hub",
      "[github.com](https://github.com/starsimhub/covasim)",
      "[Covasim: An agent-based model of COVID-19 dynamics and interventions](https://doi.org/10.1371/journal.pcbi.1009149) — *PLOS Computational Biology, 2021*",
-     "Established (289★, 238 forks; PyPI 318k; 663 citations)",
+     "Established (291★, 240 forks; PyPI 326k; 685 citations)",
      "MIT",
      "2026-08-09"
     ],
@@ -255,7 +227,7 @@ window.DB = {
      "North Carolina State University",
      "[doi.org](https://doi.org/10.1016/j.epidem.2024.100752)",
      "[COVSIM: A stochastic agent-based COVID-19 SIMulation model for North Carolina](https://doi.org/10.1016/j.epidem.2024.100752) — *Epidemics, 2024*",
-     "Minimal (10 citations; North Carolina state policy analyses)",
+     "Minimal (11 citations; North Carolina state policy analyses)",
      "No public source",
      "N/A"
     ],
@@ -269,7 +241,7 @@ window.DB = {
      "community (Hirokazu Takaya)",
      "[github.com](https://github.com/lisphilar/covid19-sir)",
      "—",
-     "Established (113★, 44 forks; PyPI 260k)",
+     "Established (113★, 44 forks; PyPI 265k)",
      "Apache-2.0",
      "2026-07-25"
     ],
@@ -283,7 +255,7 @@ window.DB = {
      "Gómez-Rubio, Moraga et al.",
      "[cran.r-project.org](https://cran.r-project.org/package=DClusterm)",
      "[DClusterm: Model-Based Detection of Disease Clusters](https://doi.org/10.18637/jss.v090.i14) — *Journal of Statistical Software, 2019*",
-     "Emerging (CRAN 49k; 23 citations)",
+     "Emerging (CRAN 50k; 23 citations)",
      "GPL-3.0",
      "2025-05-08"
     ],
@@ -297,7 +269,7 @@ window.DB = {
      "Delphi Research Group, Carnegie Mellon University",
      "[github.com](https://github.com/cmu-delphi/delphi-epidata)",
      "[An open repository of real-time COVID-19 indicators](https://doi.org/10.1073/pnas.2111452118) — *Proceedings of the National Academy of Sciences, 2021*",
-     "Established (104★, 67 forks; PyPI 4.0M; 75 citations)",
+     "Established (106★, 69 forks; PyPI 4.1M; 75 citations)",
      "MIT",
      "2026-08-07"
     ],
@@ -311,7 +283,7 @@ window.DB = {
      "Nandi, Lucas, Gething & Weiss, Malaria Atlas Project",
      "[github.com](https://github.com/aknandi/disaggregation)",
      "[disaggregation: An R Package for Bayesian Spatial Disaggregation Modeling](https://doi.org/10.18637/jss.v106.i11) — *Journal of Statistical Software, 2023*",
-     "Emerging (26★, 7 forks; CRAN 35k; 10 citations)",
+     "Emerging (26★, 9 forks; CRAN 36k; 10 citations)",
      "MIT",
      "2024-11-13"
     ],
@@ -325,7 +297,7 @@ window.DB = {
      "FitzJohn et al., MRC Centre for Global Infectious Disease Analysis, Imperial College London",
      "[github.com](https://github.com/mrc-ide/dust)",
      "[Reproducible parallel inference and simulation of stochastic state space models using odin, dust, and mcstate](https://doi.org/10.12688/wellcomeopenres.16466.2) — *Wellcome Open Research, 2021*",
-     "Minimal (20★, 2 forks; 23 citations)",
+     "Minimal (20★, 2 forks; 18 citations)",
      "MIT",
      "2025-08-15"
     ],
@@ -339,7 +311,7 @@ window.DB = {
      "Institute for Disease Modeling",
      "[github.com](https://github.com/EMOD-Hub/EMOD)",
      "[Implementation and applications of EMOD, an individual-based multi-disease modeling platform](https://doi.org/10.1093/femspd/fty059) — *Pathogens and Disease, 2018*",
-     "Emerging (107★, 53 forks; 127 citations)",
+     "Emerging (107★, 53 forks; 109 citations)",
      "MIT",
      "2026-08-10"
     ],
@@ -353,7 +325,7 @@ window.DB = {
      "Picault, Ezanno et al., INRAE",
      "[forgemia.inra.fr](https://forgemia.inra.fr/dynamo/software/emulsion-public)",
      "[EMULSION: Transparent and flexible multiscale stochastic models in human, animal and plant epidemiology](https://doi.org/10.1371/journal.pcbi.1007342) — *PLOS Computational Biology, 2019*",
-     "Emerging (PyPI 127k; 34 citations)",
+     "Emerging (PyPI 129k; 37 citations)",
      "Apache-2.0",
      "2026-08-03"
     ],
@@ -367,7 +339,7 @@ window.DB = {
      "Miller & Ting",
      "[github.com](https://github.com/springer-math/Mathematics-of-Epidemics-on-Networks)",
      "[EoN (Epidemics on Networks): a fast, flexible Python package for simulation, analytic approximation, and analysis of epidemics on networks](https://doi.org/10.21105/joss.01731) — *Journal of Open Source Software, 2019*",
-     "Established (165★, 64 forks; 76 citations)",
+     "Established (165★, 64 forks; 74 citations)",
      "MIT",
      "2026-07-15"
     ],
@@ -381,7 +353,7 @@ window.DB = {
      "US Centers for Disease Control and Prevention",
      "[github.com](https://github.com/Epi-Info/Epi-Info-Community-Edition)",
      "—",
-     "Emerging (23★, 11 forks; CDC standard field tool, distributed globally)",
+     "Emerging (25★, 11 forks; CDC standard field tool, distributed globally)",
      "Public domain (US Government)",
      "2025-04-09"
     ],
@@ -395,7 +367,7 @@ window.DB = {
      "SABS:R3, University of Oxford and University of Cambridge",
      "[github.com](https://github.com/SABS-R3-Epidemiology/epiabm)",
      "[Epidemiological Agent-Based Modelling Software (Epiabm)](https://doi.org/10.5334/jors.449) — *Journal of Open Research Software, 2024*",
-     "Minimal (21★, 5 forks; 6 citations)",
+     "Minimal (22★, 5 forks; 7 citations)",
      "BSD-3-Clause",
      "2025-09-12"
     ],
@@ -409,7 +381,7 @@ window.DB = {
      "Epiverse-TRACE / LSHTM",
      "[github.com](https://github.com/epiverse-trace/epichains)",
      "—",
-     "Minimal (10★, 4 forks; CRAN 4.9k)",
+     "Minimal (10★, 4 forks; CRAN 5.6k)",
      "MIT",
      "2026-07-09"
     ],
@@ -423,7 +395,7 @@ window.DB = {
      "RECON / Epiverse-TRACE",
      "[github.com](https://github.com/reconhub/epicontacts)",
      "[epicontacts: Handling, visualisation and analysis of epidemiological contacts](https://doi.org/10.12688/f1000research.14492.2) — *F1000Research, 2018*",
-     "Emerging (18★, 19 forks; CRAN 65k; 22 citations)",
+     "Emerging (18★, 19 forks; CRAN 66k; 26 citations)",
      "GPL-2.0-or-later",
      "2025-04-17"
     ],
@@ -437,7 +409,7 @@ window.DB = {
      "Nöremark & Widgren, SVA and SLU, Sweden",
      "[github.com](https://github.com/stewid/EpiContactTrace)",
      "[EpiContactTrace: an R-package for contact tracing during livestock disease outbreaks and for risk-based surveillance](https://doi.org/10.1186/1746-6148-10-71) — *BMC Veterinary Research, 2014*",
-     "Emerging (13★, 8 forks; CRAN 79k; 69 citations)",
+     "Emerging (13★, 8 forks; CRAN 79k; 64 citations)",
      "EUPL-1.1",
      "2024-10-10"
     ],
@@ -451,7 +423,7 @@ window.DB = {
      "Epiverse-TRACE / LSHTM",
      "[github.com](https://github.com/epiverse-trace/epidemics)",
      "—",
-     "Minimal (19★, 6 forks)",
+     "Minimal (19★, 7 forks)",
      "MIT",
      "2026-08-01"
     ],
@@ -465,7 +437,7 @@ window.DB = {
      "Cori et al., MRC Centre for Global Infectious Disease Analysis",
      "[github.com](https://github.com/mrc-ide/EpiEstim)",
      "[A New Framework and Software to Estimate Time-Varying Reproduction Numbers During Epidemics](https://doi.org/10.1093/aje/kwt133) — *American Journal of Epidemiology, 2013*",
-     "Established (104★, 40 forks; CRAN 218k; 1,807 citations)",
+     "Established (105★, 40 forks; CRAN 225k; 1,530 citations)",
      "GPL-2.0-or-later",
      "2026-07-29"
     ],
@@ -479,9 +451,23 @@ window.DB = {
      "RECON",
      "[github.com](https://github.com/reconhub/epiflows)",
      "[epiflows: an R package for risk assessment of travel-related spread of disease](https://doi.org/10.12688/f1000research.16032.2) — *F1000Research, 2019*",
-     "Emerging (19★, 13 forks; CRAN 31k; 4 citations)",
+     "Emerging (19★, 13 forks; CRAN 32k; 2 citations)",
      "MIT",
      "2026-03-09"
+    ],
+    [
+     "EpiFusion",
+     "Model",
+     "Genomics",
+     "Any/general",
+     "Java",
+     "Joint inference of epidemic trajectories and the effective reproduction number from pathogen phylogenies and case-incidence data by particle MCMC.",
+     "Judge, Vaughan, Russell & Abbott",
+     "[github.com](https://github.com/ciarajudge/EpiFusion)",
+     "[EpiFusion: Joint inference of the effective reproduction number by integrating phylodynamic and epidemiological modelling with particle filtering](https://doi.org/10.1371/journal.pcbi.1012528) — *PLOS Computational Biology, 2024*",
+     "Minimal (16★, 1 fork; 11 citations)",
+     "GPL-3.0",
+     "2026-04-01"
     ],
     [
      "epigrowthfit",
@@ -493,7 +479,7 @@ window.DB = {
      "McMaster University (Bolker group)",
      "[github.com](https://github.com/davidearn/epigrowthfit)",
      "—",
-     "Minimal (10★, 1 fork; CRAN 5k)",
+     "Minimal (10★, 1 fork; CRAN 5.6k)",
      "Not stated",
      "2026-03-31"
     ],
@@ -507,7 +493,7 @@ window.DB = {
      "Biocomplexity Institute, University of Virginia",
      "[github.com](https://github.com/NSSAC/EpiHiper)",
      "[Epihiper—A high performance computational modeling framework to support epidemic science](https://doi.org/10.1093/pnasnexus/pgae557) — *PNAS Nexus, 2024*",
-     "Minimal (6★, 2 forks; 8 citations; CDC Scenario Modeling Hub at national scale)",
+     "Minimal (6★, 2 forks; 9 citations; CDC Scenario Modeling Hub at national scale)",
      "MIT",
      "2026-07-23"
     ],
@@ -521,7 +507,7 @@ window.DB = {
      "Warriyar, Almutiry & Deardon, University of Calgary",
      "[cran.r-project.org](https://cran.r-project.org/package=EpiILM)",
      "[Individual-Level Modelling of Infectious Disease Data: EpiILM](https://doi.org/10.32614/RJ-2020-020) — *The R Journal, 2020*",
-     "Emerging (CRAN 45k; 5 citations)",
+     "Emerging (CRAN 46k; 5 citations)",
      "GPL-2.0-or-later",
      "2025-09-26"
     ],
@@ -549,7 +535,7 @@ window.DB = {
      "Gressani et al., UCLouvain and Hasselt University",
      "[github.com](https://github.com/oswaldogressani/EpiLPS)",
      "[EpiLPS: A fast and flexible Bayesian tool for estimation of the time-varying reproduction number](https://doi.org/10.1371/journal.pcbi.1010618) — *PLOS Computational Biology, 2022*",
-     "Emerging (21★, 1 fork; CRAN 21k; 43 citations)",
+     "Emerging (21★, 2 forks; CRAN 22k; 38 citations)",
      "GPL-3.0",
      "2025-09-01"
     ],
@@ -563,7 +549,7 @@ window.DB = {
      "Jenness, Goodreau & Morris, Emory University and University of Washington",
      "[github.com](https://github.com/EpiModel/EpiModel)",
      "[EpiModel: An R Package for Mathematical Modeling of Infectious Disease over Networks](https://doi.org/10.18637/jss.v084.i08) — *Journal of Statistical Software, 2018*",
-     "Established (277★, 61 forks; CRAN 223k; 203 citations)",
+     "Established (282★, 62 forks; CRAN 225k; 192 citations)",
      "GPL-3.0",
      "2026-08-06"
     ],
@@ -577,7 +563,7 @@ window.DB = {
      "Groendyke & Welch",
      "[cran.r-project.org](https://cran.r-project.org/package=epinet)",
      "[epinet: An R Package to Analyze Epidemics Spread across Contact Networks](https://doi.org/10.18637/jss.v083.i11) — *Journal of Statistical Software, 2018*",
-     "Emerging (CRAN 54k; 14 citations)",
+     "Emerging (CRAN 55k; 14 citations)",
      "GPL-2.0",
      "2023-11-29"
     ],
@@ -591,7 +577,7 @@ window.DB = {
      "epiforecasts, London School of Hygiene & Tropical Medicine",
      "[github.com](https://github.com/epiforecasts/EpiNow2)",
      "[Estimating the time-varying reproduction number of SARS-CoV-2 using national and subnational case counts](https://doi.org/10.12688/wellcomeopenres.16006.2) — *Wellcome Open Research, 2020*",
-     "Established (141★, 40 forks; CRAN 58k; 194 citations)",
+     "Established (140★, 41 forks; CRAN 60k; 335 citations)",
      "MIT",
      "2026-08-13"
     ],
@@ -619,7 +605,7 @@ window.DB = {
      "Imperial College London / NTD Modelling Consortium",
      "[github.com](https://github.com/mrc-ide/EPIONCHO.IBM)",
      "[Evaluating the impact of alternative intervention strategies in accelerating onchocerciasis elimination in an area of persistent transmission in the West Region of Cameroon](https://doi.org/10.1371/journal.pntd.0010591) — *PLOS Neglected Tropical Diseases, 2022*",
-     "Minimal (0★, 6 forks; 8 citations; NTD Modelling Consortium core model)",
+     "Minimal (1★, 6 forks; 8 citations; NTD Modelling Consortium core model)",
      "Not stated",
      "2026-07-13"
     ],
@@ -633,7 +619,7 @@ window.DB = {
      "Maier, Humboldt University of Berlin",
      "[github.com](https://github.com/benmaier/epipack)",
      "[epipack: An infectious disease modeling package for Python](https://doi.org/10.21105/joss.03097) — *Journal of Open Source Software, 2021*",
-     "Emerging (35★, 2 forks; PyPI 13k; 5 citations)",
+     "Emerging (35★, 2 forks; PyPI 13k; 4 citations)",
      "MIT",
      "2025-10-06"
     ],
@@ -647,7 +633,7 @@ window.DB = {
      "Epiverse-TRACE / LSHTM",
      "[github.com](https://github.com/epiverse-trace/epiparameter)",
      "—",
-     "Emerging (39★, 14 forks; CRAN 6.8k)",
+     "Emerging (39★, 14 forks; CRAN 7.7k)",
      "MIT",
      "2026-07-01"
     ],
@@ -661,7 +647,7 @@ window.DB = {
      "Lison et al., ETH Zurich",
      "[github.com](https://github.com/adrian-lison/EpiSewer)",
      "[Real-time estimation of pathogen transmission dynamics from wastewater](https://doi.org/10.1038/s41467-026-75380-3) — *Nature Communications, 2026*",
-     "Minimal (27★, 2 forks)",
+     "Emerging (30★, 2 forks)",
      "MIT",
      "2026-08-13"
     ],
@@ -675,7 +661,7 @@ window.DB = {
      "IIIT Hyderabad / HealthBadge",
      "[github.com](https://github.com/healthbadge/episimmer)",
      "—",
-     "Emerging (16★, 3 forks; PyPI 15k; deployed in Campus RAKSHAK at Indian institutes)",
+     "Emerging (16★, 3 forks; PyPI 16k; deployed in Campus RAKSHAK at Indian institutes)",
      "Commons Clause (not OSI-approved)",
      "2026-08-10"
     ],
@@ -689,7 +675,7 @@ window.DB = {
      "RECON",
      "[github.com](https://github.com/reconhub/epitrix)",
      "—",
-     "Emerging (12★, 5 forks; CRAN 89k)",
+     "Emerging (12★, 5 forks; CRAN 91k)",
      "MIT",
      "2023-09-20"
     ],
@@ -703,7 +689,7 @@ window.DB = {
      "Meyer & Vega Yon, University of Utah",
      "[github.com](https://github.com/UofUEpiBio/epiworldR)",
      "[epiworldR: Fast Agent-Based Epi Models](https://doi.org/10.21105/joss.05781) — *Journal of Open Source Software, 2023*",
-     "Emerging (14★, 3 forks; CRAN 15k; 2 citations)",
+     "Emerging (14★, 3 forks; CRAN 17k; 2 citations)",
      "MIT",
      "2026-08-11"
     ],
@@ -717,7 +703,7 @@ window.DB = {
      "Gozzi et al., Epistorm and Northeastern University",
      "[github.com](https://github.com/epistorm/epydemix)",
      "[Epydemix: An open-source Python package for epidemic modeling with integrated approximate Bayesian calibration](https://doi.org/10.1371/journal.pcbi.1013735) — *PLOS Computational Biology, 2025*",
-     "Emerging (69★, 14 forks; PyPI 28k; 2 citations)",
+     "Emerging (71★, 15 forks; PyPI 35k; 2 citations)",
      "GPL-3.0",
      "2026-07-29"
     ],
@@ -731,7 +717,7 @@ window.DB = {
      "Northern Arizona University",
      "[github.com](https://github.com/NAU-CCL/Epymorph)",
      "—",
-     "Minimal (9★, 3 forks; PyPI 7.4k)",
+     "Minimal (10★, 3 forks; PyPI 8.8k)",
      "GPL-3.0",
      "2026-08-05"
     ],
@@ -745,7 +731,7 @@ window.DB = {
      "Champredon et al., Public Health Agency of Canada",
      "[github.com](https://github.com/phac-nml-phrsd/ern)",
      "[ern: An R package to estimate the effective reproduction number using clinical and wastewater surveillance data](https://doi.org/10.1371/journal.pone.0305550) — *PLOS ONE, 2024*",
-     "Minimal (6★, 3 forks; CRAN 6.1k; 17 citations)",
+     "Minimal (6★, 3 forks; CRAN 6.8k; 15 citations)",
      "MIT",
      "2026-08-13"
     ],
@@ -773,7 +759,7 @@ window.DB = {
      "Acosta & Irizarry, Harvard University",
      "[github.com](https://github.com/rafalab/excessmort)",
      "[A Flexible Statistical Framework for Estimating Excess Mortality](https://doi.org/10.1097/EDE.0000000000001445) — *Epidemiology, 2022*",
-     "Emerging (20★, 4 forks; CRAN 18k; 48 citations)",
+     "Emerging (20★, 4 forks; CRAN 19k; 52 citations)",
      "Artistic-2.0",
      "2025-12-03"
     ],
@@ -787,7 +773,7 @@ window.DB = {
      "Epiverse-TRACE / LSHTM",
      "[github.com](https://github.com/epiverse-trace/finalsize)",
      "—",
-     "Emerging (15★, 6 forks; CRAN 13k)",
+     "Emerging (15★, 6 forks; CRAN 14k)",
      "MIT",
      "2026-03-26"
     ],
@@ -815,7 +801,7 @@ window.DB = {
      "Johns Hopkins Infectious Disease Dynamics group",
      "[github.com](https://github.com/HopkinsIDD/flepiMoP)",
      "[flepiMoP: The evolution of a flexible infectious disease modeling pipeline during the COVID-19 pandemic](https://doi.org/10.1016/j.epidem.2024.100753) — *Epidemics, 2024*",
-     "Minimal (11★, 4 forks; 8 citations)",
+     "Minimal (11★, 4 forks; 7 citations)",
      "GPL-3.0",
      "2025-12-15"
     ],
@@ -829,7 +815,7 @@ window.DB = {
      "University of Pittsburgh",
      "[github.com](https://github.com/PublicHealthDynamicsLab/FRED)",
      "[FRED (A Framework for Reconstructing Epidemic Dynamics): an open-source software system for modeling infectious diseases and control strategies using census-based populations](https://doi.org/10.1186/1471-2458-13-940) — *BMC Public Health, 2013*",
-     "Emerging (83★, 34 forks; 263 citations; foundational paper cited 200+ times)",
+     "Emerging (83★, 34 forks; 244 citations; foundational paper cited 200+ times)",
      "University of Pittsburgh EULA (not OSI-approved)",
      "2024-05-10"
     ],
@@ -843,7 +829,7 @@ window.DB = {
      "IMMIDD, University of Trier",
      "[github.com](https://github.com/IMMIDD/GEMS)",
      "[German Epidemic Microsimulation System](https://doi.org/10.1007/978-3-032-20404-2_26) — *Mathematics in Industry, 2026*",
-     "Minimal (13★, 8 forks)",
+     "Minimal (14★, 8 forks)",
      "GPL-3.0",
      "2026-08-12"
     ],
@@ -857,9 +843,23 @@ window.DB = {
      "Northeastern University / ISI Foundation",
      "[gleamproject.org](https://www.gleamproject.org/)",
      "[Modeling the spatial spread of infectious diseases: The GLobal Epidemic and Mobility computational model](https://doi.org/10.1016/j.jocs.2010.07.002) — *Journal of Computational Science, 2010*",
-     "Emerging (551 citations; Used by WHO and CDC; H1N1, Ebola, Zika and COVID-19 forecasting)",
+     "Emerging (508 citations; Used by WHO and CDC; H1N1, Ebola, Zika and COVID-19 forecasting)",
      "Closed source (free client binary)",
      "N/A"
+    ],
+    [
+     "Go.Data",
+     "Utility",
+     "Public health",
+     "Any/general",
+     "JavaScript / TypeScript",
+     "Outbreak investigation software for case and contact data collection, contact follow-up and visualisation of transmission chains.",
+     "WHO with the Global Outbreak Alert and Response Network (GOARN)",
+     "[github.com](https://github.com/WorldHealthOrganization/godata)",
+     "—",
+     "Established (101★, 52 forks; in use in over 60 countries and territories)",
+     "GPL-3.0",
+     "2026-06-03"
     ],
     [
      "HIV Synthesis",
@@ -871,7 +871,7 @@ window.DB = {
      "University College London",
      "[ucl.ac.uk](https://www.ucl.ac.uk/global-health/research/z-research/hiv-synthesis-model)",
      "[Cost-effectiveness of public-health policy options in the presence of pretreatment NNRTI drug resistance in sub-Saharan Africa: a modelling study](https://doi.org/10.1016/S2352-3018%2817%2930190-X) — *The Lancet HIV, 2018*",
-     "Minimal (79 citations; Informs WHO HIV treatment guidelines)",
+     "Minimal (75 citations; Informs WHO HIV treatment guidelines)",
      "Closed source",
      "N/A"
     ],
@@ -885,7 +885,7 @@ window.DB = {
      "European Centre for Disease Prevention and Control",
      "[github.com](https://github.com/EU-ECDC/hivPlatform)",
      "[Estimating HIV incidence and number of undiagnosed individuals living with HIV in the European Union/European Economic Area, 2015](https://doi.org/10.2807/1560-7917.ES.2016.21.48.30417) — *Eurosurveillance, 2016*",
-     "Minimal (0★, 1 fork; 48 citations)",
+     "Minimal (0★, 1 fork; 47 citations)",
      "EUPL-1.2",
      "2025-09-12"
     ],
@@ -899,7 +899,7 @@ window.DB = {
      "Institute for Disease Modeling / Starsim Hub",
      "[github.com](https://github.com/starsimhub/hpvsim)",
      "[HPVsim: An agent-based model of HPV transmission and cervical disease](https://doi.org/10.1371/journal.pcbi.1012181) — *PLOS Computational Biology, 2024*",
-     "Emerging (16★, 6 forks; PyPI 43k; 20 citations)",
+     "Emerging (18★, 6 forks; PyPI 46k; 21 citations)",
      "MIT",
      "2026-08-09"
     ],
@@ -913,7 +913,7 @@ window.DB = {
      "Consortium of Infectious Disease Modeling Hubs",
      "[github.com](https://github.com/hubverse-org)",
      "[A software platform for collaborative infectious disease modelling](https://doi.org/10.1038/s44360-026-00145-7) — *Nature Health, 2026*",
-     "Emerging (77★, 57 forks)",
+     "Emerging (80★, 59 forks)",
      "MIT",
      "2026-08-14"
     ],
@@ -927,7 +927,7 @@ window.DB = {
      "Fernandes Marques et al., Brazil",
      "[cran.r-project.org](https://cran.r-project.org/package=hybridModels)",
      "[hybridModels: An R Package for the Stochastic Simulation of Disease Spreading in Dynamic Networks](https://doi.org/10.18637/jss.v094.i06) — *Journal of Statistical Software, 2020*",
-     "Emerging (CRAN 39k; 10 citations)",
+     "Emerging (CRAN 40k; 10 citations)",
      "GPL-2.0-or-later",
      "2025-04-19"
     ],
@@ -941,7 +941,7 @@ window.DB = {
      "Kamvar, Cai, Pulliam, Schumacher, Jombart — RECON and Epiverse-TRACE",
      "[github.com](https://github.com/reconverse/incidence2)",
      "[Epidemic curves made easy using the R package incidence](https://doi.org/10.12688/f1000research.18002.1) — *F1000Research, 2019*",
-     "Emerging (17★, 2 forks; 59 citations)",
+     "Minimal (17★, 2 forks; 53 citations)",
      "MIT",
      "2026-03-25"
     ],
@@ -955,7 +955,7 @@ window.DB = {
      "Charles, Wu et al., MRC Centre for Global Infectious Disease Analysis",
      "[github.com](https://github.com/mrc-ide/individual)",
      "[individual: An R package for individual-based epidemiological models](https://doi.org/10.21105/joss.03539) — *Journal of Open Source Software, 2021*",
-     "Emerging (35★, 19 forks; CRAN 7.6k; 8 citations)",
+     "Emerging (34★, 19 forks; CRAN 7.7k; 6 citations)",
      "MIT",
      "2026-06-08"
     ],
@@ -969,7 +969,7 @@ window.DB = {
      "Durham University IPPP and IHME",
      "[github.com](https://github.com/IDAS-Durham/JUNE)",
      "[June: open-source individual-based epidemiology simulation](https://doi.org/10.1098/rsos.210506) — *Royal Society Open Science, 2021*",
-     "Emerging (54★, 17 forks; PyPI 25k; 29 citations)",
+     "Emerging (56★, 17 forks; PyPI 26k; 28 citations)",
      "GPL-3.0",
      "2026-04-14"
     ],
@@ -983,7 +983,7 @@ window.DB = {
      "Bui, Ziane, Stinckwich et al.",
      "[github.com](https://github.com/KendrickOrg/kendrick)",
      "[KENDRICK: A Domain Specific Language and platform for mathematical epidemiological modelling](https://doi.org/10.1109/RIVF.2015.7049888) — *The 2015 IEEE RIVF International Conference on Computing & Communication Technologies - Research, Innovation, and Vision for Future (RIVF), 2015*",
-     "Emerging (53★, 14 forks; 9 citations)",
+     "Emerging (53★, 14 forks; 10 citations)",
      "MIT",
      "2026-03-19"
     ],
@@ -997,7 +997,7 @@ window.DB = {
      "Epiverse-TRACE / LSHTM",
      "[github.com](https://github.com/epiverse-trace/linelist)",
      "—",
-     "Emerging (11★, 5 forks; CRAN 30k)",
+     "Emerging (11★, 5 forks; CRAN 31k)",
      "MIT",
      "2026-06-06"
     ],
@@ -1011,7 +1011,7 @@ window.DB = {
      "Milando et al., Boston University",
      "[github.com](https://github.com/cmilando/linelistBayes)",
      "[Bayesian back-calculation and nowcasting for line list data during the COVID-19 pandemic](https://doi.org/10.1371/journal.pcbi.1009210) — *PLOS Computational Biology, 2021*",
-     "Minimal (4★, 0 forks; CRAN 15k; 34 citations)",
+     "Minimal (4★, 0 forks; CRAN 16k; 29 citations)",
      "GPL-3.0",
      "2024-05-02"
     ],
@@ -1025,7 +1025,7 @@ window.DB = {
      "Johns Hopkins Bloomberg School of Public Health / Avenir Health",
      "[livessavedtool.org](https://www.livessavedtool.org/)",
      "[Overview of the Lives Saved Tool (LiST)](https://doi.org/10.1186/1471-2458-13-S3-S1) — *BMC Public Health, 2013*",
-     "Emerging (314 citations; Adopted globally for child-survival policy and planning)",
+     "Emerging (307 citations; Adopted globally for child-survival policy and planning)",
      "Closed source (free to use)",
      "N/A"
     ],
@@ -1039,7 +1039,7 @@ window.DB = {
      "Malaria Atlas Project, University of Oxford",
      "[github.com](https://github.com/malaria-atlas-project/malariaAtlas)",
      "[malariaAtlas: an R interface to global malariometric data hosted by the Malaria Atlas Project](https://doi.org/10.1186/s12936-018-2500-5) — *Malaria Journal, 2018*",
-     "Established (52★, 23 forks; CRAN 162k; 157 citations)",
+     "Established (52★, 23 forks; CRAN 164k; 127 citations)",
      "MIT",
      "2026-03-30"
     ],
@@ -1053,7 +1053,7 @@ window.DB = {
      "MRC Centre for Global Infectious Disease Analysis, Imperial College London",
      "[github.com](https://github.com/mrc-ide/malariasimulation)",
      "—",
-     "Emerging (22★, 27 forks; underpins Imperial analyses for WHO and the Global Fund)",
+     "Emerging (23★, 28 forks; underpins Imperial analyses for WHO and the Global Fund)",
      "MIT",
      "2026-07-03"
     ],
@@ -1067,7 +1067,7 @@ window.DB = {
      "Müller & Stadler, ETH Zurich",
      "[github.com](https://github.com/CompEvol/Mascot)",
      "[MASCOT: parameter and state inference under the marginal structured coalescent approximation](https://doi.org/10.1093/bioinformatics/bty406) — *Bioinformatics, 2018*",
-     "Emerging (12★, 7 forks; 149 citations)",
+     "Emerging (12★, 8 forks; 123 citations)",
      "GPL-3.0",
      "2026-07-14"
     ],
@@ -1081,7 +1081,7 @@ window.DB = {
      "TU Berlin",
      "[github.com](https://github.com/matsim-org/matsim-episim-libs)",
      "[Predicting the effects of COVID-19 related interventions in urban settings by combining activity-based modelling, agent-based simulation, and mobile phone data](https://doi.org/10.1371/journal.pone.0259037) — *PLOS ONE, 2021*",
-     "Emerging (24★, 31 forks; 76 citations)",
+     "Emerging (25★, 31 forks; 72 citations)",
      "AGPL-3.0",
      "2026-08-01"
     ],
@@ -1095,9 +1095,23 @@ window.DB = {
      "FitzJohn et al., MRC Centre for Global Infectious Disease Analysis, Imperial College London",
      "[github.com](https://github.com/mrc-ide/mcstate)",
      "[Reproducible parallel inference and simulation of stochastic state space models using odin, dust, and mcstate](https://doi.org/10.12688/wellcomeopenres.16466.2) — *Wellcome Open Research, 2021*",
-     "Minimal (19★, 3 forks; 23 citations)",
+     "Minimal (19★, 3 forks; 18 citations)",
      "MIT",
      "2024-07-01"
+    ],
+    [
+     "measles",
+     "Model",
+     "Epidemiology",
+     "Vaccine-preventable",
+     "R / C++",
+     "Agent-based measles models for school and community settings, with quarantine, isolation and risk-based quarantine policies, built on epiworld.",
+     "Vega Yon et al., University of Utah",
+     "[github.com](https://github.com/UofUEpiBio/measles)",
+     "—",
+     "Minimal (5★, 1 fork; CRAN 2.9k)",
+     "MIT",
+     "2026-10-09"
     ],
     [
      "mem",
@@ -1109,7 +1123,7 @@ window.DB = {
      "Vega & Lozano, Valladolid",
      "[github.com](https://github.com/lozalojo/mem)",
      "[Influenza surveillance in Europe: establishing epidemic thresholds by the Moving Epidemic Method](https://doi.org/10.1111/j.1750-2659.2012.00422.x) — *Influenza and Other Respiratory Viruses, 2012*",
-     "Emerging (18★, 4 forks; CRAN 81k; 210 citations)",
+     "Emerging (18★, 4 forks; CRAN 82k; 201 citations)",
      "GPL-2.0-or-later",
      "2026-06-08"
     ],
@@ -1123,7 +1137,7 @@ window.DB = {
      "DLR, Forschungszentrum Jülich and Helmholtz, Germany",
      "[github.com](https://github.com/SciCompMod/memilio)",
      "[Assessment of effective mitigation and prediction of the spread of SARS-CoV-2 in Germany using demographic information and spatial resolution](https://doi.org/10.1016/j.mbs.2021.108648) — *Mathematical Biosciences, 2021*",
-     "Emerging (70★, 25 forks; 42 citations)",
+     "Emerging (71★, 25 forks; 40 citations)",
      "Apache-2.0",
      "2026-08-14"
     ],
@@ -1151,7 +1165,7 @@ window.DB = {
      "University of Bristol",
      "[github.com](https://github.com/metawards/MetaWards)",
      "[MetaWards: A flexible metapopulation framework for modelling disease spread](https://doi.org/10.21105/joss.03914) — *Journal of Open Source Software, 2022*",
-     "Established (14★, 6 forks; PyPI 248k; 6 citations)",
+     "Established (14★, 7 forks; PyPI 251k; 6 citations)",
      "GPL-3.0",
      "2024-07-15"
     ],
@@ -1165,7 +1179,7 @@ window.DB = {
      "Marshall Lab, UC Berkeley",
      "[github.com](https://github.com/MarshallLab/MGDrivE)",
      "[MGDrivE: A modular simulation framework for the spread of gene drives through spatially explicit mosquito populations](https://doi.org/10.1111/2041-210X.13318) — *Methods in Ecology and Evolution, 2019*",
-     "Emerging (8★, 8 forks; CRAN 28k; 89 citations)",
+     "Emerging (8★, 8 forks; CRAN 29k; 79 citations)",
      "GPL-3.0",
      "2025-09-14"
     ],
@@ -1179,23 +1193,9 @@ window.DB = {
      "University of Cape Town",
      "[github.com](https://github.com/leighjohnson/MicroCOSM)",
      "[MicroCOSM: a model of social and structural drivers of HIV and interventions to reduce HIV incidence in high-risk populations in South Africa](https://doi.org/10.1101/310763) — *2018*",
-     "Minimal (1★, 0 forks; 11 citations; South African national HIV projections)",
+     "Minimal (1★, 0 forks; 8 citations; South African national HIV projections)",
      "GPL-3.0",
      "2025-09-17"
-    ],
-    [
-     "modelSSE",
-     "Utility",
-     "Math & stats",
-     "Any/general",
-     "R",
-     "Characterises infectious disease superspreading from contact-tracing and cluster-size data.",
-     "Chan et al.",
-     "[cran.r-project.org](https://cran.r-project.org/package=modelSSE)",
-     "[modelSSE: An R Package for Characterizing Infectious Disease Superspreading from Contact Tracing Data](https://doi.org/10.1007/s11538-025-01421-5) — *Bulletin of Mathematical Biology, 2025*",
-     "Minimal (CRAN 7.5k; 2 citations)",
-     "GPL-3.0",
-     "2023-09-07"
     ],
     [
      "Naomi",
@@ -1207,7 +1207,7 @@ window.DB = {
      "Eaton et al., Imperial College London, with UNAIDS",
      "[github.com](https://github.com/mrc-ide/naomi)",
      "[Naomi: a new modelling tool for estimating HIV epidemic indicators at the district level in sub‐Saharan Africa](https://doi.org/10.1002/jia2.25788) — *Journal of the International AIDS Society, 2021*",
-     "Emerging (9★, 11 forks; 54 citations; UNAIDS-supported subnational HIV estimates across sub-Saharan Africa)",
+     "Emerging (9★, 11 forks; 55 citations; UNAIDS-supported subnational HIV estimates across sub-Saharan Africa)",
      "MIT",
      "2026-08-10"
     ],
@@ -1235,23 +1235,9 @@ window.DB = {
      "Rossetti et al., CNR Italy",
      "[github.com](https://github.com/GiulioRossetti/ndlib)",
      "[NDlib: a python library to model and analyze diffusion processes over complex networks](https://doi.org/10.1007/s41060-017-0086-6) — *International Journal of Data Science and Analytics, 2017*",
-     "Established (299★, 80 forks; PyPI 293k; 73 citations)",
+     "Established (303★, 81 forks; PyPI 300k; 91 citations)",
      "BSD-2-Clause",
      "2026-07-31"
-    ],
-    [
-     "Nextclade",
-     "Utility",
-     "Genomics",
-     "Any/general",
-     "Rust / TypeScript",
-     "Clade assignment, mutation calling and quality control for viral genome sequences.",
-     "Neher Lab, University of Basel",
-     "[github.com](https://github.com/nextstrain/nextclade)",
-     "[Nextclade: clade assignment, mutation calling and quality control for viral genomes](https://doi.org/10.21105/joss.03773) — *Journal of Open Source Software, 2021*",
-     "Established (261★, 67 forks; 1,137 citations)",
-     "MIT",
-     "2026-08-12"
     ],
     [
      "Nextstrain",
@@ -1263,7 +1249,7 @@ window.DB = {
      "Bedford and Neher labs",
      "[github.com](https://github.com/nextstrain/augur)",
      "[Nextstrain: real-time tracking of pathogen evolution](https://doi.org/10.1093/bioinformatics/bty407) — *Bioinformatics, 2018*",
-     "Established (277★, 134 forks; PyPI 401k; 3,486 citations)",
+     "Established (279★, 138 forks; PyPI 416k; 3,143 citations)",
      "AGPL-3.0",
      "2026-08-13"
     ],
@@ -1277,7 +1263,7 @@ window.DB = {
      "McGough, Lipsitch et al., Harvard University",
      "[github.com](https://github.com/sarahhbellum/NobBS)",
      "[Nowcasting by Bayesian Smoothing: A flexible, generalizable model for real-time epidemic tracking](https://doi.org/10.1371/journal.pcbi.1007735) — *PLOS Computational Biology, 2020*",
-     "Emerging (19★, 8 forks; CRAN 26k; 146 citations)",
+     "Emerging (19★, 8 forks; CRAN 27k; 121 citations)",
      "MIT",
      "2026-06-03"
     ],
@@ -1291,7 +1277,7 @@ window.DB = {
      "Lequime, Dellicour, Baele et al., KU Leuven",
      "[github.com](https://github.com/slequime/nosoi)",
      "[nosoi: A stochastic agent-based transmission chain simulation framework in R](https://doi.org/10.1111/2041-210X.13422) — *Methods in Ecology and Evolution, 2020*",
-     "Emerging (8★, 5 forks; CRAN 30k; 33 citations)",
+     "Emerging (8★, 6 forks; CRAN 30k; 21 citations)",
      "LGPL-3.0",
      "2025-08-06"
     ],
@@ -1319,7 +1305,7 @@ window.DB = {
      "FitzJohn et al., MRC Centre for Global Infectious Disease Analysis, Imperial College London",
      "[github.com](https://github.com/mrc-ide/odin)",
      "[Reproducible parallel inference and simulation of stochastic state space models using odin, dust, and mcstate](https://doi.org/10.12688/wellcomeopenres.16466.2) — *Wellcome Open Research, 2021*",
-     "Established (106★, 11 forks; CRAN 84k; 23 citations)",
+     "Established (106★, 11 forks; CRAN 86k; 18 citations)",
      "MIT",
      "2026-01-15"
     ],
@@ -1333,7 +1319,7 @@ window.DB = {
      "FitzJohn et al., MRC Centre for Global Infectious Disease Analysis, Imperial College London",
      "[github.com](https://github.com/mrc-ide/odin2)",
      "[Reproducible parallel inference and simulation of stochastic state space models using odin, dust, and mcstate](https://doi.org/10.12688/wellcomeopenres.16466.2) — *Wellcome Open Research, 2021*",
-     "Minimal (11★, 5 forks; 23 citations)",
+     "Minimal (11★, 5 forks; 18 citations)",
      "MIT",
      "2026-07-14"
     ],
@@ -1347,7 +1333,7 @@ window.DB = {
      "WHO / Avenir Health / UN interagency working group",
      "[avenirhealth.org](https://avenirhealth.org/software-onehealth.php)",
      "[Reflections on the use of the World Health Organization’s (WHO) OneHealth Tool: Implications for health planning in low and middle income countries (LMICs)](https://doi.org/10.12688/f1000research.13824.2) — *F1000Research, 2018*",
-     "Minimal (5 citations; Used by ministries of health for national strategic planning)",
+     "Minimal (10 citations; Used by ministries of health for national strategic planning)",
      "Closed source (free to use)",
      "N/A"
     ],
@@ -1361,7 +1347,7 @@ window.DB = {
      "Big Data Institute, University of Oxford",
      "[github.com](https://github.com/BDI-pathogens/OpenABM-Covid19)",
      "[OpenABM-Covid19—An agent-based model for non-pharmaceutical interventions against COVID-19 including contact tracing](https://doi.org/10.1371/journal.pcbi.1009146) — *PLOS Computational Biology, 2021*",
-     "Established (130★, 76 forks; 217 citations)",
+     "Established (130★, 78 forks; 250 citations)",
      "GPL-3.0",
      "2025-10-09"
     ],
@@ -1375,7 +1361,7 @@ window.DB = {
      "Swiss Tropical and Public Health Institute",
      "[github.com](https://github.com/SwissTPH/OpenCOVID)",
      "[Impact of vaccination and non-pharmaceutical interventions on SARS-CoV-2 dynamics in Switzerland](https://doi.org/10.1016/j.epidem.2021.100535) — *Epidemics, 2022*",
-     "Minimal (12★, 6 forks; 61 citations)",
+     "Minimal (12★, 6 forks; 59 citations)",
      "GPL-2.0",
      "2024-07-16"
     ],
@@ -1389,7 +1375,7 @@ window.DB = {
      "Swiss Tropical and Public Health Institute",
      "[github.com](https://github.com/OpenMalaria-Org/openmalaria)",
      "[Towards a comprehensive simulation model of malaria epidemiology and control](https://doi.org/10.1017/S0031182008000371) — *Parasitology, 2008*",
-     "Emerging (85★, 37 forks; 154 citations)",
+     "Emerging (90★, 38 forks; 151 citations)",
      "GPL-2.0",
      "2026-08-11"
     ],
@@ -1403,7 +1389,7 @@ window.DB = {
      "Optima Consortium / Burnet Institute",
      "[github.com](https://github.com/optimamodel/optima)",
      "[Optima: A Model for HIV Epidemic Analysis, Program Prioritization, and Resource Optimization](https://doi.org/10.1097/QAI.0000000000000605) — *JAIDS Journal of Acquired Immune Deficiency Syndromes, 2015*",
-     "Emerging (7★, 1 fork; 114 citations)",
+     "Minimal (7★, 1 fork; 111 citations)",
      "LGPL-3.0",
      "2026-03-02"
     ],
@@ -1417,37 +1403,9 @@ window.DB = {
      "Campbell, Cori, Jombart et al.",
      "[github.com](https://github.com/reconhub/outbreaker2)",
      "[Bayesian inference of transmission chains using timing of symptoms, pathogen genomes and contact data](https://doi.org/10.1371/journal.pcbi.1006930) — *PLOS Computational Biology, 2019*",
-     "Emerging (36★, 22 forks; CRAN 43k; 83 citations)",
+     "Emerging (36★, 22 forks; CRAN 44k; 67 citations)",
      "MIT",
      "2026-04-20"
-    ],
-    [
-     "outbreaks",
-     "Utility",
-     "Epidemiology",
-     "Any/general",
-     "R",
-     "Curated collection of documented historical outbreak datasets for teaching and method benchmarking.",
-     "RECON",
-     "[github.com](https://github.com/reconverse/outbreaks)",
-     "—",
-     "Emerging (54★, 17 forks; CRAN 110k)",
-     "MIT",
-     "2022-12-08"
-    ],
-    [
-     "Pangolin",
-     "Utility",
-     "Genomics",
-     "Respiratory",
-     "Python",
-     "Assigns SARS-CoV-2 genome sequences to Pango lineages for genomic surveillance.",
-     "Rambaut, O'Toole et al., University of Edinburgh",
-     "[github.com](https://github.com/cov-lineages/pangolin)",
-     "[Assignment of epidemiological lineages in an emerging pandemic using the pangolin tool](https://doi.org/10.1093/ve/veab064) — *Virus Evolution, 2021*",
-     "Established (456★, 107 forks; 1,268 citations)",
-     "GPL-3.0",
-     "2026-07-25"
     ],
     [
      "PatchSim",
@@ -1473,7 +1431,7 @@ window.DB = {
      "Volz, Imperial College London",
      "[github.com](https://github.com/emvolz-phylodynamics/phydynR)",
      "[Phylodynamic Inference for Structured Epidemiological Models](https://doi.org/10.1371/journal.pcbi.1003570) — *PLoS Computational Biology, 2014*",
-     "Minimal (16★, 6 forks; 119 citations)",
+     "Minimal (17★, 6 forks; 100 citations)",
      "GPL-3.0",
      "2025-05-15"
     ],
@@ -1487,7 +1445,7 @@ window.DB = {
      "Imperial College London and Big Data Institute, Oxford",
      "[github.com](https://github.com/BDI-pathogens/POPART-IBM)",
      "[PopART-IBM, a highly efficient stochastic individual-based simulation model of generalised HIV epidemics developed in the context of the HPTN 071 (PopART) trial](https://doi.org/10.1371/journal.pcbi.1009301) — *PLOS Computational Biology, 2021*",
-     "Minimal (5★, 4 forks; 18 citations)",
+     "Minimal (5★, 4 forks; 19 citations)",
      "GPL-3.0",
      "2026-04-13"
     ],
@@ -1501,7 +1459,7 @@ window.DB = {
      "Larmarange et al., IRD and Ceped",
      "[github.com](https://github.com/larmarange/prevR)",
      "[Methods for mapping regional trends of HIV prevalence from Demographic and Health Surveys (DHS)](https://doi.org/10.4000/cybergeo.24606) — *Cybergeo, 2011*",
-     "Emerging (6★, 2 forks; CRAN 69k; 46 citations)",
+     "Emerging (6★, 2 forks; CRAN 70k; 45 citations)",
      "CeCILL-2",
      "2024-10-04"
     ],
@@ -1515,7 +1473,7 @@ window.DB = {
      "RECON",
      "[github.com](https://github.com/reconhub/projections)",
      "—",
-     "Emerging (14★, 8 forks; CRAN 59k)",
+     "Emerging (14★, 8 forks; CRAN 60k)",
      "MIT",
      "2024-12-06"
     ],
@@ -1529,7 +1487,7 @@ window.DB = {
      "University of Cambridge",
      "[github.com](https://github.com/SoftMatterGroupCambridge/pyross)",
      "[Efficient Bayesian inference of fully stochastic epidemiological models with applications to COVID-19](https://doi.org/10.1098/rsos.211065) — *Royal Society Open Science, 2021*",
-     "Established (167★, 57 forks; PyPI 68k; 1 citation)",
+     "Established (168★, 56 forks; PyPI 69k; 11 citations)",
      "MIT",
      "2024-08-31"
     ],
@@ -1543,7 +1501,7 @@ window.DB = {
      "Obadia, Boëlle et al., Hospices Civils de Lyon and Sorbonne",
      "[cran.r-project.org](https://cran.r-project.org/package=R0)",
      "[The R0 package: a toolbox to estimate reproduction numbers for epidemic outbreaks](https://doi.org/10.1186/1472-6947-12-147) — *BMC Medical Informatics and Decision Making, 2012*",
-     "Emerging (CRAN 80k; 353 citations)",
+     "Emerging (CRAN 81k; 300 citations)",
      "GPL-2.0-or-later",
      "2023-09-26"
     ],
@@ -1571,7 +1529,7 @@ window.DB = {
      "Martin Kulldorff / Information Management Services",
      "[satscan.org](https://www.satscan.org/)",
      "[A spatial scan statistic](https://doi.org/10.1080/03610929708831995) — *Communications in Statistics - Theory and Methods, 1997*",
-     "Established (4,047 citations; Standard cluster-detection tool in public health surveillance worldwide)",
+     "Emerging (3,948 citations; Standard cluster-detection tool in public health surveillance worldwide)",
      "Closed source (free to use)",
      "N/A"
     ],
@@ -1585,23 +1543,9 @@ window.DB = {
      "Bosse, Funk et al., London School of Hygiene & Tropical Medicine",
      "[github.com](https://github.com/epiforecasts/scoringutils)",
      "[Evaluating Forecasts with scoringutils in R](https://doi.org/10.48550/arXiv.2205.07090) — *arXiv, 2022*",
-     "Emerging (63★, 25 forks; CRAN 63k; 26 citations)",
+     "Emerging (64★, 24 forks; CRAN 66k; 28 citations)",
      "MIT",
      "2026-07-19"
-    ],
-    [
-     "scorpio",
-     "Utility",
-     "Genomics",
-     "Respiratory",
-     "Python",
-     "Defines and classifies constellations of mutations in virus genomes for variant calling.",
-     "Cov-Lineages",
-     "[github.com](https://github.com/cov-lineages/scorpio)",
-     "[SCORPIO: a utility for defining and classifying mutation constellations of virus genomes](https://doi.org/10.1093/bioinformatics/btad575) — *Bioinformatics, 2023*",
-     "Emerging (39★, 4 forks; 1 citation)",
-     "GPL-3.0",
-     "2026-02-13"
     ],
     [
      "serocalculator",
@@ -1613,7 +1557,7 @@ window.DB = {
      "Lai, Teunis et al., Serologic Epidemiology Research Group, UC Davis",
      "[github.com](https://github.com/UCD-SERG/serocalculator)",
      "[serocalculator, an R package for estimating seroincidence from cross-sectional serological data](https://doi.org/10.1101/2025.06.04.25328941) — *2025*",
-     "Emerging (7★, 3 forks; CRAN 38k; 1 citation)",
+     "Emerging (7★, 3 forks; CRAN 39k; 2 citations)",
      "GPL-3.0",
      "2026-08-10"
     ],
@@ -1627,7 +1571,7 @@ window.DB = {
      "Cucunubá et al., Pontificia Universidad Javeriana (Epiverse-TRACE)",
      "[github.com](https://github.com/epiverse-trace/serofoi)",
      "—",
-     "Minimal (22★, 3 forks; CRAN 3.6k)",
+     "Minimal (22★, 3 forks; CRAN 4.1k)",
      "MIT",
      "2026-01-01"
     ],
@@ -1641,7 +1585,7 @@ window.DB = {
      "Menezes, Takahashi, Hay et al.",
      "[github.com](https://github.com/seroanalytics/serosim)",
      "[serosim: An R package for simulating serological data arising from vaccination, epidemiological and antibody kinetics processes](https://doi.org/10.1371/journal.pcbi.1011384) — *PLOS Computational Biology, 2023*",
-     "Minimal (7★, 3 forks; 14 citations)",
+     "Minimal (7★, 3 forks; 12 citations)",
      "GPL-3.0",
      "2024-12-16"
     ],
@@ -1655,7 +1599,7 @@ window.DB = {
      "Hay, Minter, Lessler, Cummings et al.",
      "[github.com](https://github.com/seroanalytics/serosolver)",
      "[An open source tool to infer epidemiological and immunological dynamics from serological data: serosolver](https://doi.org/10.1371/journal.pcbi.1007840) — *PLOS Computational Biology, 2020*",
-     "Emerging (20★, 9 forks; 33 citations)",
+     "Emerging (20★, 9 forks; 30 citations)",
      "GPL-3.0",
      "2026-07-16"
     ],
@@ -1669,7 +1613,7 @@ window.DB = {
      "Widgren, Bauer & Engblom, SVA, SLU and Uppsala University",
      "[github.com](https://github.com/stewid/SimInf)",
      "[SimInf: An R Package for Data-Driven Stochastic Disease Spread Simulations](https://doi.org/10.18637/jss.v091.i12) — *Journal of Statistical Software, 2019*",
-     "Emerging (39★, 16 forks; CRAN 68k; 63 citations)",
+     "Emerging (39★, 16 forks; CRAN 69k; 71 citations)",
      "GPL-3.0",
      "2026-08-11"
     ],
@@ -1683,7 +1627,7 @@ window.DB = {
      "University of Antwerp / Ghent University",
      "[github.com](https://github.com/j0r1/simpactcyan)",
      "[SimpactCyan 1.0: An Open-source Simulator for Individual-Based Models in HIV Epidemiology with R and Python Interfaces](https://doi.org/10.1038/s41598-019-55689-4) — *Scientific Reports, 2019*",
-     "Minimal (1★, 4 forks; 15 citations; Scientific Reports 2019)",
+     "Minimal (1★, 4 forks; 14 citations; Scientific Reports 2019)",
      "GPL-3.0",
      "2025-02-08"
     ],
@@ -1697,7 +1641,7 @@ window.DB = {
      "Epiverse-TRACE, London School of Hygiene & Tropical Medicine",
      "[github.com](https://github.com/epiverse-trace/simulist)",
      "[simulist: An R package to simulate disease outbreak line list and contacts data](https://doi.org/10.21105/joss.08781) — *Journal of Open Source Software, 2026*",
-     "Minimal (11★, 1 fork; CRAN 6.1k; 1 citation)",
+     "Minimal (11★, 1 fork; CRAN 6.7k; 1 citation)",
      "MIT",
      "2026-07-01"
     ],
@@ -1711,7 +1655,7 @@ window.DB = {
      "North Carolina State University",
      "[doi.org](https://doi.org/10.1371/journal.pntd.0000508)",
      "[Skeeter Buster: A Stochastic, Spatially Explicit Modeling Tool for Studying Aedes aegypti Population Replacement and Population Suppression Strategies](https://doi.org/10.1371/journal.pntd.0000508) — *PLoS Neglected Tropical Diseases, 2009*",
-     "Emerging (181 citations; Used for dengue vector-control evaluation)",
+     "Emerging (159 citations; Used for dengue vector-control evaluation)",
      "Not stated",
      "N/A"
     ],
@@ -1725,7 +1669,7 @@ window.DB = {
      "epiforecasts / LSHTM",
      "[github.com](https://github.com/epiforecasts/socialmixr)",
      "—",
-     "Emerging (44★, 15 forks; CRAN 69k)",
+     "Emerging (44★, 13 forks; CRAN 71k)",
      "MIT",
      "2026-08-13"
     ],
@@ -1739,7 +1683,7 @@ window.DB = {
      "SORMAS Foundation and Helmholtz Centre for Infection Research",
      "[github.com](https://github.com/SORMAS-Foundation/SORMAS-Project)",
      "[The Surveillance Outbreak Response Management and Analysis System (SORMAS): Digital Health Global Goods Maturity Assessment](https://doi.org/10.2196/15860) — *JMIR Public Health and Surveillance, 2020*",
-     "Established (330★, 164 forks; 50 citations)",
+     "Established (331★, 164 forks; 46 citations)",
      "GPL-3.0",
      "2026-08-14"
     ],
@@ -1753,9 +1697,23 @@ window.DB = {
      "Avenir Health with the UNAIDS Reference Group",
      "[avenirhealth.org](https://avenirhealth.org/software-spectrum.php)",
      "[Updates to the Spectrum/Estimations and Projections Package model for estimating trends and current values for key HIV indicators](https://doi.org/10.1097/QAD.0000000000001322) — *AIDS, 2017*",
-     "Emerging (71 citations; Official UNAIDS HIV estimates in 161+ countries)",
+     "Emerging (68 citations; Official UNAIDS HIV estimates in 161+ countries)",
      "Closed source (free to use)",
      "N/A"
+    ],
+    [
+     "squire",
+     "Model",
+     "Global health",
+     "Respiratory",
+     "R",
+     "Age-structured SEIR model of COVID-19 transmission and health-care capacity, parameterisable for any country.",
+     "MRC Centre for Global Infectious Disease Analysis, Imperial College London",
+     "[github.com](https://github.com/mrc-ide/squire)",
+     "[The impact of COVID-19 and strategies for mitigation and suppression in low- and middle-income countries](https://doi.org/10.1126/science.abc0035) — *Science, 2020*",
+     "Emerging (53★, 26 forks; 992 citations)",
+     "MIT",
+     "2024-02-15"
     ],
     [
      "Starsim",
@@ -1767,7 +1725,7 @@ window.DB = {
      "Starsim Hub / Institute for Disease Modeling",
      "[github.com](https://github.com/starsimhub/starsim)",
      "[Starsim: A flexible framework for agent-based modeling of health and disease](https://doi.org/10.25080/ukpu4584) — *Python in Science Conference, 2024, 2024*",
-     "Emerging (43★, 30 forks; PyPI 76k)",
+     "Emerging (44★, 32 forks; PyPI 85k)",
      "MIT",
      "2026-08-07"
     ],
@@ -1795,7 +1753,7 @@ window.DB = {
      "Institute for Disease Modeling and partners",
      "[github.com](https://github.com/starsimhub/stisim)",
      "—",
-     "Minimal (4★, 3 forks; PyPI 13k)",
+     "Minimal (4★, 3 forks; PyPI 17k)",
      "MIT",
      "2026-08-13"
     ],
@@ -1809,7 +1767,7 @@ window.DB = {
      "Georgia State University (Chowell group)",
      "[github.com](https://github.com/gchowell/SubEpiPredict-Toolbox)",
      "[SubEpiPredict: A tutorial-based primer and toolbox for fitting and forecasting growth trajectories using the ensemble n-sub-epidemic modeling framework](https://doi.org/10.1016/j.idm.2024.02.001) — *Infectious Disease Modelling, 2024*",
-     "Minimal (2★, 2 forks; 10 citations; tutorial-based toolboxes)",
+     "Minimal (2★, 3 forks; 10 citations; tutorial-based toolboxes)",
      "GPL-3.0",
      "2026-03-29"
     ],
@@ -1837,7 +1795,7 @@ window.DB = {
      "Höhle, Meyer & Held, LMU Munich and University of Zurich",
      "[cran.r-project.org](https://cran.r-project.org/package=surveillance)",
      "[Spatio-Temporal Analysis of Epidemic Phenomena Using the R Package surveillance](https://doi.org/10.18637/jss.v077.i11) — *Journal of Statistical Software, 2017*",
-     "Established (CRAN 214k; 140 citations)",
+     "Established (CRAN 219k; 128 citations)",
      "GPL-2.0",
      "2026-07-30"
     ],
@@ -1851,7 +1809,7 @@ window.DB = {
      "Institute for Disease Modeling",
      "[github.com](https://github.com/synthpops/synthpops)",
      "[Inferring high-resolution human mixing patterns for disease modeling](https://doi.org/10.1038/s41467-020-20544-y) — *Nature Communications, 2021*",
-     "Emerging (49★, 48 forks; PyPI 44k; 38 citations)",
+     "Emerging (50★, 48 forks; PyPI 45k; 289 citations)",
      "MIT",
      "2026-06-04"
     ],
@@ -1865,7 +1823,7 @@ window.DB = {
      "University of Cape Town",
      "[thembisa.org](https://www.thembisa.org/)",
      "[Progress towards the 2020 targets for HIV diagnosis and antiretroviral treatment in South Africa](https://doi.org/10.4102/sajhivmed.v18i1.694) — *Southern African Journal of HIV Medicine, 2017*",
-     "Emerging (195 citations; South Africa's official national HIV estimates)",
+     "Emerging (189 citations; South Africa's official national HIV estimates)",
      "Free download, no open licence",
      "N/A"
     ],
@@ -1884,6 +1842,20 @@ window.DB = {
      "N/A"
     ],
     [
+     "TLOmodel (Thanzi la Onse)",
+     "Model",
+     "Global health",
+     "Any/general",
+     "Python",
+     "Individual-based whole-health-system model of Malawi, representing multiple diseases together with health-care service delivery and its workforce and consumable constraints.",
+     "Thanzi la Onse collaboration — Kamuzu University of Health Sciences, Imperial College London, UCL, University of York",
+     "[github.com](https://github.com/UCL/TLOmodel)",
+     "[Estimates of resource use in the public-sector health-care system and the effect of strengthening health-care services in Malawi during 2015–19: a modelling study (Thanzi La Onse)](https://doi.org/10.1016/S2214-109X%2824%2900413-3) — *The Lancet Global Health, 2025*",
+     "Emerging (35★, 17 forks; 19 citations)",
+     "MIT",
+     "2026-10-19"
+    ],
+    [
      "TransPhylo",
      "Model",
      "Genomics",
@@ -1893,7 +1865,7 @@ window.DB = {
      "Didelot et al., University of Warwick",
      "[github.com](https://github.com/xavierdidelot/TransPhylo)",
      "[Genomic infectious disease epidemiology in partially sampled and ongoing outbreaks](https://doi.org/10.1093/molbev/msw275) — *Molecular Biology and Evolution, 2017*",
-     "Emerging (72★, 22 forks; CRAN 19k; 274 citations)",
+     "Emerging (72★, 22 forks; CRAN 19k; 248 citations)",
      "GPL-2.0",
      "2026-07-14"
     ],
@@ -1907,23 +1879,9 @@ window.DB = {
      "Neher Lab, University of Basel",
      "[github.com](https://github.com/neherlab/treetime)",
      "[TreeTime: Maximum-likelihood phylodynamic analysis](https://doi.org/10.1093/ve/vex042) — *Virus Evolution, 2018*",
-     "Established (253★, 61 forks; PyPI 414k; 1,403 citations)",
+     "Established (257★, 61 forks; PyPI 580k; 1,193 citations)",
      "MIT",
      "2026-08-14"
-    ],
-    [
-     "UShER",
-     "Utility",
-     "Genomics",
-     "Respiratory",
-     "C++",
-     "Ultrafast placement of new samples onto very large existing phylogenies for real-time genomic surveillance.",
-     "Turakhia, Corbett-Detig et al., UC Santa Cruz",
-     "[github.com](https://github.com/yatisht/usher)",
-     "[Ultrafast Sample placement on Existing tRees (UShER) enables real-time phylogenetics for the SARS-CoV-2 pandemic](https://doi.org/10.1038/s41588-021-00862-7) — *Nature Genetics, 2021*",
-     "Established (140★, 47 forks; 475 citations)",
-     "MIT",
-     "2026-06-01"
     ],
     [
      "Vivarium",
@@ -1935,7 +1893,7 @@ window.DB = {
      "Institute for Health Metrics and Evaluation, University of Washington",
      "[github.com](https://github.com/ihmeuw/vivarium-suite)",
      "—",
-     "Established (54★, 15 forks; PyPI 629k; GBD-linked microsimulation studies)",
+     "Established (54★, 15 forks; PyPI 644k; GBD-linked microsimulation studies)",
      "BSD-3-Clause",
      "2026-08-13"
     ]
@@ -2074,7 +2032,7 @@ window.DB = {
      "C++, R, Python",
      "`epiworld` (header-only C++ library)",
      "**Common core engine (test 1)** — `epiworldR`, `epiworldpy` and `epiworldRShiny` are all bindings or applications over the same header-only C++ library, so model semantics are identical across languages. Small and single-institution, but the coupling is unambiguous.",
-     "~4",
+     "~5",
      "Active",
      "Fast agent-based epidemiological modelling with a shared C++ core exposed to R and Python",
      "[uofuepibio.github.io/epiworldR](https://uofuepibio.github.io/epiworldR/)"
@@ -2111,17 +2069,6 @@ window.DB = {
      "Active",
      "A domain-specific language for differential-equation and stochastic models, a parallel simulation engine, and a Monte Carlo inference layer that compose into one toolchain",
      "[mrc-ide.github.io](https://mrc-ide.github.io/odin-monty/)"
-    ],
-    [
-     "Pango / cov-lineages",
-     "University of Edinburgh (Rambaut lab); COG-UK",
-     "Python",
-     "`pangolin`",
-     "Shared nomenclature authority + data format — `pango-designation` defines the lineage vocabulary all tools resolve to, `constellations` is the shared JSON variant-definition format consumed by `scorpio`, and model artifacts are versioned separately from code",
-     "~6",
-     "Maintenance",
-     "SARS-CoV-2 lineage nomenclature, assignment, and variant-constellation calling",
-     "[cov-lineages.org](https://cov-lineages.org/)"
     ],
     [
      "RECON / reconverse",
@@ -2189,12 +2136,11 @@ window.DB = {
     "EpiModel": "**Components.** `EpiModel` (core), `EpiModelHIV`, `EpiModelHIV-Template`, `EpiModelCOVID`, `EpiModelHPC`, `EpiModel-Gallery`, `ARTnet`, `tergmLite`, `networkLite`, `slurmworkflow`, `swfcalib`.\n\n**Caveats.** EpiModel is built directly on the statnet suite (listed separately below) and cannot be understood independently of it. The core package and the HIV, COVID, and HPC extensions are actively maintained; `tergmLite` has not been updated since 2022, and `EpiModelHIV` itself was last pushed in early 2025 while the newer `EpiModelHIV-Template` is current. The organisation also holds ~40 paper-specific analysis repositories, which are research artifacts rather than components.",
     "epinowcast": "**Components.** `epinowcast` (framework), `primarycensored` (shared Stan kernel), `epidist` (brms delay estimation), `baselinenowcast`, `nowcastdatasets`, plus shared infrastructure `actions`, `enwtheme`, and an R-universe.\n\n**Caveats.** Two components are weaker than the branding suggests: `coerceDT` has been dormant since January 2025 and is **not** in `epinowcast`'s imports, and `baselinenowcast` has no dependency on any other family member — it belongs to the community organisationally rather than technically. The strongest evidence for this ecosystem is cross-organisational: `epiforecasts/EpiNow2` imports `primarycensored`.",
     "Epistorm (Epydemix)": "**Components.** `epydemix` (Python package), `epydemix-data` (population and contact-matrix data for 400+ locations), `epydemix-dashboard`/EpyScenario, `epydemix-webapi`, plus EpyForecast.\n\n**Caveats.** This is the weakest of the four ecosystems named in the project specification, and it should be included only with a clear qualification. **Epistorm is primarily a research consortium** — an 11-institution CDC Insight Net innovation hub — and belongs first in [database_communities.md](database_communities.md). Its wider software portfolio (`Epistorm-Mix`, `RtEval`, `flu-ensemble`, the mobility and forecasting dashboards) consists of separate research outputs that do not interoperate. The genuine ecosystem here is the small, real, and growing `epydemix` package-plus-data-plus-applications family ([epydemix.org](https://epydemix.org)); some of its satellite applications live in personal rather than organisational repositories.",
-    "epiworld": "**Components.** `epiworld` (header-only C++ library), `epiworldR` (R bindings, on CRAN), `epiworldpy` (Python bindings), `epiworldRShiny` (Shiny interface).\n\n**Caveats.** Small — the largest component has 14 stars — and entirely from one university lab, which is why it was initially set aside. It is listed because the interoperability test is met unambiguously: every component is a binding or application over the same C++ core, so a model specified in R and the same model specified in Python execute identical semantics. Size and institutional breadth are treated here as questions of maturity, not of whether the thing is an ecosystem.",
+    "epiworld": "**Components.** `epiworld` (header-only C++ library), `epiworldR` (R bindings, on CRAN), `epiworldpy` (Python bindings), `epiworldRShiny` (Shiny interface), `measles` (measles models built on `epiworldR`, on CRAN).\n\n**Caveats.** Small — the largest component has 14 stars — and entirely from one university lab, which is why it was initially set aside. It is listed because the interoperability test is met unambiguously: every component is a binding or application over the same C++ core, so a model specified in R and the same model specified in Python execute identical semantics. Size and institutional breadth are treated here as questions of maturity, not of whether the thing is an ecosystem.",
     "Epiverse-TRACE": "**Components.** Data ingestion and cleaning: `readepi`, `cleanepi`, `numberize`, `linelist`, `safeframe`. Parameters: `epiparameter`, `epiparameterDB`. Simulation: `simulist`, `epichains`, `epidemics`. Estimation: `cfr`, `superspreading`, `finalsize`, `serofoi`, `vaccineff`. Regional: `epiCo`, `sivirep`, `ColOpenData`. Infrastructure: `epiverse` (meta-package), `packagetemplate`, `blueprints`, `tracetheme`, `etdashboard`, and an R-universe.\n\n**Caveats.** The umbrella is thinner than the constituent packages: the `epiverse` meta-package is still v0.0.1, is not on CRAN, and was last pushed in September 2025, whereas most component packages ship monthly. `scenarios` and `quickfit` are marked suspended in their own descriptions. The relationship to RECON is successor-by-rewrite rather than merger — Epiverse-TRACE's `linelist` is an explicit reboot of RECON's, and Epiverse-TRACE *depends on* reconverse's `incidence2` rather than absorbing it. Personnel overlap between the two projects is heavy.",
     "malariaverse": "**Components.** Model: `malariasimulation`, itself built on the `individual` state-and-event toolkit. Parameterisation: `site`, `umbrella` (rainfall and seasonality), `netz` (bed-net metrics), `peeps` (demography). Calibration and optimization: `cali`, `om`. Outputs and scenarios: `postie`, `scene`, `treasure` (costing).\n\n**Notes.** The `individual` package underneath `malariasimulation` is used well beyond malaria and is a general IDD tool in its own right. The malariaverse is one of two distinct ecosystems maintained within the same MRC Centre (the other being odin/monty), which is worth noting when attributing tools to institutions.",
-    "Nextstrain": "**Components.** Core: `augur` (bioinformatics toolkit and schema author), `auspice` (visualizer), `nextstrain/cli` (unified runtime across Docker, Conda, Singularity, and AWS Batch), `nextclade` and `nextclade_data`, `auspice.us`, `fauna`, `nextstrain.org`. `treetime` — augur's molecular-clock engine — lives under the `neherlab` organisation rather than `nextstrain`. Roughly 25 maintained pathogen workflow repositories follow a common Snakemake template (`pathogen-repo-guide`), including ncov, seasonal-flu, avian-flu, mpox, dengue, measles, RSV, zika, ebola, rabies, lassa, nipah, WNV, oropouche, norovirus, and TB.\n\n**Notes.** The most consistently maintained ecosystem in this list — essentially every core repository and most pathogen workflows were pushed within a week of the snapshot date. Licensing is mixed: AGPL-3.0 for augur, auspice, and the website; MIT for nextclade and the CLI.",
+    "Nextstrain": "**Components.** Core: `augur` (bioinformatics toolkit and schema author), `auspice` (visualizer), `nextstrain/cli` (unified runtime across Docker, Conda, Singularity, and AWS Batch), `nextclade` and `nextclade_data`, `auspice.us`, `fauna`, `nextstrain.org`. `treetime` — augur's molecular-clock engine — lives under the `neherlab` organisation rather than `nextstrain`. Roughly 25 maintained pathogen workflow repositories follow a common Snakemake template (`pathogen-repo-guide`), including ncov, seasonal-flu, avian-flu, mpox, dengue, measles, RSV, zika, ebola, rabies, lassa, nipah, WNV, oropouche, norovirus, and TB.\n\n**Notes.** The most consistently maintained ecosystem in this list — essentially every core repository and most pathogen workflows were pushed within a week of the snapshot date. Licensing is mixed: AGPL-3.0 for augur, auspice, and the website; MIT for nextclade and the CLI. `nextclade` is a component here but has no row in [database_tools.md](database_tools.md): sequence-processing tools are excluded from the tools table as bioinformatics (2026-10-19), while the ecosystem they belong to is listed.",
     "odin / monty": "**Components.** Current generation: `odin2` (DSL), `dust2` (parallel simulation engine), `monty` (Monte Carlo inference), `odin.api`, `wodin` (odin on the web). First generation, now in maintenance: `odin`, `dust`, `odin.dust`, `mcstate`.\n\n**Notes.** The two generations were consolidated in 2024: `odin.dust` and `mcstate` were rationalised into `odin2`/`dust2`/`monty`. Downstream IDD models built on this toolchain include `sircovid`, `squire`, `nimue`, and `mpoxseir`; `squire` (2024) and `mcstate` (2024) are no longer actively developed. The toolchain is general-purpose in principle — it can compile and fit any dynamical model — but was built for and is used almost entirely within IDD.",
-    "Pango / cov-lineages": "**Components.** `pangolin` (orchestrator), `pango-designation` (lineage nomenclature authority), `scorpio` (constellation caller), `constellations` (shared JSON variant definitions), `pangolin-data` and `pangolin-assignment` (versioned model and tree artifacts, released independently of code). `civet` is an affiliated consumer maintained by the ARTIC network, not a cov-lineages component.\n\n**Caveats.** Entirely SARS-CoV-2-specific; nothing generalises to other pathogens. In maintenance mode rather than active development: `pango-designation` and `pangolin` still receive updates, but `scorpio` and `constellations` went quiet in early 2026. `pango-designation` and `constellations` carry no SPDX-recognised license, which matters if reuse is being recommended. Superseded components (`pangoLEARN`, `llama`, `grinch`) are excluded.",
     "RECON / reconverse": "**Components.** reconverse (nine repositories): `incidence2`, `grates`, `i2extras`, `trending`, `trendeval`, `reportfactory`, `outbreaks`, `cogs`, and the website. Legacy RECON packages: `incidence` (v1), `epicontacts`, `epitrix`, `earlyR`, `projections`/`projections2`, `outbreaker2`, `epiflows`, `aweek`, `distcrete`, `matchmaker`, `trendbreaker`, `simulacr`, `linelist` (v1).\n\n**Caveats — stated plainly.** RECON is **largely dormant**. Only `incidence2` and `grates` are genuinely maintained; everything else in reconverse has had no commits for one to five years, and roughly 50 repositories in the original RECON organisation are untouched since 2017–2020. The reconverse website's most recent post is dated July 2021. It is listed here because it was the first serious attempt at an interoperable IDD toolkit in R, because `incidence2` and `grates` remain live dependencies of Epiverse-TRACE, and because much of its design and personnel carried forward into Epiverse-TRACE. New users should generally start with Epiverse-TRACE.",
     "Spectrum": "**Components.** AIM (adult HIV), EPP (epidemic projection), Goals and Goals-ART (HIV resource allocation), DemProj (demography), FamPlan (family planning), LiST (Lives Saved Tool, child survival), TIME (TB impact), and the OneHealth Tool costing layer.\n\n**Caveats.** Not open source: the modules are distributed as a free Windows application with no public source repository, so this entry fails the open-source criterion applied to the tools database, where it is included and labelled accordingly. It is listed here because architecturally it is a genuine interoperating suite — the modules install into one host application and share its demographic projection engine and country data files — and because it produces the official UNAIDS HIV estimates for 161+ countries, which makes omitting it a distortion of the landscape.",
     "Starsim": "**Components.** Core: `starsim`. Disease models: `covasim`, `stisim` (including HIVsim), `hpvsim`, `tbsim`, `typhoidsim`, `rotasim`, `mighti`, `zdsim`. Applications and utilities: `fpsim` (family planning), `enroute`, `starsim_ai`. Language ports: `rstarsim` (R), `Starsim.jl` (Julia, early).\n\n**Caveats.** **Covasim** does not yet declare a `starsim` dependency — it is a predecessor that shares the design lineage and the Sciris utility layer, and a port onto the Starsim core is in progress. It is listed as a component on that basis rather than on current code structure. HPVsim and FPsim, also originally standalone, have already been ported and do declare a `starsim` dependency. Component maturity varies widely: `stisim`, `hpvsim`, `fpsim`, and `tbsim` are substantive, while `rotasim`, `typhoidsim`, `zdsim`, `Starsim.jl`, and `rstarsim` are early. See the conflict-of-interest note below.",

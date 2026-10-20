@@ -29,7 +29,15 @@ The blind spot was therefore a whole shape of tool — *estimate the burden from
 - **serology axis:** seroprevalence, serological survey, force of infection, serocatalytic, seroincidence, antibody kinetics → *found serofoi, serosolver, serosim, Rsero, serocalculator*
 - **widened software terms:** tool, software, application, web-based tool, shiny app, platform, dashboard, calculator — alongside the original six
 
-## Pass 3 — AI extensions
+## Pass 3 — the whole-health-system blind spot (2026-10-19)
+
+The grid missed [Thanzi la Onse](https://doi.org/10.1016/S2214-109X%2824%2900413-3) (`UCL/TLOmodel`), an individual-based model of Malawi's whole health system, published in *Lancet Global Health*. Its papers talk about "resource use in the health-care system", "health benefits package design" and "health workforce needs" in a "modelling study" — no transmission term, no software term.
+
+The lesson is about *source*, not just vocabulary. A `health-system` Crossref axis was added, but every Crossref phrasing of that vocabulary returns only health-services literature; Crossref cannot find this family. **GitHub topic search can**: TLOmodel is tagged `healthcare-systems`, `health-economic-evaluation` and `individual-based-modelling`, and `topic:healthcare-systems` returns it first. Those topics and their neighbours were added to `GITHUB_TOPICS`. For policy-audience models, search the topics their authors tag rather than the words their papers use.
+
+The topic search also returns a lot of general health economics (hesim, heemod, BCEA, darthtools) and NCD policy models (Health-GPS): out under (X).
+
+## Pass 4 — AI extensions
 
 GitHub repo search crossing `epidemiology`/`public-health`/`outbreak`/`disease` with `mcp-server`, `llm`, `agent`, `copilot`, plus Crossref queries for LLM agents and copilots in epidemic modelling.
 

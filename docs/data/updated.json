@@ -9,11 +9,6 @@
   "source": "github",
   "url": "https://github.com/msberends/AMR"
  },
- "ARTIC fieldbioinformatics": {
-  "date": "2026-07-16",
-  "source": "github",
-  "url": "https://github.com/artic-network/fieldbioinformatics"
- },
  "AnophelesModel": {
   "date": "2025-08-09",
   "source": "github",
@@ -94,6 +89,11 @@
   "source": "github",
   "url": "https://github.com/mrc-ide/EpiEstim"
  },
+ "EpiFusion": {
+  "date": "2026-04-01",
+  "source": "github",
+  "url": "https://github.com/ciarajudge/EpiFusion"
+ },
  "EpiHiper": {
   "date": "2026-07-23",
   "source": "github",
@@ -153,6 +153,11 @@
   "date": "2026-08-12",
   "source": "github",
   "url": "https://github.com/IMMIDD/GEMS"
+ },
+ "Go.Data": {
+  "date": "2026-06-03",
+  "source": "github",
+  "url": "https://github.com/WorldHealthOrganization/godata"
  },
  "HPVsim": {
   "date": "2026-08-09",
@@ -214,11 +219,6 @@
   "source": "github",
   "url": "https://github.com/mrc-ide/naomi"
  },
- "Nextclade": {
-  "date": "2026-08-12",
-  "source": "github",
-  "url": "https://github.com/nextstrain/nextclade"
- },
  "Nextstrain": {
   "date": "2026-08-13",
   "source": "github",
@@ -248,11 +248,6 @@
   "date": "2026-03-02",
   "source": "github",
   "url": "https://github.com/optimamodel/optima"
- },
- "Pangolin": {
-  "date": "2026-07-25",
-  "source": "github",
-  "url": "https://github.com/cov-lineages/pangolin"
  },
  "PatchSim": {
   "date": "2025-09-03",
@@ -314,6 +309,11 @@
   "source": "github",
   "url": "https://github.com/synthpops/synthpops"
  },
+ "TLOmodel (Thanzi la Onse)": {
+  "date": "2026-10-19",
+  "source": "github",
+  "url": "https://github.com/UCL/TLOmodel"
+ },
  "TransPhylo": {
   "date": "2026-07-14",
   "source": "github",
@@ -324,11 +324,6 @@
   "source": "github",
   "url": "https://github.com/neherlab/treetime"
  },
- "UShER": {
-  "date": "2026-06-01",
-  "source": "github",
-  "url": "https://github.com/yatisht/usher"
- },
  "Vivarium": {
   "date": "2026-08-13",
   "source": "github",
@@ -338,11 +333,6 @@
   "date": "2026-08-07",
   "source": "github",
   "url": "https://github.com/ssi-dk/aedseo"
- },
- "civet": {
-  "date": "2026-07-06",
-  "source": "github",
-  "url": "https://github.com/artic-network/civet"
  },
  "coarseDataTools": {
   "date": "2025-04-11",
@@ -504,15 +494,15 @@
   "source": "github",
   "url": "https://github.com/mrc-ide/mcstate"
  },
+ "measles": {
+  "date": "2026-10-09",
+  "source": "github",
+  "url": "https://github.com/UofUEpiBio/measles"
+ },
  "mem": {
   "date": "2026-06-08",
   "source": "github",
   "url": "https://github.com/lozalojo/mem"
- },
- "modelSSE": {
-  "date": "2023-09-07",
-  "source": "cran",
-  "url": "https://cran.r-project.org/package=modelSSE"
  },
  "nbTransmission": {
   "date": "2025-05-14",
@@ -544,11 +534,6 @@
   "source": "github",
   "url": "https://github.com/reconhub/outbreaker2"
  },
- "outbreaks": {
-  "date": "2022-12-08",
-  "source": "github",
-  "url": "https://github.com/reconverse/outbreaks"
- },
  "phydynR": {
   "date": "2025-05-15",
   "source": "github",
@@ -568,11 +553,6 @@
   "date": "2026-07-19",
   "source": "github",
   "url": "https://github.com/epiforecasts/scoringutils"
- },
- "scorpio": {
-  "date": "2026-02-13",
-  "source": "github",
-  "url": "https://github.com/cov-lineages/scorpio"
  },
  "serocalculator": {
   "date": "2026-08-10",
@@ -603,6 +583,11 @@
   "date": "2026-08-13",
   "source": "github",
   "url": "https://github.com/epiforecasts/socialmixr"
+ },
+ "squire": {
+  "date": "2024-02-15",
+  "source": "github",
+  "url": "https://github.com/mrc-ide/squire"
  },
  "summer / summer2": {
   "date": "2024-04-23",

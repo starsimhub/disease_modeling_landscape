@@ -4,7 +4,7 @@ Working file, not part of the website data. It records every tool considered and
 
 Note that the criteria have since been relaxed in three ways, and the entries below have been re-checked against the relaxed rules: closed-source tools are now included and labelled, publication is no longer a hard gate where there is strong evidence of use, and "supported" means any activity in the last three years. What remains excluded therefore fails on availability, on maintenance, on evidence of use, or on scope.
 
-Criterion numbering follows details.md: **(2)** published, **(3)** documented, **(4)** evidence of use, **(5)** supported (any activity since 2023-08-07). **(X)** marks the disqualifying categories: general-purpose tools not unique to IDD, single-group tools, guidance and training material, and datasets. Criterion (1) no longer causes exclusion on its own — closed-source tools are included in the database and labelled in the `Licence` column — so the first group below is tools that could not be **obtained** at all, which is a different problem.
+Criterion numbering follows details.md: **(2)** published, **(3)** documented, **(4)** evidence of use, **(5)** supported (any activity since 2023-10-19). **(X)** marks the disqualifying categories: general-purpose tools not unique to IDD, single-group tools, guidance and training material, and datasets. Criterion (1) no longer causes exclusion on its own — closed-source tools are included in the database and labelled in the `Licence` column — so the first group below is tools that could not be **obtained** at all, which is a different problem.
 
 ### Not obtainable — no distributable artefact located
 
@@ -28,6 +28,8 @@ Criterion numbering follows details.md: **(2)** published, **(3)** documented, *
 - **STEM (Spatiotemporal Epidemiologic Modeler)** — Eclipse project dormant; no releases in the support window.
 - **Pathogen.jl** — last push 2022-09.
 - **epidemia** — last push 2022-06; also no `LICENSE` file in the repository.
+- **modelSSE** — last CRAN release 2023-09-07 and no source repository; listed until the 2026-10-19 refresh moved the cutoff past it.
+- **CHIME** (Penn Medicine COVID-19 Hospital Impact Model) — last push 2023-03; also no publication.
 - **tsiR** — last repository push 2019, last CRAN release 2021-01.
 - **earlyR** — last CRAN release and repository push 2020-10.
 - **distcrete** — last CRAN release 2017-11.
@@ -71,6 +73,8 @@ Publication alone is no longer required. These entries have neither a publicatio
 Evidence of use is assessed cumulatively, with a publication or a documented programme deployment weighing far more than stars. These entries do not reach that bar on any combination of signals.
 
 - **MicroMoB** — 2 stars, 0 forks; also no publication.
+- **daedalus** — R package for the DAEDALUS pandemic health–economic model ([10.1038/s43588-022-00233-0](https://doi.org/10.1038/s43588-022-00233-0)); its README marks it as under development, it is not on CRAN, and it has 8 stars. Worth revisiting once released.
+- **CalCAT** — California Department of Public Health dashboard for comparing COVID-19 models; no publication, no use outside California, last push 2024-01.
 - **GEMFsim** — hosted on an institutional page rather than a forge; no observable use metrics and no update since ~2017.
 
 ### General-purpose, not unique to IDD — fails (X)
@@ -91,13 +95,33 @@ Evidence of use is assessed cumulatively, with a publication or a documented pro
 - **RevBayes** — general Bayesian phylogenetics, primarily macroevolutionary.
 - **BEAGLE** — general high-performance phylogenetic likelihood library.
 - **heemod** — general health-economic Markov modelling.
+- **BCEA** and **darthtools** — general cost-effectiveness analysis and decision-modelling toolkits.
+- **Health-GPS** — health policy microsimulation for non-communicable diseases; not an infectious disease tool.
+- **bigDM** — general scalable Bayesian disease mapping (applications chiefly cancer mortality); excluded on the same grounds as SUMMER and sae.
 - **hesim** — general health-economic simulation modelling.
 - **Synthea** — general synthetic EHR/FHIR patient generator.
 - **Optima Nutrition** — nutrition allocative efficiency; not an infectious disease tool.
 - **FPsim** — family planning agent-based model; not an infectious disease tool. See [Open questions](#open-questions).
 
+### Sequence processing and bioinformatics — fails (X)
+
+Decided 2026-10-19: genomics tools stay in only when they infer epidemiological or transmission quantities (BEAST, BEAST 2, MASCOT, phydynR, TransPhylo, outbreaker2, EpiFusion), plus Nextstrain and its molecular-clock engine TreeTime as the field's genomic-epidemiology platform. Pipelines that assemble, classify or place sequences are bioinformatics rather than IDD tools, however widely used in outbreak response.
+
+- **ARTIC fieldbioinformatics** — amplicon genome assembly and consensus-calling pipeline.
+- **civet** — builds phylogenetic context reports for outbreak sequences.
+- **Nextclade** — clade assignment, mutation calling and sequence QC; remains listed as a component of the Nextstrain ecosystem.
+- **Pangolin** and **scorpio** — SARS-CoV-2 lineage and constellation assignment.
+- **UShER** — placement of new samples onto large phylogenies.
+- **gubbins** — recombination detection in bacterial whole-genome alignments.
+- **CZ ID** (formerly IDseq) — cloud metagenomic pathogen-detection pipeline.
+
+### Replication code rather than a reusable tool — fails (X)
+
+- **ViralDynamic** — a lab collection of code accompanying separate papers, each with its own scripts; not a single installable tool.
+
 ### Datasets and data services — fails (X)
 
+- **outbreaks** (reconverse) — ships curated historical outbreak datasets rather than doing anything with them; also no activity since 2022-12 (last CRAN release 2020-09), so it fails (5) too. Remains listed as a component of the RECON / reconverse ecosystem.
 - **FluSurv-Network / FluSight** — forecast hub and its data, not a tool; the associated tooling is covered by the hubverse entry.
 - **RSV-MODEL ensemble** — forecast hub, not a tool.
 

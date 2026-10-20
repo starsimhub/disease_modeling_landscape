@@ -58,6 +58,8 @@ Two overrides:
 
 ## Standing resolutions on repeat questions
 
+- **Genomics: inference in, bioinformatics out** (Cliff, 2026-10-19). Keep genomics tools that infer epidemiological or transmission quantities (BEAST, BEAST 2, MASCOT, phydynR, TransPhylo, outbreaker2, EpiFusion), plus Nextstrain and TreeTime as the field's genomic-epidemiology platform. Exclude sequence assembly, QC, lineage-assignment and sample-placement tools however widely used in outbreak response: ARTIC fieldbioinformatics, civet, Nextclade, Pangolin, scorpio, UShER, gubbins, CZ ID. The same rule removed the Pango / cov-lineages ecosystem.
+
 - **LASER: excluded entirely.** Never published, not used; and featuring an unpublished single-institution IDM toolkit is precisely the conflict-of-interest pattern this repo has been cleaned up to avoid. It is recorded in the exclusions with reasoning. Do not reinstate without instruction.
 - **Covasim** is now a Starsim ecosystem component as of Octoboer 2026. HPVsim and FPsim were ported previously.
 - **FPsim** is family planning, not IDD — scope question the user should settle if it recurs.

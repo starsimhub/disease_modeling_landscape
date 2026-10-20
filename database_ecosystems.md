@@ -39,7 +39,7 @@ Ecosystems are listed here even when the individual component tools also appear 
 
 ## Ecosystems
 
-20 ecosystems, sorted alphabetically (case-insensitive) by name.
+19 ecosystems, sorted alphabetically (case-insensitive) by name.
 
 | Name | Lead institution(s) | Language(s) | Anchor tool | Interoperability basis | Components | Status | Description | Website |
 |---|---|---|---|---|---|---|---|---|
@@ -53,11 +53,10 @@ Ecosystems are listed here even when the individual component tools also appear 
 | epinowcast | Community-governed; contributors from LSHTM, US CDC CFA, ETH Zürich | R, Stan | `epinowcast` | Shared statistical kernel — `primarycensored` exposes reusable Stan functions for primary-event-censored, right-truncated delay distributions that `epidist`, `epinowcast`, and (cross-organisation) `EpiNow2` all consume | ~7 | Active | Real-time nowcasting, delay-distribution estimation, and reproduction number estimation from incomplete surveillance data | [epinowcast.org](https://www.epinowcast.org/) |
 | Epistorm (Epydemix) | Northeastern University; Fondazione ISI; funded by US CDC Insight Net | Python | `epydemix` | Shared data package + wrapper applications — the `epydemix` model object consumes `epydemix-data` population and contact-matrix bundles for 400+ locations, and the dashboard/API tools wrap the same package | ~4 | Active (early) | Compartmental epidemic modeling with Approximate Bayesian Computation calibration, plus companion scenario and forecast applications | [epistorm.org](https://www.epistorm.org/) |
 | Epiverse-TRACE | data.org; LSHTM; Universidad de los Andes and other Latin American partners | R | `epiverse` meta-package | Meta-package + shared classes + integration tests — a meta-package declares the released set, hosts cross-package integration tests in CI, and the packages hand off `<linelist>`, `<epiparameter>`, and `<incidence2>` objects to each other | ~18 | Active | End-to-end outbreak analytics pipeline in R: read, clean, validate, parameterise, simulate, estimate severity and transmission | [epiverse-trace.github.io](https://epiverse-trace.github.io/) |
-| epiworld | University of Utah, Division of Epidemiology | C++, R, Python | `epiworld` (header-only C++ library) | **Common core engine (test 1)** — `epiworldR`, `epiworldpy` and `epiworldRShiny` are all bindings or applications over the same header-only C++ library, so model semantics are identical across languages. Small and single-institution, but the coupling is unambiguous. | ~4 | Active | Fast agent-based epidemiological modelling with a shared C++ core exposed to R and Python | [uofuepibio.github.io/epiworldR](https://uofuepibio.github.io/epiworldR/) |
+| epiworld | University of Utah, Division of Epidemiology | C++, R, Python | `epiworld` (header-only C++ library) | **Common core engine (test 1)** — `epiworldR`, `epiworldpy` and `epiworldRShiny` are all bindings or applications over the same header-only C++ library, so model semantics are identical across languages. Small and single-institution, but the coupling is unambiguous. | ~5 | Active | Fast agent-based epidemiological modelling with a shared C++ core exposed to R and Python | [uofuepibio.github.io/epiworldR](https://uofuepibio.github.io/epiworldR/) |
 | malariaverse | MRC Centre for Global Infectious Disease Analysis, Imperial College London | R | `malariasimulation` | Shared parameter and output formats — every package either produces `malariasimulation` parameter inputs (site files, seasonality, net coverage, demography) or consumes its outputs (post-processing, costing, optimization) | ~11 | Active | A constellation of R packages that parameterise, calibrate, run, cost, and optimise the `malariasimulation` individual-based malaria model for specific places | [mrc-ide.github.io](https://mrc-ide.github.io/malariaverse/) |
 | Nextstrain | Fred Hutchinson Cancer Center (Bedford lab); Biozentrum, University of Basel (Neher lab) | Python, JavaScript, Rust | `augur` + `auspice` | Published versioned schema — Augur writes an Auspice dataset JSON validated against a public schema that any tool can emit and Auspice will render; plus a unified CLI runtime and a common Snakemake pathogen-workflow template | ~10 core + ~25 pathogen workflows | Active | Real-time pathogen genomic surveillance: bioinformatics pipelines, clade assignment, and interactive phylodynamic visualization | [nextstrain.org](https://nextstrain.org) |
 | odin / monty | MRC Centre for Global Infectious Disease Analysis, Imperial College London | R, C++ | `odin2` | Common engine + compilation target — the `odin` DSL compiles model definitions to the `dust` C++ engine interface, and `monty` runs particle filters and MCMC against any `dust` model | ~5 current (+4 legacy) | Active | A domain-specific language for differential-equation and stochastic models, a parallel simulation engine, and a Monte Carlo inference layer that compose into one toolchain | [mrc-ide.github.io](https://mrc-ide.github.io/odin-monty/) |
-| Pango / cov-lineages | University of Edinburgh (Rambaut lab); COG-UK | Python | `pangolin` | Shared nomenclature authority + data format — `pango-designation` defines the lineage vocabulary all tools resolve to, `constellations` is the shared JSON variant-definition format consumed by `scorpio`, and model artifacts are versioned separately from code | ~6 | Maintenance | SARS-CoV-2 lineage nomenclature, assignment, and variant-constellation calling | [cov-lineages.org](https://cov-lineages.org/) |
 | RECON / reconverse | R Epidemics Consortium (Imperial, LSHTM, Institut Pasteur, MSF, community) | R | `incidence2` + `grates` | Shared class stack — grouped-date classes feed `<incidence2>` objects, which the modelling and evaluation packages consume; plus a common package-development standard | ~9 (reconverse) + ~20 legacy | Dormant | The original interoperable R outbreak-analytics toolkit; historically foundational and largely superseded by Epiverse-TRACE | [reconverse.org](https://www.reconverse.org/) |
 | Spectrum | Avenir Health, with the UNAIDS Reference Group, Johns Hopkins and WHO partners | Pascal/Delphi, C++ | Spectrum shell | Common host application + shared projection layer — AIM, EPP, Goals, DemProj, FamPlan, LiST and TIME are modules installed into and run by a single Spectrum application, sharing its demographic projection and country data files | ~8 | Active | Policy modelling suite producing the official UNAIDS HIV estimates and national TB, family planning, demographic and child-survival projections | [avenirhealth.org](https://avenirhealth.org/software-spectrum.php) |
 | Starsim | Institute for Disease Modeling; Burnet Institute; Starsim Hub partners | Python | `starsim` | Common engine — every disease model declares a `starsim` version dependency and subclasses the `ss.Module`/`ss.Disease` API to run inside the same `ss.Sim` loop, with shared Sciris utilities | ~12 | Active | Modular agent-based framework for co-circulating diseases on dynamic networks, with disease-specific models for HIV/STIs, HPV, TB, typhoid, rotavirus, and family planning | [starsim.org](https://starsim.org) |
@@ -123,7 +122,7 @@ Ecosystems are listed here even when the individual component tools also appear 
 
 ### epiworld
 
-**Components.** `epiworld` (header-only C++ library), `epiworldR` (R bindings, on CRAN), `epiworldpy` (Python bindings), `epiworldRShiny` (Shiny interface).
+**Components.** `epiworld` (header-only C++ library), `epiworldR` (R bindings, on CRAN), `epiworldpy` (Python bindings), `epiworldRShiny` (Shiny interface), `measles` (measles models built on `epiworldR`, on CRAN).
 
 **Caveats.** Small — the largest component has 14 stars — and entirely from one university lab, which is why it was initially set aside. It is listed because the interoperability test is met unambiguously: every component is a binding or application over the same C++ core, so a model specified in R and the same model specified in Python execute identical semantics. Size and institutional breadth are treated here as questions of maturity, not of whether the thing is an ecosystem.
 
@@ -145,21 +144,13 @@ Ecosystems are listed here even when the individual component tools also appear 
 
 **Components.** Core: `augur` (bioinformatics toolkit and schema author), `auspice` (visualizer), `nextstrain/cli` (unified runtime across Docker, Conda, Singularity, and AWS Batch), `nextclade` and `nextclade_data`, `auspice.us`, `fauna`, `nextstrain.org`. `treetime` — augur's molecular-clock engine — lives under the `neherlab` organisation rather than `nextstrain`. Roughly 25 maintained pathogen workflow repositories follow a common Snakemake template (`pathogen-repo-guide`), including ncov, seasonal-flu, avian-flu, mpox, dengue, measles, RSV, zika, ebola, rabies, lassa, nipah, WNV, oropouche, norovirus, and TB.
 
-**Notes.** The most consistently maintained ecosystem in this list — essentially every core repository and most pathogen workflows were pushed within a week of the snapshot date. Licensing is mixed: AGPL-3.0 for augur, auspice, and the website; MIT for nextclade and the CLI.
+**Notes.** The most consistently maintained ecosystem in this list — essentially every core repository and most pathogen workflows were pushed within a week of the snapshot date. Licensing is mixed: AGPL-3.0 for augur, auspice, and the website; MIT for nextclade and the CLI. `nextclade` is a component here but has no row in [database_tools.md](database_tools.md): sequence-processing tools are excluded from the tools table as bioinformatics (2026-10-19), while the ecosystem they belong to is listed.
 
 ### odin / monty
 
 **Components.** Current generation: `odin2` (DSL), `dust2` (parallel simulation engine), `monty` (Monte Carlo inference), `odin.api`, `wodin` (odin on the web). First generation, now in maintenance: `odin`, `dust`, `odin.dust`, `mcstate`.
 
 **Notes.** The two generations were consolidated in 2024: `odin.dust` and `mcstate` were rationalised into `odin2`/`dust2`/`monty`. Downstream IDD models built on this toolchain include `sircovid`, `squire`, `nimue`, and `mpoxseir`; `squire` (2024) and `mcstate` (2024) are no longer actively developed. The toolchain is general-purpose in principle — it can compile and fit any dynamical model — but was built for and is used almost entirely within IDD.
-
-### Pango / cov-lineages
-
-**Components.** `pangolin` (orchestrator), `pango-designation` (lineage nomenclature authority), `scorpio` (constellation caller), `constellations` (shared JSON variant definitions), `pangolin-data` and `pangolin-assignment` (versioned model and tree artifacts, released independently of code). `civet` is an affiliated consumer maintained by the ARTIC network, not a cov-lineages component.
-
-**Caveats.** Entirely SARS-CoV-2-specific; nothing generalises to other pathogens. In maintenance mode rather than active development: `pango-designation` and `pangolin` still receive updates, but `scorpio` and `constellations` went quiet in early 2026. `pango-designation` and `constellations` carry no SPDX-recognised license, which matters if reuse is being recommended. Superseded components (`pangoLEARN`, `llama`, `grinch`) are excluded.
-
-
 
 ### RECON / reconverse
 
@@ -212,6 +203,7 @@ Ecosystems are listed here even when the individual component tools also appear 
 | orderly / outpack / packit (MRC IDE RESIDE) | A real and well-designed ecosystem, but for reproducible research infrastructure in general, not for IDD specifically. |
 | GLEAM / GLEAMviz | Closed source, and distributed as a single client application rather than a family of interoperating components — so it fails on architecture, not only on licensing. Listed as a tool in [database_tools.md](database_tools.md). |
 | Swiss TPH malaria tooling | `OpenMalaria`, `openMalariaUtilities`, and `AnophelesModel` are related but loosely coupled; below the threshold for a deliberate interoperable suite. |
+| Pango / cov-lineages (University of Edinburgh; COG-UK) | Genuinely coupled — `pango-designation` is the shared lineage vocabulary and `constellations` the shared variant-definition format — but every component is SARS-CoV-2 sequence classification, and sequence-processing tools are excluded from this project as bioinformatics rather than IDD tools (2026-10-19). |
 
 ## Methodology & caveats
 
