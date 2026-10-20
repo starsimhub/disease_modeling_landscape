@@ -20,9 +20,9 @@ UPDATED = DOCS / 'data' / 'updated.json'
 
 # Which file, which section heading holds the main table, and how it's labelled.
 SOURCES = [
-    dict(key='tools', label='Tools', file='database_tools.md', section='Tools'),
     dict(key='ecosystems', label='Ecosystems', file='database_ecosystems.md', section='Ecosystems'),
     dict(key='communities', label='Communities', file='database_communities.md', section='Communities'),
+    dict(key='tools', label='Tools', file='database_tools.md', section='Tools'),
 ]
 
 
