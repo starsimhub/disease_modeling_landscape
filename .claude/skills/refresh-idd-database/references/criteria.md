@@ -59,7 +59,7 @@ Two overrides:
 ## Standing resolutions on repeat questions
 
 - **LASER: excluded entirely.** Never published, not used; and featuring an unpublished single-institution IDM toolkit is precisely the conflict-of-interest pattern this repo has been cleaned up to avoid. It is recorded in the exclusions with reasoning. Do not reinstate without instruction.
-- **Covasim** is a Starsim ecosystem component with a note that the port is in progress; it declares no `starsim` dependency. HPVsim and FPsim have been ported and do.
+- **Covasim** is now a Starsim ecosystem component as of Octoboer 2026. HPVsim and FPsim were ported previously.
 - **FPsim** is family planning, not IDD — scope question the user should settle if it recurs.
 - **Suite granularity.** Collapse wrapper/companion families to one row (EMOD's `emodpy-*`, Nextstrain's Augur/Auspice, hubverse's five packages); keep independently used packages separate (EpiEstim, EpiNow2). This is acknowledged as inconsistent.
 - **Ecosystems: shared dependency is not a hard gate.** Test 5 admits a deliberate family built to a shared design philosophy and presented as a suite. Entries qualifying only under test 5 must say so in `Interoperability basis`. Optima and `epiworld` are both in on this basis — restoring one without the other would have favoured the compiler's own ecosystem.

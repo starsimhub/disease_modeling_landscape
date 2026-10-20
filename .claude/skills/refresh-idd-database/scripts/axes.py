@@ -31,6 +31,16 @@ AXES = {
                     'seroincidence', 'antibody kinetics'],
         'software': SOFTWARE_TERMS_DEV + SOFTWARE_TERMS_USER,
     },
+    # Thanzi La Onse was missed by all three axes above: its papers are about "resource use in the
+    # health-care system" and "health benefits package design", and call the tool a "model" or a
+    # "modelling study" rather than any software word. Whole-health-system and multi-disease models
+    # written for policy audiences need both a health-system subject axis and "model" as a software term.
+    'health-system': {
+        'subject': ['health system', 'health-care system', 'healthcare service delivery', 'resource allocation for health',
+                    'health benefits package', 'health workforce', 'multi-disease', 'integrated epidemiological',
+                    'universal health coverage', 'intervention impact'],
+        'software': ['model', 'modelling study', 'simulation'] + SOFTWARE_TERMS_DEV + SOFTWARE_TERMS_USER,
+    },
     'ai': {
         'subject': ['large language model epidemiology', 'LLM agent outbreak', 'AI copilot public health',
                     'MCP server epidemiology'],
