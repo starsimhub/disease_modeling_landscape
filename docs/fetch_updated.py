@@ -6,17 +6,20 @@ the last commit; for tools distributed only as a package it is the date of the
 most recent release on PyPI or CRAN; anything we cannot establish is recorded
 as unknown and shown as "N/A" in the table.
 
-Writes docs/data/updated.json, a tool name -> {date, source, url} cache that
-build_site.py turns into the Updated column. The cache is committed, so
-building the site never needs network access; re-run this to refresh it.
+Writes docs/data/updated.json, a tool name -> {date, source, url, checked}
+cache that build_site.py turns into the Updated column. The cache is committed,
+so building the site never needs network access. Unlike a DOI's title, a date
+goes stale on its own, so an entry is re-fetched once its `checked` date is more
+than MAX_AGE_DAYS old; --refresh re-fetches everything regardless.
 
 GitHub allows only 60 unauthenticated API calls an hour and the database holds
 well over a hundred repositories, so a token is used when one is available:
 either $GITHUB_TOKEN or, failing that, whatever `gh auth token` returns.
 
-Usage: python docs/fetch_updated.py [--refresh] [--only NAME]
+Usage: python docs/fetch_updated.py [--refresh] [--only NAME] [--max-age DAYS]
 """
 
+import datetime
 import json
 import os
 import re
@@ -33,6 +36,9 @@ from build_site import ROOT, parse_table
 DOCS = Path(__file__).parent
 CACHE = DOCS / 'data' / 'updated.json'
 SOURCE = ROOT / 'database_tools.md'
+
+# How old a cached date may be before it is fetched again.
+MAX_AGE_DAYS = 7
 
 HEADERS = {'User-Agent': 'gsidd-idd-tools-landscape/1.0 (mailto:info@gsidd.org)'}
 
@@ -191,29 +197,51 @@ def load_rows():
     ]
 
 
+def is_stale(entry, today, max_age):
+    """True if the entry was never checked or was last checked more than max_age days ago."""
+    checked = entry.get('checked')
+    if not checked:
+        return True
+    return (today - datetime.date.fromisoformat(checked)).days > max_age
+
+
 def main():
     refresh = '--refresh' in sys.argv
     only = sys.argv[sys.argv.index('--only') + 1] if '--only' in sys.argv else None
+    max_age = int(sys.argv[sys.argv.index('--max-age') + 1]) if '--max-age' in sys.argv else MAX_AGE_DAYS
+    today = datetime.date.today()
 
-    cache = {} if refresh else (json.loads(CACHE.read_text(encoding='utf-8')) if CACHE.exists() else {})
+    cache = json.loads(CACHE.read_text(encoding='utf-8')) if CACHE.exists() else {}
     tools = load_rows()
     if only:
         tools = [t for t in tools if t['name'].lower() == only.lower()]
-    todo = [t for t in tools if only or t['name'] not in cache]
-    print(f'{len(tools)} tools; {len(todo)} to fetch'
+    todo = [t for t in tools
+            if only or refresh or t['name'] not in cache or is_stale(cache[t['name']], today, max_age)]
+    print(f'{len(tools)} tools; {len(todo)} to fetch (missing, or checked more than {max_age} days ago)'
           f"{' (authenticated)' if TOKEN else ' (no GitHub token -- expect rate limiting)'}")
 
-    unknown = []
+    unknown, failed = [], []
     for i, tool in enumerate(todo, 1):
         name = tool['name']
         try:
             date, source, url = resolve(name, tool['code'], tool['language'])
-        except (urllib.error.URLError, KeyError, IndexError, ValueError, TimeoutError) as exc:
+        except urllib.error.HTTPError as exc:
+            if exc.code != 404:  # a 404 is a definite answer: no such repository or package
+                print(f'  [{i}/{len(todo)}] {name} -> FAILED: {exc}')
+                failed.append(name)
+                continue
             date, source, url = None, None, None
+        except (urllib.error.URLError, KeyError, IndexError, ValueError, TimeoutError) as exc:
+            # A transient failure (rate limit, timeout) must not erase a date we already
+            # had; keep the old entry, unchecked, so the next run tries again.
             print(f'  [{i}/{len(todo)}] {name} -> FAILED: {exc}')
+            failed.append(name)
+            continue
         if date:
-            cache[name] = dict(date=date, source=source, url=url)
-            print(f'  [{i}/{len(todo)}] {name} -> {date} ({source})')
+            old = cache.get(name, {}).get('date')
+            cache[name] = dict(date=date, source=source, url=url, checked=today.isoformat())
+            change = f' (was {old})' if old and old != date else ''
+            print(f'  [{i}/{len(todo)}] {name} -> {date} ({source}){change}')
         else:
             cache.pop(name, None)
             unknown.append(name)
@@ -227,6 +255,10 @@ def main():
     if unknown:
         print('No date found (shown as N/A):')
         for name in unknown:
+            print(f'  {name}')
+    if failed:
+        print('Fetch failed; previous date kept, retried next run:')
+        for name in failed:
             print(f'  {name}')
 
 

@@ -3,7 +3,7 @@ One command to take the database_*.md files to the built site.
 
 Runs, in order: a check that the tables are well formed and internally consistent;
 a Crossref lookup for any DOI not already cached and a last-updated lookup for any
-tool not already cached; and the data.js build. Anything the checker reports as an
+tool not cached or last checked more than a week ago; and the data.js build. Anything the checker reports as an
 error stops the build, so a malformed table cannot be published silently.
 
 Usage:
@@ -13,7 +13,8 @@ Usage:
     python docs/build.py --check      # run the checks only, build nothing
 
 Update dates go stale on their own rather than through anyone editing a database
-file, so `--refresh` is the way to bring them up to date.
+file, so fetch_updated.py re-checks any date older than fetch_updated.MAX_AGE_DAYS;
+`--refresh` forces every date (and DOI title) to be re-fetched now.
 """
 
 import re

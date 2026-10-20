@@ -703,7 +703,7 @@ window.DB = {
      "[Evaluation of the Automated and Early Detection of Seasonal Epidemic Onset and Burden Levels (AEDSEO) method for respiratory surveillance using data from 21 European countries](https://doi.org/10.2807/1560-7917.ES.2026.31.30.2500896) — *Eurosurveillance, 2026*",
      "Minimal (1★, 1 fork; CRAN 11k)",
      "MIT",
-     "2026-08-07"
+     "2026-10-09"
     ],
     [
      "AMR",
@@ -715,9 +715,9 @@ window.DB = {
      "Berends et al., University Medical Center Groningen",
      "[github.com](https://github.com/msberends/AMR)",
      "[AMR: An R Package for Working with Antimicrobial Resistance Data](https://doi.org/10.18637/jss.v104.i03) — *Journal of Statistical Software, 2022*",
-     "Established (114★, 27 forks; CRAN 172k; 86 citations)",
+     "Established (115★, 27 forks; CRAN 172k; 86 citations)",
      "GPL-2.0",
-     "2026-08-13"
+     "2026-10-17"
     ],
     [
      "AnophelesModel",
@@ -745,7 +745,7 @@ window.DB = {
      "—",
      "Established (17★, 3 forks; PyPI 273k)",
      "MIT",
-     "2026-08-11"
+     "2026-10-19"
     ],
     [
      "BEAST",
@@ -757,9 +757,9 @@ window.DB = {
      "Suchard, Drummond, Rambaut et al.",
      "[github.com](https://github.com/beast-dev/beast-mcmc)",
      "[Bayesian phylogenetic and phylodynamic data integration using BEAST 1.10](https://doi.org/10.1093/ve/vey016) — *Virus Evolution, 2018*",
-     "Established (248★, 84 forks; 3,796 citations)",
+     "Established (249★, 84 forks; 3,800 citations)",
      "LGPL-2.1",
-     "2026-08-10"
+     "2026-10-19"
     ],
     [
      "BEAST 2",
@@ -771,7 +771,7 @@ window.DB = {
      "Bouckaert, Drummond et al., BEAST 2 development team",
      "[github.com](https://github.com/CompEvol/beast2)",
      "[BEAST 2.5: An advanced software platform for Bayesian evolutionary analysis](https://doi.org/10.1371/journal.pcbi.1006650) — *PLOS Computational Biology, 2019*",
-     "Established (285★, 82 forks; 4,532 citations)",
+     "Established (285★, 82 forks; 4,534 citations)",
      "LGPL-2.1",
      "2026-07-13"
     ],
@@ -857,7 +857,7 @@ window.DB = {
      "[Covasim: An agent-based model of COVID-19 dynamics and interventions](https://doi.org/10.1371/journal.pcbi.1009149) — *PLOS Computational Biology, 2021*",
      "Established (291★, 240 forks; PyPI 326k; 685 citations)",
      "MIT",
-     "2026-08-09"
+     "2026-10-16"
     ],
     [
      "COVSIM",
@@ -885,7 +885,7 @@ window.DB = {
      "—",
      "Established (113★, 44 forks; PyPI 265k)",
      "Apache-2.0",
-     "2026-07-25"
+     "2026-10-10"
     ],
     [
      "DClusterm",
@@ -913,7 +913,7 @@ window.DB = {
      "[An open repository of real-time COVID-19 indicators](https://doi.org/10.1073/pnas.2111452118) — *Proceedings of the National Academy of Sciences, 2021*",
      "Established (106★, 69 forks; PyPI 4.1M; 75 citations)",
      "MIT",
-     "2026-08-07"
+     "2026-10-16"
     ],
     [
      "disaggregation",
@@ -955,7 +955,7 @@ window.DB = {
      "[Implementation and applications of EMOD, an individual-based multi-disease modeling platform](https://doi.org/10.1093/femspd/fty059) — *Pathogens and Disease, 2018*",
      "Emerging (107★, 53 forks; 109 citations)",
      "MIT",
-     "2026-08-10"
+     "2026-09-03"
     ],
     [
      "Emulsion",
@@ -983,7 +983,7 @@ window.DB = {
      "[EoN (Epidemics on Networks): a fast, flexible Python package for simulation, analytic approximation, and analysis of epidemics on networks](https://doi.org/10.21105/joss.01731) — *Journal of Open Source Software, 2019*",
      "Established (165★, 64 forks; 74 citations)",
      "MIT",
-     "2026-07-15"
+     "2026-09-09"
     ],
     [
      "Epi Info",
@@ -1025,7 +1025,7 @@ window.DB = {
      "—",
      "Minimal (10★, 4 forks; CRAN 5.6k)",
      "MIT",
-     "2026-07-09"
+     "2026-08-20"
     ],
     [
      "epicontacts",
@@ -1067,7 +1067,7 @@ window.DB = {
      "—",
      "Minimal (19★, 7 forks)",
      "MIT",
-     "2026-08-01"
+     "2026-09-01"
     ],
     [
      "EpiEstim",
@@ -1081,7 +1081,7 @@ window.DB = {
      "[A New Framework and Software to Estimate Time-Varying Reproduction Numbers During Epidemics](https://doi.org/10.1093/aje/kwt133) — *American Journal of Epidemiology, 2013*",
      "Established (105★, 40 forks; CRAN 225k; 1,530 citations)",
      "GPL-2.0-or-later",
-     "2026-07-29"
+     "2026-09-27"
     ],
     [
      "epiflows",
@@ -1151,7 +1151,7 @@ window.DB = {
      "[Individual-Level Modelling of Infectious Disease Data: EpiILM](https://doi.org/10.32614/RJ-2020-020) — *The R Journal, 2020*",
      "Emerging (CRAN 46k; 5 citations)",
      "GPL-2.0-or-later",
-     "2025-09-26"
+     "2026-09-28"
     ],
     [
      "EpiILMCT",
@@ -1165,7 +1165,7 @@ window.DB = {
      "[Continuous Time Individual-Level Models of Infectious Disease: Package EpiILMCT](https://doi.org/10.18637/jss.v098.i10) — *Journal of Statistical Software, 2021*",
      "Emerging (CRAN 39k; 8 citations)",
      "GPL-2.0-or-later",
-     "2025-09-23"
+     "2026-09-28"
     ],
     [
      "EpiLPS",
@@ -1179,7 +1179,7 @@ window.DB = {
      "[EpiLPS: A fast and flexible Bayesian tool for estimation of the time-varying reproduction number](https://doi.org/10.1371/journal.pcbi.1010618) — *PLOS Computational Biology, 2022*",
      "Emerging (21★, 2 forks; CRAN 22k; 38 citations)",
      "GPL-3.0",
-     "2025-09-01"
+     "2026-10-10"
     ],
     [
      "EpiModel",
@@ -1193,7 +1193,7 @@ window.DB = {
      "[EpiModel: An R Package for Mathematical Modeling of Infectious Disease over Networks](https://doi.org/10.18637/jss.v084.i08) — *Journal of Statistical Software, 2018*",
      "Established (282★, 62 forks; CRAN 225k; 192 citations)",
      "GPL-3.0",
-     "2026-08-06"
+     "2026-10-17"
     ],
     [
      "epinet",
@@ -1221,7 +1221,7 @@ window.DB = {
      "[Estimating the time-varying reproduction number of SARS-CoV-2 using national and subnational case counts](https://doi.org/10.12688/wellcomeopenres.16006.2) — *Wellcome Open Research, 2020*",
      "Established (140★, 41 forks; CRAN 60k; 335 citations)",
      "MIT",
-     "2026-08-13"
+     "2026-10-19"
     ],
     [
      "epinowcast",
@@ -1235,7 +1235,7 @@ window.DB = {
      "—",
      "Emerging (67★, 22 forks)",
      "MIT",
-     "2026-08-03"
+     "2026-10-01"
     ],
     [
      "EPIONCHO-IBM",
@@ -1277,7 +1277,7 @@ window.DB = {
      "—",
      "Emerging (39★, 14 forks; CRAN 7.7k)",
      "MIT",
-     "2026-07-01"
+     "2026-09-28"
     ],
     [
      "EpiSewer",
@@ -1291,7 +1291,7 @@ window.DB = {
      "[Real-time estimation of pathogen transmission dynamics from wastewater](https://doi.org/10.1038/s41467-026-75380-3) — *Nature Communications, 2026*",
      "Emerging (30★, 2 forks)",
      "MIT",
-     "2026-08-13"
+     "2026-10-20"
     ],
     [
      "Episimmer",
@@ -1305,7 +1305,7 @@ window.DB = {
      "—",
      "Emerging (16★, 3 forks; PyPI 16k; deployed in Campus RAKSHAK at Indian institutes)",
      "Commons Clause (not OSI-approved)",
-     "2026-08-10"
+     "2026-10-19"
     ],
     [
      "epitrix",
@@ -1333,7 +1333,7 @@ window.DB = {
      "[epiworldR: Fast Agent-Based Epi Models](https://doi.org/10.21105/joss.05781) — *Journal of Open Source Software, 2023*",
      "Emerging (14★, 3 forks; CRAN 17k; 2 citations)",
      "MIT",
-     "2026-08-11"
+     "2026-10-19"
     ],
     [
      "Epydemix",
@@ -1347,7 +1347,7 @@ window.DB = {
      "[Epydemix: An open-source Python package for epidemic modeling with integrated approximate Bayesian calibration](https://doi.org/10.1371/journal.pcbi.1013735) — *PLOS Computational Biology, 2025*",
      "Emerging (71★, 15 forks; PyPI 35k; 2 citations)",
      "GPL-3.0",
-     "2026-07-29"
+     "2026-10-12"
     ],
     [
      "epymorph",
@@ -1361,7 +1361,7 @@ window.DB = {
      "—",
      "Minimal (10★, 3 forks; PyPI 8.8k)",
      "GPL-3.0",
-     "2026-08-05"
+     "2026-10-20"
     ],
     [
      "ern",
@@ -1375,7 +1375,7 @@ window.DB = {
      "[ern: An R package to estimate the effective reproduction number using clinical and wastewater surveillance data](https://doi.org/10.1371/journal.pone.0305550) — *PLOS ONE, 2024*",
      "Minimal (6★, 3 forks; CRAN 6.8k; 15 citations)",
      "MIT",
-     "2026-08-13"
+     "2026-09-09"
     ],
     [
      "estimateR",
@@ -1473,7 +1473,7 @@ window.DB = {
      "[German Epidemic Microsimulation System](https://doi.org/10.1007/978-3-032-20404-2_26) — *Mathematics in Industry, 2026*",
      "Minimal (14★, 8 forks)",
      "GPL-3.0",
-     "2026-08-12"
+     "2026-10-20"
     ],
     [
      "GLEAM / GLEAMviz",
@@ -1541,9 +1541,9 @@ window.DB = {
      "Institute for Disease Modeling / Starsim Hub",
      "[github.com](https://github.com/starsimhub/hpvsim)",
      "[HPVsim: An agent-based model of HPV transmission and cervical disease](https://doi.org/10.1371/journal.pcbi.1012181) — *PLOS Computational Biology, 2024*",
-     "Emerging (18★, 6 forks; PyPI 46k; 21 citations)",
+     "Emerging (18★, 7 forks; PyPI 46k; 21 citations)",
      "MIT",
-     "2026-08-09"
+     "2026-10-20"
     ],
     [
      "hubverse",
@@ -1557,7 +1557,7 @@ window.DB = {
      "[A software platform for collaborative infectious disease modelling](https://doi.org/10.1038/s44360-026-00145-7) — *Nature Health, 2026*",
      "Emerging (80★, 59 forks)",
      "MIT",
-     "2026-08-14"
+     "2026-10-20"
     ],
     [
      "hybridModels",
@@ -1697,7 +1697,7 @@ window.DB = {
      "—",
      "Emerging (23★, 28 forks; underpins Imperial analyses for WHO and the Global Fund)",
      "MIT",
-     "2026-07-03"
+     "2026-10-15"
     ],
     [
      "MASCOT",
@@ -1711,7 +1711,7 @@ window.DB = {
      "[MASCOT: parameter and state inference under the marginal structured coalescent approximation](https://doi.org/10.1093/bioinformatics/bty406) — *Bioinformatics, 2018*",
      "Emerging (12★, 8 forks; 123 citations)",
      "GPL-3.0",
-     "2026-07-14"
+     "2026-10-13"
     ],
     [
      "MATSim Episim",
@@ -1725,7 +1725,7 @@ window.DB = {
      "[Predicting the effects of COVID-19 related interventions in urban settings by combining activity-based modelling, agent-based simulation, and mobile phone data](https://doi.org/10.1371/journal.pone.0259037) — *PLOS ONE, 2021*",
      "Emerging (25★, 31 forks; 72 citations)",
      "AGPL-3.0",
-     "2026-08-01"
+     "2026-10-19"
     ],
     [
      "mcstate",
@@ -1767,7 +1767,7 @@ window.DB = {
      "[Influenza surveillance in Europe: establishing epidemic thresholds by the Moving Epidemic Method](https://doi.org/10.1111/j.1750-2659.2012.00422.x) — *Influenza and Other Respiratory Viruses, 2012*",
      "Emerging (18★, 4 forks; CRAN 82k; 201 citations)",
      "GPL-2.0-or-later",
-     "2026-06-08"
+     "2026-10-20"
     ],
     [
      "MEmilio",
@@ -1781,7 +1781,7 @@ window.DB = {
      "[Assessment of effective mitigation and prediction of the spread of SARS-CoV-2 in Germany using demographic information and spatial resolution](https://doi.org/10.1016/j.mbs.2021.108648) — *Mathematical Biosciences, 2021*",
      "Emerging (71★, 25 forks; 40 citations)",
      "Apache-2.0",
-     "2026-08-14"
+     "2026-10-20"
     ],
     [
      "MetaCast",
@@ -1851,7 +1851,7 @@ window.DB = {
      "[Naomi: a new modelling tool for estimating HIV epidemic indicators at the district level in sub‐Saharan Africa](https://doi.org/10.1002/jia2.25788) — *Journal of the International AIDS Society, 2021*",
      "Emerging (9★, 11 forks; 55 citations; UNAIDS-supported subnational HIV estimates across sub-Saharan Africa)",
      "MIT",
-     "2026-08-10"
+     "2026-08-17"
     ],
     [
      "nbTransmission",
@@ -1891,9 +1891,9 @@ window.DB = {
      "Bedford and Neher labs",
      "[github.com](https://github.com/nextstrain/augur)",
      "[Nextstrain: real-time tracking of pathogen evolution](https://doi.org/10.1093/bioinformatics/bty407) — *Bioinformatics, 2018*",
-     "Established (279★, 138 forks; PyPI 416k; 3,143 citations)",
+     "Established (279★, 138 forks; PyPI 416k; 3,144 citations)",
      "AGPL-3.0",
-     "2026-08-13"
+     "2026-10-19"
     ],
     [
      "NobBS",
@@ -2019,7 +2019,7 @@ window.DB = {
      "[Towards a comprehensive simulation model of malaria epidemiology and control](https://doi.org/10.1017/S0031182008000371) — *Parasitology, 2008*",
      "Emerging (90★, 38 forks; 151 citations)",
      "GPL-2.0",
-     "2026-08-11"
+     "2026-10-02"
     ],
     [
      "Optima HIV",
@@ -2187,7 +2187,7 @@ window.DB = {
      "[Evaluating Forecasts with scoringutils in R](https://doi.org/10.48550/arXiv.2205.07090) — *arXiv, 2022*",
      "Emerging (64★, 24 forks; CRAN 66k; 28 citations)",
      "MIT",
-     "2026-07-19"
+     "2026-09-27"
     ],
     [
      "serocalculator",
@@ -2201,7 +2201,7 @@ window.DB = {
      "[serocalculator, an R package for estimating seroincidence from cross-sectional serological data](https://doi.org/10.1101/2025.06.04.25328941) — *2025*",
      "Emerging (7★, 3 forks; CRAN 39k; 2 citations)",
      "GPL-3.0",
-     "2026-08-10"
+     "2026-10-16"
     ],
     [
      "serofoi",
@@ -2243,7 +2243,7 @@ window.DB = {
      "[An open source tool to infer epidemiological and immunological dynamics from serological data: serosolver](https://doi.org/10.1371/journal.pcbi.1007840) — *PLOS Computational Biology, 2020*",
      "Emerging (20★, 9 forks; 30 citations)",
      "GPL-3.0",
-     "2026-07-16"
+     "2026-09-24"
     ],
     [
      "SimInf",
@@ -2257,7 +2257,7 @@ window.DB = {
      "[SimInf: An R Package for Data-Driven Stochastic Disease Spread Simulations](https://doi.org/10.18637/jss.v091.i12) — *Journal of Statistical Software, 2019*",
      "Emerging (39★, 16 forks; CRAN 69k; 71 citations)",
      "GPL-3.0",
-     "2026-08-11"
+     "2026-09-13"
     ],
     [
      "SimpactCyan",
@@ -2285,7 +2285,7 @@ window.DB = {
      "[simulist: An R package to simulate disease outbreak line list and contacts data](https://doi.org/10.21105/joss.08781) — *Journal of Open Source Software, 2026*",
      "Minimal (11★, 1 fork; CRAN 6.7k; 1 citation)",
      "MIT",
-     "2026-07-01"
+     "2026-09-07"
     ],
     [
      "Skeeter Buster",
@@ -2313,7 +2313,7 @@ window.DB = {
      "—",
      "Emerging (44★, 13 forks; CRAN 71k)",
      "MIT",
-     "2026-08-13"
+     "2026-09-28"
     ],
     [
      "SORMAS",
@@ -2327,7 +2327,7 @@ window.DB = {
      "[The Surveillance Outbreak Response Management and Analysis System (SORMAS): Digital Health Global Goods Maturity Assessment](https://doi.org/10.2196/15860) — *JMIR Public Health and Surveillance, 2020*",
      "Established (331★, 164 forks; 46 citations)",
      "GPL-3.0",
-     "2026-08-14"
+     "2026-10-20"
     ],
     [
      "Spectrum",
@@ -2367,9 +2367,9 @@ window.DB = {
      "Starsim Hub / Institute for Disease Modeling",
      "[github.com](https://github.com/starsimhub/starsim)",
      "[Starsim: A flexible framework for agent-based modeling of health and disease](https://doi.org/10.25080/ukpu4584) — *Python in Science Conference, 2024, 2024*",
-     "Emerging (44★, 32 forks; PyPI 85k)",
+     "Emerging (44★, 33 forks; PyPI 85k)",
      "MIT",
-     "2026-08-07"
+     "2026-10-20"
     ],
     [
      "STDSIM",
@@ -2397,7 +2397,7 @@ window.DB = {
      "—",
      "Minimal (4★, 3 forks; PyPI 17k)",
      "MIT",
-     "2026-08-13"
+     "2026-10-20"
     ],
     [
      "SubEpiPredict / SpatialWavePredict",
@@ -2411,7 +2411,7 @@ window.DB = {
      "[SubEpiPredict: A tutorial-based primer and toolbox for fitting and forecasting growth trajectories using the ensemble n-sub-epidemic modeling framework](https://doi.org/10.1016/j.idm.2024.02.001) — *Infectious Disease Modelling, 2024*",
      "Minimal (2★, 3 forks; 10 citations; tutorial-based toolboxes)",
      "GPL-3.0",
-     "2026-03-29"
+     "2026-10-16"
     ],
     [
      "summer / summer2",
@@ -2523,7 +2523,7 @@ window.DB = {
      "[TreeTime: Maximum-likelihood phylodynamic analysis](https://doi.org/10.1093/ve/vex042) — *Virus Evolution, 2018*",
      "Established (257★, 61 forks; PyPI 580k; 1,193 citations)",
      "MIT",
-     "2026-08-14"
+     "2026-10-20"
     ],
     [
      "Vivarium",
@@ -2537,7 +2537,7 @@ window.DB = {
      "—",
      "Established (54★, 15 forks; PyPI 644k; GBD-linked microsimulation studies)",
      "BSD-3-Clause",
-     "2026-08-13"
+     "2026-10-20"
     ]
    ]
   }

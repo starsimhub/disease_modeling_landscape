@@ -167,10 +167,13 @@ def pypi_downloads(projects):
 
 
 def pypi_metadata(project):
+    """The project's metadata, or None if PyPI has no such project; other failures raise."""
     try:
         return get_json('https://pypi.org/pypi/' + urllib.parse.quote(project) + '/json')
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
-        return None
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return None
+        raise
 
 
 def citations(doi):
@@ -281,8 +284,10 @@ def resolve_cran(name, code_url, language):
         return None
     try:
         data = get_json('https://crandb.r-pkg.org/' + urllib.parse.quote(name))
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
-        return None
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            return None
+        raise  # a failed lookup is not evidence that the package does not exist
     return data.get('Package')
 
 
@@ -371,37 +376,68 @@ def gather(tool, offline, cached):
     gh = GITHUB_RE.search(url)
     repo = f'{gh.group(1)}/{gh.group(2)}' if gh and gh.group(2) else None
 
+    # A failed lookup (rate limit, timeout) keeps the previous run's figures rather
+    # than zeroing them, which would silently drop the tool's label -- but only when
+    # the figures are for the same repository, package or DOI as before.
+    old_repo = record.get('repo')
     record['repo'] = repo
-    record['stars'], record['forks'] = (None, None)
     try:
         if repo:
             record['stars'], record['forks'] = github_stats(*repo.split('/'))
         elif gh:  # an account rather than a repository
             record['stars'], record['forks'] = github_account_stats(gh.group(1))
+        else:
+            record['stars'], record['forks'] = (None, None)
     except (urllib.error.URLError, KeyError, TimeoutError) as exc:
         print(f"    {tool['name']}: GitHub failed ({exc})")
+        if old_repo != repo:
+            record['stars'], record['forks'] = (None, None)
+        else:
+            print('      keeping previous stars and forks')
 
-    record['cran'] = resolve_cran(tool['name'], url, tool['language'])
-    record['cran_downloads'] = None
+    old_cran = record.get('cran')
+    try:
+        record['cran'] = resolve_cran(tool['name'], url, tool['language'])
+    except (urllib.error.URLError, TimeoutError) as exc:
+        print(f"    {tool['name']}: CRAN lookup failed ({exc}); keeping previous package")
+        record['cran'] = old_cran
     if record['cran']:
         try:
             record['cran_downloads'] = cran_downloads(record['cran'])
         except (urllib.error.URLError, KeyError, IndexError, TimeoutError) as exc:
             print(f"    {tool['name']}: cranlogs failed ({exc})")
+            if old_cran != record['cran']:
+                record['cran_downloads'] = None
+            else:
+                print('      keeping previous cran_downloads')
+    else:
+        record['cran_downloads'] = None
 
-    record['pypi'], record['pypi_match'] = resolve_pypi(tool['name'], url, repo, tool['language'])
-    record['pypi_downloads'] = None  # filled in by the batched ClickHouse query
+    try:
+        record['pypi'], record['pypi_match'] = resolve_pypi(tool['name'], url, repo, tool['language'])
+    except (urllib.error.URLError, TimeoutError) as exc:
+        print(f"    {tool['name']}: PyPI lookup failed ({exc}); keeping previous package")
+        record.setdefault('pypi', None)
+        record.setdefault('pypi_match', None)
+    # Filled in by the batched ClickHouse query, which falls back to the cached total.
+    record['pypi_downloads'] = None
 
     doi = DOI_RE.search(tool['publication'])
     # Parentheses in a DOI are percent-encoded in the link target (Elsevier's
     # 10.1016/S2352-3018(17)30190-X); the APIs want the decoded form.
+    old_doi = record.get('doi')
     record['doi'] = urllib.parse.unquote(doi.group(1)) if doi else None
-    record['citations'], record['paper_title'] = None, None
     if record['doi']:
         try:
             record['citations'], record['paper_title'] = citations(record['doi'])
         except (urllib.error.URLError, KeyError, TimeoutError) as exc:
             print(f"    {tool['name']}: citation lookup failed ({exc})")
+            if old_doi != record['doi']:
+                record['citations'], record['paper_title'] = None, None
+            else:
+                print('      keeping previous citations')
+    else:
+        record['citations'], record['paper_title'] = None, None
     return record
 
 

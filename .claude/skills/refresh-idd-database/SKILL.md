@@ -83,7 +83,7 @@ python docs/fetch_usage.py                                                 # re-
 python docs/build.py                                                       # check → fetch DOIs + update dates → build data.js
 ```
 
-`build.py --check` runs the structural checks alone; `--refresh` re-fetches all cached publication and last-updated data rather than only what is new. Fix everything it reports; a failing check must not be published.
+`build.py --check` runs the structural checks alone. A plain `build.py` re-fetches any last-updated date checked more than seven days ago, so the `Updated` column stays current without a flag; `--refresh` re-fetches all cached publication and last-updated data regardless of age. When the task is refreshing metadata, check that the run's "N to fetch" line covers the whole tools table. Fix everything it reports; a failing check must not be published.
 
 Leave changes uncommitted and report: counts before/after, what was added, what was excluded and why, any judgement calls the user should overturn, and anything you could not verify. Do not commit unless asked.
 

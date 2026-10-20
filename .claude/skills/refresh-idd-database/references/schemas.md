@@ -57,4 +57,4 @@ Genuine IDD organisations that are not software communities, proposed for the se
 
 ## The build
 
-`docs/build.py` is the single entry point: check → fetch missing DOIs and last-updated dates → build `docs/data/data.js`. `--check`, `--offline`, `--refresh`. `docs/data/publications.json` and `docs/data/updated.json` are committed caches, so building needs no network. `.github/workflows/build-site.yml` rebuilds `data.js` on push to `main` and fails a PR whose committed `data.js` is stale.
+`docs/build.py` is the single entry point: check → fetch missing DOIs, and last-updated dates that are missing or more than seven days old → build `docs/data/data.js`. `--check`, `--offline`, `--refresh`. `docs/data/publications.json` and `docs/data/updated.json` are committed caches, so building needs no network. `.github/workflows/build-site.yml` rebuilds `data.js` on push to `main` and fails a PR whose committed `data.js` is stale.
