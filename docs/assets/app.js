@@ -184,9 +184,15 @@
 
   var RANKED = { Usage: usageRank, Status: statusRank };
 
+  // The direction a column sorts in when first clicked: the most useful end
+  // first, so most-used, newest and largest lead; anything unlisted is A to Z.
+  var FIRST_DIR = { Usage: -1, Updated: -1, Since: -1, Components: -1 };
+
+  var NUMBER = /^[~<>]?[\d.,]+\+?$/;  // "12", "~10", "200+"
+
   function compare(a, b) {
-    var na = parseFloat(a), nb = parseFloat(b);
-    if (!isNaN(na) && !isNaN(nb) && /^[~<>]?[\d.,]+$/.test(a) && /^[~<>]?[\d.,]+$/.test(b)) return na - nb;
+    var na = parseFloat(a.replace(/[~<>,]/g, '')), nb = parseFloat(b.replace(/[~<>,]/g, ''));
+    if (!isNaN(na) && !isNaN(nb) && NUMBER.test(a) && NUMBER.test(b)) return na - nb;
     return a.toLowerCase().localeCompare(b.toLowerCase(), 'en');
   }
 
@@ -576,7 +582,7 @@
       }
       btn.addEventListener('click', function () {
         if (section.state.sortCol === c.i) section.state.sortDir *= -1;
-        else { section.state.sortCol = c.i; section.state.sortDir = 1; }
+        else { section.state.sortCol = c.i; section.state.sortDir = FIRST_DIR[c.col] || 1; }
         refresh();
       });
 
